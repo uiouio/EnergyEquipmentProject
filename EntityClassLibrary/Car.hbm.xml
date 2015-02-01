@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+	<class name="Car" table="Car" >
+		<id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+			<generator class="native" />
+		</id>
+
+		<property name="ModidiedType" column="ModidiedType" type="int" length="10"  />
+		<property name="HistoryId" column="HistoryId" type="long" length="10" />
+		<property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+		<property name="State" column="State" type="int"  length="1"/>
+		<property name="Flag" column="Flag" type="string"  length="10"/>
+		<property name="Pass" column="Pass" type="int"  length="1"/>
+		<property name="Remarks" column="Remarks" type="string"  length="100"/>
+		<property name="Carid" column="carId" type="int"/>
+		<property name="Status" column="Status" type="int"  length="1"/>
+		
+	</class>
+
+</hibernate-mapping>
+
+

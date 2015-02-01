@@ -1,0 +1,14 @@
+F:\EnergyEquipmentProject\WinHtmlEditor\bin\Release\WinHtmlEditor.dll
+F:\EnergyEquipmentProject\WinHtmlEditor\bin\Release\WinHtmlEditor.pdb
+F:\EnergyEquipmentProject\WinHtmlEditor\bin\Release\NetSpell.SpellChecker.dll
+F:\EnergyEquipmentProject\WinHtmlEditor\obj\Release\WinHtmlEditor.ContextMenuForm.resources
+F:\EnergyEquipmentProject\WinHtmlEditor\obj\Release\WinHtmlEditor.OfficeColorPicker.resources
+F:\EnergyEquipmentProject\WinHtmlEditor\obj\Release\WinHtmlEditor.ToolStripColorPicker.resources
+F:\EnergyEquipmentProject\WinHtmlEditor\obj\Release\WinHtmlEditor.EditHtmlForm.resources
+F:\EnergyEquipmentProject\WinHtmlEditor\obj\Release\WinHtmlEditor.FindReplaceForm.resources
+F:\EnergyEquipmentProject\WinHtmlEditor\obj\Release\WinHtmlEditor.HtmlEditor.resources
+F:\EnergyEquipmentProject\WinHtmlEditor\obj\Release\WinHtmlEditor.Properties.Resources.resources
+F:\EnergyEquipmentProject\WinHtmlEditor\obj\Release\WinHtmlEditor.TablePropertyForm.resources
+F:\EnergyEquipmentProject\WinHtmlEditor\obj\Release\WinHtmlEditor.csproj.GenerateResource.Cache
+F:\EnergyEquipmentProject\WinHtmlEditor\obj\Release\WinHtmlEditor.dll
+F:\EnergyEquipmentProject\WinHtmlEditor\obj\Release\WinHtmlEditor.pdb

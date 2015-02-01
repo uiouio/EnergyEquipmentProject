@@ -1,0 +1,9 @@
+F:\EnergyEquipmentProject\CommonMethod\bin\Release\CommonMethod.dll
+F:\EnergyEquipmentProject\CommonMethod\bin\Release\CommonMethod.pdb
+F:\EnergyEquipmentProject\CommonMethod\bin\Release\EntityClassLibrary.dll
+F:\EnergyEquipmentProject\CommonMethod\bin\Release\Iesi.Collections.dll
+F:\EnergyEquipmentProject\CommonMethod\bin\Release\EntityClassLibrary.pdb
+F:\EnergyEquipmentProject\CommonMethod\obj\Release\CommonMethod.csprojResolveAssemblyReference.cache
+F:\EnergyEquipmentProject\CommonMethod\obj\Release\CommonMethod.csproj.ResolveComReference.cache
+F:\EnergyEquipmentProject\CommonMethod\obj\Release\CommonMethod.dll
+F:\EnergyEquipmentProject\CommonMethod\obj\Release\CommonMethod.pdb

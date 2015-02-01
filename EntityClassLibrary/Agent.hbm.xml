@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+  <class name="Agent" table="Agent" >
+    <id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="AgentName" column="AgentName" type="string" length="50"/>
+    <property name="Category" column="Category" type="string" length="50"  />
+    <property name="AcceptTime" column="AcceptTime" type="long"  />
+    <property name="AgentAera" column="AgentAera" type="string" length="50"/>
+    <property name="AgentMoney" column="AgentMoney" type="string" length="10" />
+    <property name="AgentContent" column="AgentContent" type="string" length="50" />
+    <property name="AgentStartline" column="AgentStartline" type="long" />
+    <property name="AgentDeadline" column="AgentDeadline" type="long" />
+    <property name="MinimumSale" column="MinimumSale" type="int" length="10" />
+    <property name="PlanFlag" column="PlanFlag" type="int" length="1" />
+    <property name="ContactName" column="ContactName" type="string" length="10" />
+    <property name="PersonSex" column="PersonSex" type="string" length="10" />
+    <property name="ContactPhone" column="ContactPhone" type="string" length="50"/>
+    <property name="ContactEmail" column="ContactEmail" type="string" length="50" />
+    <property name="ContactPostCode" column="ContactPostCode" type="string" length="50" />
+    <property name="ContactAddress" column="ContactAddress" type="string" length="50" />
+    <property name="DeliveryAddress" column="DeliveryAddress" type="string" length="50" />
+    <property name="DeliveryTime" column="DeliveryTime" type="long" length="50" />
+    <property name="DeliveryForm" column="DeliveryForm" type="string" length="10" />
+    <property name="DeliveryAera" column="DeliveryAera" type="string" length="10" />
+    <property name="Progess" column=" Progess" type="string" length="50" />
+    <property name="State" column="State" type="int" length="1"/>
+    <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+    <property name="HistoryId" column="HistoryId" type="long" length="10" not-null="true"/>
+    <set name="AgentGoodBaseInfo" inverse="false" lazy="false" where="State=0">
+      <key column="AgentId"/>
+      <one-to-many class="EntityClassLibrary.AgentGood,EntityClassLibrary" />
+    </set>
+  </class>
+
+</hibernate-mapping>

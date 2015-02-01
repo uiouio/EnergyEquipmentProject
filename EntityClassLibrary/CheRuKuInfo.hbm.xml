@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+	<class name="CheRuKuInfo" table="CarStorage" >
+		<id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+			<generator class="native" />
+		</id>
+
+		<property name="ModificationOfContractId" column="ModificationOfContractId" type="long" length="10" not-null="true" />		
+		<property name="ActualCompletionDate" column="ActualCompletionDate" type="long" length="18"  />
+		<property name="Remark" column="Remark" type="string" length="100" />
+		<property name="Confirmor" column="Confirmor" type="string" length="10" />
+		<property name="Specification" column="Specification" type="string" length="100" />
+		<property name="WorkContent" column="WorkContent" type="string" length="100" />
+		
+		<property name="HistoryId" column="HistoryId" type="long" length="10" />
+		<property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+		<property name="State" column="State" type="int"  length="1"/>
+		<property name="Status" column="Status" type="int"  length="1"/>
+		
+		
+		<!--<bag name="ModificationContract" table="ModificationContract_CarStorage" lazy="false" cascade="save-update">
+			<key column="ModificationContractId"/>
+			<many-to-many class="EntityClassLibrary.CheRuKuInfo,EntityClassLibrary" column="CarStorageId"/>
+		</bag>-->
+
+		<!--<many-to-one name="TiaoShiBaoGao" column="DebugReportId" lazy="false" not-null="true"
+                class="EntityClassLibrary.TiaoShiBaoGao, EntityClassLibrary" />-->
+
+		<many-to-one name="WorkingGroup" column="WorkingGroupId" lazy="false" not-null="true"
+                class="EntityClassLibrary.WorkingGroup, EntityClassLibrary" />
+
+		<many-to-one name="RefitWork" column="RefitWorkId" lazy="false" not-null="true"
+                class="EntityClassLibrary.RefitWork, EntityClassLibrary" />
+		
+		
+	</class>
+
+</hibernate-mapping>
+

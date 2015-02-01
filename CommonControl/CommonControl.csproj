@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{668BF412-E4C3-4F29-9FBE-F69332C290B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonControl</RootNamespace>
+    <AssemblyName>CommonControl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EnergyEquipmentProject\bin\Debug\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonFlowLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonFlowLayoutPanel.Designer.cs">
+      <DependentUpon>CommonFlowLayoutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPictureButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonPictureButton.Designer.cs">
+      <DependentUpon>CommonPictureButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonTabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonTabControl.Designer.cs">
+      <DependentUpon>CommonTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonLabel.Designer.cs">
+      <DependentUpon>CommonLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaiBanShiXiang_Main_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiBanShiXiang_Main_Dialog.Designer.cs">
+      <DependentUpon>DaiBanShiXiang_Main_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatterPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MatterPanel.Designer.cs">
+      <DependentUpon>MatterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageNode.Designer.cs">
+      <DependentUpon>PageNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommonTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonTabPage.Designer.cs">
+      <DependentUpon>CommonTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonTabTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonTabTitle.Designer.cs">
+      <DependentUpon>CommonTabTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StandardField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StandardField.Designer.cs">
+      <DependentUpon>StandardField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TitleNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TitleNode.designer.cs">
+      <DependentUpon>TitleNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewsPanel.Designer.cs">
+      <DependentUpon>NewsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchedulePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchedulePanel.Designer.cs">
+      <DependentUpon>SchedulePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LetterPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LetterPanel.Designer.cs">
+      <DependentUpon>LetterPanel.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonDataGridView.resx">
+      <DependentUpon>CommonDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonFlowLayoutPanel.resx">
+      <DependentUpon>CommonFlowLayoutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonPictureButton.resx">
+      <DependentUpon>CommonPictureButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonTabControl.resx">
+      <DependentUpon>CommonTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonTabPage.resx">
+      <DependentUpon>CommonTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonTabTitle.resx">
+      <DependentUpon>CommonTabTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaiBanShiXiang_Main_Dialog.resx">
+      <DependentUpon>DaiBanShiXiang_Main_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatterPanel.resx">
+      <DependentUpon>MatterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageNode.resx">
+      <DependentUpon>PageNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandardField.resx">
+      <DependentUpon>StandardField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleNode.resx">
+      <DependentUpon>TitleNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsPanel.resx">
+      <DependentUpon>NewsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchedulePanel.resx">
+      <DependentUpon>SchedulePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LetterPanel.resx">
+      <DependentUpon>LetterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabPageBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabTitle_hover3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabTitle_select4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pageBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonMethod\CommonMethod.csproj">
+      <Project>{7DFA3086-1243-4993-B8AD-80D98A2DEE23}</Project>
+      <Name>CommonMethod</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityClassLibrary\EntityClassLibrary.csproj">
+      <Project>{6C5F2133-D535-4CA4-865F-C641810A4820}</Project>
+      <Name>EntityClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLProvider\SQLProvider.csproj">
+      <Project>{2C410869-C0F3-49A4-85E6-68B6E7072707}</Project>
+      <Name>SQLProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kuang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\个人车辆_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dot.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

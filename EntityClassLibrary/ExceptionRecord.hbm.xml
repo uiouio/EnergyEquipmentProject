@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+  <class name="ExceptionRecord" table="ExceptionRecord" >
+    <id name="Id" column="Id" type="long"  length="18" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="ExceptionStackTrace" column="ExceptionStackTrace" type="StringClob"/>
+    <property name="ExceptionMessage" column="ExceptionMessage" type="string"/>
+    <property name="ExceptionTime" column="ExceptionTime" type="string"  length="25"/>
+    <property name="HistoryId" column="HistoryId" type="long" length="10" not-null="true"/>
+    <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+    <property name="State" column="State" type="int"  length="1"/>
+  </class>
+
+</hibernate-mapping>

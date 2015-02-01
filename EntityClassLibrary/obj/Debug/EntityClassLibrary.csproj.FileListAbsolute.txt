@@ -1,0 +1,27 @@
+E:\EnergyEquipmentProject\EnergyEquipmentProject\EntityClassLibrary\bin\Debug\EntityClassLibrary.dll
+E:\EnergyEquipmentProject\EnergyEquipmentProject\EntityClassLibrary\bin\Debug\EntityClassLibrary.pdb
+E:\EnergyEquipmentProject\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\ResolveAssemblyReference.cache
+E:\EnergyEquipmentProject\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.dll
+E:\EnergyEquipmentProject\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.pdb
+F:\EnergyEquipmentProject\EntityClassLibrary\bin\Debug\EntityClassLibrary.dll
+F:\EnergyEquipmentProject\EntityClassLibrary\bin\Debug\EntityClassLibrary.pdb
+F:\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.dll
+F:\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.pdb
+F:\EnergyEquipmentProject\lib\EntityClassLibrary.dll
+F:\EnergyEquipmentProject\lib\EntityClassLibrary.pdb
+F:\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\EntityClassLibrary.dll
+F:\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\EntityClassLibrary.pdb
+D:\Users\仕\Documents\Visual Studio 2012\Projects\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\EntityClassLibrary.dll
+D:\Users\仕\Documents\Visual Studio 2012\Projects\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\EntityClassLibrary.pdb
+D:\Users\仕\Documents\Visual Studio 2012\Projects\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.csprojResolveAssemblyReference.cache
+D:\Users\仕\Documents\Visual Studio 2012\Projects\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.dll
+D:\Users\仕\Documents\Visual Studio 2012\Projects\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.pdb
+C:\Users\lenovo\Desktop\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\EntityClassLibrary.dll
+C:\Users\lenovo\Desktop\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\EntityClassLibrary.pdb
+C:\Users\lenovo\Desktop\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Desktop\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.dll
+C:\Users\lenovo\Desktop\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.pdb
+F:\EnergyEquipmentProject\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\EntityClassLibrary.dll
+F:\EnergyEquipmentProject\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\EntityClassLibrary.pdb
+F:\EnergyEquipmentProject\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.dll
+F:\EnergyEquipmentProject\EnergyEquipmentProject\EntityClassLibrary\obj\Debug\EntityClassLibrary.pdb

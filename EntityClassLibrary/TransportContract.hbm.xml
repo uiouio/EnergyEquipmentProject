@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+  <class name="TransportContract" table="TransportContract" >
+    <id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="TransportContractNum" type="string" length="50">
+      <column name="TransportContractNum"/>
+    </property>
+    
+    <property name="SendCategory" type="string" length="30">
+      <column name="SendCategory"/>
+    </property>
+    
+    <property name="ReceiveCategory" type="string" length="30">
+      <column name="ReceiveCategory"/>
+    </property>
+    
+    <property name="SendPlace" type="string" length="50">
+      <column name="SendPlace"/>
+    </property>
+    
+    <property name="ReceivePlace" type="string" length="50">
+      <column name="ReceivePlace"/>
+    </property>
+    
+    <property name="ReceiverName" type="string" length="10">
+      <column name="ReceiverName"/>
+    </property>
+    
+    <property name="ReceiverPhone" type="string" length="30">
+      <column name="ReceiverPhone"/>
+    </property>
+    
+    <property name="GoodsNameAndNum" type="string" length="200">
+      <column name="GoodsNameAndNum"/>
+    </property>
+    
+    <property name="GoodsWeight" type="string" length="10">
+      <column name="GoodsWeight"/>
+    </property>
+    
+    <property name="GoodsVolme" type="string" length="10">
+      <column name="GoodsVolme"/>
+    </property>
+    
+    <property name="SendTime" type="long" length="18">
+      <column name="SendTime"/>
+    </property>
+
+    <property name="ReceivedTime" type="long" length="18">
+      <column name="ReceivedTime"/>
+    </property>
+    
+
+    <property name="TransportMoney" type="string" length="20">
+      <column name="TransportMoney"/>
+    </property>
+    
+    <property name="Remark" type="string" length="300">
+      <column name="Remark"/>
+    </property>
+    
+    <property name="HistoryId" column="HistoryId" type="long" length="10" />
+    <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+    <property name="State" column="State" type="int"  length="1"/>
+    <!--<many-to-one name="Ku_Id" column="KU_ID" lazy="false" not-null="true"
+                class="ClassLibrary.WkTUser, ClassLibrary" />-->
+  </class>
+
+</hibernate-mapping>

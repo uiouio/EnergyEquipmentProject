@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{463DC3DB-E96D-4D86-B720-C36364FC7B11}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HeTongGuanLi</RootNamespace>
+    <AssemblyName>HeTongGuanLi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EnergyEquipmentProject\bin\Debug\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NetSpell.SpellChecker, Version=2.1.7.39341, Culture=neutral, PublicKeyToken=318b389f0db66e46, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FaHuoGuanLi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FaHuoGuanLi.Designer.cs">
+      <DependentUpon>FaHuoGuanLi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaHuoGuanLi_newTaoJian_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaHuoGuanLi_newTaoJian_Dialog.Designer.cs">
+      <DependentUpon>FaHuoGuanLi_newTaoJian_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaHuoGuanLi_newGaiZhuang_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaHuoGuanLi_newGaiZhuang_Dialog.Designer.cs">
+      <DependentUpon>FaHuoGuanLi_newGaiZhuang_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaHuoGuanLi_viewGaiZhuang_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaHuoGuanLi_viewGaiZhuang_Dialog.Designer.cs">
+      <DependentUpon>FaHuoGuanLi_viewGaiZhuang_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaHuoGuanLi_viewTaoJian_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaHuoGuanLi_viewTaoJian_Dialog.Designer.cs">
+      <DependentUpon>FaHuoGuanLi_viewTaoJian_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaiZhuangContractView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GaiZhuangContractView.Designer.cs">
+      <DependentUpon>GaiZhuangContractView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaiZhuangContractView1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GaiZhuangContractView1.Designer.cs">
+      <DependentUpon>GaiZhuangContractView1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaiZhuangHeTong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GaiZhuangHeTong.Designer.cs">
+      <DependentUpon>GaiZhuangHeTong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaiZhuangHeTong_add_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GaiZhuangHeTong_add_Dialog.Designer.cs">
+      <DependentUpon>GaiZhuangHeTong_add_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaiZhuangHeTong_add_Dialog1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GaiZhuangHeTong_add_Dialog1.Designer.cs">
+      <DependentUpon>GaiZhuangHeTong_add_Dialog1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeTongPingShen_add_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeTongPingShen_add_Dialog.Designer.cs">
+      <DependentUpon>HeTongPingShen_add_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeTongPingShen_add_Dialog1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeTongPingShen_add_Dialog1.Designer.cs">
+      <DependentUpon>HeTongPingShen_add_Dialog1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeTongPingShen_add_Dialog2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeTongPingShen_add_Dialog2.Designer.cs">
+      <DependentUpon>HeTongPingShen_add_Dialog2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeTongPingShen_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeTongPingShen_Dialog.Designer.cs">
+      <DependentUpon>HeTongPingShen_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeTongShenPi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HeTongShenPi.Designer.cs">
+      <DependentUpon>HeTongShenPi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeTongShenPi_HeTongBaoGuanYuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HeTongShenPi_HeTongBaoGuanYuan.Designer.cs">
+      <DependentUpon>HeTongShenPi_HeTongBaoGuanYuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeTongShenPi_ZongJingLi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HeTongShenPi_ZongJingLi.Designer.cs">
+      <DependentUpon>HeTongShenPi_ZongJingLi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeTongShenPi_ZongKuaiJiShi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HeTongShenPi_ZongKuaiJiShi.Designer.cs">
+      <DependentUpon>HeTongShenPi_ZongKuaiJiShi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeTongTongJi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HeTongTongJi.Designer.cs">
+      <DependentUpon>HeTongTongJi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeTong_view_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeTong_view_Dialog.Designer.cs">
+      <DependentUpon>HeTong_view_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HuiYuanDengJi_add_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuiYuanDengJi_add_Dialog.Designer.cs">
+      <DependentUpon>HuiYuanDengJi_add_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HuiYuanDengJi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HuiYuanDengJi.Designer.cs">
+      <DependentUpon>HuiYuanDengJi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuBanGuanLi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MuBanGuanLi.Designer.cs">
+      <DependentUpon>MuBanGuanLi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuBanGuanLi_add_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuBanGuanLi_add_Dialog.Designer.cs">
+      <DependentUpon>MuBanGuanLi_add_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuBanGuanLi_add_Dialog1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuBanGuanLi_add_Dialog1.Designer.cs">
+      <DependentUpon>MuBanGuanLi_add_Dialog1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuBanInfo_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuBanInfo_Input.Designer.cs">
+      <DependentUpon>MuBanInfo_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuBanSelect_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuBanSelect_Dialog.Designer.cs">
+      <DependentUpon>MuBanSelect_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentManagement.Designer.cs">
+      <DependentUpon>PaymentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentManagement_addSuit_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentManagement_addSuit_Dialog.Designer.cs">
+      <DependentUpon>PaymentManagement_addSuit_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ContractService.cs" />
+    <Compile Include="Service\DeliveryService.cs" />
+    <Compile Include="SuiteContractJudgeXSFZR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuiteContractJudgeXSFZR.Designer.cs">
+      <DependentUpon>SuiteContractJudgeXSFZR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuiteContractJudgeZJL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuiteContractJudgeZJL.Designer.cs">
+      <DependentUpon>SuiteContractJudgeZJL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuiteContractJudgeZKJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuiteContractJudgeZKJ.Designer.cs">
+      <DependentUpon>SuiteContractJudgeZKJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuiteContractView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuiteContractView.Designer.cs">
+      <DependentUpon>SuiteContractView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuiteContractView1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuiteContractView1.Designer.cs">
+      <DependentUpon>SuiteContractView1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaoJianHeTong_add_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoJianHeTong_add_Dialog.Designer.cs">
+      <DependentUpon>TaoJianHeTong_add_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaoJianHeTong_add_Dialog1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoJianHeTong_add_Dialog1.Designer.cs">
+      <DependentUpon>TaoJianHeTong_add_Dialog1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeiXiuHeTong_add_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeiXiuHeTong_add_Dialog.Designer.cs">
+      <DependentUpon>WeiXiuHeTong_add_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaoJianHeTong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaoJianHeTong.Designer.cs">
+      <DependentUpon>TaoJianHeTong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeiXiuHeTong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WeiXiuHeTong.Designer.cs">
+      <DependentUpon>WeiXiuHeTong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentManagement_add_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentManagement_add_Dialog.Designer.cs">
+      <DependentUpon>PaymentManagement_add_Dialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonControl\CommonControl.csproj">
+      <Project>{668BF412-E4C3-4F29-9FBE-F69332C290B2}</Project>
+      <Name>CommonControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonWindow\CommonWindow.csproj">
+      <Project>{B5A3A9CE-CAA4-42B9-9C4C-D08FA4635283}</Project>
+      <Name>CommonWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomManageWindow\CustomManageWindow.csproj">
+      <Project>{72D31B54-757D-47D2-919A-A4AED71C8D99}</Project>
+      <Name>CustomManageWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityClassLibrary\EntityClassLibrary.csproj">
+      <Project>{6C5F2133-D535-4CA4-865F-C641810A4820}</Project>
+      <Name>EntityClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GongYiGuanLi\GongYiGuanLi.csproj">
+      <Project>{E3BA85E8-4E08-462E-9A8D-819DB6BD88C2}</Project>
+      <Name>GongYiGuanLi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLProvider\SQLProvider.csproj">
+      <Project>{2C410869-C0F3-49A4-85E6-68B6E7072707}</Project>
+      <Name>SQLProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinHtmlEditor\WinHtmlEditor.csproj">
+      <Project>{1D1EF0A4-1D49-4D42-9295-E3B28359389A}</Project>
+      <Name>WinHtmlEditor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FaHuoGuanLi.resx">
+      <DependentUpon>FaHuoGuanLi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaHuoGuanLi_newTaoJian_Dialog.resx">
+      <DependentUpon>FaHuoGuanLi_newTaoJian_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaHuoGuanLi_newGaiZhuang_Dialog.resx">
+      <DependentUpon>FaHuoGuanLi_newGaiZhuang_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaHuoGuanLi_viewGaiZhuang_Dialog.resx">
+      <DependentUpon>FaHuoGuanLi_viewGaiZhuang_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaHuoGuanLi_viewTaoJian_Dialog.resx">
+      <DependentUpon>FaHuoGuanLi_viewTaoJian_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaiZhuangContractView.resx">
+      <DependentUpon>GaiZhuangContractView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaiZhuangContractView1.resx">
+      <DependentUpon>GaiZhuangContractView1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaiZhuangHeTong.resx">
+      <DependentUpon>GaiZhuangHeTong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaiZhuangHeTong_add_Dialog.resx">
+      <DependentUpon>GaiZhuangHeTong_add_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaiZhuangHeTong_add_Dialog1.resx">
+      <DependentUpon>GaiZhuangHeTong_add_Dialog1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeTongPingShen_add_Dialog.resx">
+      <DependentUpon>HeTongPingShen_add_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeTongPingShen_add_Dialog1.resx">
+      <DependentUpon>HeTongPingShen_add_Dialog1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeTongPingShen_add_Dialog2.resx">
+      <DependentUpon>HeTongPingShen_add_Dialog2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeTongPingShen_Dialog.resx">
+      <DependentUpon>HeTongPingShen_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeTongShenPi.resx">
+      <DependentUpon>HeTongShenPi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeTongShenPi_HeTongBaoGuanYuan.resx">
+      <DependentUpon>HeTongShenPi_HeTongBaoGuanYuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeTongShenPi_ZongJingLi.resx">
+      <DependentUpon>HeTongShenPi_ZongJingLi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeTongShenPi_ZongKuaiJiShi.resx">
+      <DependentUpon>HeTongShenPi_ZongKuaiJiShi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeTongTongJi.resx">
+      <DependentUpon>HeTongTongJi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeTong_view_Dialog.resx">
+      <DependentUpon>HeTong_view_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuiYuanDengJi_add_Dialog.resx">
+      <DependentUpon>HuiYuanDengJi_add_Dialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuiYuanDengJi.resx">
+      <DependentUpon>HuiYuanDengJi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuBanGuanLi.resx">
+      <DependentUpon>MuBanGuanLi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuBanGuanLi_add_Dialog.resx">
+      <DependentUpon>MuBanGuanLi_add_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuBanGuanLi_add_Dialog1.resx">
+      <DependentUpon>MuBanGuanLi_add_Dialog1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuBanInfo_Input.resx">
+      <DependentUpon>MuBanInfo_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuBanSelect_Dialog.resx">
+      <DependentUpon>MuBanSelect_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentManagement.resx">
+      <DependentUpon>PaymentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentManagement_addSuit_Dialog.resx">
+      <DependentUpon>PaymentManagement_addSuit_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuiteContractJudgeXSFZR.resx">
+      <DependentUpon>SuiteContractJudgeXSFZR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuiteContractJudgeZJL.resx">
+      <DependentUpon>SuiteContractJudgeZJL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuiteContractJudgeZKJ.resx">
+      <DependentUpon>SuiteContractJudgeZKJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuiteContractView.resx">
+      <DependentUpon>SuiteContractView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuiteContractView1.resx">
+      <DependentUpon>SuiteContractView1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoJianHeTong_add_Dialog.resx">
+      <DependentUpon>TaoJianHeTong_add_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoJianHeTong_add_Dialog1.resx">
+      <DependentUpon>TaoJianHeTong_add_Dialog1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeiXiuHeTong_add_Dialog.resx">
+      <DependentUpon>WeiXiuHeTong_add_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoJianHeTong.resx">
+      <DependentUpon>TaoJianHeTong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeiXiuHeTong.resx">
+      <DependentUpon>WeiXiuHeTong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentManagement_add_Dialog.resx">
+      <DependentUpon>PaymentManagement_add_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\打印.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\打印select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\导出.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\导出select.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

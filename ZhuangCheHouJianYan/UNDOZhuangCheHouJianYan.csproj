@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF99D720-2AD8-4B95-98AB-698C7D203890}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZhuangCheHouJianYan</RootNamespace>
+    <AssemblyName>ZhuangCheHouJianYan</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EnergyEquipmentProject\bin\Debug\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanChaiYouCNG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanChaiYouCNG.Designer.cs">
+      <DependentUpon>ZhuangCheHouJianYanChaiYouCNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanChaiYouCNG_ChaKan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanChaiYouCNG_ChaKan.Designer.cs">
+      <DependentUpon>ZhuangCheHouJianYanChaiYouCNG_ChaKan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanCNG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanCNG.Designer.cs">
+      <DependentUpon>ZhuangCheHouJianYanCNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanCNG_ChaKan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanCNG_ChaKan.Designer.cs">
+      <DependentUpon>ZhuangCheHouJianYanCNG_ChaKan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanLNG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanLNG.Designer.cs">
+      <DependentUpon>ZhuangCheHouJianYanLNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanLNG_ChaKan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYanLNG_ChaKan.Designer.cs">
+      <DependentUpon>ZhuangCheHouJianYanLNG_ChaKan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYan_ChaiYouCNG_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYan_ChaiYouCNG_1.Designer.cs">
+      <DependentUpon>ZhuangCheHouJianYan_ChaiYouCNG_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYan_CNG_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYan_CNG_1.Designer.cs">
+      <DependentUpon>ZhuangCheHouJianYan_CNG_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYan_LNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhuangCheHouJianYan_LNG.Designer.cs">
+      <DependentUpon>ZhuangCheHouJianYan_LNG.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonControl\CommonControl.csproj">
+      <Project>{668BF412-E4C3-4F29-9FBE-F69332C290B2}</Project>
+      <Name>CommonControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuangCheHouJianYanChaiYouCNG.resx">
+      <DependentUpon>ZhuangCheHouJianYanChaiYouCNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuangCheHouJianYanChaiYouCNG_ChaKan.resx">
+      <DependentUpon>ZhuangCheHouJianYanChaiYouCNG_ChaKan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuangCheHouJianYanCNG.resx">
+      <DependentUpon>ZhuangCheHouJianYanCNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuangCheHouJianYanCNG_ChaKan.resx">
+      <DependentUpon>ZhuangCheHouJianYanCNG_ChaKan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuangCheHouJianYanLNG.resx">
+      <DependentUpon>ZhuangCheHouJianYanLNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuangCheHouJianYanLNG_ChaKan.resx">
+      <DependentUpon>ZhuangCheHouJianYanLNG_ChaKan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuangCheHouJianYan_ChaiYouCNG_1.resx">
+      <DependentUpon>ZhuangCheHouJianYan_ChaiYouCNG_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuangCheHouJianYan_CNG_1.resx">
+      <DependentUpon>ZhuangCheHouJianYan_CNG_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuangCheHouJianYan_LNG.resx">
+      <DependentUpon>ZhuangCheHouJianYan_LNG.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\打印.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\打印select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\导出.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\导出select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建select.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

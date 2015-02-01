@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+	<class name="TiaoShiBaoGao" table="DebugReport" >
+		<id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+			<generator class="native" />
+		</id>
+
+		<property name="CarBaseInfoId" column="CarBaseInfoId" type="long" length="10" not-null="true" />
+		<property name="DebugPerson" column="DebugPerson" type="string" length="10" />
+		<property name="SingleFirewoodOilyFees" column="SingleFirewoodOilyFees" type="float"  />
+		<property name="SingleFirewoodOilyTotalFees" column="SingleFirewoodOilyTotalFees" type="float"  />
+		<property name="SingleFirewoodOilyAverageFees" column="SingleFirewoodOilyAverageFees" type="float"  />
+		<property name="OilAndGasGasFees" column="OilAndGasGasFees" type="float" />
+		<property name="OilAndGasOilFees" column="OilAndGasOilFees" type="float"  />
+		<property name="OilAndGasTotalFees" column="OilAndGasTotalFees"  type="float"/>
+
+		<property name="OilAndGasAverageFees" column="OilAndGasAverageFees" type="float"  />
+
+		<property name="OilAndGasSave" column="OilAndGasSave" type="float" />
+		<property name="Dieselfuel" column="Dieselfuel" type="float" />
+		<property name="DieselPrices" column="DieselPrices" type="float" />
+		
+		<property name="CNGPrices" column="CNGPrices" type="float"/>
+		<property name="Dynamic" column="Dynamic" type="string" length="100" />
+		<property name="Issue" column="Issue" type="string" length="100" />
+		<property name="Status" column="Status" type="int" length="1" />
+		<property name="DebugDate" column="DebugDate" type="long" length="18" />
+		<property name="Time" column="Time" type="long" length="20" />
+		<property name="Mileage" column="Mileage" type="float"  />
+		<property name="SingleDiesekm" column="SingleDiesekm" type="float"  />
+		<property name="OilAndGaskm" column="OilAndGaskm" type="float"  />
+		<property name="DrivingDirections" column="DrivingDirections" type="string" length="20" />
+		<property name="HistoryId" column="HistoryId" type="long" length="10" />
+		<property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+		<property name="State" column="State" type="int"  length="1"/>
+		
+		<many-to-one name="LiuZhuanBiao" column="InspectionFlowTableId" lazy="false" not-null="true"
+                class="EntityClassLibrary.LiuZhuanBiao, EntityClassLibrary" />
+		
+		
+	</class>
+
+</hibernate-mapping>

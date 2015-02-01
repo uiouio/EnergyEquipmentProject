@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9BEEE4A-4933-4942-9983-A23CD8E276B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkProcedure</RootNamespace>
+    <AssemblyName>WorkProcedure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EnergyEquipmentProject\bin\Debug\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CopyPaiGongDan_add_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyPaiGongDan_add_Dialog.Designer.cs">
+      <DependentUpon>CopyPaiGongDan_add_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dispatch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dispatch.Designer.cs">
+      <DependentUpon>Dispatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dispatch1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dispatch1.Designer.cs">
+      <DependentUpon>Dispatch1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dispatch1_ChaKan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dispatch1_ChaKan.Designer.cs">
+      <DependentUpon>Dispatch1_ChaKan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GongZuoZhuXuanZe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongZuoZhuXuanZe.Designer.cs">
+      <DependentUpon>GongZuoZhuXuanZe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallRecord.Designer.cs">
+      <DependentUpon>InstallRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiuZhuanBiaoEdit_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LiuZhuanBiaoEdit_Edit.Designer.cs">
+      <DependentUpon>LiuZhuanBiaoEdit_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiuZhuanBiaoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LiuZhuanBiaoView.Designer.cs">
+      <DependentUpon>LiuZhuanBiaoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiuZhuanBiaoView_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LiuZhuanBiaoView_Detail.Designer.cs">
+      <DependentUpon>LiuZhuanBiaoView_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForm.Designer.cs">
+      <DependentUpon>myForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\OP_LZB.cs" />
+    <Compile Include="ZiLiaoShenChaChaiYouCNG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZiLiaoShenChaChaiYouCNG.Designer.cs">
+      <DependentUpon>ZiLiaoShenChaChaiYouCNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZiLiaoShenChaCNG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZiLiaoShenChaCNG.Designer.cs">
+      <DependentUpon>ZiLiaoShenChaCNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZiLiaoShenChaCNG_ChaKan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZiLiaoShenChaCNG_ChaKan.Designer.cs">
+      <DependentUpon>ZiLiaoShenChaCNG_ChaKan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZiLiaoShenChaLNG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZiLiaoShenChaLNG.Designer.cs">
+      <DependentUpon>ZiLiaoShenChaLNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZiLiaoShenChaLNG_ChaKan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZiLiaoShenChaLNG_ChaKan.Designer.cs">
+      <DependentUpon>ZiLiaoShenChaLNG_ChaKan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZiLiaoShenCha_ChaiYouCNGChaKan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZiLiaoShenCha_ChaiYouCNGChaKan.Designer.cs">
+      <DependentUpon>ZiLiaoShenCha_ChaiYouCNGChaKan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZiLiaoShenCha_ChaiYouCNGEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZiLiaoShenCha_ChaiYouCNGEdit.Designer.cs">
+      <DependentUpon>ZiLiaoShenCha_ChaiYouCNGEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZiLiaoShenCha_CNGEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZiLiaoShenCha_CNGEdit.Designer.cs">
+      <DependentUpon>ZiLiaoShenCha_CNGEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZiLiaoShenCha_LNGEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZiLiaoShenCha_LNGEdit.Designer.cs">
+      <DependentUpon>ZiLiaoShenCha_LNGEdit.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonControl\CommonControl.csproj">
+      <Project>{668BF412-E4C3-4F29-9FBE-F69332C290B2}</Project>
+      <Name>CommonControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonMethod\CommonMethod.csproj">
+      <Project>{7DFA3086-1243-4993-B8AD-80D98A2DEE23}</Project>
+      <Name>CommonMethod</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonWindow\CommonWindow.csproj">
+      <Project>{B5A3A9CE-CAA4-42B9-9C4C-D08FA4635283}</Project>
+      <Name>CommonWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityClassLibrary\EntityClassLibrary.csproj">
+      <Project>{6C5F2133-D535-4CA4-865F-C641810A4820}</Project>
+      <Name>EntityClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GongYiGuanLi\GongYiGuanLi.csproj">
+      <Project>{E3BA85E8-4E08-462E-9A8D-819DB6BD88C2}</Project>
+      <Name>GongYiGuanLi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLProvider\SQLProvider.csproj">
+      <Project>{2C410869-C0F3-49A4-85E6-68B6E7072707}</Project>
+      <Name>SQLProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CopyPaiGongDan_add_Dialog.resx">
+      <DependentUpon>CopyPaiGongDan_add_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dispatch.resx">
+      <DependentUpon>Dispatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dispatch1.resx">
+      <DependentUpon>Dispatch1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dispatch1_ChaKan.resx">
+      <DependentUpon>Dispatch1_ChaKan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GongZuoZhuXuanZe.resx">
+      <DependentUpon>GongZuoZhuXuanZe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallRecord.resx">
+      <DependentUpon>InstallRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiuZhuanBiaoEdit_Edit.resx">
+      <DependentUpon>LiuZhuanBiaoEdit_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiuZhuanBiaoView.resx">
+      <DependentUpon>LiuZhuanBiaoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiuZhuanBiaoView_Detail.resx">
+      <DependentUpon>LiuZhuanBiaoView_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZiLiaoShenChaChaiYouCNG.resx">
+      <DependentUpon>ZiLiaoShenChaChaiYouCNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZiLiaoShenChaCNG.resx">
+      <DependentUpon>ZiLiaoShenChaCNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZiLiaoShenChaCNG_ChaKan.resx">
+      <DependentUpon>ZiLiaoShenChaCNG_ChaKan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZiLiaoShenChaLNG.resx">
+      <DependentUpon>ZiLiaoShenChaLNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZiLiaoShenChaLNG_ChaKan.resx">
+      <DependentUpon>ZiLiaoShenChaLNG_ChaKan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZiLiaoShenCha_ChaiYouCNGChaKan.resx">
+      <DependentUpon>ZiLiaoShenCha_ChaiYouCNGChaKan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZiLiaoShenCha_ChaiYouCNGEdit.resx">
+      <DependentUpon>ZiLiaoShenCha_ChaiYouCNGEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZiLiaoShenCha_CNGEdit.resx">
+      <DependentUpon>ZiLiaoShenCha_CNGEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZiLiaoShenCha_LNGEdit.resx">
+      <DependentUpon>ZiLiaoShenCha_LNGEdit.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\打印.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\打印select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\导出.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\导出select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建select.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

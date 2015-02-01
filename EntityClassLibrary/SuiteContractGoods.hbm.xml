@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+  <class name="SuiteContractGoods" table="SuiteContractGoods">
+    <id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+   
+    <property name="Count" column="Count" type="int" length="5" />
+   
+    <many-to-one name="GoodsBaseInfoId" column="GoodsBaseInfoId" lazy="false" not-null="true"
+                class="EntityClassLibrary.GoodsBaseInfo, EntityClassLibrary" />
+    <many-to-one name="SuiteContractId" column="SuiteContractId" lazy="false"
+                class="EntityClassLibrary.SuiteContract, EntityClassLibrary" />
+    <property name="Remark" column="Remark" type="string" length="100" />
+
+    <property name="HistoryId" column="HistoryId" type="long" length="10" />
+    <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+    <property name="State" column="SuiteContractGoodsState" type="int"  length="1"/>
+  </class>
+
+</hibernate-mapping>

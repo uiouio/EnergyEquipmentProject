@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+  <class name="WeiXiuJiLu" table="WeiXiuJiLu" >
+    <id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="ModificationNumber" column="ModificationNumber" type="string" length="20" />
+    <property name="License" column="License" type="string" length="20" />
+    <property name="GasType" column="GasType" type="string" length="10" />
+    <property name="Condition" column="Condition" type="string" length="100" />
+    <property name="GearSpeed" column="GearSpeed" type="string" length="10" />
+    <property name="SpeedFactor" column="SpeedFactor" type="string" length="10" />
+    <property name="StartGear" column="StartGear" type="string" length="10" />
+    <property name="StartSpeed" column="StartSpeed" type="string" length="10" />
+    <property name="BestGasRpm" column="BestGasRpm" type="string" length="10" />
+    <property name="BestGasOil" column="BestGasOil" type="string" length="10" />
+    <property name="BestGasSpeed" column="BestGasSpeed" type="string" length="10" />
+    <property name="BestGasProportion" column="BestGasProportion" type="string" length="10" />
+    <property name="SupplyPressure" column="SupplyPressure" type="string" length="10" />
+    <property name="MinimumFuelConsumption" column="MinimumFuelConsumption" type="string" length="10" />
+    <property name="LessTemperatureProtect" column="LessTemperatureProtect" type="string" length="10" />
+    <property name="ManyTemperatureProtect" column="ManyTemperatureProtect" type="string" length="10" />
+
+    <property name="Rpm" column="Rpm" type="string" length="10" />
+    <property name="Speed" column="Speed" type="string" length="10" />
+    <property name="OilSupply" column="OilSupply" type="string" length="10" />
+    <property name="Oilback" column="Oilback" type="string" length="10" />
+    <property name="OilCosumption" column="OilCosumption" type="string" length="10" />
+    <property name="GasValue" column="GasValue" type="string" length="10" />
+    <property name="OilCosumptionHigh" column="OilCosumptionHigh" type="string" length="10" />
+    <property name="OilCosumptionShort" column="OilCosumptionShort" type="string" length="10" />
+    <property name="GasCosumptionHigh" column="GasCosumptionHigh" type="string" length="10" />
+    <property name="GasCosumptionShort" column="GasCosumptionShort" type="string" length="10" />
+    <property name="Edu" column="Edu" type="string" length="10" />
+    <property name="ExhaustGasTemperature" column="ExhaustGasTemperature" type="string" length="10" />
+
+    <property name="Rpm2" column="Rpm2" type="string" length="10" />
+    <property name="Speed2" column="Speed2" type="string" length="10" />
+    <property name="OilSupply2" column="OilSupply2" type="string" length="10" />
+    <property name="Oilback2" column="Oilback2" type="string" length="10" />
+    <property name="OilCosumption2" column="OilCosumption2" type="string" length="10" />
+    <property name="GasValue2" column="GasValue2" type="string" length="10" />
+    <property name="OilCosumptionHigh2" column="OilCosumptionHigh2" type="string" length="10" />
+    <property name="OilCosumptionShort2" column="OilCosumptionShort2" type="string" length="10" />
+    <property name="GasCosumptionHigh2" column="GasCosumptionHigh2" type="string" length="10" />
+    <property name="GasCosumptionShort2" column="GasCosumptionShort2" type="string" length="10" />
+    <property name="Edu2" column="Edu2" type="string" length="10" />
+    <property name="ExhaustGasTemperature2" column="ExhaustGasTemperature2" type="string" length="10" />
+
+    <property name="Rpm3" column="Rpm3" type="string" length="10" />
+    <property name="Speed3" column="Speed3" type="string" length="10" />
+    <property name="OilSupply3" column="OilSupply3" type="string" length="10" />
+    <property name="Oilback3" column="Oilback3" type="string" length="10" />
+    <property name="OilCosumption3" column="OilCosumption3" type="string" length="10" />
+    <property name="GasValue3" column="GasValue3" type="string" length="10" />
+    <property name="OilCosumptionHigh3" column="OilCosumptionHigh3" type="string" length="10" />
+    <property name="OilCosumptionShort3" column="OilCosumptionShort3" type="string" length="10" />
+    <property name="GasCosumptionHigh3" column="GasCosumptionHigh3" type="string" length="10" />
+    <property name="GasCosumptionShort3" column="GasCosumptionShort3" type="string" length="10" />
+    <property name="Edu3" column="Edu3" type="string" length="10" />
+    <property name="ExhaustGasTemperature3" column="ExhaustGasTemperature3" type="string" length="10" />
+
+    <property name="Rpm4" column="Rpm4" type="string" length="10" />
+    <property name="Speed4" column="Speed4" type="string" length="10" />
+    <property name="OilSupply4" column="OilSupply4" type="string" length="10" />
+    <property name="Oilback4" column="Oilback4" type="string" length="10" />
+    <property name="OilCosumption4" column="OilCosumption4" type="string" length="10" />
+    <property name="GasValue4" column="GasValue4" type="string" length="10" />
+    <property name="OilCosumptionHigh4" column="OilCosumptionHigh4" type="string" length="10" />
+    <property name="OilCosumptionShort4" column="OilCosumptionShort4" type="string" length="10" />
+    <property name="GasCosumptionHigh4" column="GasCosumptionHigh4" type="string" length="10" />
+    <property name="GasCosumptionShort4" column="GasCosumptionShort4" type="string" length="10" />
+    <property name="Edu4" column="Edu4" type="string" length="10" />
+    <property name="ExhaustGasTemperature4" column="ExhaustGasTemperature4" type="string" length="10" />
+
+    <property name="DieselMiles" column="DieselMiles" type="float" length="10" />
+    <property name="Oilcosts" column="Oilcosts" type="float" length="10" />
+    <property name="TotalCosts" column="TotalCosts" type="float" length="10" />
+    <property name="AverageCosts" column="AverageCosts" type="float" length="10" />
+    <property name="OilPrice" column="OilPrice" type="float" length="10" />
+    <property name="OilAndGasMiles" column="OilAndGasMiles" type="float" length="10" />
+    <property name="OilAndGasCosts" column="OilAndGasCosts" type="float" length="10" />
+    <property name="OilAndGasOilCosts" column="OilAndGasOilCosts" type="float" length="10" />
+    <property name="OilAndGasTotalCosts" column="OilAndGasTotalCosts" type="float" length="10" />
+    <property name="OilAndGasAverageCosts" column="OilAndGasAverageCosts" type="float" length="10" />
+    <property name="OilAndGasOilPrice" column="OilAndGasOilPrice" type="float" length="10" />
+    <property name="OilAndGasGasPrice" column="OilAndGasGasPrice" type="float" length="10" />
+    
+    <property name="DebugTimes" column="DebugTimes" type="string" length="10" />
+    <property name="DebugGroup" column="DebugGroup" type="string" length="10" />
+    <property name="DebugStaff" column="DebugStaff" type="string" length="20" />
+    <property name="DebugTime" column="DebugTime" type="long" length="18" />
+    <property name="Dynamic" column="Dynamic" type="string" length="10" />
+    <property name="Economy" column="Economy" type="string" length="10" />
+    <property name="Phone" column="Phone" type="int" length="15" />
+    <property name="Name" column="Name" type="string" length="10" />
+
+   
+
+
+    <property name="HistoryId" column="HistoryId" type="long" length="10" />
+    <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+    <property name="State" column="State" type="int"  length="1"/>
+
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,5 @@
+F:\EnergyEquipmentProject\EntityClassLibrary\bin\Release\EntityClassLibrary.dll
+F:\EnergyEquipmentProject\EntityClassLibrary\bin\Release\EntityClassLibrary.pdb
+F:\EnergyEquipmentProject\EntityClassLibrary\bin\Release\Iesi.Collections.dll
+F:\EnergyEquipmentProject\EntityClassLibrary\obj\Release\EntityClassLibrary.dll
+F:\EnergyEquipmentProject\EntityClassLibrary\obj\Release\EntityClassLibrary.pdb

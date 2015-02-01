@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+	<class name="LiuZhuanBiao" table="InspectionFlowTable" >
+		<id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+			<generator class="native" />
+		</id>
+		
+		<property name="CarBaseInfoID" column="CarBaseInfoID" type="long" length="10" not-null="true" />
+		<property name="WiringInstaller" column="WiringInstaller" type="string" length="10" />
+		<property name="WiringHead" column="WiringHead" type="string" length="10" />
+		<property name="WiringRemark" column="WiringRemark" type="String" length="100" />
+		<property name="ElectricECUInstaller" column="ElectricECUInstaller" type="string" length="10" />
+		<property name="ElectricECUHead" column="ElectricECUHead" type="string" length="10" />
+		<property name="ElectricECURemark" column="ElectricECURemark" type="String" length="100" />
+
+		<property name="LimitOilInstaller" column="LimitOilInstaller" type="string" length="10" />
+		<property name="LimitOilHead" column="LimitOilHead" type="string" length="10" />
+		<property name="LimitOilRemark" column="LimitOilRemark" type="String" length="100" />
+		<property name="SensorInstaller" column="SensorInstaller" type="string" length="10" />
+		<property name="SensorHead" column="SensorHead" type="string" length="10" />
+		<property name="SensorRemark" column="SensorRemark" type="String" length="100" />
+
+		<property name="SwitchInstaller" column="SwitchInstaller" type="string" length="10" />
+		<property name="SwitchHead" column="SwitchHead" type="string" length="10" />
+		<property name="SwitchRemark" column="SwitchRemark" type="string" length="100" />
+		<property name="KeySwitchInstaller" column="KeySwitchInstaller" type="string" length="10" />
+		<property name="KeySwitchHead" column="KeySwitchHead" type="string" length="10" />
+		<property name="KeySwitchReamrk" column="KeySwitchReamrk" type="string" length="100" />
+
+		<property name="LNGConnectionInstaller" column="LNGConnectionInstaller" type="string" length="10" />
+		<property name="LNGConnectionHead" column="LNGConnectionHead" type="string" length="10" />
+		<property name="LNGConnectionHeadRemark" column="LNGConnectionHeadRemark" type="String" length="100" />
+		<property name="CNGConnectionInstaller" column="CNGConnectionInstaller" type="string" length="10" />
+		<property name="CNGConnectionHead" column="CNGConnectionHead" type="string" length="10" />
+		<property name="CNGConnectionRemark" column="CNGConnectionRemark" type="String" length="100" />
+
+
+		<property name="MixerConnectionInstaller" column="MixerConnectionInstaller" type="string" length="10" />
+		<property name="MixerConnectionHead" column="MixerConnectionHead" type="string" length="10" />
+		<property name="MixerConnectionRemark" column="MixerConnectionRemark" type="String" length="100" />
+		<property name="SpeedAcquisitionInstaller" column="SpeedAcquisitionInstaller" type="string" length="10" />
+		<property name="SpeedAcquisitionHead" column="SpeedAcquisitionHead" type="string" length="10" />
+		<property name="SpeedAcquisitionRemark" column="SpeedAcquisitionRemark" type="String" length="100" />
+
+		<property name="SpeedSignalInstaller" column="SpeedSignalInstaller" type="string" length="10" />
+		<property name="SpeedSignalHead" column="SpeedSignalHead" type="string" length="10" />
+		<property name="SpeedSignalRemark" column="SpeedSignalRemark" type="string" length="100" />
+		<property name="TemperatureSignalInstaller" column="TemperatureSignalInstaller" type="string" length="10" />
+		<property name="TemperatureSignalHead" column="TemperatureSignalHead" type="string" length="10" />
+		<property name="TemperatureSignalRemark" column="TemperatureSignalRemark" type="string" length="100" />
+
+		<property name="FuelSignalInstaller" column="FuelSignalInstaller" type="string" length="10" />
+		<property name="FuelSignalHead" column="FuelSignalHead" type="string" length="10" />
+		<property name="FuelSignalRemark" column="FuelSignalRemark" type="string" length="100" />
+		<property name="SystemDebugInstaller" column="SystemDebugInstaller" type="string" length="10" />
+		<property name="SystemDebugHead" column="SystemDebugHead" type="string" length="10" />
+		<property name="SystemDebugRemark" column="SystemDebugRemark" type="string" length="100" />
+
+		<property name="TrainingLocation" column="TrainingLocation" type="string" length="100" />
+		<property name="Training" column="Training" type="string" length="100" />
+		<property name="DriverGuideCollect" column="DriverGuideCollect" type="string" length="1" />
+		<property name="TrainersSign" column="TrainersSign" type="string" length="5" />
+		<property name="TrainerDriverSign" column="TrainerDriverSign" type="string" length="5" />
+		<property name="TrainingDates" column="TrainingDates" type="long" length="18" />
+
+		<property name="AffectOriginalCar" column="AffectOriginalCar" type="int" length="1" />
+		<property name="AffectOriginalGasPedal" column="AffectOriginalGasPedal" type="int" length="1" />
+		<property name="AffectOriginalSpeed" column="AffectOriginalSpeed" type="int" length="1" />
+		<property name="AffectOriginalPower" column="AffectOriginalPower" type="int" length="1" />
+		<property name="Factory" column="Factory" type="string" length="50" />
+		<property name="EngingPower" column="EngingPower" type="float"  />
+		<property name="ScratchSaveState" column="ScratchSaveState" type="int" length="1" />
+		<property name="Time" column="Time" type="long" length="18" />
+		
+		<property name="HistoryId" column="HistoryId" type="long" length="10" />
+		<property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+		<property name="State" column="State" type="int"  length="1"/>
+	
+		<many-to-one name="PaiGongDan" column="RefitWorkId" lazy="false" not-null="true"
+                class="EntityClassLibrary.RefitWork, EntityClassLibrary" />
+	</class>
+
+</hibernate-mapping>
+

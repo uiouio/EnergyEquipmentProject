@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3DD4C7D4-08FD-4F1A-977A-60318CB08FF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XinXiGuanLi</RootNamespace>
+    <AssemblyName>XinXiGuanLi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EnergyEquipmentProject\bin\Debug\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSpell.SpellChecker">
+      <HintPath>..\lib\NetSpell.SpellChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RiChengGuanLi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RiChengGuanLi.Designer.cs">
+      <DependentUpon>RiChengGuanLi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RiChengGuanLi_view_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RiChengGuanLi_view_Dialog.Designer.cs">
+      <DependentUpon>RiChengGuanLi_view_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\LetterService.cs" />
+    <Compile Include="Service\NewsService.cs" />
+    <Compile Include="Service\ScheduleService.cs" />
+    <Compile Include="SiXinChaKan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SiXinChaKan.Designer.cs">
+      <DependentUpon>SiXinChaKan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiXinGuanLi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SiXinGuanLi.Designer.cs">
+      <DependentUpon>SiXinGuanLi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiXinGuanLi_add_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiXinGuanLi_add_Dialog.Designer.cs">
+      <DependentUpon>SiXinGuanLi_add_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiXinGuanLi_viewUser_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiXinGuanLi_viewUser_Dialog.Designer.cs">
+      <DependentUpon>SiXinGuanLi_viewUser_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiXinGuanLi_view_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiXinGuanLi_view_Dialog.Designer.cs">
+      <DependentUpon>SiXinGuanLi_view_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XinWenGuanLi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XinWenGuanLi.Designer.cs">
+      <DependentUpon>XinWenGuanLi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XinWenGuanLi_add_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XinWenGuanLi_add_Dialog.Designer.cs">
+      <DependentUpon>XinWenGuanLi_add_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XinWenGuanLi_view_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XinWenGuanLi_view_Dialog.Designer.cs">
+      <DependentUpon>XinWenGuanLi_view_Dialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonControl\CommonControl.csproj">
+      <Project>{668BF412-E4C3-4F29-9FBE-F69332C290B2}</Project>
+      <Name>CommonControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonMethod\CommonMethod.csproj">
+      <Project>{7DFA3086-1243-4993-B8AD-80D98A2DEE23}</Project>
+      <Name>CommonMethod</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonWindow\CommonWindow.csproj">
+      <Project>{B5A3A9CE-CAA4-42B9-9C4C-D08FA4635283}</Project>
+      <Name>CommonWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityClassLibrary\EntityClassLibrary.csproj">
+      <Project>{6C5F2133-D535-4CA4-865F-C641810A4820}</Project>
+      <Name>EntityClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLProvider\SQLProvider.csproj">
+      <Project>{2C410869-C0F3-49A4-85E6-68B6E7072707}</Project>
+      <Name>SQLProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinHtmlEditor\WinHtmlEditor.csproj">
+      <Project>{1D1EF0A4-1D49-4D42-9295-E3B28359389A}</Project>
+      <Name>WinHtmlEditor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiChengGuanLi.resx">
+      <DependentUpon>RiChengGuanLi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiChengGuanLi_view_Dialog.resx">
+      <DependentUpon>RiChengGuanLi_view_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiXinChaKan.resx">
+      <DependentUpon>SiXinChaKan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiXinGuanLi.resx">
+      <DependentUpon>SiXinGuanLi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiXinGuanLi_add_Dialog.resx">
+      <DependentUpon>SiXinGuanLi_add_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiXinGuanLi_viewUser_Dialog.resx">
+      <DependentUpon>SiXinGuanLi_viewUser_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiXinGuanLi_view_Dialog.resx">
+      <DependentUpon>SiXinGuanLi_view_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XinWenGuanLi.resx">
+      <DependentUpon>XinWenGuanLi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XinWenGuanLi_add_Dialog.resx">
+      <DependentUpon>XinWenGuanLi_add_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XinWenGuanLi_view_Dialog.resx">
+      <DependentUpon>XinWenGuanLi_view_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+  <class name="PurchaseContract" table="PurchaseContract" >
+    <id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+
+    <property name="PurchaseContractCode" type="String" length="50">
+      <column name="PurchaseContractCode"/>
+    </property>
+
+    <many-to-one name="SupplierInfoId" column="SupplierInfoId" lazy="false" not-null="true"
+                class="EntityClassLibrary.SupplierInfo, EntityClassLibrary" />
+    
+    <property name="PurchaseContractAddress" type="String" length="100">
+      <column name="PurchaseContractAddress"/>
+    </property>
+    
+    <property name="PurchaseContractTime" type="long" length="18">
+      <column name="PurchaseContractTime"/>
+    </property>
+    <property name="HandleTime" type="long" length="18">
+      <column name="HandleTime"/>
+    </property>
+    <property name="HandlePerson" type="String" length="50">
+      <column name="HandlePerson"/>
+    </property>
+    <property name="HandleOffice" type="String"  length="50">
+      <column name="HandleOffice"/>
+    </property>
+    <property name="SupName" type="String" length="50">
+      <column name="SupName"/>
+    </property>
+    <property name="SupAddress" type="String" length="50">
+      <column name="SupAddress"/>
+    </property>
+    <property name="SupPersonName" type="String"  length="50">
+      <column name="SupPersonName"/>
+    </property>
+    <property name="SupEntrustPersonName" type="String" length="50">
+      <column name="SupEntrustPersonName"/>
+    </property>
+    <property name="SupPhone" type="String" length="50">
+      <column name="SupPhone"/>
+    </property>
+    <property name="SupTaxCode" type="String"  length="50">
+      <column name="SupTaxCode"/>
+    </property>
+    <property name="SupBankName" type="String" length="50">
+      <column name="SupBankName"/>
+    </property>
+    <property name="SupBankCode" type="String" length="50">
+      <column name="SupBankCode"/>
+    </property>
+    <property name="SupZioCode" type="String" length="50">
+      <column name="SupZioCode"/>
+    </property>
+    <property name="RecName" type="String" length="50">
+      <column name="RecName"/>
+    </property>
+    <property name="RecAddress" type="String" length="50">
+      <column name="RecAddress"/>
+    </property>
+    <property name="RecPersonName" type="String" length="50">
+      <column name="RecPersonName"/>
+    </property>
+
+    <property name="RecEntrustPersonName" type="String" length="50">
+      <column name="RecEntrustPersonName"/>
+    </property>
+
+    <property name="RecPhone" type="String" length="50">
+      <column name="RecPhone"/>
+    </property>
+
+    <property name="RecTaxCode" type="String" length="50">
+      <column name="RecTaxCode"/>
+    </property>
+
+    <property name="RecBankName" type="String" length="50">
+      <column name="RecBankName"/>
+    </property>
+
+    <property name="RecBankCode" type="String" length="50">
+      <column name="RecBankCode"/>
+    </property>
+
+    <property name="RecZioCode" type="String" length="50">
+      <column name="RecZioCode"/>
+    </property>
+    <property name="PurchaseContractState" type="long" length="1">
+      <column name="PurchaseContractState"/>
+    </property>
+    
+    <property name="HistoryId" column="HistoryId" type="long" length="10" />
+    <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+    <property name="State" column="State" type="int"  length="1"/>
+    <!--<many-to-one name="Ku_Id" column="KU_ID" lazy="false" not-null="true"
+                class="ClassLibrary.WkTUser, ClassLibrary" />-->
+  </class>
+
+</hibernate-mapping>

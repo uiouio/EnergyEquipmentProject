@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+  <class name="Matter" table="Matter">
+    <id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="TypeFullName" type="string">
+      <column name="TypeFullName"/>
+    </property>
+    <property name="MatterContent" type="string">
+      <column name="MatterContent"/>
+    </property>
+    <property name="Number" type="string">
+      <column name="Number"/>
+    </property>
+    <property name="UserId" type="long">
+      <column name="UserId"/>
+    </property>
+    <property name="State" column="State" type="int" length="1"/>
+    <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+    <property name="HistoryId" column="HistoryId" type="long" length="10" not-null="true"/>
+  </class>
+</hibernate-mapping>

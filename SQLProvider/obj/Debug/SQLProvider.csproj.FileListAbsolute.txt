@@ -1,0 +1,50 @@
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\obj\Debug\ResolveAssemblyReference.cache
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\bin\Debug\SQLProvider.dll
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\bin\Debug\SQLProvider.pdb
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\bin\Debug\CommonMethod.dll
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\bin\Debug\EntityClassLibrary.dll
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\bin\Debug\LinFu.DynamicProxy.dll
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\bin\Debug\NHibernate.ByteCode.LinFu.dll
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\bin\Debug\NHibernate.Mapping.Attributes.dll
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\bin\Debug\CommonMethod.pdb
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\bin\Debug\EntityClassLibrary.pdb
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.dll
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.pdb
+E:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\bin\Debug\NHibernate.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Debug\SQLProvider.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Debug\SQLProvider.pdb
+F:\EnergyEquipmentProject\SQLProvider\bin\Debug\CommonMethod.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Debug\EntityClassLibrary.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Debug\LinFu.DynamicProxy.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Debug\NHibernate.ByteCode.LinFu.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Debug\NHibernate.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Debug\NHibernate.Mapping.Attributes.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Debug\CommonMethod.pdb
+F:\EnergyEquipmentProject\SQLProvider\bin\Debug\EntityClassLibrary.pdb
+F:\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.csprojResolveAssemblyReference.cache
+F:\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.dll
+F:\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.pdb
+F:\EnergyEquipmentProject\lib\SQLProvider.dll
+F:\EnergyEquipmentProject\lib\SQLProvider.pdb
+F:\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\SQLProvider.dll
+F:\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\SQLProvider.pdb
+D:\Users\仕\Desktop\双燃料\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\SQLProvider.dll
+D:\Users\仕\Desktop\双燃料\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\SQLProvider.pdb
+D:\Users\仕\Desktop\双燃料\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.csprojResolveAssemblyReference.cache
+D:\Users\仕\Desktop\双燃料\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.dll
+D:\Users\仕\Desktop\双燃料\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.pdb
+D:\Users\仕\Documents\Visual Studio 2012\Projects\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\SQLProvider.dll
+D:\Users\仕\Documents\Visual Studio 2012\Projects\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\SQLProvider.pdb
+D:\Users\仕\Documents\Visual Studio 2012\Projects\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.csprojResolveAssemblyReference.cache
+D:\Users\仕\Documents\Visual Studio 2012\Projects\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.dll
+D:\Users\仕\Documents\Visual Studio 2012\Projects\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.pdb
+C:\Users\lenovo\Desktop\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\SQLProvider.dll
+C:\Users\lenovo\Desktop\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\SQLProvider.pdb
+C:\Users\lenovo\Desktop\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Desktop\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.dll
+C:\Users\lenovo\Desktop\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.pdb
+F:\EnergyEquipmentProject\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\SQLProvider.dll
+F:\EnergyEquipmentProject\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\SQLProvider.pdb
+F:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.csprojResolveAssemblyReference.cache
+F:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.dll
+F:\EnergyEquipmentProject\EnergyEquipmentProject\SQLProvider\obj\Debug\SQLProvider.pdb

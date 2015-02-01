@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+  <class name="PurchasePlan" table="PurchasePlan" >
+    <id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <many-to-one name="UserId" column="UserId" lazy="false"  class="EntityClassLibrary.UserInfo,EntityClassLibrary" ></many-to-one>
+
+    <many-to-one name="PurchaseApplyId" column="PurchaseApplyId" lazy="false"  class="EntityClassLibrary.PurchaseApply,EntityClassLibrary" ></many-to-one>
+
+    <property name="PurchaseRemark" column="PurchaseRemark" type="string" length="200" />
+    <property name="PurchaseReplayRemark" column="PurchaseReplayRemark" type="string" length="200" />
+    <property name="PurchaseApplyTime" column="PurchaseApplyTime" type="long" length="18" />
+    
+    <property name="PurchaseNeedTime" column="PurchaseNeedTime" type="long" length="18" />
+   
+    <property name="PurchasePlanState" column="PurchasePlanState" type="long" length="1" />
+    
+    <property name="HistoryId" column="HistoryId" type="long" length="10" />
+    <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+    <property name="State" column="State" type="int"  length="1"/>
+
+    <!--<many-to-one name="Ku_Id" column="KU_ID" not-null="true"
+                class="ClassLibrary.WkTUser, ClassLibrary" />-->
+  </class>
+
+</hibernate-mapping>

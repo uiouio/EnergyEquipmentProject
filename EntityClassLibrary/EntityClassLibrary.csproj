@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C5F2133-D535-4CA4-865F-C641810A4820}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EntityClassLibrary</RootNamespace>
+    <AssemblyName>EntityClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EnergyEquipmentProject\bin\Debug\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agent.cs" />
+    <Compile Include="AgentGood.cs" />
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="Batch.cs" />
+    <Compile Include="BrokenParts.cs" />
+    <Compile Include="Car.cs" />
+    <Compile Include="CarBaseInfo.cs" />
+    <Compile Include="CarTheLibrary.cs" />
+    <Compile Include="CheRuKuInfo.cs" />
+    <Compile Include="CustomBaseInfo.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="GoodsBaseInfo.cs" />
+    <Compile Include="HuiYuanBaseInfo.cs" />
+    <Compile Include="InstallRecord.cs" />
+    <Compile Include="JianJianInfo.cs" />
+    <Compile Include="LiuZhuanBiao.cs" />
+    <Compile Include="Matter.cs" />
+    <Compile Include="ModificationContract.cs" />
+    <Compile Include="PaymentRecords.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ExceptionRecord.cs" />
+    <Compile Include="PurchaseApply.cs" />
+    <Compile Include="PurchaseApplyDetail.cs" />
+    <Compile Include="PurchaseContract.cs" />
+    <Compile Include="PurchaseContractDetail.cs" />
+    <Compile Include="PurchasePlan.cs" />
+    <Compile Include="PurchasePlanDetail.cs" />
+    <Compile Include="RefitWork.cs" />
+    <Compile Include="Schedule.cs" />
+    <Compile Include="ServiceGoods.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="StockOperation.cs" />
+    <Compile Include="StockOperationDetail.cs" />
+    <Compile Include="SuiteContractGoods.cs" />
+    <Compile Include="SupplierCreditRecord.cs" />
+    <Compile Include="SupplierInfo.cs" />
+    <Compile Include="Supplier_Goods.cs" />
+    <Compile Include="SuiteContract.cs" />
+    <Compile Include="TemplateManager.cs" />
+    <Compile Include="TiaoShiBaoGao.cs" />
+    <Compile Include="TransportContract.cs" />
+    <Compile Include="UserRole.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="Resource.cs" />
+    <Compile Include="WaitChooseSuppliers.cs" />
+    <Compile Include="WeiXiuFanKuiDan.cs" />
+    <Compile Include="News.cs" />
+    <Compile Include="WeiXiuJiLu.cs" />
+    <Compile Include="WorkingGroup.cs" />
+    <Compile Include="Letter.cs" />
+    <Compile Include="RefitWorkModel.cs" />
+    <Compile Include="RefitWorkGoods.cs" />
+    <Compile Include="RefitWorkModelGoods.cs" />
+    <Compile Include="DeliveryModificationRecords.cs" />
+    <Compile Include="DeliverySuiteRecords.cs" />
+    <Compile Include="PaymentRecordsSuit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExceptionRecord.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UserRole.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GoodsBaseInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LiuZhuanBiao.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiaoShiBaoGao.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportContract.hbm.xml" />
+    <EmbeddedResource Include="WeiXiuFanKuiDan.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomBaseInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarBaseInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierInfo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Matter.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="News.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="JianJianInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AgentGood.hbm.xml" />
+    <EmbeddedResource Include="Car.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateManager.hbm.xml" />
+    <EmbeddedResource Include="PaymentRecordsSuit.hbm.xml" />
+    <EmbeddedResource Include="DeliverySuiteRecords.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuiteContractGoods.hbm.xml" />
+    <EmbeddedResource Include="DeliveryModificationRecords.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Batch.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuiteContract.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierCreditRecord.hbm.xml" />
+    <EmbeddedResource Include="WaitChooseSuppliers.hbm.xml" />
+    <EmbeddedResource Include="PurchaseContract.hbm.xml" />
+    <EmbeddedResource Include="PurchaseContractDetail.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier_Goods.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseApply.hbm.xml" />
+    <EmbeddedResource Include="PurchaseApplyDetail.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchasePlan.hbm.xml" />
+    <EmbeddedResource Include="PurchasePlanDetail.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrokenParts.hbm.xml" />
+    <EmbeddedResource Include="PaymentRecords.hbm.xml" />
+    <EmbeddedResource Include="RefitWorkModelGoods.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceGoods.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RefitWorkGoods.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agent.hbm.xml" />
+    <EmbeddedResource Include="CarTheLibrary.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheRuKuInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RefitWorkModel.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letter.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RefitWork.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuiYuanBaseInfo.hbm.xml" />
+    <EmbeddedResource Include="ModificationContract.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingGroup.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockOperation.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockOperationDetail.hbm.xml" />
+    <EmbeddedResource Include="Schedule.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InstallRecord.hbm.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WeiXiuJiLu.hbm.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

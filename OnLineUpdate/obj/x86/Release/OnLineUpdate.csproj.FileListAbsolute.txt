@@ -1,0 +1,8 @@
+F:\EnergyEquipmentProject\OnLineUpdate\bin\Release\UpdateConfig.xml
+F:\EnergyEquipmentProject\OnLineUpdate\bin\Release\OnLineUpdate.exe
+F:\EnergyEquipmentProject\OnLineUpdate\bin\Release\OnLineUpdate.pdb
+F:\EnergyEquipmentProject\OnLineUpdate\obj\x86\Release\OnLineUpdate.Form1.resources
+F:\EnergyEquipmentProject\OnLineUpdate\obj\x86\Release\OnLineUpdate.Properties.Resources.resources
+F:\EnergyEquipmentProject\OnLineUpdate\obj\x86\Release\OnLineUpdate.csproj.GenerateResource.Cache
+F:\EnergyEquipmentProject\OnLineUpdate\obj\x86\Release\OnLineUpdate.exe
+F:\EnergyEquipmentProject\OnLineUpdate\obj\x86\Release\OnLineUpdate.pdb

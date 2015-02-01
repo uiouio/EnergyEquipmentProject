@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5A3A9CE-CAA4-42B9-9C4C-D08FA4635283}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonWindow</RootNamespace>
+    <AssemblyName>CommonWindow</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CategtoryTreeview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategtoryTreeview.Designer.cs">
+      <DependentUpon>CategtoryTreeview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectCompanyCustom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCompanyCustom.Designer.cs">
+      <DependentUpon>SelectCompanyCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectCompanyCustomInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCompanyCustomInfo.Designer.cs">
+      <DependentUpon>SelectCompanyCustomInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectGoods.Designer.cs">
+      <DependentUpon>SelectGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectPersonalCustom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectPersonalCustom.Designer.cs">
+      <DependentUpon>SelectPersonalCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectPersonalCustomInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectPersonalCustomInfo.Designer.cs">
+      <DependentUpon>SelectPersonalCustomInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUser.Designer.cs">
+      <DependentUpon>SelectUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Categtory.cs" />
+    <Compile Include="Service\CustomInfoService.cs" />
+    <Compile Include="Service\OpStock.cs" />
+    <Compile Include="Service\UserInfoService.cs" />
+    <Compile Include="TitlePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TitlePage.Designer.cs">
+      <DependentUpon>TitlePage.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonControl\CommonControl.csproj">
+      <Project>{668BF412-E4C3-4F29-9FBE-F69332C290B2}</Project>
+      <Name>CommonControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonMethod\CommonMethod.csproj">
+      <Project>{7DFA3086-1243-4993-B8AD-80D98A2DEE23}</Project>
+      <Name>CommonMethod</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityClassLibrary\EntityClassLibrary.csproj">
+      <Project>{6C5F2133-D535-4CA4-865F-C641810A4820}</Project>
+      <Name>EntityClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLProvider\SQLProvider.csproj">
+      <Project>{2C410869-C0F3-49A4-85E6-68B6E7072707}</Project>
+      <Name>SQLProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CategtoryTreeview.resx">
+      <DependentUpon>CategtoryTreeview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectCompanyCustom.resx">
+      <DependentUpon>SelectCompanyCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectCompanyCustomInfo.resx">
+      <DependentUpon>SelectCompanyCustomInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectGoods.resx">
+      <DependentUpon>SelectGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectPersonalCustom.resx">
+      <DependentUpon>SelectPersonalCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectPersonalCustomInfo.resx">
+      <DependentUpon>SelectPersonalCustomInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectUser.resx">
+      <DependentUpon>SelectUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitlePage.resx">
+      <DependentUpon>TitlePage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

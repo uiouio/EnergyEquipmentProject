@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+  <class name="Letter" table="Letter">
+    <id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <many-to-one name="SenderUser" column="SenderUser" lazy="false"
+               class="EntityClassLibrary.UserInfo, EntityClassLibrary" />
+    <property name="SenderTime" type="long">
+      <column name="SenderTime"/>
+    </property>
+    <property name="LetterContent" type="StringClob">
+      <column name="LetterContent"/>
+    </property>
+    <property name="LetterTitle" type="string">
+      <column name="LetterTitle"/>
+    </property>
+    <property name="FileName" type="string">
+      <column name="FileName"/>
+    </property>
+    <property name="FilePath" type="string">
+      <column name="FilePath"/>
+    </property>
+    <bag name="Users" table="Letter_UserInfo" lazy="false">
+      <key column="LetterId"/>
+      <many-to-many class="EntityClassLibrary.UserInfo,EntityClassLibrary" column="UserId"/>
+    </bag>
+    <property name="State" column="State" type="int" length="1"/>
+    <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+    <property name="HistoryId" column="HistoryId" type="long" length="10" not-null="true"/>
+  </class>
+</hibernate-mapping>

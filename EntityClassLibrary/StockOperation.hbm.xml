@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+  <class name="StockOperation" table="StockOperation" >
+    <id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="OperationTpye" column="OperationTpye" type="long" length="1" />
+    <property name="IOFlag" column="IOFlag" type="long" length="1" />
+    <property name="OperationTime" column="OperationTime" type="long" length="18" />
+
+    <many-to-one name="UserId" column="UserId" lazy="false"  class="EntityClassLibrary.UserInfo,EntityClassLibrary" ></many-to-one>
+    <many-to-one name="SupplierInfoId" column="SupplierInfoId" lazy="false"  class="EntityClassLibrary.SupplierInfo,EntityClassLibrary" ></many-to-one>
+
+    <property name="RetrospectListNumber" column="RetrospectListNumber" type="string" length="50" />
+    <property name="Remark" column="Remark" type="string" length="200" />
+    <bag name="OperationDetails" inverse="true" lazy="false">
+      <key column="StockOperationId"/>
+      <one-to-many class="EntityClassLibrary.StockOperationDetail,EntityClassLibrary" />
+    </bag>
+
+    
+    
+    <property name="HistoryId" column="HistoryId" type="long" length="10" />
+    <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+    <property name="State" column="State" type="int"  length="1"/>
+
+    <!--<many-to-one name="Ku_Id" column="KU_ID" not-null="true"
+                class="ClassLibrary.WkTUser, ClassLibrary" />-->
+  </class>
+
+</hibernate-mapping>

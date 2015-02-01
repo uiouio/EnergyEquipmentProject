@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+  <class name="GoodsBaseInfo" table="GoodsBaseInfo" >
+    <id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    
+    <property name="GoodsClassCode" column="GoodsClassCode" type="string" length="50"/>
+    <property name="GoodsName" column="GoodsName" type="string" length="50" />
+    <property name="Specifications" column="Specifications" type="string" length="100" />
+    <property name="Unit" column="Unit" type="string" length="20"/>
+    
+    <property name="Material" column="Material" type="string" length="50"/>
+    
+    <property name="SingleMoney" column="SingleMoney" type="float" />
+
+    <property name="GoodsParentClassId" column="GoodsParentClassId" type="long" length="10" />
+    
+    <property name="GoodsClassOrder" column="GoodsClassOrder" type="long" length="10" />
+    <property name="GoodsClassLevel" column="GoodsClassLevel" type="long" length="10" />
+    <property name="GoodsClassDescribe" column="GoodsClassDescribe" type="string" length="100"/>
+    
+    <property name="GoodsFlag" column="GoodsFlag" type="int" length="1" />
+    <property name="IsUniqueCode" column="IsUniqueCode" type="int" length="1" />
+
+    <property name="WaringNum" column="WaringNum" type="long" length="10" />
+
+    <property name="IsWaring" column="IsWaring" type="int" length="1" />
+
+    
+
+    <property name="HistoryId" column="HistoryId" type="long" length="10" />
+    <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+    <property name="State" column="State" type="int"  length="1"/>
+    <!--<many-to-one name="Ku_Id" column="KU_ID" lazy="false" not-null="true"
+                class="ClassLibrary.WkTUser, ClassLibrary" />-->
+  </class>
+
+</hibernate-mapping>

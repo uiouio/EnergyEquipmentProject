@@ -1,0 +1,14 @@
+F:\EnergyEquipmentProject\SQLProvider\bin\Release\SQLProvider.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Release\SQLProvider.pdb
+F:\EnergyEquipmentProject\SQLProvider\bin\Release\CommonMethod.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Release\EntityClassLibrary.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Release\Iesi.Collections.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Release\LinFu.DynamicProxy.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Release\NHibernate.ByteCode.LinFu.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Release\NHibernate.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Release\NHibernate.Mapping.Attributes.dll
+F:\EnergyEquipmentProject\SQLProvider\bin\Release\CommonMethod.pdb
+F:\EnergyEquipmentProject\SQLProvider\bin\Release\EntityClassLibrary.pdb
+F:\EnergyEquipmentProject\SQLProvider\obj\Release\SQLProvider.csprojResolveAssemblyReference.cache
+F:\EnergyEquipmentProject\SQLProvider\obj\Release\SQLProvider.dll
+F:\EnergyEquipmentProject\SQLProvider\obj\Release\SQLProvider.pdb

@@ -1,0 +1,9 @@
+F:\EnergyEquipmentProject\SecuritTool\bin\Release\SecuritTool.exe
+F:\EnergyEquipmentProject\SecuritTool\bin\Release\SecuritTool.pdb
+F:\EnergyEquipmentProject\SecuritTool\bin\Release\CommonMethod.dll
+F:\EnergyEquipmentProject\SecuritTool\bin\Release\CommonMethod.pdb
+F:\EnergyEquipmentProject\SecuritTool\obj\x86\Release\SecuritTool.Form1.resources
+F:\EnergyEquipmentProject\SecuritTool\obj\x86\Release\SecuritTool.Properties.Resources.resources
+F:\EnergyEquipmentProject\SecuritTool\obj\x86\Release\SecuritTool.csproj.GenerateResource.Cache
+F:\EnergyEquipmentProject\SecuritTool\obj\x86\Release\SecuritTool.exe
+F:\EnergyEquipmentProject\SecuritTool\obj\x86\Release\SecuritTool.pdb

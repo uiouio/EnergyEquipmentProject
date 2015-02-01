@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="EntityClassLibrary.Agent">
+    <Position X="0.5" Y="4.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IEAEIQAABACAACAAADggIAAwADQABAEUAAwLBKBADiE=</HashCode>
+      <FileName>Agent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.BaseEntity">
+    <Position X="40.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="EntityClassLibrary.BaseEntity.stateEnum" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BaseEntity.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.BaseEntity.YesNo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BaseEntity.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.BaseEntity.SaveDispatchingDispatchReceive" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BaseEntity.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.BaseEntity.CNGGasCNGDieselLNGDiesel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BaseEntity.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIAGAACAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAABgA=</HashCode>
+      <FileName>BaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.CarBaseInfo">
+    <Position X="27.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CGsSgAgREKACEqogQMKrC8KAAQuXKAsCHQgCggoqAoI=</HashCode>
+      <FileName>CarBaseInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.CarTheLibrary">
+    <Position X="40.75" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CACBgAAAgAAQAAIQEAACEAAAAAAAAAAAAIAAAAiAAYA=</HashCode>
+      <FileName>CarTheLibrary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.CheRuKuInfo">
+    <Position X="54.25" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QACBAAAAkABAARIAQAICAAACAAAAAQAAAAAAAEAAAQA=</HashCode>
+      <FileName>CheRuKuInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.CustomBaseInfo">
+    <Position X="68.75" Y="4.25" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="EntityClassLibrary.CustomBaseInfo.kehuleibie" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CustomBaseInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.CustomBaseInfo.PersonalOrCompany" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CustomBaseInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.CustomBaseInfo.FunctionAndGoods" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CustomBaseInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQEiAEMAKAgDCQhIAQkgAUBgIIEQAQqAMEIIACBCAA=</HashCode>
+      <FileName>CustomBaseInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.Department">
+    <Position X="3" Y="4.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAQAoAAEAKAAAAAAAAAAAAAAAAwAAAAEAAAA=</HashCode>
+      <FileName>Department.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.DispatchMaterial">
+    <Position X="16.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAgAAQCIAEEAgAAAABAAAAAAAEAAAA=</HashCode>
+      <FileName>DispatchMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.ExceptionRecord">
+    <Position X="30.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIEAAAAIAAAAAAAAAIAAAAAAAAAAAQAAAAgAA=</HashCode>
+      <FileName>ExceptionRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.GoodsBaseInfo">
+    <Position X="43.75" Y="4.25" Width="2" />
+    <NestedTypes>
+      <Enum Name="EntityClassLibrary.GoodsBaseInfo.TheGoodsFlag" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>GoodsBaseInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AACEAAAAjAAgABiAIAAQkAAIABAACgBAAAAAQAAAgAA=</HashCode>
+      <FileName>GoodsBaseInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.HuiYuanBaseInfo">
+    <Position X="57.25" Y="4.25" Width="2.75" />
+    <NestedTypes>
+      <Enum Name="EntityClassLibrary.HuiYuanBaseInfo.Marriage1" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HuiYuanBaseInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.HuiYuanBaseInfo.Sex1" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HuiYuanBaseInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.HuiYuanBaseInfo.insent" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HuiYuanBaseInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.HuiYuanBaseInfo.weixian" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HuiYuanBaseInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.HuiYuanBaseInfo.yayun" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HuiYuanBaseInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.HuiYuanBaseInfo.yushuhuowuo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HuiYuanBaseInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.HuiYuanBaseInfo.huiyuan" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HuiYuanBaseInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gSokSCmAkAAIFJABgQahCQ0LwQsdAEYqcQiiYEU6gkg=</HashCode>
+      <FileName>HuiYuanBaseInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.JianJianInfo">
+    <Position X="71.25" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACBAAAAgQAAAAAAAABIAAAAQAAABAAFAAQIBQAAAAA=</HashCode>
+      <FileName>JianJianInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.Letter">
+    <Position X="5.5" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAAAACAAAAAAAAAgAAAAIAAAAIAAQECAAEJAAABCAAA=</HashCode>
+      <FileName>Letter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.LiuZhuanBiao">
+    <Position X="19" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>YQUBAMJMAwDGaGUQxAROknRFHhJgLVFaA0k0iQdgJAE=</HashCode>
+      <FileName>LiuZhuanBiao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.Matter">
+    <Position X="33.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAABQAAACEAAAAgAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>Matter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.ModificationContract">
+    <Position X="46.5" Y="4.25" Width="2" />
+    <NestedTypes>
+      <Enum Name="EntityClassLibrary.ModificationContract.Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ModificationContract.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAABgAAAAIgQAAAIAAAgAIAQIBCAEACEAAIAhAACAQA=</HashCode>
+      <FileName>ModificationContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.News">
+    <Position X="60.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAEAQEAAAEBAAAACAAEAAgEBAAABAAAA=</HashCode>
+      <FileName>News.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.RefitWork">
+    <Position X="74.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACABAgAgAAJBAQACQSEAAgAiIAAQAiAAEgAAAAIAAQ=</HashCode>
+      <FileName>RefitWork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.Resource">
+    <Position X="7.75" Y="4.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgBAAMIIAApACAIKAAACAAACAAAAAgAAgAAAAIAAQA=</HashCode>
+      <FileName>Resource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.Schedule">
+    <Position X="22.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAQAEAAAABAAAAAAAAQAAAAE=</HashCode>
+      <FileName>Schedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.Stock">
+    <Position X="35.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQQAAAAAQAAAAEAAAAAAAAAAAAAADAQAAAgEAAEAA=</HashCode>
+      <FileName>Stock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.StockOperation">
+    <Position X="49.25" Y="4.25" Width="2" />
+    <NestedTypes>
+      <Enum Name="EntityClassLibrary.StockOperation.InOrOutFlag" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>StockOperation.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EntityClassLibrary.StockOperation.OpTypeFlag" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>StockOperation.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAABAgAACQIAAEgAAAAAAgAgAAAAIEAAAQA=</HashCode>
+      <FileName>StockOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.StockOperationDetail">
+    <Position X="63" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAQiAQAAIgEAAAAA=</HashCode>
+      <FileName>StockOperationDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.SupplierInfo">
+    <Position X="77" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABABAAQAUAAEAFAAAAAAAAAAAAAgAAAAKQAgAAgAIQ=</HashCode>
+      <FileName>SupplierInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.TiaoShiBaoGao">
+    <Position X="10.25" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EQcpChAEAAEQQBSBEAiegAIQEIACgCASAACAABFDIQg=</HashCode>
+      <FileName>TiaoShiBaoGao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.TransportContract">
+    <Position X="24.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAZAAoABBAKAAQQAAAAAAAIIAAEASAABCEAAAAhGQA=</HashCode>
+      <FileName>TransportContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.UserInfo">
+    <Position X="38.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgEAAiIARAIgAEQAwAUACMIEDAgiAQ0AIgEBAAA=</HashCode>
+      <FileName>UserInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.UserRole">
+    <Position X="52" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAAAAgAAAAIAAIAAAACAAAACAAAgAgEAAEABA=</HashCode>
+      <FileName>UserRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.WeiXiuFanKuiDan">
+    <Position X="65.75" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEiQgAAIgIAAAgAgAIIAIASABAAEAAQAAAgAAABIEIA=</HashCode>
+      <FileName>WeiXiuFanKuiDan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.WorkingGroup">
+    <Position X="80" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAEAAABBAAAAQAAABABAQ=</HashCode>
+      <FileName>WorkingGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityClassLibrary.XinJianPaiGongMuBan">
+    <Position X="13.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAgIAAEICAQBAAAEAIAAYAAAAHAAAAAQAIAABAAAA=</HashCode>
+      <FileName>XinJianPaiGongMuBan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

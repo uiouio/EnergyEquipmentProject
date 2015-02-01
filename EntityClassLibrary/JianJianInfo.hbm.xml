@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="EntityClassLibrary" assembly="EntityClassLibrary">
+
+	<class name="JianJianInfo" table="SupervisoryInspection" >
+		<id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
+			<generator class="native" />
+		</id>
+
+		<property name="ModificationOfContractId" column="ModificationOfContractId" type="long" length="10" not-null="true" />		
+		<property name="Status" column="Status" type="int" length="1" />
+		
+		<property name="HistoryId" column="HistoryId" type="long" length="10" />
+		<property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
+		<property name="State" column="State" type="int"  length="1"/>
+
+		<many-to-one name="Batch" column="BatchId" lazy="false" not-null="true"
+                class="EntityClassLibrary.Batch, EntityClassLibrary" />
+			
+
+		<many-to-one name="CarTheLibrary" column="CarTheLibraryId" lazy="false" not-null="true"
+                class="EntityClassLibrary.CarTheLibrary, EntityClassLibrary" />
+		
+		<!--<bag name="CarBaseInfo" table="CarBaseInfo_SupervisoryInspection" lazy="false">
+				<key column="CarBaseInfoId"/>
+			<many-to-many class="EntityClassLibrary.JianJianInfo,EntityClassLibrary" column="SupervisoryInspectionId"/>
+		</bag>-->
+		
+		
+		<!--<many-to-one name="Ku_Id" column="KU_ID" lazy="false" not-null="true"
+                class="ClassLibrary.WkTUser, ClassLibrary" />-->
+	</class>
+
+</hibernate-mapping>
+
+

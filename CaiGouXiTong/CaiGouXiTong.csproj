@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{75D8D027-D1CA-47A0-A19A-55C5D11F0EE6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CaiGouXiTong</RootNamespace>
+    <AssemblyName>CaiGouXiTong</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EnergyEquipmentProject\bin\Debug\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BiJiaPingShen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BiJiaPingShen.Designer.cs">
+      <DependentUpon>BiJiaPingShen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiJiaPingShen_BiJiaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiJiaPingShen_BiJiaView.Designer.cs">
+      <DependentUpon>BiJiaPingShen_BiJiaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiJiaPingShen_New_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiJiaPingShen_New_dialog.Designer.cs">
+      <DependentUpon>BiJiaPingShen_New_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiJiaPingShen_New_GongHuoShang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiJiaPingShen_New_GongHuoShang.Designer.cs">
+      <DependentUpon>BiJiaPingShen_New_GongHuoShang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouBaoBiao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaiGouBaoBiao.Designer.cs">
+      <DependentUpon>CaiGouBaoBiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouHeTong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaiGouHeTong.Designer.cs">
+      <DependentUpon>CaiGouHeTong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouHeTong_New_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaiGouHeTong_New_dialog.Designer.cs">
+      <DependentUpon>CaiGouHeTong_New_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouHeTong_New_HeTong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaiGouHeTong_New_HeTong.Designer.cs">
+      <DependentUpon>CaiGouHeTong_New_HeTong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouHeTong_View_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaiGouHeTong_View_dialog.Designer.cs">
+      <DependentUpon>CaiGouHeTong_View_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouJiHua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaiGouJiHua.Designer.cs">
+      <DependentUpon>CaiGouJiHua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouJiHua_TuiHuiYuanYin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaiGouJiHua_TuiHuiYuanYin.Designer.cs">
+      <DependentUpon>CaiGouJiHua_TuiHuiYuanYin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouJiHua_View_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaiGouJiHua_View_dialog.Designer.cs">
+      <DependentUpon>CaiGouJiHua_View_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouJiHua_New_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaiGouJiHua_New_dialog.Designer.cs">
+      <DependentUpon>CaiGouJiHua_New_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouShenQing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaiGouShenQing.Designer.cs">
+      <DependentUpon>CaiGouShenQing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UNDOCaiGouShenQing_Edit_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UNDOCaiGouShenQing_Edit_dialog.Designer.cs">
+      <DependentUpon>UNDOCaiGouShenQing_Edit_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouShenQing_New_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaiGouShenQing_New_dialog.Designer.cs">
+      <DependentUpon>CaiGouShenQing_New_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouShenQing_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaiGouShenQing_View.Designer.cs">
+      <DependentUpon>CaiGouShenQing_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UNDOCaiGouWuPinXinXi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UNDOCaiGouWuPinXinXi.Designer.cs">
+      <DependentUpon>UNDOCaiGouWuPinXinXi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GongHuoShangGuanLi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GongHuoShangGuanLi.Designer.cs">
+      <DependentUpon>GongHuoShangGuanLi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GongHuoShangXinYongJiLu_New_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongHuoShangXinYongJiLu_New_dialog.Designer.cs">
+      <DependentUpon>GongHuoShangXinYongJiLu_New_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GongHuoShang_Detail_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongHuoShang_Detail_dialog.Designer.cs">
+      <DependentUpon>GongHuoShang_Detail_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GongHuoShang_New_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongHuoShang_New_dialog.Designer.cs">
+      <DependentUpon>GongHuoShang_New_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouJiHua_YuanGong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaiGouJiHua_YuanGong.Designer.cs">
+      <DependentUpon>CaiGouJiHua_YuanGong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiJiaPingShen_NoPiZhun.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BiJiaPingShen_NoPiZhun.Designer.cs">
+      <DependentUpon>BiJiaPingShen_NoPiZhun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouShenQing_NoXinZeng.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaiGouShenQing_NoXinZeng.Designer.cs">
+      <DependentUpon>CaiGouShenQing_NoXinZeng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouShenQing_NoPiZhun.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaiGouShenQing_NoPiZhun.Designer.cs">
+      <DependentUpon>CaiGouShenQing_NoPiZhun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouShenQing_View_NoPiZhun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaiGouShenQing_View_NoPiZhun.Designer.cs">
+      <DependentUpon>CaiGouShenQing_View_NoPiZhun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\OpPurchase.cs" />
+    <Compile Include="Service\OpSupplierInfo.cs" />
+    <Compile Include="YunShuHeTong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="YunShuHeTong.Designer.cs">
+      <DependentUpon>YunShuHeTong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YunShuHeTong_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YunShuHeTong_New.Designer.cs">
+      <DependentUpon>YunShuHeTong_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouJiHua_View_dialog_NoTuiHui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaiGouJiHua_View_dialog_NoTuiHui.Designer.cs">
+      <DependentUpon>CaiGouJiHua_View_dialog_NoTuiHui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaiGouHeTong_NoXinZeng.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaiGouHeTong_NoXinZeng.Designer.cs">
+      <DependentUpon>CaiGouHeTong_NoXinZeng.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BiJiaPingShen.resx">
+      <DependentUpon>BiJiaPingShen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiJiaPingShen_BiJiaView.resx">
+      <DependentUpon>BiJiaPingShen_BiJiaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiJiaPingShen_New_dialog.resx">
+      <DependentUpon>BiJiaPingShen_New_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiJiaPingShen_New_GongHuoShang.resx">
+      <DependentUpon>BiJiaPingShen_New_GongHuoShang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouBaoBiao.resx">
+      <DependentUpon>CaiGouBaoBiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouHeTong.resx">
+      <DependentUpon>CaiGouHeTong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouHeTong_New_dialog.resx">
+      <DependentUpon>CaiGouHeTong_New_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouHeTong_New_HeTong.resx">
+      <DependentUpon>CaiGouHeTong_New_HeTong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouHeTong_View_dialog.resx">
+      <DependentUpon>CaiGouHeTong_View_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouJiHua.resx">
+      <DependentUpon>CaiGouJiHua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouJiHua_TuiHuiYuanYin.resx">
+      <DependentUpon>CaiGouJiHua_TuiHuiYuanYin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouJiHua_View_dialog.resx">
+      <DependentUpon>CaiGouJiHua_View_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouJiHua_New_dialog.resx">
+      <DependentUpon>CaiGouJiHua_New_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouShenQing.resx">
+      <DependentUpon>CaiGouShenQing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UNDOCaiGouShenQing_Edit_dialog.resx">
+      <DependentUpon>UNDOCaiGouShenQing_Edit_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouShenQing_New_dialog.resx">
+      <DependentUpon>CaiGouShenQing_New_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouShenQing_View.resx">
+      <DependentUpon>CaiGouShenQing_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UNDOCaiGouWuPinXinXi.resx">
+      <DependentUpon>UNDOCaiGouWuPinXinXi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GongHuoShangGuanLi.resx">
+      <DependentUpon>GongHuoShangGuanLi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GongHuoShangXinYongJiLu_New_dialog.resx">
+      <DependentUpon>GongHuoShangXinYongJiLu_New_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GongHuoShang_Detail_dialog.resx">
+      <DependentUpon>GongHuoShang_Detail_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GongHuoShang_New_dialog.resx">
+      <DependentUpon>GongHuoShang_New_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouJiHua_YuanGong.resx">
+      <DependentUpon>CaiGouJiHua_YuanGong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiJiaPingShen_NoPiZhun.resx">
+      <DependentUpon>BiJiaPingShen_NoPiZhun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouShenQing_NoXinZeng.resx">
+      <DependentUpon>CaiGouShenQing_NoXinZeng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouShenQing_NoPiZhun.resx">
+      <DependentUpon>CaiGouShenQing_NoPiZhun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouShenQing_View_NoPiZhun.resx">
+      <DependentUpon>CaiGouShenQing_View_NoPiZhun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YunShuHeTong.resx">
+      <DependentUpon>YunShuHeTong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YunShuHeTong_New.resx">
+      <DependentUpon>YunShuHeTong_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouJiHua_View_dialog_NoTuiHui.resx">
+      <DependentUpon>CaiGouJiHua_View_dialog_NoTuiHui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiGouHeTong_NoXinZeng.resx">
+      <DependentUpon>CaiGouHeTong_NoXinZeng.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CheRuKu\CheRuKu.csproj">
+      <Project>{A01F8085-35B0-4D3A-84D7-F55B972EFFB2}</Project>
+      <Name>CheRuKu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonControl\CommonControl.csproj">
+      <Project>{668BF412-E4C3-4F29-9FBE-F69332C290B2}</Project>
+      <Name>CommonControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonMethod\CommonMethod.csproj">
+      <Project>{7DFA3086-1243-4993-B8AD-80D98A2DEE23}</Project>
+      <Name>CommonMethod</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonWindow\CommonWindow.csproj">
+      <Project>{B5A3A9CE-CAA4-42B9-9C4C-D08FA4635283}</Project>
+      <Name>CommonWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityClassLibrary\EntityClassLibrary.csproj">
+      <Project>{6C5F2133-D535-4CA4-865F-C641810A4820}</Project>
+      <Name>EntityClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JianJian\JianJian.csproj">
+      <Project>{DE616B5E-9A72-49F6-A2D1-8725D618D612}</Project>
+      <Name>JianJian</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLProvider\SQLProvider.csproj">
+      <Project>{2C410869-C0F3-49A4-85E6-68B6E7072707}</Project>
+      <Name>SQLProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemManageWindow\SystemManageWindow.csproj">
+      <Project>{49FBCA5D-08FC-4087-847E-4DD6A9EF27EF}</Project>
+      <Name>SystemManageWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TiaoShi\TiaoShi.csproj">
+      <Project>{1504311D-232F-43BF-911C-5A5D81FF237F}</Project>
+      <Name>TiaoShi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

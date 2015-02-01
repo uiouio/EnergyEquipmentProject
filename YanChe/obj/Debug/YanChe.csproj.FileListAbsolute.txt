@@ -1,0 +1,10 @@
+F:\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\YanChe.dll
+F:\EnergyEquipmentProject\EnergyEquipmentProject\bin\Debug\lib\YanChe.pdb
+F:\EnergyEquipmentProject\YanChe\obj\Debug\YanChe.csprojResolveAssemblyReference.cache
+F:\EnergyEquipmentProject\YanChe\obj\Debug\YanChe.Properties.Resources.resources
+F:\EnergyEquipmentProject\YanChe\obj\Debug\YanChe.YanChe.resources
+F:\EnergyEquipmentProject\YanChe\obj\Debug\YanChe.YanChe_GaiZhuangDan.resources
+F:\EnergyEquipmentProject\YanChe\obj\Debug\YanChe.YanChe_XinJian.resources
+F:\EnergyEquipmentProject\YanChe\obj\Debug\YanChe.csproj.GenerateResource.Cache
+F:\EnergyEquipmentProject\YanChe\obj\Debug\YanChe.dll
+F:\EnergyEquipmentProject\YanChe\obj\Debug\YanChe.pdb
