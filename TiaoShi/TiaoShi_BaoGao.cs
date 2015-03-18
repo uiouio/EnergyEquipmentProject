@@ -245,6 +245,19 @@ namespace TiaoShi
             print.DocPrint(panel1);
         }
 
+
+        ///由于测试的提交
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }
