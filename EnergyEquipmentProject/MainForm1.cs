@@ -125,6 +125,7 @@ namespace EnergyEquipmentProject
         {
             try
             {
+                this.Cursor = Cursors.WaitCursor;
                 if (sender.GetType() == typeof(Label))
                 {
                     Label label = (Label)sender;
@@ -140,6 +141,7 @@ namespace EnergyEquipmentProject
                     PictureBox pic = (PictureBox)sender;
                     commonTabControl1.AddTabPage((CommonTabPage)pic.Parent.Tag);
                 }
+                this.Cursor = Cursors.Hand;
             }
             catch (Exception exc)
             {
