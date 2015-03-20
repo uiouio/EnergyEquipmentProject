@@ -15,7 +15,6 @@ namespace KuGuanXiTong
     {
 
         private GoodsBaseInfo newGoods;
-
         public GoodsBaseInfo NewGoods
         {
             get { return newGoods; }
@@ -169,7 +168,7 @@ namespace KuGuanXiTong
                 {
                     NewGoods.IsUniqueCode = 0;
                 }
-                categtory.SaveOrUpdateEntity(newGoods);
+                NewGoods =  categtory.SaveOrUpdateEntity(newGoods) as GoodsBaseInfo;
                 this.DialogResult = DialogResult.OK;
             }
             else
@@ -245,6 +244,7 @@ namespace KuGuanXiTong
         private void CanShuSheZhi_LeiBieGuanLi_NewClass_Load(object sender, EventArgs e)
         {
             this.textBox2.Text = Pgoods.GoodsClassCode;
+            this.labelOfPgoodsName.Text = this.labelOfPgoodsName.Text + Pgoods.GoodsName;
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
