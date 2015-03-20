@@ -22,13 +22,18 @@ namespace EnergyEquipmentProject
             get { return userInfo; }
             set { userInfo = value; }
         }
+        
+       
+
         public Login()
         {
             InitializeComponent();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.button1.Cursor = Cursors.WaitCursor;
             #region 将用户信息存入临时文件
             if (rem_checkBox.Checked)
             {
@@ -55,11 +60,13 @@ namespace EnergyEquipmentProject
                 this.UserInfo = (UserInfo)userInfoList[0];
                 userInfoService.ExecuteSQL("update UserInfo set TimeStamp=" + DateTime.Now.Ticks + " where Id=" + UserInfo.Id);//更新用户的最近一次登录时间
                 this.DialogResult = DialogResult.OK;
+               
             }
             else
             {
                 MessageBox.Show("用户名或密码错误！");
             }
+            this.button1.Cursor = Cursors.Hand;
         }
 
         private void Login_Load(object sender, EventArgs e)

@@ -14,11 +14,13 @@ using CommonMethod;
 using System.Collections;
 using System.IO;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace EnergyEquipmentProject
 {
     public partial class MainForm1 : CommonControl.BaseForm
     {
+      
         public delegate void dataChangedHandler(object sender, SqlNotificationEventArgs e);
         Service.UserInfoService userInfoService = new Service.UserInfoService();
         public MainForm1()
@@ -28,15 +30,21 @@ namespace EnergyEquipmentProject
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
+            
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             //listenMethod_Login();
             this.Opacity = 0;
-            this.Visible = false;
+            
             this.WindowState = FormWindowState.Maximized;
+
+
             MainPage u = new MainPage(this.UserInfo);
             u.Name = "首页";
             commonTabControl1.AddTabPage(u);
+            this.Opacity = 0.1;
             IList resourceList = userInfoService.getAllOneLevelResource();
+            this.Opacity = 0.2;
             if (resourceList != null && resourceList.Count > 0)
             {
                 foreach (Resource resource in resourceList)
@@ -68,10 +76,20 @@ namespace EnergyEquipmentProject
                         node.Tag = getAssemblyByReflection(assembleAndClass[0], assembleAndClass[1], resource.ResourceName, resource);
                     }
                     node.Parent = flowLayoutPanel1;
+                    if (this.Opacity <1)
+                        this.Opacity = this.Opacity+0.1;
                 }
             }
             this.Opacity = 1;
-            this.Visible = true;
+            
+            this.Cursor = Cursors.Hand;
+        }
+
+        public void MainLoad()
+        {
+            
+          
+        
         }
 
         private Object getAssemblyByReflection(string assemblyName, string objectName, string title,Resource resource)

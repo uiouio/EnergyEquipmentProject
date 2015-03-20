@@ -82,6 +82,7 @@
             // 
             this.button1.BackgroundImage = global::EnergyEquipmentProject.Properties.Resources.登_录;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(452, 405);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 49);
@@ -93,6 +94,7 @@
             // 
             this.button2.BackgroundImage = global::EnergyEquipmentProject.Properties.Resources.重_置1;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(557, 405);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 49);
@@ -144,6 +146,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "柴油-天然气双燃料重卡汽车业务信息管理系统";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
