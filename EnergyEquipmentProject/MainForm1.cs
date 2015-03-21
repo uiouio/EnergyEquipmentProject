@@ -125,23 +125,27 @@ namespace EnergyEquipmentProject
         {
             try
             {
-                this.Cursor = Cursors.WaitCursor;
                 if (sender.GetType() == typeof(Label))
                 {
                     Label label = (Label)sender;
+                    label.Cursor = Cursors.WaitCursor;
                     commonTabControl1.AddTabPage((CommonTabPage)label.Parent.Tag);
+                    label.Cursor = Cursors.Default;
                 }
                 else if (sender.GetType() == typeof(TitleNode))
                 {
                     UserControl uc = (UserControl)sender;
+                    uc.Cursor = Cursors.WaitCursor;
                     commonTabControl1.AddTabPage((CommonTabPage)uc.Tag);
+                    uc.Cursor = Cursors.Default;
                 }
                 else if (sender.GetType() == typeof(PictureBox))
                 {
                     PictureBox pic = (PictureBox)sender;
+                    pic.Cursor = Cursors.WaitCursor;
                     commonTabControl1.AddTabPage((CommonTabPage)pic.Parent.Tag);
+                    pic.Cursor = Cursors.Default;
                 }
-                this.Cursor = Cursors.Hand;
             }
             catch (Exception exc)
             {
