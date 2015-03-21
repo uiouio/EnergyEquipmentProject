@@ -82,7 +82,7 @@ namespace EnergyEquipmentProject
             }
             this.Opacity = 1;
             
-            this.Cursor = Cursors.Hand;
+            this.Cursor = Cursors.Default;
         }
 
         public void MainLoad()
