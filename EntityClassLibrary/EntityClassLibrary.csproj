@@ -244,7 +244,9 @@
     <EmbeddedResource Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CustomerServiceRecord.hbm.xml" />
+    <EmbeddedResource Include="CustomerServiceRecord.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="InstallRecord.hbm.xml">
       <SubType>Designer</SubType>
     </Content>

@@ -267,7 +267,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label4;
         private CommonControl.CommonPictureButton commonPictureButton1;
-        private CommonControl.CommonTabControl commonTabControl1;
+        //private CommonControl.CommonTabControl commonTabControl1;
     }
 }
 
