@@ -14,11 +14,13 @@ using CommonMethod;
 using System.Collections;
 using System.IO;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace EnergyEquipmentProject
 {
     public partial class MainForm1 : CommonControl.BaseForm
     {
+      
         public delegate void dataChangedHandler(object sender, SqlNotificationEventArgs e);
         Service.UserInfoService userInfoService = new Service.UserInfoService();
         public MainForm1()
@@ -28,15 +30,21 @@ namespace EnergyEquipmentProject
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
+            
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             //listenMethod_Login();
             this.Opacity = 0;
-            this.Visible = false;
+            
             this.WindowState = FormWindowState.Maximized;
+
+
             MainPage u = new MainPage(this.UserInfo);
             u.Name = "首页";
             commonTabControl1.AddTabPage(u);
+            this.Opacity = 0.1;
             IList resourceList = userInfoService.getAllOneLevelResource();
+            this.Opacity = 0.2;
             if (resourceList != null && resourceList.Count > 0)
             {
                 foreach (Resource resource in resourceList)
@@ -68,10 +76,20 @@ namespace EnergyEquipmentProject
                         node.Tag = getAssemblyByReflection(assembleAndClass[0], assembleAndClass[1], resource.ResourceName, resource);
                     }
                     node.Parent = flowLayoutPanel1;
+                    if (this.Opacity <1)
+                        this.Opacity = this.Opacity+0.1;
                 }
             }
             this.Opacity = 1;
-            this.Visible = true;
+            
+            this.Cursor = Cursors.Default;
+        }
+
+        public void MainLoad()
+        {
+            
+          
+        
         }
 
         private Object getAssemblyByReflection(string assemblyName, string objectName, string title,Resource resource)
@@ -110,17 +128,23 @@ namespace EnergyEquipmentProject
                 if (sender.GetType() == typeof(Label))
                 {
                     Label label = (Label)sender;
+                    label.Cursor = Cursors.WaitCursor;
                     commonTabControl1.AddTabPage((CommonTabPage)label.Parent.Tag);
+                    label.Cursor = Cursors.Default;
                 }
                 else if (sender.GetType() == typeof(TitleNode))
                 {
                     UserControl uc = (UserControl)sender;
+                    uc.Cursor = Cursors.WaitCursor;
                     commonTabControl1.AddTabPage((CommonTabPage)uc.Tag);
+                    uc.Cursor = Cursors.Default;
                 }
                 else if (sender.GetType() == typeof(PictureBox))
                 {
                     PictureBox pic = (PictureBox)sender;
+                    pic.Cursor = Cursors.WaitCursor;
                     commonTabControl1.AddTabPage((CommonTabPage)pic.Parent.Tag);
+                    pic.Cursor = Cursors.Default;
                 }
             }
             catch (Exception exc)

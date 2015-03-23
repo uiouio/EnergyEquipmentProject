@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Collections;
 using EntityClassLibrary;
 using System.Threading;
-
+using KuGuanXiTong.Service;
 namespace KuGuanXiTong
 {
     public partial class CategtoryTreeview : Form
@@ -17,7 +17,9 @@ namespace KuGuanXiTong
         private string str;
         private string str2;//用来向内部传值，判断是不是选择了自己
         private int isCatetoryOrGoods;
+        private OpStock opstock = new OpStock ();
 
+       
         private GoodsBaseInfo gg;
         
         /// <summary>
@@ -133,6 +135,8 @@ namespace KuGuanXiTong
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+
+            this.button3.Visible = false;
             if (IsCatetoryOrGoods != 1)
             {
                 GoodsBaseInfo Catetory = new GoodsBaseInfo();
@@ -140,14 +144,26 @@ namespace KuGuanXiTong
                 this.textBox1.Text = Catetory.GoodsName;
                 Str = Catetory.GoodsClassCode;
                 Gg = e.Node.Tag as GoodsBaseInfo;
+
+
             }
             else if (IsCatetoryOrGoods == 1)
             {
                 Gg = e.Node.Tag as GoodsBaseInfo;
                 this.textBox1.Text = Gg.GoodsClassCode + " " + Gg.GoodsName;
+
+                if (Gg.GoodsFlag == (int)GoodsBaseInfo.TheGoodsFlag.goods)
+                {
+                    this.button3.Visible = true;
+                    currentGoods = Gg;
+                    this.textBox2.Text = currentGoods.Specifications;
+                    this.textBox3.Text = currentGoods.Material;
+                    this.textBox5.Text = currentGoods.Unit;
+                    this.textBox4.Text = currentGoods.GoodsClassDescribe;
+                
+                }
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (IsCatetoryOrGoods != 1)
@@ -194,6 +210,21 @@ namespace KuGuanXiTong
             Gg = null;
             this.Close();
             IsCatetoryOrGoods = 0;
+        }
+
+        /// <summary>
+        /// 查询库存数量
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button3_Click(object sender, EventArgs e)
+        {
+           this.button3.Cursor = Cursors.WaitCursor;
+           Stock s = opstock.GetStockByGoodsInfoId(currentGoods.Id);
+           this.button3.Cursor = Cursors.Hand;
+            MessageBox.Show(s.Quantity.ToString());
+            
+
         }
     }
 }

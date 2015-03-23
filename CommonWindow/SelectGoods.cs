@@ -197,7 +197,10 @@ namespace CommonWindow
             this.textBox3.Text = "";
             this.button3.Enabled = true;
             this.commonDataGridView1.Rows.Clear();
-           // this.commonDataGridView2.Rows.Clear();
+
+            IList showGoods;
+            showGoods = opp.GetCategtoryBranching(1, this.textBox1.Text, this.textBox3.Text);
+            ShowSelectInGrid1(showGoods);
         }
 
         private void SelectGoods_Load(object sender, EventArgs e)

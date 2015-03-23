@@ -180,9 +180,9 @@
             // 
             this.button6.Location = new System.Drawing.Point(966, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(113, 23);
             this.button6.TabIndex = 44;
-            this.button6.Text = "重置";
+            this.button6.Text = "查询全部货物";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -346,7 +346,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1380, 559);
+            this.ClientSize = new System.Drawing.Size(1370, 559);
             this.Controls.Add(this.commonDataGridView2);
             this.Controls.Add(this.commonDataGridView1);
             this.Controls.Add(this.button6);
