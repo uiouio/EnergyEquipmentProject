@@ -117,19 +117,19 @@ namespace WorkProcedure.SQL
             return i;
         }
 
-        public IList QueryPaiGongDanChaKan(string number, long dispatch,string platenumber)
+        public IList QueryPaiGongDanChaKan(string number, int dispatch, string platenumber,string workgroup)
         {
             IList i = null;
             string sql;
             if (dispatch != -1)
             {
-                sql = "from RefitWork u where u.DispatchOrder like " + "'%" + number + "%' and u.CarInfo.ModidiedType = " + dispatch + " and u.CarInfo.PlateNumber like " + "'%" + platenumber + "%' and u.State = " + (int)BaseEntity.stateEnum.Normal + "order by u.DispatchState Asc, u.DispatchTime Desc";
+                sql = "from RefitWork u where u.DispatchOrder like" + "'%" + number + "%' and u.CarInfo.ModidiedType =" + dispatch + " and u.WorkingGroupId.WorkingGroupName='" + workgroup + "' and u.CarInfo.PlateNumber like" + "'%" + platenumber + " %'and u.State = " + (int)BaseEntity.stateEnum.Normal + "order by u.DispatchState Asc, u.DispatchTime Desc";
             }
             else
             {
-                sql = "from RefitWork u where u.DispatchOrder like " + "'%" + number + "%'and u.CarInfo.PlateNumber like " + "'%" + platenumber + "%' and u.State = " + (int)BaseEntity.stateEnum.Normal + "order by u.DispatchState Asc, u.DispatchTime Desc";
-
+                sql = "from RefitWork u where u.DispatchOrder like" + "'%" + number + "%' and u.WorkingGroupId.WorkingGroupName='" + workgroup + "' and u.CarInfo.PlateNumber like" + "'%" + platenumber + "%' and  u.State = " + (int)BaseEntity.stateEnum.Normal + "order by u.DispatchState Asc, u.DispatchTime Desc";
             }
+           
             i = this.loadEntityList(sql);
             return i;
         }
