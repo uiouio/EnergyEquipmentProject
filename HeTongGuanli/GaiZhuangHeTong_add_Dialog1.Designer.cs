@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.commonDataGridView2 = new CommonControl.CommonDataGridView();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -71,7 +72,6 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -118,6 +118,19 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "合同参数";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "现金",
+            "电汇",
+            "承兑",
+            "第三方顶账"});
+            this.comboBox3.Location = new System.Drawing.Point(402, 361);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(112, 20);
+            this.comboBox3.TabIndex = 49;
             // 
             // groupBox2
             // 
@@ -488,7 +501,7 @@
             // Column11
             // 
             this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column11.HeaderText = "品牌号";
+            this.Column11.HeaderText = "改装类型";
             this.Column11.Name = "Column11";
             // 
             // Column4
@@ -503,19 +516,6 @@
             this.Column14.HeaderText = " ";
             this.Column14.Name = "Column14";
             this.Column14.Width = 60;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "现金",
-            "电汇",
-            "承兑",
-            "第三方顶账"});
-            this.comboBox3.Location = new System.Drawing.Point(402, 361);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(112, 20);
-            this.comboBox3.TabIndex = 49;
             // 
             // GaiZhuangHeTong_add_Dialog1
             // 
@@ -583,6 +583,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
@@ -590,6 +591,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewLinkColumn Column14;
-        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

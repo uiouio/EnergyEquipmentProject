@@ -140,7 +140,7 @@ namespace HeTongGuanLi
                     {
                         if (s.ModificationID == null)
                         {
-                            commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, s.VehicleBrand, s.CylinderType, "删除");
+                            commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, s.ModidiedType, s.CylinderType, "删除");
                             commonDataGridView2.Rows[commonDataGridView2.Rows.Count - 1].Tag = s;
                             i++;
                         }
@@ -206,7 +206,7 @@ namespace HeTongGuanLi
                     {
                         if (s.ModificationID == null)
                         {
-                            commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, s.VehicleBrand, s.CylinderType, "删除");
+                            commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, s.ModidiedType, s.CylinderType, "删除");
                             commonDataGridView2.Rows[commonDataGridView2.Rows.Count - 1].Tag = s;
                             i++;
                         }

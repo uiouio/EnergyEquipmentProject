@@ -38,27 +38,32 @@ namespace CustomManageWindow
         {
             if(CarBaseInfo.ModidiedType==(int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGGas)
             {
-                this.comboBox1.Items.Add("φ325—50");
-                this.comboBox1.Items.Add("φ325—55");
-                this.comboBox1.Items.Add("φ325—65");
-                this.comboBox1.Items.Add("φ325—70");
-                this.comboBox1.Items.Add("φ325—75");
-                this.comboBox1.Items.Add("φ325—80");
-                this.comboBox1.Items.Add("φ356—50");
-                this.comboBox1.Items.Add("φ356—55");
-                this.comboBox1.Items.Add("φ356—65");
-                this.comboBox1.Items.Add("φ356—70");
-                this.comboBox1.Items.Add("φ356—75");
-                this.comboBox1.Items.Add("φ356—80");
+                this.comboBox1.Items.Add("φ325*50");
+                this.comboBox1.Items.Add("φ325*55");
+                this.comboBox1.Items.Add("φ325*60");
+                this.comboBox1.Items.Add("φ325*65");
+                this.comboBox1.Items.Add("φ356*65");
+                this.comboBox1.Items.Add("φ325*70");
+                this.comboBox1.Items.Add("φ356*70");
+                this.comboBox1.Items.Add("φ356*75");
+                this.comboBox1.Items.Add("φ325*80");
+                this.comboBox1.Items.Add("φ356*80");
+                this.comboBox1.Items.Add("φ406*87");
+                this.comboBox1.Items.Add("φ356*100");
+                this.comboBox1.Items.Add("φ406*100");
+                this.comboBox2.Text = "1";
 
             }
             else if (CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGDiesel)
             {
-                this.comboBox1.Items.Add("φ279—50");
-                this.comboBox1.Items.Add("φ279—80");
-                this.comboBox1.Items.Add("φ325—100");
-                this.comboBox1.Items.Add("φ325—120");
-                this.comboBox1.Items.Add("φ325—140");
+                this.comboBox1.Items.Add("140L-150L");
+                this.comboBox1.Items.Add("100L-120L");
+                this.comboBox1.Items.Add("100L以下");
+                this.comboBox2.Items.Add("1");
+                this.comboBox2.Items.Add("2");
+                this.comboBox2.Items.Add("3");
+                this.comboBox2.Items.Add("4");
+                
             }
             else if (CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.LNGDiesel)
             {
@@ -67,6 +72,8 @@ namespace CustomManageWindow
                 this.comboBox1.Items.Add("375L");
                 this.comboBox1.Items.Add("450L");
                 this.comboBox1.Items.Add("500L");
+                this.comboBox2.Items.Add("1");
+                this.comboBox2.Items.Add("2");
 
             }
             this.textBox13.Text = CarBaseInfo.TotalMass.ToString();
@@ -268,12 +275,110 @@ namespace CustomManageWindow
                 CarBaseInfo.TotalMass = float.Parse(this.textBox13.Text);
             }
             #endregion
-
             CarBaseInfo.SupperTime= dateTimePicker1.Value.Ticks;
-
             CarBaseInfo.CylinderType = this.comboBox1.Text;
+            #region CNG汽油气瓶价格
+            if (CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGGas)
+            {
+                if (this.comboBox1.Text == "φ325*50")
+                {
+                    CarBaseInfo.CylinderValue = 3700;
+
+                }
+                else if (this.comboBox1.Text == "φ325*55")
+                {
+                    CarBaseInfo.CylinderValue = 3800;
+
+                }
+                else if (this.comboBox1.Text == "φ325*60")
+                {
+                    CarBaseInfo.CylinderValue = 3850;
+
+                }
+                else if (this.comboBox1.Text == "φ325*65")
+                {
+                    CarBaseInfo.CylinderValue = 3900;
+
+                }
+                else if (this.comboBox1.Text == "φ356*65")
+                {
+                    CarBaseInfo.CylinderValue = 3950;
+
+                }
+                else if (this.comboBox1.Text == "φ325*70")
+                {
+                    CarBaseInfo.CylinderValue = 4000;
+                    CarBaseInfo.CylinderNumber = 1;
+                }
+                else if (this.comboBox1.Text == "φ356*70")
+                {
+                    CarBaseInfo.CylinderNumber = 4050;
+                }
+
+                else if (this.comboBox1.Text == "φ356*75")
+                {
+                    CarBaseInfo.CylinderValue = 4100;
+
+                }
+                else if (this.comboBox1.Text == "φ325*80")
+                {
+                    CarBaseInfo.CylinderValue = 4100;
+
+                }
+                else if (this.comboBox1.Text == "φ356*80")
+                {
+                    CarBaseInfo.CylinderValue = 4150;
+
+                }
+                else if (this.comboBox1.Text == "φ406*87")
+                {
+                    CarBaseInfo.CylinderValue = 4300;
+
+                }
+                else if (this.comboBox1.Text == "φ356*100")
+                {
+                    CarBaseInfo.CylinderValue = 4350;
+
+                }
+                else if (this.comboBox1.Text == "φ406*100")
+                {
+                    CarBaseInfo.CylinderValue = 4400;
+
+                }
+            }
+            #endregion
+            #region CNG柴油气瓶价格
+            else if(CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGDiesel)
+            {
+                 if (this.comboBox1.Text == "140L-150L")
+                {
+                  CarBaseInfo.CylinderValue = 50000 - Convert.ToInt16(this.comboBox2.Text) * 2500;
+                 }
+                else if (this.comboBox1.Text == "100L-120L")
+                {
+                  CarBaseInfo.CylinderValue = 48000 - Convert.ToInt16(this.comboBox2.Text) * 2000;
+                }
+                else if (this.comboBox1.Text == "100L以下")
+                {
+                  CarBaseInfo.CylinderValue = 46000 - Convert.ToInt16(this.comboBox2.Text) * 1500;
+                }
+            }
+            #endregion
+            #region LNG气瓶价格
+            else if(CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.LNGDiesel)
+            {
+                if(this.comboBox2.Text=="1")
+                {
+                    CarBaseInfo.CylinderValue = 60000;
+                }
+                else if (this.comboBox2.Text == "2")
+                {
+                    CarBaseInfo.CylinderValue = 90000;
+                }
+            }
+            #endregion     
             CarBaseInfo.CylinderWeight =float.Parse(textBox9.Text);
-           
+            CarBaseInfo.CylinderNumber=Convert.ToInt16(this.comboBox2.Text);
             CarBaseInfo.CylinderPressure = float.Parse(textBox15.Text);
         
             if (textBox14.Text == "")
@@ -284,7 +389,7 @@ namespace CustomManageWindow
             {
                 CarBaseInfo.CylinderVolume = float.Parse(textBox14.Text);
             }
-          
+
             if (textBox4.Text == "")
             {
                 CarBaseInfo.Thinckness = 0;

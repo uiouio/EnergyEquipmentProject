@@ -233,6 +233,12 @@
     </Compile>
     <Compile Include="Service\ContractService.cs" />
     <Compile Include="Service\DeliveryService.cs" />
+    <Compile Include="SetModifyValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SetModifyValue.Designer.cs">
+      <DependentUpon>SetModifyValue.cs</DependentUpon>
+    </Compile>
     <Compile Include="SuiteContractJudgeXSFZR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,6 +429,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetModifyValue.resx">
+      <DependentUpon>SetModifyValue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SuiteContractJudgeXSFZR.resx">
       <DependentUpon>SuiteContractJudgeXSFZR.cs</DependentUpon>
