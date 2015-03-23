@@ -37,6 +37,8 @@
             this.commonPictureButton3 = new CommonControl.CommonPictureButton(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -69,7 +71,7 @@
             "CNG汽油",
             "CNG柴油",
             "LNG柴油"});
-            this.comboBox1.Location = new System.Drawing.Point(585, 31);
+            this.comboBox1.Location = new System.Drawing.Point(497, 31);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(111, 20);
             this.comboBox1.TabIndex = 6;
@@ -118,7 +120,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(500, 34);
+            this.label3.Location = new System.Drawing.Point(416, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 12);
             this.label3.TabIndex = 5;
@@ -126,6 +128,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -133,16 +137,35 @@
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(280, 80);
+            this.groupBox1.Location = new System.Drawing.Point(215, 80);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(830, 80);
+            this.groupBox1.Size = new System.Drawing.Size(942, 80);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询条件";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(677, 31);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(111, 20);
+            this.comboBox2.TabIndex = 22;
+            this.comboBox2.DropDown += new System.EventHandler(this.comboBox2_DropDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(624, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 12);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "工作组:";
+            // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(351, 31);
+            this.textBox2.Location = new System.Drawing.Point(282, 31);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(124, 21);
             this.textBox2.TabIndex = 8;
@@ -150,7 +173,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(300, 34);
+            this.label2.Location = new System.Drawing.Point(231, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 7;
@@ -158,7 +181,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(732, 29);
+            this.button4.Location = new System.Drawing.Point(817, 29);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 4;
@@ -168,7 +191,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 31);
+            this.textBox1.Location = new System.Drawing.Point(93, 31);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(124, 21);
             this.textBox1.TabIndex = 1;
@@ -176,7 +199,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 34);
+            this.label1.Location = new System.Drawing.Point(19, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 12);
             this.label1.TabIndex = 0;
@@ -320,5 +343,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewLinkColumn Column11;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

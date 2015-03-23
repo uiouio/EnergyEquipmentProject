@@ -51,13 +51,19 @@ namespace WeiXiu
 
         private void WeiXiuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (WeiXiuDataGridView1.CurrentCell.Value.ToString() == "查看")
-            {
+            if (e.ColumnIndex == 9) {
                 WeiXiu_FanKuiDan tt = new WeiXiu_FanKuiDan();
                 tt.Wx = (WeiXiuFanKuiDan)this.WeiXiuDataGridView1.CurrentRow.Tag;
-                tt.SetAllTextEnableUnActive();
                 tt.ShowDialog();
+                if (tt.DialogResult == DialogResult.OK)
+                {
+                    this.WeiXiuDataGridView1.CurrentRow.Tag = tt.Wx;
+                    if (tt.Wx.ServiceState == (int)WeiXiuFanKuiDan.ScratchSave.Save) {
+                        this.WeiXiuDataGridView1.Rows[e.RowIndex].Cells[9].Value ="查看";
+                    }
+                }
             }
+           
         }
 
         public void ShowGridView()
@@ -68,7 +74,7 @@ namespace WeiXiu
             {
                 foreach (WeiXiuFanKuiDan s in Currentss)
                 {
-                    this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"), "查看");
+                    this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber,s.ServicePerson,s.QualityProblems, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"),  s.ServiceState ==(int)WeiXiuFanKuiDan.ScratchSave.Save? "查看" : "编辑");
                     this.WeiXiuDataGridView1.Rows[this.WeiXiuDataGridView1.Rows.Count - 1].Tag = s;
                     i++;
                 }
@@ -88,7 +94,7 @@ namespace WeiXiu
             {
                 foreach (WeiXiuFanKuiDan s in Currentss)
                 {
-                    this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"), "查看");
+                    this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber, s.ServicePerson, s.QualityProblems, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"), s.ServiceState == (int)WeiXiuFanKuiDan.ScratchSave.Save ? "查看" : "编辑");
                     this.WeiXiuDataGridView1.Rows[this.WeiXiuDataGridView1.Rows.Count - 1].Tag = s;
                     i++;
                 }

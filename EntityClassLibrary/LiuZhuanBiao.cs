@@ -457,8 +457,318 @@ namespace EntityClassLibrary
             set { time = value; }
         }
 
+        private string dieselOilFilterInstaller;
 
+        public virtual string DieselOilFilterInstaller
+        {
+            get { return dieselOilFilterInstaller; }
+            set { dieselOilFilterInstaller = value; }
+        }
 
+        private string dieselOilFilterHead;
+
+        public virtual string DieselOilFilterHead
+        {
+            get { return dieselOilFilterHead; }
+            set { dieselOilFilterHead = value; }
+        }
+
+        private string dieselOilFilterRemark;
+
+        public virtual string DieselOilFilterRemark
+        {
+            get { return dieselOilFilterRemark; }
+            set { dieselOilFilterRemark = value; }
+        }
+
+        private string pressurizerInstaller;
+
+        public virtual string PressurizerInstaller
+        {
+            get { return pressurizerInstaller; }
+            set { pressurizerInstaller = value; }
+        }
+
+        private string pressurizerHead;
+
+        public virtual string PressurizerHead
+        {
+            get { return pressurizerHead; }
+            set { pressurizerHead = value; }
+        }
+
+        private string pressurizerRemark;
+
+        public virtual string PressurizerRemark
+        {
+            get { return pressurizerRemark; }
+            set { pressurizerRemark = value; }
+        }
+
+        private string mixerInstaller;
+
+        public virtual string MixerInstaller
+        {
+            get { return mixerInstaller; }
+            set { mixerInstaller = value; }
+        }
+
+        private string mixerHead;
+
+        public virtual string MixerHead
+        {
+            get { return mixerHead; }
+            set { mixerHead = value; }
+        }
+
+        private string mixerRemark;
+
+        public virtual string MixerRemark
+        {
+            get { return mixerRemark; }
+            set { mixerRemark = value; }
+        }
+
+        private string waterHeaterInstaller;
+
+        public virtual string WaterHeaterInstaller
+        {
+            get { return waterHeaterInstaller; }
+            set { waterHeaterInstaller = value; }
+        }
+
+        private string waterHeaterHead;
+
+        public virtual string WaterHeaterHead
+        {
+            get { return waterHeaterHead; }
+            set { waterHeaterHead = value; }
+        }
+
+        private string waterHeaterRemark;
+
+        public virtual string WaterHeaterRemark
+        {
+            get { return waterHeaterRemark; }
+            set { waterHeaterRemark = value; }
+        }
+
+        private string liquidMonitorInstaller;
+
+        public virtual string LiquidMonitorInstaller
+        {
+            get { return liquidMonitorInstaller; }
+            set { liquidMonitorInstaller = value; }
+        }
+
+        private string liquidMonitorHead;
+
+        public virtual string LiquidMonitorHead
+        {
+            get { return liquidMonitorHead; }
+            set { liquidMonitorHead = value; }
+        }
+
+        private string liquidMonitorRemark;
+
+        public virtual string LiquidMonitorRemark
+        {
+            get { return liquidMonitorRemark; }
+            set { liquidMonitorRemark = value; }
+        }
+
+        private string bracketInstallationInstaller;
+
+        public virtual string BracketInstallationInstaller
+        {
+            get { return bracketInstallationInstaller; }
+            set { bracketInstallationInstaller = value; }
+        }
+
+        private string bracketInstallationHead;
+
+        public virtual string BracketInstallationHead
+        {
+            get { return bracketInstallationHead; }
+            set { bracketInstallationHead = value; }
+        }
+
+        private string bracketInstallationRemark;
+
+        public virtual string BracketInstallationRemark
+        {
+            get { return bracketInstallationRemark; }
+            set { bracketInstallationRemark = value; }
+        }
+
+        private string gasInstallationInstaller;
+
+        public virtual string GasInstallationInstaller
+        {
+            get { return gasInstallationInstaller; }
+            set { gasInstallationInstaller = value; }
+        }
+
+        private string gasInstallationHead;
+
+        public virtual string GasInstallationHead
+        {
+            get { return gasInstallationHead; }
+            set { gasInstallationHead = value; }
+        }
+
+        private string gasInstallationRemark;
+
+        public virtual string GasInstallationRemark
+        {
+            get { return gasInstallationRemark; }
+            set { gasInstallationRemark = value; }
+        }
+
+        private string boxInstallationInstaller;
+
+        public virtual string BoxInstallationInstaller
+        {
+            get { return boxInstallationInstaller; }
+            set { boxInstallationInstaller = value; }
+        }
+
+        private string boxInstallationHead;
+
+        public virtual string BoxInstallationHead
+        {
+            get { return boxInstallationHead; }
+            set { boxInstallationHead = value; }
+        }
+
+        private string boxInstallationRemark;
+
+        public virtual string BoxInstallationRemark
+        {
+            get { return boxInstallationRemark; }
+            set { boxInstallationRemark = value; }
+        }
+
+        private string bufferInstallationInstaller;
+
+        public virtual string BufferInstallationInstaller
+        {
+            get { return bufferInstallationInstaller; }
+            set { bufferInstallationInstaller = value; }
+        }
+
+        private string bufferInstallationHead;
+
+        public virtual string BufferInstallationHead
+        {
+            get { return bufferInstallationHead; }
+            set { bufferInstallationHead = value; }
+        }
+
+        private string bufferInstallationRemark;
+
+        public virtual string BufferInstallationRemark
+        {
+            get { return bufferInstallationRemark; }
+            set { bufferInstallationRemark = value; }
+        }
+
+        private string speedInstallationInstaller;
+
+        public virtual string SpeedInstallationInstaller
+        {
+            get { return speedInstallationInstaller; }
+            set { speedInstallationInstaller = value; }
+        }
+
+        private string speedInstallationHead;
+
+        public virtual string SpeedInstallationHead
+        {
+            get { return speedInstallationHead; }
+            set { speedInstallationHead = value; }
+        }
+
+        private string speedInstallationRemark;
+
+        public virtual string SpeedInstallationRemark
+        {
+            get { return speedInstallationRemark; }
+            set { speedInstallationRemark = value; }
+        }
+
+        private string turbineInstallationInstaller;
+
+        public virtual string TurbineInstallationInstaller
+        {
+            get { return turbineInstallationInstaller; }
+            set { turbineInstallationInstaller = value; }
+        }
+
+        private string turbineInstallationHead;
+
+        public virtual string TurbineInstallationHead
+        {
+            get { return turbineInstallationHead; }
+            set { turbineInstallationHead = value; }
+        }
+
+        private string turbineInstallationRemark;
+
+        public virtual string TurbineInstallationRemark
+        {
+            get { return turbineInstallationRemark; }
+            set { turbineInstallationRemark = value; }
+        }
+
+        private string beautifulInstaller;
+
+        public virtual string BeautifulInstaller
+        {
+            get { return beautifulInstaller; }
+            set { beautifulInstaller = value; }
+        }
+
+        private string beautifuHead;
+
+        public virtual string BeautifuHead
+        {
+            get { return beautifuHead; }
+            set { beautifuHead = value; }
+        }
+
+        private string beautifuRemark;
+
+        public virtual string BeautifuRemark
+        {
+            get { return beautifuRemark; }
+            set { beautifuRemark = value; }
+        }
+
+        private string waterIsGoodPerson;
+
+        public virtual string WaterIsGoodPerson
+        {
+            get { return waterIsGoodPerson; }
+            set { waterIsGoodPerson = value; }
+        }
+
+        private string waterIsGoodSign;
+
+        public virtual string WaterIsGoodSign
+        {
+            get { return waterIsGoodSign; }
+            set { waterIsGoodSign = value; }
+        }
+
+        private string waterIsGoodRemark;
+
+        public virtual string WaterIsGoodRemark
+        {
+            get { return waterIsGoodRemark; }
+            set { waterIsGoodRemark = value; }
+        }
+       
 
         //private string producer;
         //public virtual string Producer

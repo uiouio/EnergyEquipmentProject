@@ -55,6 +55,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SQL\OP_WX.cs" />
+    <Compile Include="TiaoShiWeiXiuJiLu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TiaoShiWeiXiuJiLu.Designer.cs">
+      <DependentUpon>TiaoShiWeiXiuJiLu.cs</DependentUpon>
+    </Compile>
     <Compile Include="WeiXiu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +95,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="TiaoShiWeiXiuJiLu.resx">
+      <DependentUpon>TiaoShiWeiXiuJiLu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WeiXiu.resx">
       <DependentUpon>WeiXiu.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +126,10 @@
     <ProjectReference Include="..\CommonWindow\CommonWindow.csproj">
       <Project>{B5A3A9CE-CAA4-42B9-9C4C-D08FA4635283}</Project>
       <Name>CommonWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnergyEquipmentProject\EnergyEquipmentProject.csproj">
+      <Project>{e6f0b4fb-3e48-4a8c-a37e-383a2faacfc1}</Project>
+      <Name>EnergyEquipmentProject</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityClassLibrary\EntityClassLibrary.csproj">
       <Project>{6C5F2133-D535-4CA4-865F-C641810A4820}</Project>
