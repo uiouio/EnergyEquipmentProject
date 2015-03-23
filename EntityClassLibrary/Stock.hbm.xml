@@ -9,7 +9,7 @@
 
     <many-to-one name="GoodsBaseInfoID" column="GoodsBaseInfoID" lazy="false"  class="EntityClassLibrary.GoodsBaseInfo,EntityClassLibrary" ></many-to-one>
     <property name="Money" column="Money" type="float" />
-    <property name="Quantity" column="Quantity" type="long" length="7" />
+    <property name="Quantity" column="Quantity" type="float" />
     <property name="GoodsCode" column="GoodsCode" type="string" length="50" />
     <property name="StorehouseplaceCode" column="StorehouseplaceCode" type="long" length="10" />
     

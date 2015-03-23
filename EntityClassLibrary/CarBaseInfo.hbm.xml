@@ -49,9 +49,12 @@
     <property name="HistoryId" column="HistoryId" type="long" length="10" not-null="true"/>
     <many-to-one name="Cbi" column="CustomBaseID" lazy="false"
                  class="EntityClassLibrary.CustomBaseInfo, EntityClassLibrary" />
-
     <many-to-one name="ModificationID" column="ModificationContractId" lazy="false"
                 class="EntityClassLibrary.ModificationContract, EntityClassLibrary" />
+    <set name="CustomRecordInfo" inverse="false" lazy="false" where="State=0">
+      <key column="carBaseinfoID"/>
+      <one-to-many class="EntityClassLibrary.CustomerServiceRecord,EntityClassLibrary" />
+    </set>
   </class>
 
 </hibernate-mapping>

@@ -190,7 +190,7 @@ namespace KuGuanXiTong
                         if (typeof(Stock) == this.commonDataGridView1.Rows[i].Tag.GetType())
                         {
                             Stock ss = (Stock)commonDataGridView1.Rows[i].Tag;
-                            ss.Quantity = ss.Quantity + long.Parse(this.commonDataGridView1.Rows[i].Cells[6].Value.ToString());
+                            ss.Quantity = ss.Quantity + float.Parse(this.commonDataGridView1.Rows[i].Cells[6].Value.ToString());
                             ss.GoodsCode = this.commonDataGridView1.Rows[i].Cells[2].Value.ToString();
                             ss.Money = (ss.Money + float.Parse(this.commonDataGridView1.Rows[i].Cells[7].Value.ToString())) / 2;
                             sod.StockId = ss;
@@ -228,7 +228,7 @@ namespace KuGuanXiTong
                             ss.GoodsBaseInfoID = goods;
                             ss.Money = float.Parse(this.commonDataGridView1.Rows[i].Cells[7].Value.ToString());
                             ss.GoodsCode = this.commonDataGridView1.Rows[i].Cells[2].Value.ToString();
-                            ss.Quantity = long.Parse(this.commonDataGridView1.Rows[i].Cells[6].Value.ToString());
+                            ss.Quantity = float.Parse(this.commonDataGridView1.Rows[i].Cells[6].Value.ToString());
                             ss.StorehouseplaceCode = long.Parse(this.commonDataGridView1.Rows[i].Cells[8].Value.ToString() == "" ? "0" : this.commonDataGridView1.Rows[i].Cells[8].Value.ToString());
                             sod.StockId = opstck.SaveOrUpdateEntity(ss) as Stock;
 
@@ -250,7 +250,7 @@ namespace KuGuanXiTong
 
                         //StockOperationDetail表中数据变化
                         sod.StockOperationId = opeaid;
-                        sod.Quantity = long.Parse(this.commonDataGridView1.Rows[i].Cells[6].Value.ToString());
+                        sod.Quantity = float.Parse(this.commonDataGridView1.Rows[i].Cells[6].Value.ToString());
                         sod.GoodsCode = this.commonDataGridView1.Rows[i].Cells[2].Value.ToString();
                         sod.TheMoney = float.Parse(this.commonDataGridView1.Rows[i].Cells[7].Value.ToString());
                         opstck.SaveOrUpdateEntity(sod);

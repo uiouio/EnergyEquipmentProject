@@ -7,7 +7,7 @@
       <generator class="native" />
     </id>
 
-    <property name="Quantity" column="Quantity" type="long" length="7" />
+    <property name="Quantity" column="Quantity" type="float"  />
     <property name="GoodsCode" column="GoodsCode" type="string" length="23" />
 
     <many-to-one name="StockOperationId" column="StockOperationId" lazy="false"  class="EntityClassLibrary.StockOperation,EntityClassLibrary" ></many-to-one>

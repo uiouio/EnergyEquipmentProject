@@ -82,7 +82,7 @@ namespace KuGuanXiTong
                     goodsName.Text = refitGoods.GoodsBaseInfoId.GoodsName;
                     count.Text = s.Quantity.ToString();
                     code.Text = s.GoodsCode;
-                    money.Text = s.TheMoney!=null?s.TheMoney.ToString():"";
+                    money.Text = s.TheMoney !=0?s.TheMoney.ToString():"";
                     item.SubItems.Add(goodsName);
                     item.SubItems.Add(count);
                     item.SubItems.Add(code);
@@ -109,7 +109,7 @@ namespace KuGuanXiTong
                 textBox_goodsCode.Focus();
                 return;
             }
-            if ((differenceCount - Convert.ToInt32(textBox_Count.Text.Trim())) < 0)
+            if ((differenceCount - Convert.ToDouble(textBox_Count.Text.Trim())) < 0)
             {
                 MessageBox.Show("所出数量超出待出数量！");
                 textBox_Count.Text = "";
@@ -117,7 +117,7 @@ namespace KuGuanXiTong
                 return;
             }
             Stock stock = chuKuService.getStockByGoodsCode(label_typeCode.Text + textBox_goodsCode.Text.Trim());
-            if (stock != null && stock.Quantity >= Convert.ToInt64(textBox_Count.Text.Trim()))
+            if (stock != null && stock.Quantity >= Convert.ToDouble(textBox_Count.Text.Trim()))
             {
                 if (chuKuDetail != null && chuKuDetail[1] == null)
                 {
@@ -125,7 +125,7 @@ namespace KuGuanXiTong
                 }
                 IList<StockOperationDetail> detailList = (IList<StockOperationDetail>)chuKuDetail[1];
 
-                stock.Quantity -= Convert.ToInt64(textBox_Count.Text.Trim());
+                stock.Quantity -= (float)Convert.ToDouble(textBox_Count.Text.Trim());
                 chuKuService.SaveOrUpdateEntity(stock);
                 if (stockOp == null)
                 {
@@ -141,7 +141,7 @@ namespace KuGuanXiTong
 
                 StockOperationDetail sod = new StockOperationDetail();
                 sod.GoodsCode = label_typeCode.Text + textBox_goodsCode.Text.Trim();
-                sod.Quantity = Convert.ToInt64(textBox_Count.Text.Trim());
+                sod.Quantity = (float)Convert.ToDouble(textBox_Count.Text.Trim());
                 sod.StockOperationId = stockOp;
                 sod.StockId = stock;
                 sod.TheMoney = stock.GoodsBaseInfoID.SingleMoney;

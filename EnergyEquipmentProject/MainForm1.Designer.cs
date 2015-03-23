@@ -37,6 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.commonTabControl1 = new CommonControl.CommonTabControl();
             this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -68,7 +69,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 719);
+            this.panel1.Location = new System.Drawing.Point(0, 720);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1370, 30);
             this.panel1.TabIndex = 21;
@@ -107,7 +108,7 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("楷体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(1191, 28);
+            this.label4.Location = new System.Drawing.Point(1172, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 1;
@@ -121,7 +122,7 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("楷体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(1280, 28);
+            this.label2.Location = new System.Drawing.Point(1276, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 20);
             this.label2.TabIndex = 0;
@@ -134,16 +135,17 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(234, 69);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1136, 650);
+            this.panel3.Size = new System.Drawing.Size(1136, 651);
             this.panel3.TabIndex = 35;
             // 
+            this.commonTabControl1.Size = new System.Drawing.Size(1136, 651);
             // panel4
             // 
             this.panel4.Controls.Add(this.flowLayoutPanel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 69);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(224, 650);
+            this.panel4.Size = new System.Drawing.Size(224, 651);
             this.panel4.TabIndex = 33;
             // 
             // flowLayoutPanel1
@@ -155,8 +157,9 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(224, 650);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(224, 651);
             this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel5
             // 
@@ -220,6 +223,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = global::EnergyEquipmentProject.Properties.Resources.QQ图片20140709214426;
+            this.ClientSize = new System.Drawing.Size(1544, 774);
+            this.ClientSize = new System.Drawing.Size(1370, 750);
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.commonPictureButton1);
@@ -253,6 +258,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private CommonControl.CommonTabControl commonTabControl1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

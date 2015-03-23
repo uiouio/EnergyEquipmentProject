@@ -8,6 +8,9 @@ namespace EntityClassLibrary
    public class Stock :BaseEntity
     {
         private GoodsBaseInfo goodsBaseInfoID;
+        /// <summary>
+        /// 货物类别ID
+        /// </summary>
         public virtual GoodsBaseInfo GoodsBaseInfoID
         {
             get { return goodsBaseInfoID; }
@@ -15,20 +18,29 @@ namespace EntityClassLibrary
         }
 
         private float money;
+        /// <summary>
+        /// 金钱
+        /// </summary>
         public virtual float Money
         {
             get { return money; }
             set { money = value; }
         }
        
-        private long quantity;
-        public virtual long Quantity
+        private float quantity;
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public virtual float Quantity
         {
             get { return quantity; }
             set { quantity = value; }
         }
         
         private string goodsCode;
+        /// <summary>
+        /// 物品条码
+        /// </summary>
         public virtual string GoodsCode
         {
             get { return goodsCode; }
@@ -36,6 +48,9 @@ namespace EntityClassLibrary
         }
         
         private long storehouseplaceCode;
+        /// <summary>
+        /// 库位号
+        /// </summary>
         public virtual long StorehouseplaceCode
         {
             get { return storehouseplaceCode; }

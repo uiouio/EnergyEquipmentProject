@@ -117,7 +117,7 @@ namespace KuGuanXiTong
                 return;
             }
             Stock stock = chuKuService.getStockByGoodsCode(label_typeCode.Text + textBox_goodsCode.Text.Trim());
-            if (stock != null && stock.Quantity >= Convert.ToInt64(textBox_Count.Text.Trim()))
+            if (stock != null && stock.Quantity >= Convert.ToDouble(textBox_Count.Text.Trim()))
             {
                 if (chuKuDetail != null && chuKuDetail[1] == null)
                 {
@@ -125,7 +125,7 @@ namespace KuGuanXiTong
                 }
                 IList<StockOperationDetail> detailList = (IList<StockOperationDetail>)chuKuDetail[1];
 
-                stock.Quantity -= Convert.ToInt64(textBox_Count.Text.Trim());
+                stock.Quantity -= (float)Convert.ToDouble(textBox_Count.Text.Trim());
                 chuKuService.SaveOrUpdateEntity(stock);
                 if (stockOp == null)
                 {
@@ -141,7 +141,7 @@ namespace KuGuanXiTong
 
                 StockOperationDetail sod = new StockOperationDetail();
                 sod.GoodsCode = label_typeCode.Text + textBox_goodsCode.Text.Trim();
-                sod.Quantity = Convert.ToInt64(textBox_Count.Text.Trim());
+                sod.Quantity = (float)Convert.ToDouble(textBox_Count.Text.Trim());
                 sod.StockOperationId = stockOp;
                 sod.StockId = stock;
                 sod.TheMoney = stock.GoodsBaseInfoID.SingleMoney;

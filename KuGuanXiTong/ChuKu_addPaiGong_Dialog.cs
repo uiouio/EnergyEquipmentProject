@@ -73,7 +73,7 @@ namespace KuGuanXiTong
                             RefitWorkGoods rwg = (RefitWorkGoods)o[0];
                             if (rwg.GoodsBaseInfoId.Id.ToString().Equals(Convert.ToInt32(s.GoodsCode.Substring(0, 8)).ToString()))
                             {
-                                r.Cells[6].Value = rwg.Count - Convert.ToInt32(s.Quantity);
+                                r.Cells[6].Value = rwg.Count - Convert.ToDouble(s.Quantity);
                                 IList<StockOperationDetail> stockList = null;
                                 if (o[1] == null)
                                 {

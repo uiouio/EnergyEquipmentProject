@@ -9,6 +9,9 @@ namespace EntityClassLibrary
     {
 
         StockOperation stockOperationId;
+        /// <summary>
+        /// 操作单号
+        /// </summary>
         public virtual StockOperation StockOperationId
         {
             get { return stockOperationId; }
@@ -16,8 +19,11 @@ namespace EntityClassLibrary
         }
 
 
-        long quantity;
-        public virtual long Quantity
+        float quantity;
+        /// <summary>
+        /// 操作数量
+        /// </summary>
+        public virtual float Quantity
         {
             get { return quantity; }
             set { quantity = value; }
