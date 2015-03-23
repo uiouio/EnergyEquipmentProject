@@ -49,7 +49,7 @@ namespace WeiXiu
             {
                 foreach (WeiXiuFanKuiDan s in Currentss)
                 {
-                    this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"), "查看");
+                    this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber, s.ServicePerson, s.QualityProblems, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"), "查看");
                     this.WeiXiuDataGridView1.Rows[this.WeiXiuDataGridView1.Rows.Count - 1].Tag = s;
                     i++;
                 }
@@ -82,7 +82,7 @@ namespace WeiXiu
                 {
                     foreach (WeiXiuFanKuiDan s in Currentss)
                     {
-                        this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"), "查看");
+                        this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber, s.ServicePerson, s.QualityProblems, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"), "查看");
                         this.WeiXiuDataGridView1.Rows[this.WeiXiuDataGridView1.Rows.Count - 1].Tag = s;
                         i++;
                     }

@@ -19,6 +19,7 @@ namespace WeiXiu
 
     {
         OP_WX oo = new OP_WX();
+        ServiceGoods sergoo = new ServiceGoods();
 
         WeiXiuFanKuiDan wx;
         /// <summary>
@@ -68,9 +69,7 @@ namespace WeiXiu
 
 
         private void button1_Click(object sender, EventArgs e)
-        {
-
-            
+        {          
             wx = new WeiXiuFanKuiDan();
             wx.Name = this.textBox1.Text;
             wx.LicensePlateNumber = this.textBox15.Text;
@@ -100,41 +99,32 @@ namespace WeiXiu
             DateTime now = DateTime.Now;
             textBox8.Text = "WX" + now.Year + (now.Month.ToString().Length == 1 ? ("0" + now.Month) : now.Month.ToString()) + (now.Day.ToString().Length == 1 ? ("0" + now.Day) : now.Day.ToString()) + DateTime.Now.ToLongTimeString().Replace(":", "");
             wx.ServiceNumber = this.textBox8.Text;
-
-           // wx.ServiceGoods=Currentss;
-
+            wx.ServiceState =(int)WeiXiuFanKuiDan.ScratchSave.Save;
             wx = oo.SaveOrUpdateEntity(wx) as WeiXiuFanKuiDan;
+           
 
- 
             if(this.commonDataGridView1.Rows.Count>0)
             {
                 int count = this.commonDataGridView1.Rows.Count;
                 for (int i = 0; i < count;i++)
                 {
                   Object[] obj =   (this.commonDataGridView1.Rows[i].Tag as Object[]);
-                  ServiceGoods sergoo = new ServiceGoods();
-                  sergoo.WeiXiuFanKuiDanId = wx;
+                 
+                    sergoo.WeiXiuFanKuiDanId = wx;
                     GoodsBaseInfo gg = new GoodsBaseInfo ();
                     gg.Id = Convert.ToInt64(obj[7]);
                     sergoo.GoodsBaseInfoId = gg;
                     sergoo.Number =  Convert.ToInt32 (obj[9]);
                     oo.SaveOrUpdateEntity(sergoo);
+                  
                 }
-            }
+            } 
 
-            //foreach (ServiceGoods rwg in Currentss)
-            //{
-               
-                //oo.SaveOrUpdateEntity(rwg);
-           // }
-            //oo.SaveOrUpdateEntity(wx);
-
-            //weixiugoods.WeiXiuFanKuiDanId = tt;
-            // GoodsBaseInfo gg = new  ();
-            // gg.Id = (this.com.tag as object[])[7];
-            //weixiugoods.GoodsBaseInfoId = gg;
+          
             if (MessageBox.Show("是否确认？", "确认", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+               
+                
                 this.DialogResult = DialogResult.OK;
 
             }
@@ -149,43 +139,49 @@ namespace WeiXiu
 
         private void WeiXiu_FanKuiDan_Load(object sender, EventArgs e)
         {
-            if (wx != null)
-            {
-
-                this.textBox1.Text = wx.Name;
-                textBox15.Text = wx.LicensePlateNumber;
-                textBox3.Text = wx.Models;
-                textBox2.Text = wx.FeedbackForm;
-                textBox4.Text = wx.TelephoneNumber;
-                textBox6.Text = wx.ServicePerson;
-                textBox7.Text = wx.QualityProblems;
-                textBox5.Text = wx.Remarks;
-                textBox8.Text = wx.ServiceNumber;
-               
-                if (wx.Payment == 1)
+           
+                if (wx != null)
                 {
-                    this.radioButton1.Checked = true;
-                    textBox14.Text = wx.Money.ToString();
-                }
-                else if (wx.Payment == 0)
-                {
-                    this.radioButton2.Checked = true;
-                }
-
-                IList i = oo.QueryWeiXiuFGoods(wx.Id);
-                
-                if( i!= null && i.Count>0)
-                {
-                    foreach (ServiceGoods o in i)
+                    if (wx.ServiceState == (int)WeiXiuFanKuiDan.ScratchSave.Save)
                     {
-                        this.commonDataGridView1.Rows.Add(o.GoodsBaseInfoId.GoodsName, o.GoodsBaseInfoId.Specifications, o.GoodsBaseInfoId.Material, o.GoodsBaseInfoId.Unit, o.Number);
+                        SetAllTextEnableUnActive();
 
                     }
+
+                    this.textBox1.Text = wx.Name;
+                    textBox15.Text = wx.LicensePlateNumber;
+                    textBox3.Text = wx.Models;
+                    textBox2.Text = wx.FeedbackForm;
+                    textBox4.Text = wx.TelephoneNumber;
+                    textBox6.Text = wx.ServicePerson;
+                    textBox7.Text = wx.QualityProblems;
+                    textBox5.Text = wx.Remarks;
+                    textBox8.Text = wx.ServiceNumber;
+
+                    if (wx.Payment == 1)
+                    {
+                        this.radioButton1.Checked = true;
+                        textBox14.Text = wx.Money.ToString();
+                    }
+                    else if (wx.Payment == 0)
+                    {
+                        this.radioButton2.Checked = true;
+                    }
+
+                    IList i = oo.QueryWeiXiuFGoods(wx.Id);
+
+                    if (i != null && i.Count > 0)
+                    {
+                        foreach (ServiceGoods o in i)
+                        {
+                            this.commonDataGridView1.Rows.Add(o.GoodsBaseInfoId.GoodsName, o.GoodsBaseInfoId.Specifications, o.GoodsBaseInfoId.Material, o.GoodsBaseInfoId.Unit, o.Number);
+
+                        }
+                    }
+                    DateTime newdatetime = new DateTime(wx.FeedbackTime);
+                    dateTimePicker2.Value = newdatetime;
                 }
-        DateTime newdatetime = new DateTime(wx.FeedbackTime);
-                dateTimePicker2.Value = newdatetime;
-            }
-            
+               
         }
 
         public void SetAllTextEnableUnActive()
@@ -205,6 +201,7 @@ namespace WeiXiu
             commonDataGridView1.Enabled = false;
             button5.Enabled = false;
             button1.Enabled = false;
+          
 
         }
 
@@ -222,7 +219,63 @@ namespace WeiXiu
                     this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = o;
                 }
             }
-        }     
+        }
+
+       /*  private void button4_Click(object sender, EventArgs e)
+        {
+            wx = new WeiXiuFanKuiDan();
+            wx.Name = this.textBox1.Text;
+            wx.LicensePlateNumber = this.textBox15.Text;
+            wx.Models = this.textBox3.Text;
+            wx.FeedbackTime = dateTimePicker2.Value.Ticks;
+            wx.FeedbackForm = this.textBox2.Text;
+            wx.TelephoneNumber = this.textBox4.Text;
+            if (radioButton1.Checked)
+            {
+                wx.Payment = (int)BaseEntity.YesNo.Yes;
+                if (textBox14.Text == "")
+                {
+                    wx.Money = 0;
+                }
+                else
+                {
+                    wx.Money = float.Parse(this.textBox14.Text);
+                }
+            }
+            else
+            {
+                wx.Money = (int)BaseEntity.YesNo.No;
+            }
+            wx.ServicePerson = this.textBox6.Text;
+            wx.QualityProblems = this.textBox7.Text;
+            wx.Remarks = this.textBox5.Text;
+            DateTime now = DateTime.Now;
+            textBox8.Text = "WX" + now.Year + (now.Month.ToString().Length == 1 ? ("0" + now.Month) : now.Month.ToString()) + (now.Day.ToString().Length == 1 ? ("0" + now.Day) : now.Day.ToString()) + DateTime.Now.ToLongTimeString().Replace(":", "");
+            wx.ServiceNumber = this.textBox8.Text;
+            wx = oo.SaveOrUpdateEntity(wx) as WeiXiuFanKuiDan;
+          
+
+            if (this.commonDataGridView1.Rows.Count > 0)
+            {
+                int count = this.commonDataGridView1.Rows.Count;
+                for (int i = 0; i < count; i++)
+                {
+                    Object[] obj = (this.commonDataGridView1.Rows[i].Tag as Object[]);
+                    ServiceGoods sergoo = new ServiceGoods();
+                    sergoo.WeiXiuFanKuiDanId = wx;
+                    GoodsBaseInfo gg = new GoodsBaseInfo();
+                    gg.Id = Convert.ToInt64(obj[7]);
+                    sergoo.GoodsBaseInfoId = gg;
+                    sergoo.Number = Convert.ToInt32(obj[9]);
+                    oo.SaveOrUpdateEntity(sergoo);
+                }
+            } 
+                                   
+          
+            MessageBox.Show("暂存成功");
+            this.DialogResult = DialogResult.OK;
+        } */
+   
           
     }
 }

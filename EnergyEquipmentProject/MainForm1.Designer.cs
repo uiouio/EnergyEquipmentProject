@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
+            this.commonTabControl1 = new CommonControl.CommonTabControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -137,18 +138,7 @@
             this.panel3.Size = new System.Drawing.Size(1136, 651);
             this.panel3.TabIndex = 35;
             // 
-            // commonTabControl1
-            // 
-            this.commonTabControl1.BackColor = System.Drawing.Color.Transparent;
-            this.commonTabControl1.BackgroundImage = global::EnergyEquipmentProject.Properties.Resources.menuBG;
-            this.commonTabControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.commonTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.commonTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.commonTabControl1.Name = "commonTabControl1";
-            this.commonTabControl1.SelectedIndex = -1;
             this.commonTabControl1.Size = new System.Drawing.Size(1136, 651);
-            this.commonTabControl1.TabIndex = 0;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.flowLayoutPanel1);
@@ -209,11 +199,23 @@
             this.commonPictureButton1.Name = "commonPictureButton1";
             this.commonPictureButton1.NonSelectBackGroundImage = global::EnergyEquipmentProject.Properties.Resources.ToLeft1;
             this.commonPictureButton1.SelectBackGroundImage = global::EnergyEquipmentProject.Properties.Resources.ToLeft1;
-            this.commonPictureButton1.Size = new System.Drawing.Size(10, 651);
+            this.commonPictureButton1.Size = new System.Drawing.Size(10, 650);
             this.commonPictureButton1.TabIndex = 36;
             this.commonPictureButton1.TabStop = false;
             this.commonPictureButton1.ToolTipString = null;
             this.commonPictureButton1.Click += new System.EventHandler(this.commonPictureButton1_Click);
+            // 
+            // commonTabControl1
+            // 
+            this.commonTabControl1.BackColor = System.Drawing.Color.Transparent;
+            this.commonTabControl1.BackgroundImage = global::EnergyEquipmentProject.Properties.Resources.menuBG;
+            this.commonTabControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.commonTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.commonTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.commonTabControl1.Name = "commonTabControl1";
+            this.commonTabControl1.SelectedIndex = -1;
+            this.commonTabControl1.Size = new System.Drawing.Size(1136, 650);
+            this.commonTabControl1.TabIndex = 0;
             // 
             // MainForm1
             // 
@@ -221,7 +223,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = global::EnergyEquipmentProject.Properties.Resources.QQ图片20140709214426;
+            this.ClientSize = new System.Drawing.Size(1544, 774);
             this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.commonPictureButton1);
             this.Controls.Add(this.panel4);
@@ -263,6 +267,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label4;
         private CommonControl.CommonPictureButton commonPictureButton1;
+        private CommonControl.CommonTabControl commonTabControl1;
     }
 }
 

@@ -78,10 +78,11 @@ namespace WorkProcedure
         {
             commonDataGridView1.Rows.Clear();
             string number = this.textBox1.Text;
-            long dispatch = (long)this.comboBox1.SelectedIndex ;
+            int dispatch = this.comboBox1.SelectedIndex;
             string platenumber = this.textBox2.Text;
+            string workgroup = this.comboBox2.Text;
             //WorkingGroup workgroup = this.comboBox2.SelectedValue as WorkingGroup;
-            Currentss = OP_LZB.QueryPaiGongDanChaKan(number,dispatch,platenumber);
+            Currentss = OP_LZB.QueryPaiGongDanChaKan(number,dispatch,platenumber,workgroup);
             int i = 1;
             if (Currentss != null)
             {
@@ -182,6 +183,35 @@ namespace WorkProcedure
             }
             
         }
+
+        private void comboBox2_DropDown(object sender, EventArgs e)
+        {
+            if (this.comboBox2.Items.Count == 0)
+            {
+                IList group = OP_LZB.GetAllGroups();
+                if (group != null)
+                {
+                    this.comboBox2.DataSource = group;
+                    this.comboBox2.DisplayMember = "WorkingGroupName";
+                    //this.comboBox2.ValueMember = "Itself";
+                }
+            }
+        }
+
+      /*  private void comboBox2_DropDown(object sender, EventArgs e)
+        {
+            if (this.comboBox2.Items.Count == 0)
+            {
+                IList group = OP_LZB.GetAllGroups();
+                if (group != null)
+                {
+                    this.comboBox2.DataSource = group;
+                    this.comboBox2.DisplayMember = "WorkingGroupName";
+                    //this.comboBox2.ValueMember = "Itself";
+                }
+            }
+        }*/
+
 
       
 

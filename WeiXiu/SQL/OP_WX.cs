@@ -33,7 +33,21 @@ namespace WeiXiu.SQL
          
         }
 
-        public void saveWeiXiuJiLu(EntityClassLibrary.WeiXiuJiLu tt)
+        public IList getAllTiaoShiJiLu() {
+            IList ss = null;
+            string sql = "from TiaoShiWeiXiuJiLu u where u.State = " + (int)BaseEntity.stateEnum.Normal;
+            ss = this.loadEntityList(sql);
+            if (ss.Count > 0 && ss != null)
+            {
+                return ss;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public void saveWeiXiuJiLu(EntityClassLibrary.TiaoShiWeiXiuJiLu tt)
         {
             this.SaveOrUpdateEntity(tt);
         }
@@ -59,6 +73,13 @@ namespace WeiXiu.SQL
             IList i = null;
             string sql = "from WeiXiuFanKuiDan u where u.LicensePlateNumber like" + "'%" + number + "%'and u.State = " + (int)BaseEntity.stateEnum.Normal + " order by u.FeedbackTime Asc";
             i = this.loadEntityList(sql);
+            return i;
+        }
+
+        public IList QueryWeiXiuJiLu(string code, string number, long time1, long time2) { 
+            IList i=null;
+            string sql = "from TiaoShiWeiXiuJiLu u where u.ModificationNumber like " + "'%" + code + "%' and u.License like" + "'%" + number + "%' and u.DebugTime>=" + time1 + " and u.DebugTime<" + time2 + " and  u.State = " + (int)BaseEntity.stateEnum.Normal + " order by u.DebugTime Asc";
+            i = this.loadEntityList(sql); 
             return i;
         }
 

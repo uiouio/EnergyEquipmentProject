@@ -85,6 +85,7 @@
     <Compile Include="SuiteContract.cs" />
     <Compile Include="TemplateManager.cs" />
     <Compile Include="TiaoShiBaoGao.cs" />
+    <Compile Include="TiaoShiWeiXiuJiLu.cs" />
     <Compile Include="TransportContract.cs" />
     <Compile Include="UserRole.cs" />
     <Compile Include="UserInfo.cs" />
@@ -92,7 +93,6 @@
     <Compile Include="WaitChooseSuppliers.cs" />
     <Compile Include="WeiXiuFanKuiDan.cs" />
     <Compile Include="News.cs" />
-    <Compile Include="WeiXiuJiLu.cs" />
     <Compile Include="WorkingGroup.cs" />
     <Compile Include="Letter.cs" />
     <Compile Include="RefitWorkModel.cs" />
@@ -248,9 +248,9 @@
     <Content Include="InstallRecord.hbm.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="WeiXiuJiLu.hbm.xml">
+    <EmbeddedResource Include="TiaoShiWeiXiuJiLu.hbm.xml">
       <SubType>Designer</SubType>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

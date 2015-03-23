@@ -20,7 +20,7 @@ namespace HeTongGuanLi
             get { return modificationContract; }
             set { modificationContract = value; }
         }
-      
+       
         public HeTongPingShen_add_Dialog()
         {
             InitializeComponent();
@@ -60,8 +60,6 @@ namespace HeTongGuanLi
                 this.textBox10.Text = ModificationContract.PaymentMethod;
                 this.textBox9.Text = ModificationContract.Remarks;
             }
-           
-           
             if(ModificationContract.ContractMethod==(int)ModificationContract.Type.duinei)
             {
                 this.radioButton1.Checked = true;
@@ -73,8 +71,6 @@ namespace HeTongGuanLi
             }
             this.textBox15.Text = ModificationContract.UserID.Name;
             this.textBox18.Text = ModificationContract.UserID.Phone;
-            
-
             this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2 - this.Width / 2, Screen.PrimaryScreen.WorkingArea.Height / 2 - this.Height / 2);
         }
 
@@ -83,19 +79,39 @@ namespace HeTongGuanLi
             ModificationContract.SalesResponsiblePersonOpinion = this.textBox8.Text;
            
             ModificationContract.Pass=(int)ModificationContract.PassorNot.pass;
-            ModificationContract.Process=(int)ModificationContract.guocheng.kjs;
-            ModificationContract.ApprovalState=(int)ModificationContract.Approval.already;
-            ss.SaveOrUpdateEntity(ModificationContract);
-            MessageBox.Show("合同评审完成 已通过 提交给会计师");
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if (ModificationContract.CarBaseInfoID != null && ModificationContract.CarBaseInfoID.Count > 0)
+            {
+                CarBaseInfo cbi = null;
+                foreach (CarBaseInfo c in ModificationContract.CarBaseInfoID)
+                {
+                    cbi = c;
+                    break;
+                }
+                if (ModificationContract.ContractAmount >= cbi.CylinderValue)
+                {
+                    ModificationContract.Process = (int)ModificationContract.guocheng.htbgy;
+                    ModificationContract.ApprovalState = (int)ModificationContract.Approval.already;
+                    ss.SaveOrUpdateEntity(ModificationContract);
+                    MessageBox.Show("合同评审完成 已通过 ");
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    ModificationContract.Process = (int)ModificationContract.guocheng.zjl;
+                    ModificationContract.ApprovalState = (int)ModificationContract.Approval.already;
+                    ss.SaveOrUpdateEntity(ModificationContract);
+                    MessageBox.Show("合同评审完成 合同金额小于改装价格 提交给总经理审核 ");
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             ModificationContract.Pass=(int)ModificationContract.PassorNot.unpass;
             ModificationContract.ApprovalState = (int)ModificationContract.Approval.already;
-          
             ss.SaveOrUpdateEntity(ModificationContract);
             MessageBox.Show("合同评审完成 未通过");
             this.DialogResult = DialogResult.OK;

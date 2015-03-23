@@ -221,8 +221,24 @@ namespace EntityClassLibrary
             get { return cylinderType; }
             set { cylinderType = value; }
         }
-       
-
+        private int cylinderValue;
+        /// <summary>
+        /// 气瓶价格
+        /// </summary>
+        public virtual int CylinderValue
+        {
+            get { return cylinderValue; }
+            set { cylinderValue = value; }
+        }
+        private int cylinderNumber;
+        /// <summary>
+        /// 气瓶数量
+        /// </summary>
+        public virtual int CylinderNumber
+        {
+            get { return cylinderNumber; }
+            set { cylinderNumber = value; }
+        }
         private string cylinderNo;
         /// <summary>
         /// 气瓶编号

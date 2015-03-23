@@ -16,6 +16,7 @@ namespace KuGuanXiTong
     public partial class CanShuSheZhi_LeiBieGuanLi : CommonControl.CommonTabPage
     {
 
+        TreeNode treeNode;
         private int Ischanged = 0;
 
         OpStock ops = new OpStock();
@@ -114,6 +115,7 @@ namespace KuGuanXiTong
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            this.button3.Visible = false; //删除按钮
             this.textBox9.Text = "";
             //打印条码
             this.button5.Enabled = false;
@@ -123,7 +125,7 @@ namespace KuGuanXiTong
                 EnableButton();
             }
     
-            TreeNode treeNode = e.Node;
+            treeNode = e.Node;
             //GoodsBaseInfo goods = new GoodsBaseInfo();
             currentGoods = (GoodsBaseInfo)treeNode.Tag;
             if (currentGoods != null)
@@ -196,6 +198,37 @@ namespace KuGuanXiTong
                 }
                 else if(currentGoods.IsUniqueCode != 1)
                     this.checkBox1.Checked = false;
+                if (currentGoods.GoodsFlag == (int)GoodsBaseInfo.TheGoodsFlag.goods)
+                {
+                    string sql = "select u from Stock u where u.GoodsBaseInfoID = " + currentGoods.Id;
+                    IList li =  categtory.loadEntityList(sql);
+                    if (li == null || li.Count == 0)
+                    {
+                        this.button3.Visible = true;
+                    }
+                }
+                else if (currentGoods.GoodsFlag == (int)GoodsBaseInfo.TheGoodsFlag.categtory)
+                {
+                    string sql = "select u from GoodsBaseInfo u where u.GoodsParentClassId = " + currentGoods.Id;
+                    IList li = categtory.loadEntityList(sql);
+                    if (li == null || li.Count == 0)
+                    {
+                        this.button3.Visible = true;
+                    }
+                
+                }
+                else if (currentGoods.GoodsFlag == (int)GoodsBaseInfo.TheGoodsFlag.Taojian)
+                {
+                    string sql = "select u from GoodsBaseInfo u where u.GoodsParentClassId = " + currentGoods.Id;
+                    string sql2 = "select u from Stock u where u.GoodsBaseInfoID = " + currentGoods.Id;
+                    IList li = categtory.loadEntityList(sql);
+                    IList li2 = categtory.loadEntityList(sql2);
+                    if ((li == null || li.Count == 0) && (li2 == null || li2.Count == 0))
+                    {
+                        this.button3.Visible = true;
+                    }
+
+                }
 
             }
 
@@ -346,9 +379,14 @@ namespace KuGuanXiTong
 
                currentGoods =  categtory.SaveOrUpdateEntity(currentGoods) as GoodsBaseInfo;
 
+               //保持原来的展开状态
+               treeNode.Text = currentGoods.GoodsName;
+               treeNode.Tag = currentGoods;
+               
 
-               this.treeView1.Nodes.Clear();
-               RefreshTree(categtory.GetAllCategtory());
+               //this.treeView1.Nodes.Clear();
+               //RefreshTree(categtory.GetAllCategtory());
+
                Ischanged = 0;
            
            }
@@ -370,8 +408,12 @@ namespace KuGuanXiTong
             newClass.ShowDialog();
             if(newClass.DialogResult == DialogResult.OK)
             {
-                this.treeView1.Nodes.Clear();
-                RefreshTree(categtory.GetAllCategtory());
+                TreeNode newnode =  new TreeNode ();
+                newnode.Text = newClass.NewGoods.GoodsName;
+                newnode.Tag = newClass.NewGoods;
+                treeNode.Nodes.Add(newnode);
+                //this.treeView1.Nodes.Clear();
+                //RefreshTree(categtory.GetAllCategtory());
             }
            
         }
@@ -479,13 +521,16 @@ namespace KuGuanXiTong
         private void button3_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("您确定要删除该节点及其子节点吗？", "提示消息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("您确定要删除该节点吗？", "提示消息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                GoodsBaseInfo gg = new GoodsBaseInfo();
-                gg = categtory.GetClassByPcode(this.textBox2.Text);
+                GoodsBaseInfo gg  = currentGoods;
                 RemoveNode(gg.Id);
-                this.treeView1.Nodes.Clear();
-                RefreshTree(categtory.GetAllCategtory());
+
+                TreeNode t = treeNode.Parent;
+                t.Nodes.Remove(treeNode);
+                //this.treeView1.Nodes.Clear();
+                //RefreshTree(categtory.GetAllCategtory());
+                
                 MessageBox.Show("删除成功！");
             }
 

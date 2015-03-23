@@ -26,6 +26,8 @@
     <property name="AfterFuelConsumption" column="AfterFuelConsumption" type="float" />
     <property name="AfterGasConsumption" column="AfterGasConsumption" type="float" />
     <property name="CylinderType" column="CylinderType" type="string" length="18" />
+    <property name="CylinderValue" column="CylinderValue" type="int"  />
+    <property name="CylinderNumber" column="CylinderNumber" type="int"  />
     <property name="CylinderNo" column="CylinderNo" type="string" length="50" />
     <property name="CylinderWeight" column="CylinderWeight" type="float"  />
     <property name="WaterVolume" column="WaterVolume" type="float"  />

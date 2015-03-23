@@ -54,6 +54,8 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.commonFlowLayoutPanel1.SuspendLayout();
@@ -221,6 +223,8 @@
             this.Column2,
             this.Column10,
             this.Column7,
+            this.Column4,
+            this.Column5,
             this.Column8,
             this.Column6});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -268,18 +272,21 @@
             // 
             // Column9
             // 
+            this.Column9.FillWeight = 70F;
             this.Column9.HeaderText = "车主姓名";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
             // Column2
             // 
+            this.Column2.FillWeight = 70F;
             this.Column2.HeaderText = "车型";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column10
             // 
+            this.Column10.FillWeight = 70F;
             this.Column10.HeaderText = "车牌号";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
@@ -290,8 +297,22 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "维修人员";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 200F;
+            this.Column5.HeaderText = "维修问题";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // Column8
             // 
+            this.Column8.FillWeight = 70F;
             this.Column8.HeaderText = "日期";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
@@ -347,6 +368,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewLinkColumn Column6;
     }

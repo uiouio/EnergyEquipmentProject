@@ -54,6 +54,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.labelOfPgoodsName = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -303,11 +304,21 @@
             this.textBox8.Size = new System.Drawing.Size(85, 21);
             this.textBox8.TabIndex = 33;
             // 
+            // labelOfPgoodsName
+            // 
+            this.labelOfPgoodsName.AutoSize = true;
+            this.labelOfPgoodsName.Location = new System.Drawing.Point(45, 21);
+            this.labelOfPgoodsName.Name = "labelOfPgoodsName";
+            this.labelOfPgoodsName.Size = new System.Drawing.Size(77, 12);
+            this.labelOfPgoodsName.TabIndex = 34;
+            this.labelOfPgoodsName.Text = "父类别名称：";
+            // 
             // CanShuSheZhi_LeiBieGuanLi_NewClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 544);
+            this.Controls.Add(this.labelOfPgoodsName);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.checkBox2);
@@ -368,5 +379,6 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label labelOfPgoodsName;
     }
 }

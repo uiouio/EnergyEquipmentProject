@@ -216,10 +216,10 @@ namespace HeTongGuanLi
                     }
                     #endregion
                     #region 销售负责人通过
-                    else if (s.Process == (int)ModificationContract.guocheng.kjs && s.Pass == (int)ModificationContract.PassorNot.pass)
-                    {
-                        this.commonDataGridView1.Rows.Add(0, i.ToString(), s.ContractNo, s.UserID.Name, s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, ModificationContract.ProcessArray[s.Process] + "待审核", "已审批", "查看");
-                    }
+                   //// else if (s.Process == (int)ModificationContract.guocheng.kjs && s.Pass == (int)ModificationContract.PassorNot.pass)
+                   //// {
+                   //     //this.commonDataGridView1.Rows.Add(0, i.ToString(), s.ContractNo, s.UserID.Name, s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, ModificationContract.ProcessArray[s.Process] + "待审核", "已审批", "查看");
+                   //// }
                     #endregion
                     #region  销售负责人不通过
                     else if (s.Process == (int)ModificationContract.guocheng.xsfzr && s.Pass == (int)ModificationContract.PassorNot.unpass)
@@ -228,25 +228,25 @@ namespace HeTongGuanLi
                     }
                     #endregion
                     #region 总会计通过
-                    else if (s.Process == (int)ModificationContract.guocheng.zjl && s.Pass == (int)ModificationContract.PassorNot.pass)
-                    {
-                        this.commonDataGridView1.Rows.Add(0, i.ToString(), s.ContractNo, s.UserID.Name, s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, ModificationContract.ProcessArray[s.Process] + "待审核", "已审批", "查看");
-                    }
+                   // else if (s.Process == (int)ModificationContract.guocheng.zjl && s.Pass == (int)ModificationContract.PassorNot.pass)
+                    //{
+                       // this.commonDataGridView1.Rows.Add(0, i.ToString(), s.ContractNo, s.UserID.Name, s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, ModificationContract.ProcessArray[s.Process] + "待审核", "已审批", "查看");
+                 //   }
                     #endregion
                     #region 总会计不通过
-                    else if (s.Process == (int)ModificationContract.guocheng.xsfzr && s.Pass == (int)ModificationContract.PassorNot.unpass)
-                    {
-                        this.commonDataGridView1.Rows.Add(0, i.ToString(), s.ContractNo, s.UserID.Name, s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, ModificationContract.ProcessArray[s.Process] + "不通过", "已审批", "查看");
-                    }
+                    //else if (s.Process == (int)ModificationContract.guocheng.xsfzr && s.Pass == (int)ModificationContract.PassorNot.unpass)
+                    //{
+                    //    this.commonDataGridView1.Rows.Add(0, i.ToString(), s.ContractNo, s.UserID.Name, s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, ModificationContract.ProcessArray[s.Process] + "不通过", "已审批", "查看");
+                    //}
                     #endregion
                     #region 总经理通过
                     else if (s.Process == (int)ModificationContract.guocheng.htbgy && s.Pass == (int)ModificationContract.PassorNot.pass)
                     {
-                        this.commonDataGridView1.Rows.Add(0, i.ToString(), s.ContractNo, s.UserID.Name, s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, ModificationContract.ProcessArray[s.Process], "已审批", "查看");
+                        this.commonDataGridView1.Rows.Add(0, i.ToString(), s.ContractNo, s.UserID.Name, s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, ModificationContract.ProcessArray[s.Process]+"通过", "已审批", "查看");
                     }
                     #endregion
                     #region 总经理不通过
-                    else if (s.Process == (int)ModificationContract.guocheng.kjs && s.Pass == (int)ModificationContract.PassorNot.unpass)
+                    else if (s.Process == (int)ModificationContract.guocheng.xsfzr && s.Pass == (int)ModificationContract.PassorNot.unpass)
                     {
                         this.commonDataGridView1.Rows.Add(0, i.ToString(), s.ContractNo, s.UserID.Name, s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, ModificationContract.ProcessArray[s.Process] + "不通过", "已审批", "查看");
                     }
