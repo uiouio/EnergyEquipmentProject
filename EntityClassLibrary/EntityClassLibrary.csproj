@@ -54,6 +54,7 @@
     <Compile Include="CarTheLibrary.cs" />
     <Compile Include="CheRuKuInfo.cs" />
     <Compile Include="CustomBaseInfo.cs" />
+    <Compile Include="CustomerServiceRecord.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="GoodsBaseInfo.cs" />
     <Compile Include="HuiYuanBaseInfo.cs" />
@@ -243,6 +244,7 @@
     <EmbeddedResource Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CustomerServiceRecord.hbm.xml" />
     <Content Include="InstallRecord.hbm.xml">
       <SubType>Designer</SubType>
     </Content>

@@ -196,5 +196,10 @@ namespace EnergyEquipmentProject
                 commonPictureButton1.SelectBackGroundImage = EnergyEquipmentProject.Properties.Resources.ToLeft1;
             }
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using Iesi.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
@@ -395,6 +395,13 @@ namespace EntityClassLibrary
         {
             get { return modificationID; }
             set { modificationID = value; }
+        }
+        private ISet<CustomerServiceRecord> customRecordInfo;
+
+        public virtual ISet<CustomerServiceRecord> CustomRecordInfo
+        {
+            get { return customRecordInfo; }
+            set { customRecordInfo = value; }
         }
 
         public static string[] ModifyType = { "CNG汽油", "CNG柴油", "LNG柴油" };

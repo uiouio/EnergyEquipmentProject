@@ -44,6 +44,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinHtmlEditor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EnergyEquipmentProject\bin\Debug\lib\WinHtmlEditor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CarManage_add_Dialog.cs">
@@ -111,6 +115,18 @@
     </Compile>
     <Compile Include="CompanyCustomInfo_add_Dialog2.Designer.cs">
       <DependentUpon>CompanyCustomInfo_add_Dialog2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomReport_Add_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomReport_Add_Dialog.Designer.cs">
+      <DependentUpon>CustomReport_Add_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomServiceQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomServiceQuery.Designer.cs">
+      <DependentUpon>CustomServiceQuery.cs</DependentUpon>
     </Compile>
     <Compile Include="JingXiaoShangGuanLi.cs">
       <SubType>UserControl</SubType>
@@ -184,6 +200,7 @@
     <Compile Include="QiYeCheLiangJianYeXinXiLuRu.Designer.cs">
       <DependentUpon>QiYeCheLiangJianYeXinXiLuRu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\CustomerRecordService.cs" />
     <Compile Include="Service\Service.cs" />
     <Compile Include="YanChe_add_Dialog.cs">
       <SubType>Form</SubType>
@@ -209,6 +226,10 @@
       <Project>{75D8D027-D1CA-47A0-A19A-55C5D11F0EE6}</Project>
       <Name>CaiGouXiTong</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CheRuKu\CheRuKu.csproj">
+      <Project>{A01F8085-35B0-4D3A-84D7-F55B972EFFB2}</Project>
+      <Name>CheRuKu</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CommonControl\CommonControl.csproj">
       <Project>{668BF412-E4C3-4F29-9FBE-F69332C290B2}</Project>
       <Name>CommonControl</Name>
@@ -228,6 +249,10 @@
     <ProjectReference Include="..\SQLProvider\SQLProvider.csproj">
       <Project>{2C410869-C0F3-49A4-85E6-68B6E7072707}</Project>
       <Name>SQLProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XinXiGuanLi\XinXiGuanLi.csproj">
+      <Project>{3DD4C7D4-08FD-4F1A-977A-60318CB08FF2}</Project>
+      <Name>XinXiGuanLi</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -263,6 +288,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CompanyCustomInfo_add_Dialog2.resx">
       <DependentUpon>CompanyCustomInfo_add_Dialog2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomReport_Add_Dialog.resx">
+      <DependentUpon>CustomReport_Add_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomServiceQuery.resx">
+      <DependentUpon>CustomServiceQuery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JingXiaoShangGuanLi.resx">
       <DependentUpon>JingXiaoShangGuanLi.cs</DependentUpon>
@@ -337,6 +368,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\transparent1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
