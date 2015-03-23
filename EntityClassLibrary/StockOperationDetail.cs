@@ -44,11 +44,23 @@ namespace EntityClassLibrary
         }
 
         float theMoney;
-
+        /// <summary>
+        /// 税前的单价
+        /// </summary>
         public virtual float TheMoney
         {
             get { return theMoney; }
             set { theMoney = value; }
+        }
+
+        float tax;
+        /// <summary>
+        /// 稅
+        /// </summary>
+        public virtual float Tax
+        {
+            get { return tax; }
+            set { tax = value; }
         }
 
     }

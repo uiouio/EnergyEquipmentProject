@@ -58,6 +58,7 @@ namespace KuGuanXiTong
                         spd.StockId.GoodsBaseInfoID.Unit,
                         spd.Quantity,
                         spd.TheMoney,
+                        spd.Tax,
                         spd.StockId.StorehouseplaceCode,
                         spd.StockId.Quantity);
                     num++;
@@ -105,6 +106,7 @@ namespace KuGuanXiTong
                     spd.StockId.GoodsBaseInfoID.Unit,
                     spd.Quantity,
                     spd.TheMoney,
+                    spd.Tax,
                     spd.StockId.StorehouseplaceCode,
                     spd.StockId.Quantity);
                 num++;
@@ -130,6 +132,7 @@ namespace KuGuanXiTong
                     spd.StockId.GoodsBaseInfoID.Unit,
                     spd.Quantity,
                     spd.TheMoney,
+                    spd.Tax,
                     spd.StockId.StorehouseplaceCode,
                     spd.StockId.Quantity);
                 num++;
