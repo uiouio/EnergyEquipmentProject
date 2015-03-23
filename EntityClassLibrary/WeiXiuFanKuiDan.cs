@@ -115,6 +115,18 @@ namespace EntityClassLibrary
             set { serviceGoods = value; }
         }
 
+        private int serviceState;
+
+        public virtual int ServiceState
+        {
+            get { return serviceState; }
+            set { serviceState = value; }
+        }
+        public enum ScratchSave {
+            Scratch=0,
+            Save=1
+        }
+
 
     }
 }
