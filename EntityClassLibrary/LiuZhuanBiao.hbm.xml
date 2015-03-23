@@ -77,6 +77,47 @@
 		<property name="HistoryId" column="HistoryId" type="long" length="10" />
 		<property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
 		<property name="State" column="State" type="int"  length="1"/>
+
+    <property name="DieselOilFilterInstaller" column="DieselOilFilterInstaller" type="string" length="10" />
+    <property name="DieselOilFilterHead" column="DieselOilFilterHead" type="string" length="10" />
+    <property name="DieselOilFilterRemark" column="DieselOilFilterRemark" type="string" length="50" />
+    <property name="PressurizerInstaller" column="PressurizerInstaller" type="string" length="10" />
+    <property name="PressurizerHead" column="PressurizerHead" type="string" length="10" />
+    <property name="PressurizerRemark" column="PressurizerRemark" type="string" length="50" />
+    <property name="MixerInstaller" column="MixerInstaller" type="string" length="10" />
+    <property name="MixerHead" column="MixerHead" type="string" length="10" />
+    <property name="MixerRemark" column="MixerRemark" type="string" length="50" />
+    <property name="WaterHeaterInstaller" column="WaterHeaterInstaller" type="string" length="10" />
+    <property name="WaterHeaterHead" column="WaterHeaterHead" type="string" length="10" />
+    <property name="WaterHeaterRemark" column="WaterHeaterRemark" type="string" length="50" />
+    <property name="LiquidMonitorInstaller" column="LiquidMonitorInstaller" type="string" length="10" />
+    <property name="LiquidMonitorHead" column="LiquidMonitorHead" type="string" length="10" />
+    <property name="LiquidMonitorRemark" column="LiquidMonitorRemark" type="string" length="50" />
+    <property name="BracketInstallationInstaller" column="BracketInstallationInstaller" type="string" length="10" />
+    <property name="BracketInstallationHead" column="BracketInstallationHead" type="string" length="10" />
+    <property name="BracketInstallationRemark" column="BracketInstallationRemark" type="string" length="50" />
+    <property name="GasInstallationInstaller" column="GasInstallationInstaller" type="string" length="10" />
+    <property name="GasInstallationHead" column="GasInstallationHead" type="string" length="10" />
+    <property name="GasInstallationRemark" column="GasInstallationRemark" type="string" length="50" />
+    <property name="BoxInstallationInstaller" column="BoxInstallationInstaller" type="string" length="10" />
+    <property name="BoxInstallationHead" column="BoxInstallationHead" type="string" length="10" />
+    <property name="BoxInstallationRemark" column="BoxInstallationRemark" type="string" length="50" />
+
+    <property name="BufferInstallationInstaller" column="BufferInstallationInstaller" type="string" length="10" />
+    <property name="BufferInstallationHead" column="BufferInstallationHead" type="string" length="10" />
+    <property name="BufferInstallationRemark" column="BufferInstallationRemark" type="string" length="50" />
+    <property name="SpeedInstallationInstaller" column="SpeedInstallationInstaller" type="string" length="10" />
+    <property name="SpeedInstallationHead" column="SpeedInstallationHead" type="string" length="10" />
+    <property name="SpeedInstallationRemark" column="SpeedInstallationRemark" type="string" length="50" />
+    <property name="TurbineInstallationInstaller" column="TurbineInstallationInstaller" type="string" length="10" />
+    <property name="TurbineInstallationHead" column="TurbineInstallationHead" type="string" length="10" />
+    <property name="TurbineInstallationRemark" column="TurbineInstallationRemark" type="string" length="50" />
+    <property name="BeautifulInstaller" column="BeautifulInstaller" type="string" length="10" />
+    <property name="BeautifuHead" column="BeautifuHead" type="string" length="10" />
+    <property name="BeautifuRemark" column="BeautifuRemark" type="string" length="50" />
+    <property name="WaterIsGoodPerson" column="WaterIsGoodPerson" type="string" length="10" />
+    <property name="WaterIsGoodSign" column="WaterIsGoodSign" type="string" length="10" />
+    <property name="WaterIsGoodRemark" column="WaterIsGoodRemark" type="string" length="50" />
 	
 		<many-to-one name="PaiGongDan" column="RefitWorkId" lazy="false" not-null="true"
                 class="EntityClassLibrary.RefitWork, EntityClassLibrary" />
