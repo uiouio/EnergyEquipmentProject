@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.commonTabControl1 = new CommonControl.CommonTabControl();
+            
             this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -267,7 +267,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label4;
         private CommonControl.CommonPictureButton commonPictureButton1;
-        //private CommonControl.CommonTabControl commonTabControl1;
     }
 }
 
