@@ -10,6 +10,7 @@ namespace HeTongGuanLi.Service
 {
      public  class ContractService:BaseService
     {
+         BaseService ss = new BaseService();
          /// <summary>
          /// 查询销售负责人审核过的合同
          /// </summary>
@@ -519,6 +520,41 @@ namespace HeTongGuanLi.Service
              {
                  return false;
              }
+         }
+         /// <summary>
+         /// 更新气瓶价格
+         /// </summary>
+         /// <param name="name"></param>
+         /// <param name="cname"></param>
+         /// <returns></returns>
+         public void UpdateModifyValue(string name,string cname)
+         {
+             
+             string sql = "update CarBaseInfo set CylinderValue=" + name+ "  where  CylinderType = '" + cname + " ' ";
+             ss.ExecuteSQL(sql);
+         }
+         /// <summary>
+         /// 根据气瓶型号选择车辆
+         /// </summary>
+         /// <param name="name"></param>
+         /// <returns></returns>
+         public IList SelectCarsByType(string name)
+         {
+             IList i = null;
+             string sql = "from CarBaseInfo where  CylinderType='" + name + "'";
+             i = this.loadEntityList(sql);
+             return i;
+         }
+         /// <summary>
+         /// 选择已有车辆的气瓶型号
+         /// </summary>
+         /// <returns></returns>
+         public IList SelectCarsCylinderType()
+         {
+             IList i = null;
+             string sql = "select CylinderType from CarBaseInfo";
+             i = this.loadEntityList(sql);
+             return i;
          }
     }
 }
