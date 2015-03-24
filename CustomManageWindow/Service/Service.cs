@@ -6,6 +6,7 @@ using SQLProvider;
 using EntityClassLibrary;
 using System.Collections;
 using SQLProvider.Service;
+using System.Windows.Forms;
 namespace CustomManageWindow.Service
 {
     public class CustomService : BaseService
@@ -277,6 +278,56 @@ namespace CustomManageWindow.Service
             i = this.loadEntityList(sql);
             return i;
         }
-        
+        /// <summary>
+        /// DataGridView克隆
+        /// </summary>
+        /// <param name="dgv"></param>
+        /// <returns></returns>
+        public DataGridView CloneDataGridView(DataGridView dgv)
+        {
+            try
+            {
+                DataGridView ResultDGV = new DataGridView();
+                ResultDGV.ColumnHeadersDefaultCellStyle = dgv.ColumnHeadersDefaultCellStyle.Clone();
+                DataGridViewCellStyle dtgvdcs = dgv.RowsDefaultCellStyle.Clone();
+                dtgvdcs.BackColor = dgv.DefaultCellStyle.BackColor;
+                dtgvdcs.ForeColor = dgv.DefaultCellStyle.ForeColor;
+                dtgvdcs.Font = dgv.DefaultCellStyle.Font;
+                ResultDGV.RowsDefaultCellStyle = dtgvdcs;
+                ResultDGV.AlternatingRowsDefaultCellStyle = dgv.AlternatingRowsDefaultCellStyle.Clone();
+                for (int i = 0; i < dgv.Columns.Count; i++)
+                {
+                    DataGridViewColumn DTGVC = dgv.Columns[i].Clone() as DataGridViewColumn;
+                    DTGVC.DisplayIndex = dgv.Columns[i].DisplayIndex;
+                    if (DTGVC.CellType == null)
+                    {
+                        DTGVC.CellTemplate = new DataGridViewTextBoxCell();
+                        ResultDGV.Columns.Add(DTGVC);
+                    }
+                    else
+                    {
+                        ResultDGV.Columns.Add(DTGVC);
+                    }
+                }
+                foreach (DataGridViewRow var in dgv.Rows)
+                {
+                    DataGridViewRow Dtgvr = var.Clone() as DataGridViewRow;
+                    Dtgvr.DefaultCellStyle = var.DefaultCellStyle.Clone();
+                    for (int i = 0; i < var.Cells.Count; i++)
+                    {
+                        Dtgvr.Cells[i].Value = var.Cells[i].Value;
+                    }
+                    if (var.Index % 2 == 0)
+                        Dtgvr.DefaultCellStyle.BackColor = ResultDGV.RowsDefaultCellStyle.BackColor;
+                    ResultDGV.Rows.Add(Dtgvr);
+                }
+                return ResultDGV;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
     }
 }

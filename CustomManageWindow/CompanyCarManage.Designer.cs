@@ -35,16 +35,6 @@
             this.commonPictureButton5 = new CommonControl.CommonPictureButton(this.components);
             this.commonPictureButton6 = new CommonControl.CommonPictureButton(this.components);
             this.commonDataGridView2 = new CommonControl.CommonDataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
             this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +50,16 @@
             this.Column34 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             this.commonFlowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton6)).BeginInit();
@@ -92,6 +92,7 @@
             this.commonPictureButton5.TabIndex = 1;
             this.commonPictureButton5.TabStop = false;
             this.commonPictureButton5.ToolTipString = "打印";
+            this.commonPictureButton5.Click += new System.EventHandler(this.commonPictureButton5_Click);
             // 
             // commonPictureButton6
             // 
@@ -106,6 +107,7 @@
             this.commonPictureButton6.TabIndex = 2;
             this.commonPictureButton6.TabStop = false;
             this.commonPictureButton6.ToolTipString = "导出";
+            this.commonPictureButton6.Click += new System.EventHandler(this.commonPictureButton6_Click);
             // 
             // commonDataGridView2
             // 
@@ -144,98 +146,6 @@
             this.commonDataGridView2.Size = new System.Drawing.Size(1224, 515);
             this.commonDataGridView2.TabIndex = 11;
             this.commonDataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView2_CellContentClick);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox28);
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.textBox27);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.textBox18);
-            this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Controls.Add(this.textBox23);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Location = new System.Drawing.Point(296, 49);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(906, 69);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "企业车辆信息查询";
-            // 
-            // textBox28
-            // 
-            this.textBox28.Location = new System.Drawing.Point(669, 30);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(100, 21);
-            this.textBox28.TabIndex = 14;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(608, 33);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(65, 12);
-            this.label30.TabIndex = 15;
-            this.label30.Text = "发动机号：";
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(488, 30);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(101, 21);
-            this.textBox27.TabIndex = 13;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(415, 33);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(77, 12);
-            this.label29.TabIndex = 12;
-            this.label29.Text = "车辆识别码：";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(291, 30);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 21);
-            this.textBox18.TabIndex = 11;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(231, 33);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(65, 12);
-            this.label28.TabIndex = 10;
-            this.label28.Text = "车 牌 号：";
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(110, 30);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(100, 21);
-            this.textBox23.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 12);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "公司名称：";
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(804, 30);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(76, 22);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "查询";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Column4
             // 
@@ -357,6 +267,98 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 40;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox28);
+            this.groupBox3.Controls.Add(this.label30);
+            this.groupBox3.Controls.Add(this.textBox27);
+            this.groupBox3.Controls.Add(this.label29);
+            this.groupBox3.Controls.Add(this.textBox18);
+            this.groupBox3.Controls.Add(this.label28);
+            this.groupBox3.Controls.Add(this.textBox23);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.button8);
+            this.groupBox3.Location = new System.Drawing.Point(296, 49);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(906, 69);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "企业车辆信息查询";
+            // 
+            // textBox28
+            // 
+            this.textBox28.Location = new System.Drawing.Point(669, 30);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(100, 21);
+            this.textBox28.TabIndex = 14;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(608, 33);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(65, 12);
+            this.label30.TabIndex = 15;
+            this.label30.Text = "发动机号：";
+            // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(488, 30);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(101, 21);
+            this.textBox27.TabIndex = 13;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(415, 33);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(77, 12);
+            this.label29.TabIndex = 12;
+            this.label29.Text = "车辆识别码：";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(291, 30);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(100, 21);
+            this.textBox18.TabIndex = 11;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(231, 33);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(65, 12);
+            this.label28.TabIndex = 10;
+            this.label28.Text = "车 牌 号：";
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(110, 30);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(100, 21);
+            this.textBox23.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(48, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 12);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "公司名称：";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(804, 30);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(76, 22);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "查询";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // CompanyCarManage
             // 

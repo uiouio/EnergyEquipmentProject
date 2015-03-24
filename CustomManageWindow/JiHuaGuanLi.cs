@@ -10,6 +10,7 @@ using System.Collections;
 using CustomManageWindow.Service;
 using CommonControl;
 using CommonWindow;
+using CommonMethod;
 namespace CustomManageWindow
 {
     public partial class JiHuaGuanLi : CommonControl.CommonTabPage
@@ -80,6 +81,24 @@ namespace CustomManageWindow
                     i++;
                 }
             }
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = ss.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[7]);
+            div.Columns.Remove(div.Columns[7]);
+            DoExport.DoTheExport(div);
+        }
+
+        private void commonPictureButton5_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = ss.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[7]);
+            div.Columns.Remove(div.Columns[7]);
+            PrintDataGridView.PrintTheDataGridView(div);
         }
     }
 }

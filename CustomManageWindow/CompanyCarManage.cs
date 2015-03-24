@@ -118,7 +118,6 @@ namespace CustomManageWindow
 
         private void button8_Click(object sender, EventArgs e)
         {
-
             string name = textBox23.Text;
 
             string cname = textBox18.Text;
@@ -131,26 +130,22 @@ namespace CustomManageWindow
             currentcustoms = ss.SelectCompanyCar(name, cname, dname, ename);
 
             ShowSelectCompanyCarGrid();
-
-
-        }
-
+        }     
         private void commonPictureButton5_Click(object sender, EventArgs e)
         {
-            this.commonDataGridView2.Columns.Remove(Column1);
-            this.commonDataGridView2.Columns.Remove(Column3);
-            PrintDataGridView.PrintTheDataGridView(this.commonDataGridView2);
-            this.commonDataGridView2.Columns.Add(Column1);
-            this.commonDataGridView2.Columns.Add(Column3);
+            DataGridView div = new DataGridView();
+            div = ss.CloneDataGridView(this.commonDataGridView2);
+            div.Columns.Remove(div.Columns[13]);
+            div.Columns.Remove(div.Columns[13]);
+            PrintDataGridView.PrintTheDataGridView(div);
         }
-
         private void commonPictureButton6_Click(object sender, EventArgs e)
         {
-            this.commonDataGridView2.Columns.Remove(Column1);
-            this.commonDataGridView2.Columns.Remove(Column3);
-            DoExport.DoTheExport(this.commonDataGridView2);
-            this.commonDataGridView2.Columns.Remove(Column1);
-            this.commonDataGridView2.Columns.Remove(Column3);
+            DataGridView div = new DataGridView();
+            div = ss.CloneDataGridView(this.commonDataGridView2);
+            div.Columns.Remove(div.Columns[13]);
+            div.Columns.Remove(div.Columns[13]);
+            DoExport.DoTheExport(div);
         }
 
     }
