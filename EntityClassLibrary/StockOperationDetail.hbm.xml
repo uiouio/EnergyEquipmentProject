@@ -13,11 +13,14 @@
     <many-to-one name="StockOperationId" column="StockOperationId" lazy="false"  class="EntityClassLibrary.StockOperation,EntityClassLibrary" ></many-to-one>
 
     <many-to-one name="StockId" column="StockId" lazy="false"  class="EntityClassLibrary.Stock,EntityClassLibrary" ></many-to-one>
+    
+    <property name="Tax" column="Tax" type="float"/>
 
     <property name="TheMoney" column="TheMoney" type="float"/>
     <property name="HistoryId" column="HistoryId" type="long" length="10" />
     <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
     <property name="State" column="State" type="int"  length="1"/>
+    
 
     <!--<many-to-one name="Ku_Id" column="KU_ID" not-null="true"
                 class="ClassLibrary.WkTUser, ClassLibrary" />-->
