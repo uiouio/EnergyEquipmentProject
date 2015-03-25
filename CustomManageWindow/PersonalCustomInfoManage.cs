@@ -120,18 +120,21 @@ namespace CustomManageWindow
 
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
-            
-            this.commonDataGridView1.Columns.Remove(Column4);
-            PrintDataGridView.PrintTheDataGridView(this.commonDataGridView1);
-            this.commonDataGridView1.Columns.Add(Column4);
+            DataGridView div = new DataGridView();
+            div = ss.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[8]);
+            PrintDataGridView.PrintTheDataGridView(div);
+           
             
         }
 
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
-            this.commonDataGridView1.Columns.Remove(Column4);
-            DoExport.DoTheExport(this.commonDataGridView1);
-            this.commonDataGridView1.Columns.Add(Column4);
+            DataGridView div = new DataGridView();
+            div = ss.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[8]);
+            DoExport.DoTheExport(div);
+    
         }
 
     }

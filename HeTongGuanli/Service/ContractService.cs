@@ -546,13 +546,32 @@ namespace HeTongGuanLi.Service
              return i;
          }
          /// <summary>
+         /// 选择CNG气瓶车辆
+         /// </summary>
+         /// <param name="name"></param>
+         /// <returns></returns>
+         public IList SelectCNGCars(string name)
+         {
+             IList i = null;
+             string sql = "select distinct CylinderType from CarBaseInfo where  CylinderType is not null and VehicleType='" + name + "'and (ModidiedType=0 or ModidiedType=1) and CarBaseInfoState=" + (int)BaseEntity.stateEnum.Normal;
+             i = this.loadEntityList(sql);
+             return i;
+         }
+         public IList SelectLNGCars(string name)
+         {
+             IList i = null;
+             string sql = "select distinct CylinderType from CarBaseInfo where CylinderType is not null and VehicleType='" + name + "'and ModidiedType=2 and CarBaseInfoState=" + (int)BaseEntity.stateEnum.Normal;
+             i = this.loadEntityList(sql);
+             return i;
+         }
+         /// <summary>
          /// 选择已有车辆的气瓶型号
          /// </summary>
          /// <returns></returns>
          public IList SelectCarsCylinderType()
          {
              IList i = null;
-             string sql = "select CylinderType from CarBaseInfo";
+             string sql = "from CarBaseInfo";
              i = this.loadEntityList(sql);
              return i;
          }

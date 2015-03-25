@@ -36,12 +36,6 @@
             this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
             this.commonPictureButton5 = new CommonControl.CommonPictureButton(this.components);
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.gongHuoShangButton = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comapnyLabel = new System.Windows.Forms.Label();
             this.checks = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.index = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +45,12 @@
             this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.delCol = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gongHuoShangButton = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comapnyLabel = new System.Windows.Forms.Label();
             this.commonFlowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).BeginInit();
@@ -100,6 +100,7 @@
             this.commonPictureButton2.TabIndex = 17;
             this.commonPictureButton2.TabStop = false;
             this.commonPictureButton2.ToolTipString = null;
+            this.commonPictureButton2.Click += new System.EventHandler(this.commonPictureButton2_Click);
             // 
             // commonPictureButton5
             // 
@@ -114,6 +115,7 @@
             this.commonPictureButton5.TabIndex = 16;
             this.commonPictureButton5.TabStop = false;
             this.commonPictureButton5.ToolTipString = null;
+            this.commonPictureButton5.Click += new System.EventHandler(this.commonPictureButton5_Click);
             // 
             // commonDataGridView1
             // 
@@ -145,62 +147,6 @@
             this.commonDataGridView1.Size = new System.Drawing.Size(803, 450);
             this.commonDataGridView1.TabIndex = 2;
             this.commonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.gongHuoShangButton);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comapnyLabel);
-            this.groupBox1.Location = new System.Drawing.Point(244, 43);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(905, 81);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "计划管理查询";
-            // 
-            // gongHuoShangButton
-            // 
-            this.gongHuoShangButton.Location = new System.Drawing.Point(754, 36);
-            this.gongHuoShangButton.Name = "gongHuoShangButton";
-            this.gongHuoShangButton.Size = new System.Drawing.Size(79, 23);
-            this.gongHuoShangButton.TabIndex = 4;
-            this.gongHuoShangButton.Text = "查询";
-            this.gongHuoShangButton.UseVisualStyleBackColor = true;
-
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(476, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 21);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(351, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "联系人姓名：";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(167, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 21);
-            this.textBox1.TabIndex = 1;
-            // 
-            // comapnyLabel
-            // 
-            this.comapnyLabel.AutoSize = true;
-            this.comapnyLabel.Location = new System.Drawing.Point(68, 39);
-            this.comapnyLabel.Name = "comapnyLabel";
-            this.comapnyLabel.Size = new System.Drawing.Size(77, 12);
-            this.comapnyLabel.TabIndex = 0;
-            this.comapnyLabel.Text = "加盟商名称：";
             // 
             // checks
             // 
@@ -264,6 +210,61 @@
             this.delCol.HeaderText = " ";
             this.delCol.Name = "delCol";
             this.delCol.Width = 60;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.gongHuoShangButton);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.comapnyLabel);
+            this.groupBox1.Location = new System.Drawing.Point(244, 43);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(905, 81);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "计划管理查询";
+            // 
+            // gongHuoShangButton
+            // 
+            this.gongHuoShangButton.Location = new System.Drawing.Point(754, 36);
+            this.gongHuoShangButton.Name = "gongHuoShangButton";
+            this.gongHuoShangButton.Size = new System.Drawing.Size(79, 23);
+            this.gongHuoShangButton.TabIndex = 4;
+            this.gongHuoShangButton.Text = "查询";
+            this.gongHuoShangButton.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(476, 36);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(162, 21);
+            this.textBox2.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(351, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 12);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "联系人姓名：";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(167, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(162, 21);
+            this.textBox1.TabIndex = 1;
+            // 
+            // comapnyLabel
+            // 
+            this.comapnyLabel.AutoSize = true;
+            this.comapnyLabel.Location = new System.Drawing.Point(68, 39);
+            this.comapnyLabel.Name = "comapnyLabel";
+            this.comapnyLabel.Size = new System.Drawing.Size(77, 12);
+            this.comapnyLabel.TabIndex = 0;
+            this.comapnyLabel.Text = "加盟商名称：";
             // 
             // JiHuaGuanLi
             // 

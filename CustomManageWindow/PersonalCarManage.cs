@@ -9,7 +9,7 @@ using EntityClassLibrary;
 using System.Collections;
 using CustomManageWindow.Service;
 using CommonControl;
-
+using CommonMethod;
 namespace CustomManageWindow
 {
     public partial class PersonalCarManage : CommonControl.CommonTabPage
@@ -111,6 +111,23 @@ namespace CustomManageWindow
             this.commonDataGridView1.Rows.Clear();
             currentcustoms = ss.SelectPersonalCar(name,cname,dname,ename);
             ShowSelectedPersonalCarGrid();
+        }
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = ss.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[13]);
+            div.Columns.Remove(div.Columns[13]);
+            PrintDataGridView.PrintTheDataGridView(div);
+
+        }
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = ss.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[13]);
+            div.Columns.Remove(div.Columns[13]);
+            DoExport.DoTheExport(div);
         }
 
        

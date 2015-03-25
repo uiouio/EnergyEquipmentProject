@@ -229,7 +229,7 @@ namespace KuGuanXiTong
                             ss.Money = float.Parse(this.commonDataGridView1.Rows[i].Cells[7].Value.ToString());
                             ss.GoodsCode = this.commonDataGridView1.Rows[i].Cells[2].Value.ToString();
                             ss.Quantity = float.Parse(this.commonDataGridView1.Rows[i].Cells[6].Value.ToString());
-                            ss.StorehouseplaceCode = long.Parse(this.commonDataGridView1.Rows[i].Cells[8].Value.ToString() == "" ? "0" : this.commonDataGridView1.Rows[i].Cells[8].Value.ToString());
+                            ss.StorehouseplaceCode = long.Parse(this.commonDataGridView1.Rows[i].Cells[10].Value.ToString() == "" ? "0" : this.commonDataGridView1.Rows[i].Cells[9].Value.ToString());
                             sod.StockId = opstck.SaveOrUpdateEntity(ss) as Stock;
 
 
@@ -253,6 +253,7 @@ namespace KuGuanXiTong
                         sod.Quantity = float.Parse(this.commonDataGridView1.Rows[i].Cells[6].Value.ToString());
                         sod.GoodsCode = this.commonDataGridView1.Rows[i].Cells[2].Value.ToString();
                         sod.TheMoney = float.Parse(this.commonDataGridView1.Rows[i].Cells[7].Value.ToString());
+                        sod.Tax = float.Parse(this.commonDataGridView1.Rows[i].Cells[8].Value.ToString());
                         opstck.SaveOrUpdateEntity(sod);
 
 
@@ -349,7 +350,7 @@ namespace KuGuanXiTong
                             {
                                 this.commonDataGridView1.Rows.Add(sk.GoodsBaseInfoID.GoodsClassCode, sk.GoodsBaseInfoID.GoodsName,
                                 this.textBox10.Text, sk.GoodsBaseInfoID.Specifications, sk.GoodsBaseInfoID.Material,
-                                sk.GoodsBaseInfoID.Unit, "1", this.textBox8.Text, sk.StorehouseplaceCode, "删除", "打印条码");
+                                sk.GoodsBaseInfoID.Unit, "1", this.textBox8.Text, this.textBox13.Text, sk.StorehouseplaceCode, "删除", "打印条码");
                                 this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = sk;
                                 CommonMethod.PrintCode.print(this.textBox10.Text, sk.GoodsBaseInfoID.GoodsName);
                             }
@@ -476,6 +477,8 @@ namespace KuGuanXiTong
                     this.textBox6.Text = goodstree.Gg.Specifications;
                     this.textBox5.Text = goodstree.Gg.Material;
                     this.textBox4.Text = goodstree.Gg.Unit;
+                    this.textBox13.Text = "25";
+
                     NewGoods = goodstree.Gg;
                 }
 
@@ -588,7 +591,7 @@ namespace KuGuanXiTong
             else
             {
                 //金钱输入框
-                if (this.textBox8.Text == "" || !test.TestDecimal(this.textBox8.Text))
+                if (this.textBox8.Text == "" || !test.TestDecimal(this.textBox8.Text)||!test.TestDecimal(this.textBox13.Text))
                 {
                     MessageBox.Show("请输入金额，且为数字,最多保留三位小数!");
                     this.textBox8.Focus();
@@ -599,7 +602,7 @@ namespace KuGuanXiTong
                     {
                         this.commonDataGridView1.Rows.Add(sk.GoodsBaseInfoID.GoodsClassCode, sk.GoodsBaseInfoID.GoodsName,
                             this.textBox10.Text, sk.GoodsBaseInfoID.Specifications, sk.GoodsBaseInfoID.Material,
-                            sk.GoodsBaseInfoID.Unit, this.textBox11.Text, this.textBox8.Text, sk.StorehouseplaceCode, "删除", "打印条码");
+                            sk.GoodsBaseInfoID.Unit, this.textBox11.Text, this.textBox8.Text,this.textBox13.Text, sk.StorehouseplaceCode, "删除", "打印条码");
 
                         this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = sk;
                     }
@@ -607,7 +610,7 @@ namespace KuGuanXiTong
                     {
                         this.commonDataGridView1.Rows.Add(newGoods.GoodsClassCode, newGoods.GoodsName,
                            this.textBox10.Text, newGoods.Specifications, newGoods.Material,
-                           newGoods.Unit, this.textBox11.Text, this.textBox8.Text, this.textBox9.Text, "删除", "打印条码");
+                           newGoods.Unit, this.textBox11.Text, this.textBox8.Text, this.textBox13.Text, this.textBox9.Text, "删除", "打印条码");
 
                         this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = newGoods;
                     }
