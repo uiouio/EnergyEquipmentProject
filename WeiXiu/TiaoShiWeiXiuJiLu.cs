@@ -10,6 +10,7 @@ using System.Drawing.Printing;
 using WeiXiu.SQL;
 using System.Collections;
 using EntityClassLibrary;
+using CommonMethod;
 
 
 namespace WeiXiu
@@ -91,6 +92,16 @@ namespace WeiXiu
         {
             
             reFreshAllControl();
+        }
+
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            PrintDataGridView.PrintTheDataGridView(this.commonDataGridView1);
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DoExport.DoTheExport(this.commonDataGridView1);
         }
     }
 }

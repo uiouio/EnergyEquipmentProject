@@ -163,9 +163,7 @@
             this.textBox84 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -1271,19 +1269,10 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Location = new System.Drawing.Point(1, 9);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(736, 899);
             this.panel1.TabIndex = 306;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Location = new System.Drawing.Point(3, 25);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(730, 868);
-            this.groupBox2.TabIndex = 281;
-            this.groupBox2.TabStop = false;
             // 
             // WeiXiuJiLu
             // 
@@ -1427,7 +1416,6 @@
             this.Name = "WeiXiuJiLu";
             this.Load += new System.EventHandler(this.WeiXiuJiLu_Load);
             this.groupBox1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1570,6 +1558,5 @@
         private System.Windows.Forms.TextBox textBox84;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

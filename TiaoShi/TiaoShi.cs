@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Collections;
 using EntityClassLibrary;
 using TiaoShi.SQL;
+using CommonMethod;
 
 namespace TiaoShi
 {
@@ -96,6 +97,16 @@ namespace TiaoShi
                 }
             }
 
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DoExport.DoTheExport(this.TiaoShiDataGridView1);
+        }
+
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            PrintDataGridView.PrintTheDataGridView(this.TiaoShiDataGridView1);
         }
 
        
