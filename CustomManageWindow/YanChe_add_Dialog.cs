@@ -264,7 +264,7 @@ namespace CustomManageWindow
             pictureBox1.Image.Save(CommonStaticParameter.TEMP+@"\carCheckTemp\"+filename);
             String file = fileUpDown.Upload(CommonStaticParameter.TEMP + @"\carCheckTemp\" + filename, CommonStaticParameter.CAR_RSOURCE);
             //File.Delete(CommonStaticParameter.TEMP + @"\" + filename);懒得弄了，资源占用删不了
-            
+            CarBaseInfo.BodyImage = file;
             #region 判断总质量
             if (textBox13.Text == "")
             {

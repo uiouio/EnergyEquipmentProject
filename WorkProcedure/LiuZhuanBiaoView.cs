@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Collections;
 using WorkProcedure.SQL;
 using EntityClassLibrary;
+using CommonMethod;
 
 
 namespace WorkProcedure
@@ -112,6 +113,23 @@ namespace WorkProcedure
                     i++;
                 }
             }
+        }
+
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            DoExport.DoTheExport(this.LiuZhuanBiaoDataGridView1);
+        }
+
+        private void commonPictureButton1_Click(object sender, EventArgs e)
+        {
+            this.LiuZhuanBiaoDataGridView1.Columns.Remove(Column10);
+            this.LiuZhuanBiaoDataGridView1.Columns.Remove(Column11);
+            PrintDataGridView.PrintTheDataGridView(this.LiuZhuanBiaoDataGridView1);
+            this.LiuZhuanBiaoDataGridView1.Columns.Add(Column10);
+            this.LiuZhuanBiaoDataGridView1.Columns.Add(Column11);
+            reFreshAllControl();
+
+           
         }
 
         //private void comboBox1_DropDown(object sender, EventArgs e)
