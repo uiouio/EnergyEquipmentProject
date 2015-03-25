@@ -54,12 +54,14 @@
     <Compile Include="ExportAndImport.cs" />
     <Compile Include="FileReadAndWrite.cs" />
     <Compile Include="FileUpDown.cs" />
+    <Compile Include="HtmlUtility.cs" />
     <Compile Include="PrintCode.cs" />
     <Compile Include="PrintDataGridView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Securit.cs" />
     <Compile Include="TestInput.cs" />
     <Compile Include="ToChineseNum.cs" />
+    <Compile Include="Weather.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DLLFullPrint\DLLFullPrint.csproj">

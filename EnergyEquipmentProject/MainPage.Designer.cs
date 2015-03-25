@@ -40,19 +40,16 @@
             this.tomorrow_weather_pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tomorrow2_weather_pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tomorrow_weather_pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.tomorrow2_weather_pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel28 = new System.Windows.Forms.Panel();
             this.tomorrow_weather_label = new System.Windows.Forms.Label();
             this.panel30 = new System.Windows.Forms.Panel();
             this.tomorrow2_weather_label = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.today_weather_label2 = new System.Windows.Forms.Label();
             this.today_weather_label1 = new System.Windows.Forms.Label();
             this.today_weather_pictureBox2 = new System.Windows.Forms.PictureBox();
             this.today_weather_pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
             this.today_weather_label = new System.Windows.Forms.Label();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
@@ -175,41 +172,36 @@
             this.panel22.Controls.Add(this.tomorrow_weather_pictureBox2);
             this.panel22.Controls.Add(this.tomorrow2_weather_pictureBox2);
             this.panel22.Controls.Add(this.tomorrow_weather_pictureBox1);
-            this.panel22.Controls.Add(this.label12);
             this.panel22.Controls.Add(this.tomorrow2_weather_pictureBox1);
             this.panel22.Controls.Add(this.panel28);
             this.panel22.Controls.Add(this.panel30);
-            this.panel22.Controls.Add(this.label20);
             this.panel22.Controls.Add(this.panel26);
             this.panel22.Controls.Add(this.today_weather_pictureBox2);
             this.panel22.Controls.Add(this.today_weather_pictureBox1);
-            this.panel22.Controls.Add(this.label8);
             this.panel22.Controls.Add(this.panel25);
             this.panel22.Controls.Add(this.shapeContainer2);
             this.panel22.Location = new System.Drawing.Point(0, 125);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(257, 291);
+            this.panel22.Size = new System.Drawing.Size(257, 322);
             this.panel22.TabIndex = 13;
             // 
             // panel29
             // 
             this.panel29.Controls.Add(this.tomorrow2_weather_label2);
             this.panel29.Controls.Add(this.tomorrow2_weather_label1);
-            this.panel29.Location = new System.Drawing.Point(0, 242);
+            this.panel29.Location = new System.Drawing.Point(0, 273);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(257, 36);
             this.panel29.TabIndex = 49;
             // 
             // tomorrow2_weather_label2
             // 
-            this.tomorrow2_weather_label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tomorrow2_weather_label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tomorrow2_weather_label2.ForeColor = System.Drawing.Color.Black;
             this.tomorrow2_weather_label2.Location = new System.Drawing.Point(0, 19);
             this.tomorrow2_weather_label2.Name = "tomorrow2_weather_label2";
             this.tomorrow2_weather_label2.Size = new System.Drawing.Size(257, 17);
             this.tomorrow2_weather_label2.TabIndex = 16;
-            this.tomorrow2_weather_label2.Text = "西北风3-4级转北风微风";
             this.tomorrow2_weather_label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // tomorrow2_weather_label1
@@ -221,14 +213,13 @@
             this.tomorrow2_weather_label1.Name = "tomorrow2_weather_label1";
             this.tomorrow2_weather_label1.Size = new System.Drawing.Size(257, 19);
             this.tomorrow2_weather_label1.TabIndex = 15;
-            this.tomorrow2_weather_label1.Text = "20°C~37°C";
             this.tomorrow2_weather_label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel27
             // 
             this.panel27.Controls.Add(this.tomorrow_weather_label2);
             this.panel27.Controls.Add(this.tomorrow_weather_label1);
-            this.panel27.Location = new System.Drawing.Point(0, 147);
+            this.panel27.Location = new System.Drawing.Point(0, 160);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(257, 36);
             this.panel27.TabIndex = 44;
@@ -242,7 +233,6 @@
             this.tomorrow_weather_label2.Name = "tomorrow_weather_label2";
             this.tomorrow_weather_label2.Size = new System.Drawing.Size(257, 17);
             this.tomorrow_weather_label2.TabIndex = 16;
-            this.tomorrow_weather_label2.Text = "西北风3-4级转北风微风";
             this.tomorrow_weather_label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // tomorrow_weather_label1
@@ -254,16 +244,14 @@
             this.tomorrow_weather_label1.Name = "tomorrow_weather_label1";
             this.tomorrow_weather_label1.Size = new System.Drawing.Size(257, 19);
             this.tomorrow_weather_label1.TabIndex = 15;
-            this.tomorrow_weather_label1.Text = "20°C~37°C";
             this.tomorrow_weather_label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tomorrow_weather_pictureBox2
             // 
             this.tomorrow_weather_pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.tomorrow_weather_pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tomorrow_weather_pictureBox2.BackgroundImage")));
-            this.tomorrow_weather_pictureBox2.Location = new System.Drawing.Point(139, 125);
+            this.tomorrow_weather_pictureBox2.Location = new System.Drawing.Point(141, 128);
             this.tomorrow_weather_pictureBox2.Name = "tomorrow_weather_pictureBox2";
-            this.tomorrow_weather_pictureBox2.Size = new System.Drawing.Size(22, 22);
+            this.tomorrow_weather_pictureBox2.Size = new System.Drawing.Size(40, 30);
             this.tomorrow_weather_pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tomorrow_weather_pictureBox2.TabIndex = 43;
             this.tomorrow_weather_pictureBox2.TabStop = false;
@@ -271,10 +259,9 @@
             // tomorrow2_weather_pictureBox2
             // 
             this.tomorrow2_weather_pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.tomorrow2_weather_pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tomorrow2_weather_pictureBox2.BackgroundImage")));
-            this.tomorrow2_weather_pictureBox2.Location = new System.Drawing.Point(139, 220);
+            this.tomorrow2_weather_pictureBox2.Location = new System.Drawing.Point(143, 237);
             this.tomorrow2_weather_pictureBox2.Name = "tomorrow2_weather_pictureBox2";
-            this.tomorrow2_weather_pictureBox2.Size = new System.Drawing.Size(22, 22);
+            this.tomorrow2_weather_pictureBox2.Size = new System.Drawing.Size(40, 30);
             this.tomorrow2_weather_pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tomorrow2_weather_pictureBox2.TabIndex = 48;
             this.tomorrow2_weather_pictureBox2.TabStop = false;
@@ -282,31 +269,19 @@
             // tomorrow_weather_pictureBox1
             // 
             this.tomorrow_weather_pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.tomorrow_weather_pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tomorrow_weather_pictureBox1.BackgroundImage")));
-            this.tomorrow_weather_pictureBox1.Location = new System.Drawing.Point(94, 125);
+            this.tomorrow_weather_pictureBox1.Location = new System.Drawing.Point(74, 127);
             this.tomorrow_weather_pictureBox1.Name = "tomorrow_weather_pictureBox1";
-            this.tomorrow_weather_pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.tomorrow_weather_pictureBox1.Size = new System.Drawing.Size(40, 30);
             this.tomorrow_weather_pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tomorrow_weather_pictureBox1.TabIndex = 42;
             this.tomorrow_weather_pictureBox1.TabStop = false;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(119, 135);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(20, 19);
-            this.label12.TabIndex = 41;
-            this.label12.Text = "~";
-            // 
             // tomorrow2_weather_pictureBox1
             // 
             this.tomorrow2_weather_pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.tomorrow2_weather_pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tomorrow2_weather_pictureBox1.BackgroundImage")));
-            this.tomorrow2_weather_pictureBox1.Location = new System.Drawing.Point(94, 220);
+            this.tomorrow2_weather_pictureBox1.Location = new System.Drawing.Point(75, 237);
             this.tomorrow2_weather_pictureBox1.Name = "tomorrow2_weather_pictureBox1";
-            this.tomorrow2_weather_pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.tomorrow2_weather_pictureBox1.Size = new System.Drawing.Size(40, 30);
             this.tomorrow2_weather_pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tomorrow2_weather_pictureBox1.TabIndex = 47;
             this.tomorrow2_weather_pictureBox1.TabStop = false;
@@ -314,7 +289,7 @@
             // panel28
             // 
             this.panel28.Controls.Add(this.tomorrow_weather_label);
-            this.panel28.Location = new System.Drawing.Point(0, 97);
+            this.panel28.Location = new System.Drawing.Point(0, 99);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(257, 27);
             this.panel28.TabIndex = 40;
@@ -328,13 +303,12 @@
             this.tomorrow_weather_label.Name = "tomorrow_weather_label";
             this.tomorrow_weather_label.Size = new System.Drawing.Size(257, 27);
             this.tomorrow_weather_label.TabIndex = 16;
-            this.tomorrow_weather_label.Text = "5月27日 晴";
             this.tomorrow_weather_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel30
             // 
             this.panel30.Controls.Add(this.tomorrow2_weather_label);
-            this.panel30.Location = new System.Drawing.Point(0, 192);
+            this.panel30.Location = new System.Drawing.Point(0, 206);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(257, 27);
             this.panel30.TabIndex = 45;
@@ -348,24 +322,13 @@
             this.tomorrow2_weather_label.Name = "tomorrow2_weather_label";
             this.tomorrow2_weather_label.Size = new System.Drawing.Size(257, 27);
             this.tomorrow2_weather_label.TabIndex = 16;
-            this.tomorrow2_weather_label.Text = "5月27日 晴";
             this.tomorrow2_weather_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label20.Location = new System.Drawing.Point(119, 230);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(20, 19);
-            this.label20.TabIndex = 46;
-            this.label20.Text = "~";
             // 
             // panel26
             // 
             this.panel26.Controls.Add(this.today_weather_label2);
             this.panel26.Controls.Add(this.today_weather_label1);
-            this.panel26.Location = new System.Drawing.Point(0, 52);
+            this.panel26.Location = new System.Drawing.Point(0, 58);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(257, 36);
             this.panel26.TabIndex = 39;
@@ -379,7 +342,6 @@
             this.today_weather_label2.Name = "today_weather_label2";
             this.today_weather_label2.Size = new System.Drawing.Size(257, 17);
             this.today_weather_label2.TabIndex = 16;
-            this.today_weather_label2.Text = "西北风3-4级转北风微风";
             this.today_weather_label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // today_weather_label1
@@ -391,16 +353,14 @@
             this.today_weather_label1.Name = "today_weather_label1";
             this.today_weather_label1.Size = new System.Drawing.Size(257, 19);
             this.today_weather_label1.TabIndex = 15;
-            this.today_weather_label1.Text = "20°C~37°C";
             this.today_weather_label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // today_weather_pictureBox2
             // 
             this.today_weather_pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.today_weather_pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("today_weather_pictureBox2.BackgroundImage")));
-            this.today_weather_pictureBox2.Location = new System.Drawing.Point(139, 30);
+            this.today_weather_pictureBox2.Location = new System.Drawing.Point(139, 26);
             this.today_weather_pictureBox2.Name = "today_weather_pictureBox2";
-            this.today_weather_pictureBox2.Size = new System.Drawing.Size(22, 22);
+            this.today_weather_pictureBox2.Size = new System.Drawing.Size(40, 30);
             this.today_weather_pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.today_weather_pictureBox2.TabIndex = 38;
             this.today_weather_pictureBox2.TabStop = false;
@@ -408,23 +368,12 @@
             // today_weather_pictureBox1
             // 
             this.today_weather_pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.today_weather_pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("today_weather_pictureBox1.BackgroundImage")));
-            this.today_weather_pictureBox1.Location = new System.Drawing.Point(94, 30);
+            this.today_weather_pictureBox1.Location = new System.Drawing.Point(73, 26);
             this.today_weather_pictureBox1.Name = "today_weather_pictureBox1";
-            this.today_weather_pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.today_weather_pictureBox1.Size = new System.Drawing.Size(40, 30);
             this.today_weather_pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.today_weather_pictureBox1.TabIndex = 37;
             this.today_weather_pictureBox1.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(119, 40);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(20, 19);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "~";
             // 
             // panel25
             // 
@@ -444,7 +393,7 @@
             this.today_weather_label.Name = "today_weather_label";
             this.today_weather_label.Size = new System.Drawing.Size(257, 27);
             this.today_weather_label.TabIndex = 16;
-            this.today_weather_label.Text = "5月27日 晴";
+            this.today_weather_label.Text = "     ";
             this.today_weather_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // shapeContainer2
@@ -455,7 +404,7 @@
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape8,
             this.lineShape7});
-            this.shapeContainer2.Size = new System.Drawing.Size(257, 291);
+            this.shapeContainer2.Size = new System.Drawing.Size(257, 322);
             this.shapeContainer2.TabIndex = 50;
             this.shapeContainer2.TabStop = false;
             // 
@@ -466,8 +415,8 @@
             this.lineShape8.Name = "lineShape8";
             this.lineShape8.X1 = 42;
             this.lineShape8.X2 = 212;
-            this.lineShape8.Y1 = 191;
-            this.lineShape8.Y2 = 191;
+            this.lineShape8.Y1 = 202;
+            this.lineShape8.Y2 = 202;
             // 
             // lineShape7
             // 
@@ -476,8 +425,8 @@
             this.lineShape7.Name = "lineShape7";
             this.lineShape7.X1 = 42;
             this.lineShape7.X2 = 212;
-            this.lineShape7.Y1 = 94;
-            this.lineShape7.Y2 = 94;
+            this.lineShape7.Y1 = 97;
+            this.lineShape7.Y2 = 97;
             // 
             // panel21
             // 
@@ -516,7 +465,7 @@
             // 
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel4.Location = new System.Drawing.Point(81, 584);
+            this.linkLabel4.Location = new System.Drawing.Point(81, 591);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(101, 12);
             this.linkLabel4.TabIndex = 12;
@@ -528,7 +477,7 @@
             // 
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel3.Location = new System.Drawing.Point(91, 478);
+            this.linkLabel3.Location = new System.Drawing.Point(91, 501);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(77, 12);
             this.linkLabel3.TabIndex = 11;
@@ -540,7 +489,7 @@
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel2.Location = new System.Drawing.Point(29, 550);
+            this.linkLabel2.Location = new System.Drawing.Point(29, 563);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(209, 12);
             this.linkLabel2.TabIndex = 10;
@@ -552,7 +501,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Location = new System.Drawing.Point(57, 512);
+            this.linkLabel1.Location = new System.Drawing.Point(57, 532);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(149, 12);
             this.linkLabel1.TabIndex = 9;
@@ -565,7 +514,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(92, 435);
+            this.label6.Location = new System.Drawing.Point(92, 468);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 16);
             this.label6.TabIndex = 8;
@@ -605,8 +554,8 @@
             this.lineShape6.Name = "lineShape6";
             this.lineShape6.X1 = 34;
             this.lineShape6.X2 = 95;
-            this.lineShape6.Y1 = 445;
-            this.lineShape6.Y2 = 445;
+            this.lineShape6.Y1 = 478;
+            this.lineShape6.Y2 = 478;
             // 
             // lineShape5
             // 
@@ -615,8 +564,8 @@
             this.lineShape5.Name = "lineShape5";
             this.lineShape5.X1 = 162;
             this.lineShape5.X2 = 223;
-            this.lineShape5.Y1 = 445;
-            this.lineShape5.Y2 = 445;
+            this.lineShape5.Y1 = 476;
+            this.lineShape5.Y2 = 476;
             // 
             // lineShape4
             // 
@@ -645,8 +594,8 @@
             this.lineShape2.Name = "lineShape2";
             this.lineShape2.X1 = 10;
             this.lineShape2.X2 = 246;
-            this.lineShape2.Y1 = 424;
-            this.lineShape2.Y2 = 424;
+            this.lineShape2.Y1 = 455;
+            this.lineShape2.Y2 = 455;
             // 
             // lineShape1
             // 
@@ -1057,7 +1006,6 @@
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
             this.panel29.ResumeLayout(false);
             this.panel27.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tomorrow_weather_pictureBox2)).EndInit();
@@ -1166,19 +1114,16 @@
         private System.Windows.Forms.PictureBox tomorrow_weather_pictureBox2;
         private System.Windows.Forms.PictureBox tomorrow2_weather_pictureBox2;
         private System.Windows.Forms.PictureBox tomorrow_weather_pictureBox1;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox tomorrow2_weather_pictureBox1;
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Label tomorrow_weather_label;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Label tomorrow2_weather_label;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label today_weather_label2;
         private System.Windows.Forms.Label today_weather_label1;
         private System.Windows.Forms.PictureBox today_weather_pictureBox2;
         private System.Windows.Forms.PictureBox today_weather_pictureBox1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Label today_weather_label;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;

@@ -39,9 +39,13 @@ namespace EnergyEquipmentProject
             this.WindowState = FormWindowState.Maximized;
 
 
-            MainPage u = new MainPage(this.UserInfo);
-            u.Name = "首页";
-            commonTabControl1.AddTabPage(u);
+            //MainPage u = new MainPage(this.UserInfo);
+            //u.Name = "首页";
+            //commonTabControl1.AddTabPage(u);
+
+            this.timerLoadMainPage.Start();
+            
+
             this.Opacity = 0.1;
             IList resourceList = userInfoService.getAllOneLevelResource();
             this.Opacity = 0.2;
@@ -76,6 +80,8 @@ namespace EnergyEquipmentProject
                         node.Tag = getAssemblyByReflection(assembleAndClass[0], assembleAndClass[1], resource.ResourceName, resource);
                     }
                     node.Parent = flowLayoutPanel1;
+                    
+                    //窗体的渐显效果
                     if (this.Opacity <1)
                         this.Opacity = this.Opacity+0.1;
                 }
@@ -84,6 +90,23 @@ namespace EnergyEquipmentProject
             
             this.Cursor = Cursors.Default;
         }
+
+
+        /// <summary>
+        /// 异步加载mainpage
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timerLoadMainPage_Tick(object sender, EventArgs e)
+        {
+            MainPage u = new MainPage(this.UserInfo);
+            u.Name = "首页";
+            commonTabControl1.AddTabPage(u);
+            this.timerLoadMainPage.Stop();
+        }
+
+
+
 
         public void MainLoad()
         {
@@ -221,9 +244,6 @@ namespace EnergyEquipmentProject
             }
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
     }
 }

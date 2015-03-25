@@ -10,6 +10,7 @@ using EntityClassLibrary;
 using System.Data.SqlClient;
 using SQLProvider.Service;
 using CommonMethod;
+using System.IO;
 
 namespace EnergyEquipmentProject
 {
@@ -42,6 +43,7 @@ namespace EnergyEquipmentProject
 
         private void MainPage_Load(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             this.Visible = false;
             label_userName.Text = User.Name;
             if (User.Sex != null)
@@ -60,6 +62,7 @@ namespace EnergyEquipmentProject
             //listenMethod_Matter();
             initTodayInfo();
             this.Visible = true;
+            this.Cursor = Cursors.Default;
         }
 
         private void newsChange(object sender, SqlNotificationEventArgs e)
@@ -144,29 +147,67 @@ namespace EnergyEquipmentProject
         {
             try
             {
-                WeatherService.WeatherWebServiceSoapClient wwsc = new WeatherService.WeatherWebServiceSoapClient();
-                string[] weathers = wwsc.getWeatherbyCityName("邯郸");
-                today_weather_label.Text = weathers[6];
-                today_weather_label1.Text = weathers[5];
-                today_weather_label2.Text = weathers[7];
-                tomorrow_weather_label.Text = weathers[13];
-                tomorrow_weather_label1.Text = weathers[12];
-                tomorrow_weather_label2.Text = weathers[14];
-                tomorrow2_weather_label.Text = weathers[18];
-                tomorrow2_weather_label1.Text = weathers[17];
-                tomorrow2_weather_label2.Text = weathers[19];
-                today_weather_pictureBox1.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[8]);
-                today_weather_pictureBox2.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[9]);
-                tomorrow_weather_pictureBox1.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[15]);
-                tomorrow_weather_pictureBox1.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[16]);
-                tomorrow2_weather_pictureBox1.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[20]);
-                tomorrow2_weather_pictureBox2.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[21]);
+                List<Weather> weather3day = new List<Weather>();
+                weather3day = Weather.Get3DayWeather();
+
+                DownloadOrShowWeather(weather3day[0].PicName1, today_weather_pictureBox1);
+                DownloadOrShowWeather(weather3day[0].PicName2, today_weather_pictureBox2);
+
+                today_weather_label.Text = weather3day[0].Day + "" + weather3day[0].WeaDescription;
+                today_weather_label1.Text = weather3day[0].MinTem + "---" + weather3day[0].MaxTem;
+                today_weather_label2.Text = weather3day[0].WindDirection1 + " " + weather3day[0].WindDirection2 + "  " + weather3day[0].WindSpeed;
+
+                DownloadOrShowWeather(weather3day[1].PicName1, tomorrow_weather_pictureBox1);
+                DownloadOrShowWeather(weather3day[1].PicName2, tomorrow_weather_pictureBox2);
+
+                tomorrow_weather_label.Text = weather3day[1].Day + "" + weather3day[1].WeaDescription;
+                tomorrow_weather_label1.Text = weather3day[1].MinTem + "---" + weather3day[1].MaxTem;
+                tomorrow_weather_label2.Text = weather3day[1].WindDirection1 + " " + weather3day[1].WindDirection2 + "  " + weather3day[1].WindSpeed;
+
+
+                DownloadOrShowWeather(weather3day[2].PicName1, tomorrow2_weather_pictureBox1);
+                DownloadOrShowWeather(weather3day[2].PicName2, tomorrow2_weather_pictureBox2);
+
+                tomorrow2_weather_label.Text = weather3day[2].Day + "" + weather3day[2].WeaDescription;
+                tomorrow2_weather_label1.Text = weather3day[2].MinTem + "---" + weather3day[2].MaxTem;
+                tomorrow2_weather_label2.Text = weather3day[2].WindDirection1 + " " + weather3day[2].WindDirection2 + "  " + weather3day[2].WindSpeed;
+
             }
             catch
             {
-                today_weather_label.Text = "";
+                MessageBox.Show("网络原因无法加载天气情况");
+                today_weather_label.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                tomorrow_weather_label.Text = DateTime.Now.AddDays(1).ToString("yyyy-MM-dd");
+                tomorrow2_weather_label.Text = DateTime.Now.AddDays(2).ToString("yyyy-MM-dd");
             }
         }
+
+        private void DownloadOrShowWeather(string PicName1, PictureBox p)
+        {
+            if (PicName1 != "")
+            {
+                string tempPath = CommonStaticParameter.TEMP + "\\" + CommonStaticParameter.WEATHERLOGO + "\\" + PicName1 + ".png";
+                if (File.Exists(tempPath))
+                {
+                    p.BackgroundImage = new Bitmap(tempPath);
+                }
+                else
+                {
+                    CommonMethod.FileUpDown fileUpDown = new FileUpDown(Securit.DeDES(FileReadAndWrite.IniReadValue("file", "ip")), Securit.DeDES(FileReadAndWrite.IniReadValue("file", "id")), Securit.DeDES(FileReadAndWrite.IniReadValue("file", "pwd")));
+                    fileUpDown.Download(CommonStaticParameter.TEMP + "\\" + CommonStaticParameter.WEATHERLOGO, PicName1 + ".png", CommonStaticParameter.WEATHERLOGO);
+                    if (File.Exists(tempPath))
+                    {
+                        p.BackgroundImage = new Bitmap(tempPath);
+                    }
+                }
+            }
+            else
+            {
+                p.BackgroundImage = null;
+            }
+        
+        }
+
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
