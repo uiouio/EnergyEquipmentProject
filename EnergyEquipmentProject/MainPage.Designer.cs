@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -109,6 +110,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.timerWeather = new System.Windows.Forms.Timer(this.components);
             this.panel13.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel29.SuspendLayout();
@@ -978,6 +980,10 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "待办事项";
             // 
+            // timerWeather
+            // 
+            this.timerWeather.Tick += new System.EventHandler(this.timerWeather_Tick);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1131,6 +1137,7 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape7;
         private CommonControl.SchedulePanel schedulePanel1;
         private CommonControl.LetterPanel letterPanel1;
+        private System.Windows.Forms.Timer timerWeather;
 
 
 

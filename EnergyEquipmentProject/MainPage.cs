@@ -60,11 +60,21 @@ namespace EnergyEquipmentProject
             this.reFreshAllControl();
             //listenMethod_News();
             //listenMethod_Matter();
-            initTodayInfo();
+            this.timerWeather.Start();
             this.Visible = true;
-            this.Cursor = Cursors.Default;
+            
         }
 
+        /// <summary>
+        /// 异步加载天气信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timerWeather_Tick(object sender, EventArgs e)
+        {
+            initTodayInfo();
+            this.timerWeather.Stop();
+        }
         private void newsChange(object sender, SqlNotificationEventArgs e)
         {
             IList newsList = mainPageService.getNews();
@@ -145,6 +155,9 @@ namespace EnergyEquipmentProject
 
         private void initTodayInfo()
         {
+            this.panel22.Visible = false;
+            this.panel22.Cursor = Cursors.WaitCursor;
+
             try
             {
                 List<Weather> weather3day = new List<Weather>();
@@ -180,6 +193,9 @@ namespace EnergyEquipmentProject
                 tomorrow_weather_label.Text = DateTime.Now.AddDays(1).ToString("yyyy-MM-dd");
                 tomorrow2_weather_label.Text = DateTime.Now.AddDays(2).ToString("yyyy-MM-dd");
             }
+            this.panel22.Visible = true;
+            this.panel22.Cursor = Cursors.Default;
+            this.Cursor = Cursors.Default;
         }
 
         private void DownloadOrShowWeather(string PicName1, PictureBox p)
@@ -228,5 +244,7 @@ namespace EnergyEquipmentProject
         {
             System.Diagnostics.Process.Start("http://www.hebut.edu.cn/");
         }
+
+       
     }
 }
