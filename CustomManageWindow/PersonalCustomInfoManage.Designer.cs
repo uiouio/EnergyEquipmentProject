@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonalCustomInfoManage));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,10 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
-            this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
-            this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
-            this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
-            this.commonPictureButton3 = new CommonControl.CommonPictureButton(this.components);
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +51,10 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
+            this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
+            this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
+            this.commonPictureButton3 = new CommonControl.CommonPictureButton(this.components);
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
@@ -129,6 +129,7 @@
             this.button11.Text = "查询";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
+
             // 
             // textBox2
             // 
@@ -167,8 +168,8 @@
             this.commonDataGridView1.AllowUserToAddRows = false;
             this.commonDataGridView1.AllowUserToDeleteRows = false;
             this.commonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.commonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commonDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -193,64 +194,6 @@
             this.commonDataGridView1.Size = new System.Drawing.Size(957, 503);
             this.commonDataGridView1.TabIndex = 4;
             this.commonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick);
-            // 
-            // commonFlowLayoutPanel1
-            // 
-            this.commonFlowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonFlowLayoutPanel1.BackgroundImage")));
-            this.commonFlowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton1);
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton2);
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton3);
-            this.commonFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.commonFlowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.commonFlowLayoutPanel1.Name = "commonFlowLayoutPanel1";
-            this.commonFlowLayoutPanel1.Size = new System.Drawing.Size(66, 723);
-            this.commonFlowLayoutPanel1.TabIndex = 12;
-            // 
-            // commonPictureButton1
-            // 
-            this.commonPictureButton1.BackgroundImage = global::CustomManageWindow.Properties.Resources.新建;
-            this.commonPictureButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton1.Location = new System.Drawing.Point(0, 3);
-            this.commonPictureButton1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton1.Name = "commonPictureButton1";
-            this.commonPictureButton1.NonSelectBackGroundImage = global::CustomManageWindow.Properties.Resources.新建;
-            this.commonPictureButton1.SelectBackGroundImage = global::CustomManageWindow.Properties.Resources.新建select;
-            this.commonPictureButton1.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton1.TabIndex = 0;
-            this.commonPictureButton1.TabStop = false;
-            this.commonPictureButton1.ToolTipString = "新建";
-            this.commonPictureButton1.Click += new System.EventHandler(this.commonPictureButton1_Click);
-            // 
-            // commonPictureButton2
-            // 
-            this.commonPictureButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonPictureButton2.BackgroundImage")));
-            this.commonPictureButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton2.Location = new System.Drawing.Point(0, 67);
-            this.commonPictureButton2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton2.Name = "commonPictureButton2";
-            this.commonPictureButton2.NonSelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton2.NonSelectBackGroundImage")));
-            this.commonPictureButton2.SelectBackGroundImage = global::CustomManageWindow.Properties.Resources.打印select;
-            this.commonPictureButton2.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton2.TabIndex = 1;
-            this.commonPictureButton2.TabStop = false;
-            this.commonPictureButton2.ToolTipString = "打印";
-            this.commonPictureButton2.Click += new System.EventHandler(this.commonPictureButton2_Click);
-            // 
-            // commonPictureButton3
-            // 
-            this.commonPictureButton3.BackgroundImage = global::CustomManageWindow.Properties.Resources.导出;
-            this.commonPictureButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton3.Location = new System.Drawing.Point(0, 131);
-            this.commonPictureButton3.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton3.Name = "commonPictureButton3";
-            this.commonPictureButton3.NonSelectBackGroundImage = global::CustomManageWindow.Properties.Resources.导出;
-            this.commonPictureButton3.SelectBackGroundImage = global::CustomManageWindow.Properties.Resources.导出select;
-            this.commonPictureButton3.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton3.TabIndex = 2;
-            this.commonPictureButton3.TabStop = false;
-            this.commonPictureButton3.ToolTipString = "导出";
-            this.commonPictureButton3.Click += new System.EventHandler(this.commonPictureButton3_Click);
             // 
             // Column7
             // 
@@ -313,6 +256,64 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 50;
             // 
+            // commonFlowLayoutPanel1
+            // 
+            this.commonFlowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonFlowLayoutPanel1.BackgroundImage")));
+            this.commonFlowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton1);
+            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton2);
+            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton3);
+            this.commonFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.commonFlowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.commonFlowLayoutPanel1.Name = "commonFlowLayoutPanel1";
+            this.commonFlowLayoutPanel1.Size = new System.Drawing.Size(66, 723);
+            this.commonFlowLayoutPanel1.TabIndex = 12;
+            // 
+            // commonPictureButton1
+            // 
+            this.commonPictureButton1.BackgroundImage = global::CustomManageWindow.Properties.Resources.新建;
+            this.commonPictureButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.commonPictureButton1.Location = new System.Drawing.Point(0, 3);
+            this.commonPictureButton1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.commonPictureButton1.Name = "commonPictureButton1";
+            this.commonPictureButton1.NonSelectBackGroundImage = global::CustomManageWindow.Properties.Resources.新建;
+            this.commonPictureButton1.SelectBackGroundImage = global::CustomManageWindow.Properties.Resources.新建select;
+            this.commonPictureButton1.Size = new System.Drawing.Size(66, 61);
+            this.commonPictureButton1.TabIndex = 0;
+            this.commonPictureButton1.TabStop = false;
+            this.commonPictureButton1.ToolTipString = "新建";
+            this.commonPictureButton1.Click += new System.EventHandler(this.commonPictureButton1_Click);
+            // 
+            // commonPictureButton2
+            // 
+            this.commonPictureButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonPictureButton2.BackgroundImage")));
+            this.commonPictureButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.commonPictureButton2.Location = new System.Drawing.Point(0, 67);
+            this.commonPictureButton2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.commonPictureButton2.Name = "commonPictureButton2";
+            this.commonPictureButton2.NonSelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton2.NonSelectBackGroundImage")));
+            this.commonPictureButton2.SelectBackGroundImage = global::CustomManageWindow.Properties.Resources.打印select;
+            this.commonPictureButton2.Size = new System.Drawing.Size(66, 61);
+            this.commonPictureButton2.TabIndex = 1;
+            this.commonPictureButton2.TabStop = false;
+            this.commonPictureButton2.ToolTipString = "打印";
+            this.commonPictureButton2.Click += new System.EventHandler(this.commonPictureButton2_Click);
+            // 
+            // commonPictureButton3
+            // 
+            this.commonPictureButton3.BackgroundImage = global::CustomManageWindow.Properties.Resources.导出;
+            this.commonPictureButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.commonPictureButton3.Location = new System.Drawing.Point(0, 131);
+            this.commonPictureButton3.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.commonPictureButton3.Name = "commonPictureButton3";
+            this.commonPictureButton3.NonSelectBackGroundImage = global::CustomManageWindow.Properties.Resources.导出;
+            this.commonPictureButton3.SelectBackGroundImage = global::CustomManageWindow.Properties.Resources.导出select;
+            this.commonPictureButton3.Size = new System.Drawing.Size(66, 61);
+            this.commonPictureButton3.TabIndex = 2;
+            this.commonPictureButton3.TabStop = false;
+            this.commonPictureButton3.ToolTipString = "导出";
+            this.commonPictureButton3.Click += new System.EventHandler(this.commonPictureButton3_Click);
+            // 
             // PersonalCustomInfoManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -322,6 +323,7 @@
             this.Name = "PersonalCustomInfoManage";
             this.Size = new System.Drawing.Size(1420, 723);
             this.Load += new System.EventHandler(this.PersonalCustomInfoManage_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PersonalCustomInfoManage_KeyPress);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);

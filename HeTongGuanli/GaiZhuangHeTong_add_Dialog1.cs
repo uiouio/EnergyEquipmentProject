@@ -142,7 +142,12 @@ namespace HeTongGuanLi
                         {
                             commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, s.ModidiedType, s.CylinderType, "删除");
                             commonDataGridView2.Rows[commonDataGridView2.Rows.Count - 1].Tag = s;
+                            this.textBox5.Text = s.VIN;
                             i++;
+                        }
+                        else
+                        {
+                            MessageBox.Show("该客户车牌号为"+s.PlateNumber+"车辆已有合同");
                         }
                     }
                 }
@@ -197,7 +202,6 @@ namespace HeTongGuanLi
             if (xzqy.ShowDialog() == DialogResult.OK)
             {
                 this.textBox1.Text = xzqy.CustomBaseInfo.Name;
-                this.textBox5.Text = xzqy.CustomBaseInfo.IdentifyCardNo;
                 carList = xzqy.CustomBaseInfo.CarInfo;
                 int i = 1;
                 if (carList != null)
@@ -208,7 +212,12 @@ namespace HeTongGuanLi
                         {
                             commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, s.ModidiedType, s.CylinderType, "删除");
                             commonDataGridView2.Rows[commonDataGridView2.Rows.Count - 1].Tag = s;
+                            this.textBox5.Text = s.VIN;
                             i++;
+                        }
+                        else
+                        {
+                            MessageBox.Show("该客户车牌号为" + s.PlateNumber + "车辆已有合同");
                         }
                     }
                 }

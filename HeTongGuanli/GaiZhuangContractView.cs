@@ -69,7 +69,7 @@ namespace HeTongGuanLi
                     
                     foreach(CarBaseInfo s in ModificationContract.CarBaseInfoID)
                     {
-                        this.commonDataGridView2.Rows.Add(0,i.ToString(),s.PlateNumber,s.ModidiedType,s.CylinderType);
+                        this.commonDataGridView2.Rows.Add(0,i.ToString(),s.PlateNumber,CarBaseInfo.ModifyType[s.ModidiedType],s.CylinderType);
                         i++;
                     }
                     
@@ -83,10 +83,9 @@ namespace HeTongGuanLi
                     this.textBox5.Enabled = false;
                     this.textBox1.Text = cbi.Cbi.Name;
                     this.textBox5.Text = cbi.Cbi.IdentifyCardNo;
-                    this.commonDataGridView2.Rows.Add();
                     foreach (CarBaseInfo s in ModificationContract.CarBaseInfoID)
                     {
-                        this.commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.ModidiedType, s.CylinderType);
+                        this.commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, CarBaseInfo.ModifyType[s.ModidiedType], s.CylinderType);
                         i++;
                     }
                 }

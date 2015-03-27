@@ -34,6 +34,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GaiZhuangHeTong));
             this.commonDataGridView = new CommonControl.CommonDataGridView();
+            this.Column12 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.付款类型 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,18 +59,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
             this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
-            this.Column12 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.付款类型 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.commonFlowLayoutPanel1.SuspendLayout();
@@ -106,6 +106,103 @@
             this.commonDataGridView.Size = new System.Drawing.Size(1123, 502);
             this.commonDataGridView.TabIndex = 0;
             this.commonDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView_CellContentClick);
+            // 
+            // Column12
+            // 
+            this.Column12.FillWeight = 131.4231F;
+            this.Column12.HeaderText = " ";
+            this.Column12.Name = "Column12";
+            this.Column12.ThreeState = true;
+            this.Column12.Width = 20;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 70.67931F;
+            this.Column1.HeaderText = "序号";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 60;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.FillWeight = 100.0384F;
+            this.Column2.HeaderText = "合同编号";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column7.FillWeight = 100.0384F;
+            this.Column7.HeaderText = "乙方";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.HeaderText = "改装类型";
+            this.Column3.Name = "Column3";
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column6.FillWeight = 100.0384F;
+            this.Column6.HeaderText = "经办人";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column11.FillWeight = 100.0384F;
+            this.Column11.HeaderText = "签订时间";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.FillWeight = 100.0384F;
+            this.Column4.HeaderText = "合同金额(元)";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // 付款类型
+            // 
+            this.付款类型.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.付款类型.FillWeight = 97.36939F;
+            this.付款类型.HeaderText = "付款类型";
+            this.付款类型.Name = "付款类型";
+            this.付款类型.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column13.HeaderText = "审批状态";
+            this.Column13.Name = "Column13";
+            this.Column13.Width = 120;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column9.FillWeight = 97.36939F;
+            this.Column9.HeaderText = " ";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 60;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column10.FillWeight = 97.36939F;
+            this.Column10.HeaderText = " ";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 60;
             // 
             // groupBox1
             // 
@@ -224,103 +321,6 @@
             this.commonPictureButton1.TabStop = false;
             this.commonPictureButton1.ToolTipString = null;
             this.commonPictureButton1.Click += new System.EventHandler(this.commonPictureButton1_Click);
-            // 
-            // Column12
-            // 
-            this.Column12.FillWeight = 131.4231F;
-            this.Column12.HeaderText = " ";
-            this.Column12.Name = "Column12";
-            this.Column12.ThreeState = true;
-            this.Column12.Width = 20;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 70.67931F;
-            this.Column1.HeaderText = "序号";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.FillWeight = 100.0384F;
-            this.Column2.HeaderText = "合同编号";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column7.FillWeight = 100.0384F;
-            this.Column7.HeaderText = "乙方";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.HeaderText = "改装类型";
-            this.Column3.Name = "Column3";
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column6.FillWeight = 100.0384F;
-            this.Column6.HeaderText = "经办人";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column11.FillWeight = 100.0384F;
-            this.Column11.HeaderText = "签订时间";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.FillWeight = 100.0384F;
-            this.Column4.HeaderText = "合同金额(元)";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // 付款类型
-            // 
-            this.付款类型.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.付款类型.FillWeight = 97.36939F;
-            this.付款类型.HeaderText = "付款类型";
-            this.付款类型.Name = "付款类型";
-            this.付款类型.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column13.HeaderText = "审批状态";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 120;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column9.FillWeight = 97.36939F;
-            this.Column9.HeaderText = " ";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 60;
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column10.FillWeight = 97.36939F;
-            this.Column10.HeaderText = " ";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 60;
             // 
             // GaiZhuangHeTong
             // 
