@@ -43,9 +43,70 @@ namespace WeiXiu
         }
 
         public void unEnableShow() {
-            panel1.Enabled = false;
+   
             button1.Enabled=false;
-            groupBox2.Enabled = false;
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            textBox7.Enabled = false;
+            textBox6.Enabled = false;
+            textBox5.Enabled = false;
+            textBox10.Enabled = false;
+            textBox9.Enabled = false;
+            textBox13.Enabled = false;
+            textBox8.Enabled = false;
+            textBox12.Enabled = false;
+            textBox11.Enabled = false;
+            textBox16.Enabled = false;
+            textBox14.Enabled = false;
+            textBox15.Enabled = false;
+            textBox20.Enabled = false;
+            textBox19.Enabled = false;
+            textBox18.Enabled = false;
+            textBox17.Enabled = false;
+            textBox24.Enabled = false;
+            textBox23.Enabled = false;
+            textBox22.Enabled = false;
+            textBox21.Enabled = false;
+            textBox28.Enabled = false;
+            textBox27.Enabled = false;
+            textBox26.Enabled = false;
+            textBox25.Enabled = false;
+            textBox40.Enabled = false;
+            textBox39.Enabled = false;
+            textBox38.Enabled = false;
+            textBox37.Enabled = false;
+            textBox36.Enabled = false;
+            textBox35.Enabled = false;
+            textBox34.Enabled = false;
+            textBox33.Enabled = false;
+            textBox32.Enabled = false;
+            textBox31.Enabled = false;
+            textBox30.Enabled = false;
+            textBox29.Enabled = false;
+            textBox73.Enabled = false;
+            textBox73.Enabled = false;
+            textBox75.Enabled = false;
+            textBox76.Enabled = false;
+            textBox77.Enabled = false;
+            textBox78.Enabled = false;
+            textBox74.Enabled = false;
+            textBox79.Enabled = false;
+            textBox80.Enabled = false;
+            textBox81.Enabled = false;
+            textBox82.Enabled = false;
+            textBox83.Enabled = false;
+            textBox84.Enabled = false;
+            textBox67.Enabled = false;
+            textBox72.Enabled = false;
+            textBox71.Enabled = false;
+            textBox70.Enabled = false;
+            this.dateTimePicker1.Enabled = false;
+            textBox66.Enabled = false;
+            textBox65.Enabled = false;
+            textBox69.Enabled = false;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -222,6 +283,7 @@ namespace WeiXiu
 
         private void WeiXiuJiLu_Load(object sender, EventArgs e)
         {
+            if (tw != null) {
             textBox1.Text = tw.ModificationNumber;
             textBox2.Text = tw.License;
             textBox3.Text = tw.GasType;
@@ -263,13 +325,31 @@ namespace WeiXiu
             textBox32.Text=tw.GasCosumptionHigh2 ;
              textBox31.Text=tw.GasCosumptionShort2;
             textBox30.Text=tw.Edu2 ;
-             textBox29.Text=tw.ExhaustGasTemperature2; 
-          
+             textBox29.Text=tw.ExhaustGasTemperature2;
+             textBox73.Text = tw.DieselMiles.ToString();
+             textBox73.Text = tw.DieselMiles.ToString();
+             textBox75.Text = tw.OilCosts.ToString();
+             textBox76.Text = tw.TotalCosts.ToString();
+             textBox77.Text = tw.AverageCosts.ToString();
+             textBox78.Text = tw.OilPrice.ToString();
+             textBox74.Text = tw.OilAndGasMiles.ToString();
+             textBox79.Text = tw.OilAndGasCosts.ToString();
+             textBox80.Text = tw.OilAndGasOilPrice.ToString();
+             textBox81.Text = tw.OilAndGasTotalCosts.ToString();
+             textBox82.Text = tw.OilAndGasAverageCosts.ToString();
+             textBox83.Text = tw.OilAndGasOilPrice.ToString();
+             textBox84.Text = tw.OilAndGasGasPrice.ToString();
 
-
-        }
-
-       
+             textBox67.Text = tw.Phone;
+             textBox72.Text = tw.DebugTimes;
+             textBox71.Text = tw.DebugGroup;
+             textBox70.Text = tw.DebugStaff;
+             this.dateTimePicker1.Value = new DateTime(tw.DebugTime);
+             textBox66.Text = tw.Dynamic;
+             textBox65.Text = tw.Economy;
+             textBox69.Text = tw.Name;
+            }
+    }     
       
     }
 }

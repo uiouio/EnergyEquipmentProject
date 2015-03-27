@@ -10,6 +10,7 @@ using System.Collections;
 using CheRuKu.SQL;
 using SQLProvider.Service;
 using EntityClassLibrary;
+using CommonMethod;
 
 namespace CheRuKu
 {
@@ -129,6 +130,16 @@ namespace CheRuKu
                     i++;
                 }
             }
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DoExport.DoTheExport(this.CheRuKuDataGridView1);
+        }
+
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            PrintDataGridView.PrintTheDataGridView(this.CheRuKuDataGridView1);
         }
     }
 }

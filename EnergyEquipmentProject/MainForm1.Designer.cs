@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
+            this.timerLoadMainPage = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -169,7 +170,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(224, 650);
             this.flowLayoutPanel1.TabIndex = 1;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel5
             // 
@@ -214,6 +214,10 @@
             this.commonPictureButton1.TabStop = false;
             this.commonPictureButton1.ToolTipString = null;
             this.commonPictureButton1.Click += new System.EventHandler(this.commonPictureButton1_Click);
+            // 
+            // timerLoadMainPage
+            // 
+            this.timerLoadMainPage.Tick += new System.EventHandler(this.timerLoadMainPage_Tick);
             // 
             // MainForm1
             // 
@@ -263,6 +267,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label4;
         private CommonControl.CommonPictureButton commonPictureButton1;
+        private System.Windows.Forms.Timer timerLoadMainPage;
     }
 }
 

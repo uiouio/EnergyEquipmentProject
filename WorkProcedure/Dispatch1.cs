@@ -10,6 +10,7 @@ using System.Collections;
 using WorkProcedure.SQL;
 using SQLProvider.Service;
 using EntityClassLibrary;
+using CommonMethod;
 
 namespace WorkProcedure
 {
@@ -135,6 +136,16 @@ namespace WorkProcedure
                     i++;
                 }
             }
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DoExport.DoTheExport(this.commonDataGridView1);
+        }
+
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            PrintDataGridView.PrintTheDataGridView(this.commonDataGridView1);
         }
 
        

@@ -18,6 +18,7 @@ namespace CommonMethod
         public static string NEWS_RSOURCE = "newsResource";
         public static string LETTER_RSOURCE = "letterResource";
         public static string CAR_RSOURCE = "carCheckResource";
+        public static string WEATHERLOGO = "WeatherLogo";
         public static string TEMP = System.Environment.CurrentDirectory + @"\TEMP";
 
         public static string Weather = System.Environment.CurrentDirectory + @"\Weather\";

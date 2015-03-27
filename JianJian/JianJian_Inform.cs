@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using JianJian.SQL;
 using System.Collections;
 using EntityClassLibrary;
+using CommonMethod;
 
 namespace JianJian
 {
@@ -281,6 +282,16 @@ namespace JianJian
             string number = this.textBox2.Text;
             Currentss = OP_JianJian.QueryJianJianCheLiang(name, number,gridview2BatchId);
             ShowGridViewJianJianCheLiang();
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DoExport.DoTheExport(this.JianJian1DataGridView1);
+        }
+
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            PrintDataGridView.PrintTheDataGridView(this.JianJian1DataGridView1);
         }
     }
 }

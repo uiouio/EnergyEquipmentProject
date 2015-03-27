@@ -10,11 +10,18 @@ using EntityClassLibrary;
 using System.Data.SqlClient;
 using SQLProvider.Service;
 using CommonMethod;
+using System.IO;
 
 namespace EnergyEquipmentProject
 {
     public partial class MainPage : CommonControl.CommonTabPage
     {
+
+        IList matterListOld ;
+        IList newslistOld;
+        IList scheduleListOld;
+        IList letterListOld;
+        MessageShow messagewindow;
         public delegate void dataChangedHandler(IList newsList);
         Service.MainPageService mainPageService = new Service.MainPageService();
         public MainPage()
@@ -28,20 +35,183 @@ namespace EnergyEquipmentProject
             InitializeComponent();
         }
 
-        public override void reFreshAllControl()
+        private void LoadAllControlFirstTime()
         {
-            IList matterList = mainPageService.getMatterByUserId(this.User);
-            matterPanel1.refresh(matterList);
-            IList newsList = mainPageService.getNews();
-            newsPanel1.refresh(newsList);
+            IList matterListNew = mainPageService.getMatterByUserId(this.User);
+            if (!IsTheListAreSame(matterListOld, matterListNew))
+            {
+                matterListOld = matterListNew;
+                matterPanel1.refresh(matterListOld);
+            }
+
+            IList newsListNew = mainPageService.getNews();
+            if (!IsTheListAreSame(newslistOld, newsListNew))
+            {
+                newslistOld = newsListNew;
+                newsPanel1.refresh(newslistOld);
+            }
+
             IList scheduleList = mainPageService.getScheduleByUserIdAndDate(this.User.Id, DateTime.Now.Date.Ticks, DateTime.Now.Date.Ticks + new DateTime(1, 1, 2).Date.Ticks);
-            schedulePanel1.refresh(scheduleList);
+            if (!IsTheListAreSame(scheduleListOld, scheduleList))
+            {
+                scheduleListOld = scheduleList;
+                schedulePanel1.refresh(scheduleList);
+            }
+
             IList letterList = mainPageService.getLetterByPublishUser(this.User.Id);
-            letterPanel1.refresh(letterList);
+            if (!IsTheListAreSame(letterListOld, letterList))
+            {
+                letterListOld = letterList;
+                letterPanel1.refresh(letterList);
+            }
+        
+        
         }
 
+        public override void reFreshAllControl()
+        {
+            IList matterListNew = mainPageService.getMatterByUserId(this.User);
+            if (!IsTheListAreSame(matterListOld, matterListNew))
+            {
+                matterListOld = matterListNew;
+                matterPanel1.refresh(matterListOld);
+                if (matterListNew.Count > 0)
+                {
+                    if (messagewindow == null)
+                    {
+                        messagewindow = new MessageShow();
+                        messagewindow.AddMessage("您有新的代办事项，请到首页查看。");
+                        messagewindow.Show();
+                    }
+                    else
+                    {
+                        messagewindow.AddMessage("您有新的代办事项，请到首页查看。");
+                        messagewindow.Focus();
+                    }
+                }
+            }
+           
+            IList newsListNew = mainPageService.getNews();
+            if (!IsTheListAreSame(newslistOld, newsListNew))
+            {
+                newslistOld = newsListNew;
+                newsPanel1.refresh(newslistOld);
+                if (newsListNew.Count > 0)
+                {
+                    if (messagewindow == null)
+                    {
+                        messagewindow = new MessageShow();
+                        messagewindow.AddMessage("有新的通知，请到首页查看。");
+                        messagewindow.Show();
+                    }
+                    else
+                    {
+                        messagewindow.AddMessage("有新的通知，请到首页查看。");
+                        messagewindow.Focus();
+                    }
+                }
+            }
+
+            IList scheduleList = mainPageService.getScheduleByUserIdAndDate(this.User.Id, DateTime.Now.Date.Ticks, DateTime.Now.Date.Ticks + new DateTime(1, 1, 2).Date.Ticks);
+            if (!IsTheListAreSame(scheduleListOld, scheduleList))
+            {
+                scheduleListOld = scheduleList;
+                schedulePanel1.refresh(scheduleList);
+                if (scheduleList.Count > 0)
+                {
+                    if (messagewindow == null)
+                    {
+                        messagewindow = new MessageShow();
+                        messagewindow.AddMessage("您有新的日程，请到首页查看。");
+                        messagewindow.Show();
+                    }
+                    else
+                    {
+                        messagewindow.AddMessage("您有新的日程，请到首页查看。");
+                        messagewindow.Focus();
+                    }
+                }
+            }
+            
+            IList letterList = mainPageService.getLetterByPublishUser(this.User.Id);
+            if (!IsTheListAreSame(letterListOld, letterList))
+            {
+                letterListOld = letterList;
+                letterPanel1.refresh(letterList);
+                if (letterList.Count > 0)
+                {
+                    if (messagewindow == null)
+                    {
+                        messagewindow = new MessageShow();
+                        messagewindow.AddMessage("您有新的私信，请到首页查看。");
+                        messagewindow.Show();
+                    }
+                    else
+                    {
+                        messagewindow.AddMessage("您有新的私信，请到首页查看。");
+                        messagewindow.Focus();
+                    }
+                }
+            }
+        
+        }
+
+        public bool IsTheListAreSame(IList oldlist ,IList newlist)
+        {
+
+            if (oldlist != null && newlist != null)
+            {
+                for(int i = 0; i < newlist.Count; i++)
+                {
+                    if (!Contains(oldlist,newlist[i]))
+                    {
+                        return false;
+                    }
+                }
+
+                for (int i = 0 ; i<oldlist.Count;i++)
+                {
+                    if (!Contains(newlist, oldlist[i]))
+                    {
+                        return false;
+                    }
+                }
+                
+                return true;
+            }
+            else if (oldlist == null && newlist != null)
+            {
+                return false;
+            }
+            else if (oldlist != null && newlist == null)
+            {
+                return false;
+            }
+            else if (oldlist == null && newlist == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+        private bool Contains(IList i1, object obj)
+        {
+            for (int i = 0; i < i1.Count;i++ )
+            {
+                BaseEntity b = i1[i] as BaseEntity;
+                BaseEntity b2 = obj as BaseEntity;
+                if (b.Id == b2.Id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+       
         private void MainPage_Load(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             this.Visible = false;
             label_userName.Text = User.Name;
             if (User.Sex != null)
@@ -55,13 +225,27 @@ namespace EnergyEquipmentProject
                     label_userName.Text += "女士";
                 }
             }
-            this.reFreshAllControl();
+            LoadAllControlFirstTime();
             //listenMethod_News();
             //listenMethod_Matter();
-            initTodayInfo();
+            this.timerWeather.Start();
             this.Visible = true;
         }
 
+
+
+
+
+        /// <summary>
+        /// 异步加载天气信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timerWeather_Tick(object sender, EventArgs e)
+        {
+            initTodayInfo();
+            this.timerWeather.Stop();
+        }
         private void newsChange(object sender, SqlNotificationEventArgs e)
         {
             IList newsList = mainPageService.getNews();
@@ -124,11 +308,13 @@ namespace EnergyEquipmentProject
             OnChangeEventHandler onChangeNews = new OnChangeEventHandler(newsChange);
             BaseService.autoUpdateForm(onChangeNews, "select ID from [dbo].News where State=" + (int)BaseEntity.stateEnum.Normal);
         }
+
         private void listenMethod_Matter()
         {
             OnChangeEventHandler onChangeMatter = new OnChangeEventHandler(matterChange);
             BaseService.autoUpdateForm(onChangeMatter, "select Number from [dbo].Matter where State=" + (int)BaseEntity.stateEnum.Normal + " and UserId=" + this.User.Id);
         }
+
         private void listenMethod_Schedule()
         {
             OnChangeEventHandler onChangeSchduleChange = new OnChangeEventHandler(schduleChange);
@@ -142,31 +328,75 @@ namespace EnergyEquipmentProject
 
         private void initTodayInfo()
         {
+            this.panel22.Visible = false;
+            this.panel22.Cursor = Cursors.WaitCursor;
+
             try
             {
-                WeatherService.WeatherWebServiceSoapClient wwsc = new WeatherService.WeatherWebServiceSoapClient();
-                string[] weathers = wwsc.getWeatherbyCityName("邯郸");
-                today_weather_label.Text = weathers[6];
-                today_weather_label1.Text = weathers[5];
-                today_weather_label2.Text = weathers[7];
-                tomorrow_weather_label.Text = weathers[13];
-                tomorrow_weather_label1.Text = weathers[12];
-                tomorrow_weather_label2.Text = weathers[14];
-                tomorrow2_weather_label.Text = weathers[18];
-                tomorrow2_weather_label1.Text = weathers[17];
-                tomorrow2_weather_label2.Text = weathers[19];
-                today_weather_pictureBox1.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[8]);
-                today_weather_pictureBox2.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[9]);
-                tomorrow_weather_pictureBox1.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[15]);
-                tomorrow_weather_pictureBox1.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[16]);
-                tomorrow2_weather_pictureBox1.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[20]);
-                tomorrow2_weather_pictureBox2.BackgroundImage = new Bitmap(CommonMethod.CommonStaticParameter.Weather + weathers[21]);
+                List<Weather> weather3day = new List<Weather>();
+                weather3day = Weather.Get3DayWeather();
+
+                DownloadOrShowWeather(weather3day[0].PicName1, today_weather_pictureBox1);
+                DownloadOrShowWeather(weather3day[0].PicName2, today_weather_pictureBox2);
+
+                today_weather_label.Text = weather3day[0].Day + "" + weather3day[0].WeaDescription;
+                today_weather_label1.Text = weather3day[0].MinTem + "---" + weather3day[0].MaxTem;
+                today_weather_label2.Text = weather3day[0].WindDirection1 + " " + weather3day[0].WindDirection2 + "  " + weather3day[0].WindSpeed;
+
+                DownloadOrShowWeather(weather3day[1].PicName1, tomorrow_weather_pictureBox1);
+                DownloadOrShowWeather(weather3day[1].PicName2, tomorrow_weather_pictureBox2);
+
+                tomorrow_weather_label.Text = weather3day[1].Day + "" + weather3day[1].WeaDescription;
+                tomorrow_weather_label1.Text = weather3day[1].MinTem + "---" + weather3day[1].MaxTem;
+                tomorrow_weather_label2.Text = weather3day[1].WindDirection1 + " " + weather3day[1].WindDirection2 + "  " + weather3day[1].WindSpeed;
+
+
+                DownloadOrShowWeather(weather3day[2].PicName1, tomorrow2_weather_pictureBox1);
+                DownloadOrShowWeather(weather3day[2].PicName2, tomorrow2_weather_pictureBox2);
+
+                tomorrow2_weather_label.Text = weather3day[2].Day + "" + weather3day[2].WeaDescription;
+                tomorrow2_weather_label1.Text = weather3day[2].MinTem + "---" + weather3day[2].MaxTem;
+                tomorrow2_weather_label2.Text = weather3day[2].WindDirection1 + " " + weather3day[2].WindDirection2 + "  " + weather3day[2].WindSpeed;
+
             }
             catch
             {
-                today_weather_label.Text = "";
+                MessageBox.Show("网络原因无法加载天气情况");
+                today_weather_label.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                tomorrow_weather_label.Text = DateTime.Now.AddDays(1).ToString("yyyy-MM-dd");
+                tomorrow2_weather_label.Text = DateTime.Now.AddDays(2).ToString("yyyy-MM-dd");
             }
+            this.panel22.Visible = true;
+            this.panel22.Cursor = Cursors.Default;
+            this.Cursor = Cursors.Default;
         }
+
+        private void DownloadOrShowWeather(string PicName1, PictureBox p)
+        {
+            if (PicName1 != "")
+            {
+                string tempPath = CommonStaticParameter.TEMP + "\\" + CommonStaticParameter.WEATHERLOGO + "\\" + PicName1 + ".png";
+                if (File.Exists(tempPath))
+                {
+                    p.BackgroundImage = new Bitmap(tempPath);
+                }
+                else
+                {
+                    CommonMethod.FileUpDown fileUpDown = new FileUpDown(Securit.DeDES(FileReadAndWrite.IniReadValue("file", "ip")), Securit.DeDES(FileReadAndWrite.IniReadValue("file", "id")), Securit.DeDES(FileReadAndWrite.IniReadValue("file", "pwd")));
+                    fileUpDown.Download(CommonStaticParameter.TEMP + "\\" + CommonStaticParameter.WEATHERLOGO, PicName1 + ".png", CommonStaticParameter.WEATHERLOGO);
+                    if (File.Exists(tempPath))
+                    {
+                        p.BackgroundImage = new Bitmap(tempPath);
+                    }
+                }
+            }
+            else
+            {
+                p.BackgroundImage = null;
+            }
+        
+        }
+
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -187,5 +417,12 @@ namespace EnergyEquipmentProject
         {
             System.Diagnostics.Process.Start("http://www.hebut.edu.cn/");
         }
+
+        private void timerOfRefreshAllControl_Tick(object sender, EventArgs e)
+        {
+            this.reFreshAllControl();
+        }
+
+       
     }
 }

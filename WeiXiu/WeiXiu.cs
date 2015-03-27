@@ -10,6 +10,7 @@ using System.Drawing.Printing;
 using WeiXiu.SQL;
 using System.Collections;
 using EntityClassLibrary;
+using CommonMethod;
 
 namespace WeiXiu
 {
@@ -100,6 +101,16 @@ namespace WeiXiu
                 }
             }
             
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DoExport.DoTheExport(this.WeiXiuDataGridView1);
+        }
+
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            PrintDataGridView.PrintTheDataGridView(this.WeiXiuDataGridView1);
         }
 
 

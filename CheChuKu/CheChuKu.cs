@@ -10,6 +10,7 @@ using System.Collections;
 using SQLProvider.Service;
 using CheChuKu.SQL;
 using EntityClassLibrary;
+using CommonMethod;
 
 namespace CheChuKu
 {
@@ -170,6 +171,16 @@ namespace CheChuKu
             }
 
 
+        }
+
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            PrintDataGridView.PrintTheDataGridView(this.commonDataGridView1);
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DoExport.DoTheExport(this.commonDataGridView1);
         }
 
     }
