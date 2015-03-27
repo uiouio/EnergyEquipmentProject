@@ -111,6 +111,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.timerWeather = new System.Windows.Forms.Timer(this.components);
+            this.timerOfRefreshAllControl = new System.Windows.Forms.Timer(this.components);
             this.panel13.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel29.SuspendLayout();
@@ -984,6 +985,12 @@
             // 
             this.timerWeather.Tick += new System.EventHandler(this.timerWeather_Tick);
             // 
+            // timerOfRefreshAllControl
+            // 
+            this.timerOfRefreshAllControl.Enabled = true;
+            this.timerOfRefreshAllControl.Interval = 40000;
+            this.timerOfRefreshAllControl.Tick += new System.EventHandler(this.timerOfRefreshAllControl_Tick);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1138,6 +1145,7 @@
         private CommonControl.SchedulePanel schedulePanel1;
         private CommonControl.LetterPanel letterPanel1;
         private System.Windows.Forms.Timer timerWeather;
+        private System.Windows.Forms.Timer timerOfRefreshAllControl;
 
 
 

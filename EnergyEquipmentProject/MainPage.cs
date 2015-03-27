@@ -16,6 +16,11 @@ namespace EnergyEquipmentProject
 {
     public partial class MainPage : CommonControl.CommonTabPage
     {
+
+        IList matterListOld ;
+        IList newslistOld;
+        IList scheduleListOld;
+        IList letterListOld;
         public delegate void dataChangedHandler(IList newsList);
         Service.MainPageService mainPageService = new Service.MainPageService();
         public MainPage()
@@ -31,16 +36,89 @@ namespace EnergyEquipmentProject
 
         public override void reFreshAllControl()
         {
-            IList matterList = mainPageService.getMatterByUserId(this.User);
-            matterPanel1.refresh(matterList);
-            IList newsList = mainPageService.getNews();
-            newsPanel1.refresh(newsList);
+            IList matterListNew = mainPageService.getMatterByUserId(this.User);
+            if (!IsTheListAreSame(matterListOld, matterListNew))
+            {
+                matterListOld = matterListNew;
+                matterPanel1.refresh(matterListOld);
+            }
+           
+            IList newsListNew = mainPageService.getNews();
+            if(!IsTheListAreSame(newslistOld,newsListNew))
+            {
+                newslistOld = newsListNew;
+                newsPanel1.refresh(newslistOld);
+            }
+
             IList scheduleList = mainPageService.getScheduleByUserIdAndDate(this.User.Id, DateTime.Now.Date.Ticks, DateTime.Now.Date.Ticks + new DateTime(1, 1, 2).Date.Ticks);
-            schedulePanel1.refresh(scheduleList);
+            if (!IsTheListAreSame(scheduleListOld, scheduleList))
+            {
+                scheduleListOld = scheduleList;
+                schedulePanel1.refresh(scheduleList);
+            }
+            
             IList letterList = mainPageService.getLetterByPublishUser(this.User.Id);
-            letterPanel1.refresh(letterList);
+            if (!IsTheListAreSame(letterListOld, letterList))
+            {
+                letterListOld = letterList;
+                letterPanel1.refresh(letterList);
+            }
+        
         }
 
+        public bool IsTheListAreSame(IList oldlist ,IList newlist)
+        {
+
+            if (oldlist != null && newlist != null)
+            {
+                for(int i = 0; i < newlist.Count; i++)
+                {
+                    if (!Contains(oldlist,newlist[i]))
+                    {
+                        return false;
+                    }
+                }
+
+                for (int i = 0 ; i<oldlist.Count;i++)
+                {
+                    if (!Contains(newlist, oldlist[i]))
+                    {
+                        return false;
+                    }
+                }
+                
+                return true;
+            }
+            else if (oldlist == null && newlist != null)
+            {
+                return false;
+            }
+            else if (oldlist != null && newlist == null)
+            {
+                return false;
+            }
+            else if (oldlist == null && newlist == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+        private bool Contains(IList i1, object obj)
+        {
+            for (int i = 0; i < i1.Count;i++ )
+            {
+                BaseEntity b = i1[i] as BaseEntity;
+                BaseEntity b2 = obj as BaseEntity;
+                if (b.Id == b2.Id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+       
         private void MainPage_Load(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
@@ -57,13 +135,16 @@ namespace EnergyEquipmentProject
                     label_userName.Text += "女士";
                 }
             }
-            this.reFreshAllControl();
+            
             //listenMethod_News();
             //listenMethod_Matter();
             this.timerWeather.Start();
             this.Visible = true;
-            
         }
+
+
+
+
 
         /// <summary>
         /// 异步加载天气信息
@@ -137,11 +218,13 @@ namespace EnergyEquipmentProject
             OnChangeEventHandler onChangeNews = new OnChangeEventHandler(newsChange);
             BaseService.autoUpdateForm(onChangeNews, "select ID from [dbo].News where State=" + (int)BaseEntity.stateEnum.Normal);
         }
+
         private void listenMethod_Matter()
         {
             OnChangeEventHandler onChangeMatter = new OnChangeEventHandler(matterChange);
             BaseService.autoUpdateForm(onChangeMatter, "select Number from [dbo].Matter where State=" + (int)BaseEntity.stateEnum.Normal + " and UserId=" + this.User.Id);
         }
+
         private void listenMethod_Schedule()
         {
             OnChangeEventHandler onChangeSchduleChange = new OnChangeEventHandler(schduleChange);
@@ -243,6 +326,11 @@ namespace EnergyEquipmentProject
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("http://www.hebut.edu.cn/");
+        }
+
+        private void timerOfRefreshAllControl_Tick(object sender, EventArgs e)
+        {
+            this.reFreshAllControl();
         }
 
        
