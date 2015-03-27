@@ -21,6 +21,7 @@ namespace EnergyEquipmentProject
         IList newslistOld;
         IList scheduleListOld;
         IList letterListOld;
+        MessageShow messagewindow;
         public delegate void dataChangedHandler(IList newsList);
         Service.MainPageService mainPageService = new Service.MainPageService();
         public MainPage()
@@ -34,7 +35,7 @@ namespace EnergyEquipmentProject
             InitializeComponent();
         }
 
-        public override void reFreshAllControl()
+        private void LoadAllControlFirstTime()
         {
             IList matterListNew = mainPageService.getMatterByUserId(this.User);
             if (!IsTheListAreSame(matterListOld, matterListNew))
@@ -42,9 +43,9 @@ namespace EnergyEquipmentProject
                 matterListOld = matterListNew;
                 matterPanel1.refresh(matterListOld);
             }
-           
+
             IList newsListNew = mainPageService.getNews();
-            if(!IsTheListAreSame(newslistOld,newsListNew))
+            if (!IsTheListAreSame(newslistOld, newsListNew))
             {
                 newslistOld = newsListNew;
                 newsPanel1.refresh(newslistOld);
@@ -56,12 +57,101 @@ namespace EnergyEquipmentProject
                 scheduleListOld = scheduleList;
                 schedulePanel1.refresh(scheduleList);
             }
+
+            IList letterList = mainPageService.getLetterByPublishUser(this.User.Id);
+            if (!IsTheListAreSame(letterListOld, letterList))
+            {
+                letterListOld = letterList;
+                letterPanel1.refresh(letterList);
+            }
+        
+        
+        }
+
+        public override void reFreshAllControl()
+        {
+            IList matterListNew = mainPageService.getMatterByUserId(this.User);
+            if (!IsTheListAreSame(matterListOld, matterListNew))
+            {
+                matterListOld = matterListNew;
+                matterPanel1.refresh(matterListOld);
+                if (matterListNew.Count > 0)
+                {
+                    if (messagewindow == null)
+                    {
+                        messagewindow = new MessageShow();
+                        messagewindow.AddMessage("您有新的代办事项，请到首页查看。");
+                        messagewindow.Show();
+                    }
+                    else
+                    {
+                        messagewindow.AddMessage("您有新的代办事项，请到首页查看。");
+                        messagewindow.Focus();
+                    }
+                }
+            }
+           
+            IList newsListNew = mainPageService.getNews();
+            if (!IsTheListAreSame(newslistOld, newsListNew))
+            {
+                newslistOld = newsListNew;
+                newsPanel1.refresh(newslistOld);
+                if (newsListNew.Count > 0)
+                {
+                    if (messagewindow == null)
+                    {
+                        messagewindow = new MessageShow();
+                        messagewindow.AddMessage("有新的通知，请到首页查看。");
+                        messagewindow.Show();
+                    }
+                    else
+                    {
+                        messagewindow.AddMessage("有新的通知，请到首页查看。");
+                        messagewindow.Focus();
+                    }
+                }
+            }
+
+            IList scheduleList = mainPageService.getScheduleByUserIdAndDate(this.User.Id, DateTime.Now.Date.Ticks, DateTime.Now.Date.Ticks + new DateTime(1, 1, 2).Date.Ticks);
+            if (!IsTheListAreSame(scheduleListOld, scheduleList))
+            {
+                scheduleListOld = scheduleList;
+                schedulePanel1.refresh(scheduleList);
+                if (scheduleList.Count > 0)
+                {
+                    if (messagewindow == null)
+                    {
+                        messagewindow = new MessageShow();
+                        messagewindow.AddMessage("您有新的日程，请到首页查看。");
+                        messagewindow.Show();
+                    }
+                    else
+                    {
+                        messagewindow.AddMessage("您有新的日程，请到首页查看。");
+                        messagewindow.Focus();
+                    }
+                }
+            }
             
             IList letterList = mainPageService.getLetterByPublishUser(this.User.Id);
             if (!IsTheListAreSame(letterListOld, letterList))
             {
                 letterListOld = letterList;
                 letterPanel1.refresh(letterList);
+                if (letterList.Count > 0)
+                {
+                    if (messagewindow == null)
+                    {
+                        messagewindow = new MessageShow();
+                        messagewindow.AddMessage("您有新的私信，请到首页查看。");
+                        messagewindow.Show();
+                    }
+                    else
+                    {
+                        messagewindow.AddMessage("您有新的私信，请到首页查看。");
+                        messagewindow.Focus();
+                    }
+                }
             }
         
         }
@@ -135,7 +225,7 @@ namespace EnergyEquipmentProject
                     label_userName.Text += "女士";
                 }
             }
-            
+            LoadAllControlFirstTime();
             //listenMethod_News();
             //listenMethod_Matter();
             this.timerWeather.Start();
