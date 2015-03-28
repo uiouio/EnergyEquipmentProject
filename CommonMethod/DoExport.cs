@@ -29,7 +29,7 @@ namespace CommonMethod
                     drr = dt.NewRow();
                     for (int i = 0; i < dt.Columns.Count; i++)
                     {
-                        drr[i] = item.Cells[i].Value.ToString();
+                        drr[i] = item.Cells[i].Value == null?"":item.Cells[i].Value.ToString();
                     }
                     dt.Rows.Add(drr);
                 }
