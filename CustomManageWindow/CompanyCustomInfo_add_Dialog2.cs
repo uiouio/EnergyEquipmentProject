@@ -11,7 +11,7 @@ using CustomManageWindow.Service;
 using System.Collections;
 namespace CustomManageWindow
 {
-    public partial class CompanyCustomInfo_add_Dialog2 : Form
+    public partial class CompanyCustomInfo_add_Dialog2 : CommonControl.BaseForm
     {
         public int i = 0;
 
