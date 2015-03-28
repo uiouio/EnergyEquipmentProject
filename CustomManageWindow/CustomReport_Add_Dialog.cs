@@ -10,11 +10,12 @@ using EntityClassLibrary;
 using System.Collections;
 using CustomManageWindow.Service;
 using SQLProvider.Service;
+using CommonControl;
  
 
 namespace CustomManageWindow
 {
-    public partial class CustomReport_Add_Dialog : Form
+    public partial class CustomReport_Add_Dialog : BaseForm
     {
         /// <summary>
         /// 0为查看，1为新建
@@ -57,6 +58,7 @@ namespace CustomManageWindow
             s=(CarTheLibrary)CarMesg[0];
             
             this.Text = "新建客户回访记录";
+            label3.Text = UserInfo.Name;
             //label3.Text = Currentrecords.PhoneWorker;
             textBox2.ReadOnly = false;
             textBox3.ReadOnly = false;
@@ -91,7 +93,9 @@ namespace CustomManageWindow
 
         private void CustomReport_Add_Dialog_Load(object sender, EventArgs e)
         {
-                       
+            this.printDocument1.OriginAtMargins = true;//启用页边距
+            this.pageSetupDialog1.EnableMetric = true; //以毫米为单位
+           
             if (dialogFlag == 0)
                 this.showViewState();//查看
             else this.showNewState();//新建
@@ -123,6 +127,37 @@ namespace CustomManageWindow
                 this.Close();
             }
                 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (this.printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            ////打印内容 为 整个Form
+            //Image myFormImage;
+            //myFormImage = new Bitmap(this.Width, this.Height);
+            //Graphics g = Graphics.FromImage(myFormImage);
+            //g.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+            //e.Graphics.DrawImage(myFormImage, 0, 0);
+
+            //打印内容 为 局部的 this.groupBox1
+            Bitmap _NewBitmap = new Bitmap(groupBox1.Width, groupBox1.Height);
+            groupBox1.DrawToBitmap(_NewBitmap, new Rectangle(0, 0, _NewBitmap.Width, _NewBitmap.Height));
+            e.Graphics.DrawImage(_NewBitmap, 0, 0, _NewBitmap.Width, _NewBitmap.Height);
+
+            //打印内容 为 自定义文本内容 
+            //Font font = new Font("宋体", 12);
+            //Brush bru = Brushes.Blue;
+            //for (int i = 1; i <= 5; i++)
+            //{
+            //    e.Graphics.DrawString("Hello world ", font, bru, i * 20, i * 20);
+            //}
         }
     }
 }
