@@ -18,6 +18,7 @@ namespace CustomManageWindow
     {
         IList currentrecords,currentrecords1;
         CustomerRecordService ss = new CustomerRecordService();
+        CustomService cs = new CustomService();
         public CustomServiceQuery()
         {
             InitializeComponent();
@@ -230,6 +231,20 @@ namespace CustomManageWindow
             {
                 pictureBox2_Click(this, e);
             }
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = cs.CloneDataGridView(this.commonDataGridView2);
+            //div.Columns.Remove(div.Columns[13]);
+            //div.Columns.Remove(div.Columns[13]);
+            DoExport.DoTheExport(div);
         }
     }
 }
