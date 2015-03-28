@@ -36,7 +36,8 @@ namespace WorkProcedure
 
         private void GongZuoZhuXuanZe_Load(object sender, EventArgs e)
         {
-              ShowGridViewPaiGongDan();
+            LoadComboBox();
+            ShowGridViewPaiGongDan();
         }
 
         public void ShowGridViewPaiGongDan()
@@ -79,9 +80,9 @@ namespace WorkProcedure
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-        }    
+        }
 
-        private void comboBox2_DropDown(object sender, EventArgs e) // combox工作组下拉选项的方法
+        private void LoadComboBox()
         {
             if (this.comboBox2.Items.Count == 0)
             {
@@ -93,11 +94,7 @@ namespace WorkProcedure
                     this.comboBox2.ValueMember = "Itself";
                 }
             }
-
         }
-
-
-
                 
     }
 }

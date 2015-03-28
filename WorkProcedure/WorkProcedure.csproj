@@ -54,11 +54,11 @@
     <Compile Include="CopyPaiGongDan_add_Dialog.Designer.cs">
       <DependentUpon>CopyPaiGongDan_add_Dialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dispatch.cs">
+    <Compile Include="UNDODispatch.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dispatch.Designer.cs">
-      <DependentUpon>Dispatch.cs</DependentUpon>
+    <Compile Include="UNDODispatch.Designer.cs">
+      <DependentUpon>UNDODispatch.cs</DependentUpon>
     </Compile>
     <Compile Include="Dispatch1.cs">
       <SubType>UserControl</SubType>
@@ -84,11 +84,11 @@
     <Compile Include="InstallRecord.Designer.cs">
       <DependentUpon>InstallRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="LiuZhuanBiaoEdit_Edit.cs">
+    <Compile Include="UNDOLiuZhuanBiaoEdit_Edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LiuZhuanBiaoEdit_Edit.Designer.cs">
-      <DependentUpon>LiuZhuanBiaoEdit_Edit.cs</DependentUpon>
+    <Compile Include="UNDOLiuZhuanBiaoEdit_Edit.Designer.cs">
+      <DependentUpon>UNDOLiuZhuanBiaoEdit_Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="LiuZhuanBiaoView.cs">
       <SubType>UserControl</SubType>
@@ -102,12 +102,6 @@
     <Compile Include="LiuZhuanBiaoView_Detail.Designer.cs">
       <DependentUpon>LiuZhuanBiaoView_Detail.cs</DependentUpon>
     </Compile>
-    <Compile Include="myForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="myForm.Designer.cs">
-      <DependentUpon>myForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -115,59 +109,59 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SQL\OP_LZB.cs" />
-    <Compile Include="ZiLiaoShenChaChaiYouCNG.cs">
+    <Compile Include="UNDOZiLiaoShenChaChaiYouCNG.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ZiLiaoShenChaChaiYouCNG.Designer.cs">
-      <DependentUpon>ZiLiaoShenChaChaiYouCNG.cs</DependentUpon>
+    <Compile Include="UNDOZiLiaoShenChaChaiYouCNG.Designer.cs">
+      <DependentUpon>UNDOZiLiaoShenChaChaiYouCNG.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZiLiaoShenChaCNG.cs">
+    <Compile Include="UNDOZiLiaoShenChaCNG.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ZiLiaoShenChaCNG.Designer.cs">
-      <DependentUpon>ZiLiaoShenChaCNG.cs</DependentUpon>
+    <Compile Include="UNDOZiLiaoShenChaCNG.Designer.cs">
+      <DependentUpon>UNDOZiLiaoShenChaCNG.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZiLiaoShenChaCNG_ChaKan.cs">
+    <Compile Include="UNDOZiLiaoShenChaCNG_ChaKan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZiLiaoShenChaCNG_ChaKan.Designer.cs">
-      <DependentUpon>ZiLiaoShenChaCNG_ChaKan.cs</DependentUpon>
+    <Compile Include="UNDOZiLiaoShenChaCNG_ChaKan.Designer.cs">
+      <DependentUpon>UNDOZiLiaoShenChaCNG_ChaKan.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZiLiaoShenChaLNG.cs">
+    <Compile Include="UNDOZiLiaoShenChaLNG.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ZiLiaoShenChaLNG.Designer.cs">
-      <DependentUpon>ZiLiaoShenChaLNG.cs</DependentUpon>
+    <Compile Include="UNDOZiLiaoShenChaLNG.Designer.cs">
+      <DependentUpon>UNDOZiLiaoShenChaLNG.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZiLiaoShenChaLNG_ChaKan.cs">
+    <Compile Include="UNDOZiLiaoShenChaLNG_ChaKan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZiLiaoShenChaLNG_ChaKan.Designer.cs">
-      <DependentUpon>ZiLiaoShenChaLNG_ChaKan.cs</DependentUpon>
+    <Compile Include="UNDOZiLiaoShenChaLNG_ChaKan.Designer.cs">
+      <DependentUpon>UNDOZiLiaoShenChaLNG_ChaKan.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZiLiaoShenCha_ChaiYouCNGChaKan.cs">
+    <Compile Include="UNDOZiLiaoShenCha_ChaiYouCNGChaKan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZiLiaoShenCha_ChaiYouCNGChaKan.Designer.cs">
-      <DependentUpon>ZiLiaoShenCha_ChaiYouCNGChaKan.cs</DependentUpon>
+    <Compile Include="UNDOZiLiaoShenCha_ChaiYouCNGChaKan.Designer.cs">
+      <DependentUpon>UNDOZiLiaoShenCha_ChaiYouCNGChaKan.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZiLiaoShenCha_ChaiYouCNGEdit.cs">
+    <Compile Include="UNDOZiLiaoShenCha_ChaiYouCNGEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZiLiaoShenCha_ChaiYouCNGEdit.Designer.cs">
-      <DependentUpon>ZiLiaoShenCha_ChaiYouCNGEdit.cs</DependentUpon>
+    <Compile Include="UNDOZiLiaoShenCha_ChaiYouCNGEdit.Designer.cs">
+      <DependentUpon>UNDOZiLiaoShenCha_ChaiYouCNGEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZiLiaoShenCha_CNGEdit.cs">
+    <Compile Include="UNDOZiLiaoShenCha_CNGEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZiLiaoShenCha_CNGEdit.Designer.cs">
-      <DependentUpon>ZiLiaoShenCha_CNGEdit.cs</DependentUpon>
+    <Compile Include="UNDOZiLiaoShenCha_CNGEdit.Designer.cs">
+      <DependentUpon>UNDOZiLiaoShenCha_CNGEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZiLiaoShenCha_LNGEdit.cs">
+    <Compile Include="UNDOZiLiaoShenCha_LNGEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZiLiaoShenCha_LNGEdit.Designer.cs">
-      <DependentUpon>ZiLiaoShenCha_LNGEdit.cs</DependentUpon>
+    <Compile Include="UNDOZiLiaoShenCha_LNGEdit.Designer.cs">
+      <DependentUpon>UNDOZiLiaoShenCha_LNGEdit.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -200,8 +194,8 @@
     <EmbeddedResource Include="CopyPaiGongDan_add_Dialog.resx">
       <DependentUpon>CopyPaiGongDan_add_Dialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dispatch.resx">
-      <DependentUpon>Dispatch.cs</DependentUpon>
+    <EmbeddedResource Include="UNDODispatch.resx">
+      <DependentUpon>UNDODispatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dispatch1.resx">
       <DependentUpon>Dispatch1.cs</DependentUpon>
@@ -215,8 +209,8 @@
     <EmbeddedResource Include="InstallRecord.resx">
       <DependentUpon>InstallRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LiuZhuanBiaoEdit_Edit.resx">
-      <DependentUpon>LiuZhuanBiaoEdit_Edit.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOLiuZhuanBiaoEdit_Edit.resx">
+      <DependentUpon>UNDOLiuZhuanBiaoEdit_Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LiuZhuanBiaoView.resx">
       <DependentUpon>LiuZhuanBiaoView.cs</DependentUpon>
@@ -228,32 +222,32 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZiLiaoShenChaChaiYouCNG.resx">
-      <DependentUpon>ZiLiaoShenChaChaiYouCNG.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOZiLiaoShenChaChaiYouCNG.resx">
+      <DependentUpon>UNDOZiLiaoShenChaChaiYouCNG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZiLiaoShenChaCNG.resx">
-      <DependentUpon>ZiLiaoShenChaCNG.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOZiLiaoShenChaCNG.resx">
+      <DependentUpon>UNDOZiLiaoShenChaCNG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZiLiaoShenChaCNG_ChaKan.resx">
-      <DependentUpon>ZiLiaoShenChaCNG_ChaKan.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOZiLiaoShenChaCNG_ChaKan.resx">
+      <DependentUpon>UNDOZiLiaoShenChaCNG_ChaKan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZiLiaoShenChaLNG.resx">
-      <DependentUpon>ZiLiaoShenChaLNG.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOZiLiaoShenChaLNG.resx">
+      <DependentUpon>UNDOZiLiaoShenChaLNG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZiLiaoShenChaLNG_ChaKan.resx">
-      <DependentUpon>ZiLiaoShenChaLNG_ChaKan.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOZiLiaoShenChaLNG_ChaKan.resx">
+      <DependentUpon>UNDOZiLiaoShenChaLNG_ChaKan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZiLiaoShenCha_ChaiYouCNGChaKan.resx">
-      <DependentUpon>ZiLiaoShenCha_ChaiYouCNGChaKan.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOZiLiaoShenCha_ChaiYouCNGChaKan.resx">
+      <DependentUpon>UNDOZiLiaoShenCha_ChaiYouCNGChaKan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZiLiaoShenCha_ChaiYouCNGEdit.resx">
-      <DependentUpon>ZiLiaoShenCha_ChaiYouCNGEdit.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOZiLiaoShenCha_ChaiYouCNGEdit.resx">
+      <DependentUpon>UNDOZiLiaoShenCha_ChaiYouCNGEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZiLiaoShenCha_CNGEdit.resx">
-      <DependentUpon>ZiLiaoShenCha_CNGEdit.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOZiLiaoShenCha_CNGEdit.resx">
+      <DependentUpon>UNDOZiLiaoShenCha_CNGEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZiLiaoShenCha_LNGEdit.resx">
-      <DependentUpon>ZiLiaoShenCha_LNGEdit.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOZiLiaoShenCha_LNGEdit.resx">
+      <DependentUpon>UNDOZiLiaoShenCha_LNGEdit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

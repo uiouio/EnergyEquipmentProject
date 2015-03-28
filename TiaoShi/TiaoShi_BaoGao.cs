@@ -43,7 +43,7 @@ namespace TiaoShi
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.button1.Cursor = Cursors.WaitCursor;
             TiaoShiBaoGao.LiuZhuanBiao.PaiGongDan.CarInfo.Cbi.Name= this.textBox3.Text;
             TiaoShiBaoGao.LiuZhuanBiao.PaiGongDan.CarInfo.VehicleType=this.textBox1.Text ;
             TiaoShiBaoGao.LiuZhuanBiao.PaiGongDan.CarInfo.PlateNumber=this.textBox6.Text;
@@ -174,7 +174,6 @@ namespace TiaoShi
                 
                 tiaoShiBaoGao.Status = (int)EntityClassLibrary.TiaoShiBaoGao.savecheck.check;
                 OP_TS.SaveBao(tiaoShiBaoGao);
-                
 
                 CheRuKuInfo cheRuKuInfo=new CheRuKuInfo();
                 RefitWork rf = new RefitWork();
@@ -188,9 +187,8 @@ namespace TiaoShi
 
                 this.DialogResult = DialogResult.OK;
                 
-
             }
-           
+            this.button1.Cursor = Cursors.Hand;
         }
 
         public void ShowTiaoShiBaoGaoChaKan()
@@ -245,19 +243,5 @@ namespace TiaoShi
             print.DocPrint(panel1);
         }
 
-
-        ///由于测试的提交
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

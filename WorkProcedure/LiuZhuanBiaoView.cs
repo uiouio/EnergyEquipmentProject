@@ -80,6 +80,7 @@ namespace WorkProcedure
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.button4.Cursor = Cursors.WaitCursor;
             this.LiuZhuanBiaoDataGridView1.Rows.Clear();
             string number = this.textBox1.Text;
             string platenumber = this.textBox2.Text;
@@ -98,15 +99,18 @@ namespace WorkProcedure
                     i++;
                 }
             }
+            this.button4.Cursor = Cursors.Hand;
         }
 
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
+            this.commonPictureButton3.Cursor = Cursors.WaitCursor;
             DataGridView d1 = new DataGridView();
             d1 = CommonMethod.OperateDateGridView.CloneDataGridView(LiuZhuanBiaoDataGridView1);
             d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
             d1.Columns.Remove(d1.Columns[0]);
             DoExport.DoTheExport(d1);
+            this.commonPictureButton3.Cursor = Cursors.Hand;
         }
 
         private void commonPictureButton1_Click(object sender, EventArgs e)

@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -68,11 +67,11 @@
     <Compile Include="TiaoShi_BaoGao.Designer.cs">
       <DependentUpon>TiaoShi_BaoGao.cs</DependentUpon>
     </Compile>
-    <Compile Include="TiaoShi_BaoGaoChaKan.cs">
+    <Compile Include="UNDOTiaoShi_BaoGaoChaKan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TiaoShi_BaoGaoChaKan.Designer.cs">
-      <DependentUpon>TiaoShi_BaoGaoChaKan.cs</DependentUpon>
+    <Compile Include="UNDOTiaoShi_BaoGaoChaKan.Designer.cs">
+      <DependentUpon>UNDOTiaoShi_BaoGaoChaKan.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -108,8 +107,8 @@
     <EmbeddedResource Include="TiaoShi_BaoGao.resx">
       <DependentUpon>TiaoShi_BaoGao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TiaoShi_BaoGaoChaKan.resx">
-      <DependentUpon>TiaoShi_BaoGaoChaKan.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOTiaoShi_BaoGaoChaKan.resx">
+      <DependentUpon>UNDOTiaoShi_BaoGaoChaKan.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

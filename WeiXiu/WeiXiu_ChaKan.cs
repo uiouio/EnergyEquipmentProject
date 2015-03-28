@@ -72,33 +72,49 @@ namespace WeiXiu
 
         private void button4_Click(object sender, EventArgs e)
         {
-                this.WeiXiuDataGridView1.Rows.Clear();
-                string name = textBox1.Text;
-                string number = textBox2.Text;
-                long time1 = dateTimePicker1.Value.Date.Ticks;
-                long time2 = dateTimePicker2.Value.Date.AddDays(+1).Ticks;
-                Currentss = OP_WX.QueryWeiXiu(name,number,time1,time2);
-                int i = 1;
-                if (Currentss != null)
+            this.button4.Cursor = Cursors.WaitCursor;
+            this.WeiXiuDataGridView1.Rows.Clear();
+            string name = textBox1.Text;
+            string number = textBox2.Text;
+            long time1 = dateTimePicker1.Value.Date.Ticks;
+            long time2 = dateTimePicker2.Value.Date.AddDays(+1).Ticks;
+            Currentss = OP_WX.QueryWeiXiu(name, number, time1, time2);
+            int i = 1;
+            if (Currentss != null)
+            {
+                foreach (WeiXiuFanKuiDan s in Currentss)
                 {
-                    foreach (WeiXiuFanKuiDan s in Currentss)
-                    {
-                        this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber, s.ServicePerson, s.QualityProblems, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"), "查看");
-                        this.WeiXiuDataGridView1.Rows[this.WeiXiuDataGridView1.Rows.Count - 1].Tag = s;
-                        i++;
-                    }
+                    this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber, s.ServicePerson, s.QualityProblems, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"), "查看");
+                    this.WeiXiuDataGridView1.Rows[this.WeiXiuDataGridView1.Rows.Count - 1].Tag = s;
+                    i++;
                 }
-            
+            }
+            this.button4.Cursor = Cursors.Hand;
         }
 
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
+            this.commonPictureButton2.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(WeiXiuDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+
             DoExport.DoTheExport(this.WeiXiuDataGridView1);
+            this.commonPictureButton2.Cursor = Cursors.Hand;
         }
 
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
-            PrintDataGridView.PrintTheDataGridView(this.WeiXiuDataGridView1);
+            this.commonPictureButton3.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(WeiXiuDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+
+            PrintDataGridView.PrintTheDataGridView(d1);
+            this.commonPictureButton3.Cursor = Cursors.Hand;
+        
         }
     }
 }

@@ -69,7 +69,7 @@ namespace WeiXiu
 
 
         private void button1_Click(object sender, EventArgs e)
-        {          
+        {
             wx = new WeiXiuFanKuiDan();
             wx.Name = this.textBox1.Text;
             wx.LicensePlateNumber = this.textBox15.Text;
@@ -99,34 +99,31 @@ namespace WeiXiu
             DateTime now = DateTime.Now;
             textBox8.Text = "WX" + now.Year + (now.Month.ToString().Length == 1 ? ("0" + now.Month) : now.Month.ToString()) + (now.Day.ToString().Length == 1 ? ("0" + now.Day) : now.Day.ToString()) + DateTime.Now.ToLongTimeString().Replace(":", "");
             wx.ServiceNumber = this.textBox8.Text;
-            wx.ServiceState =(int)WeiXiuFanKuiDan.ScratchSave.Save;
+            wx.ServiceState = (int)WeiXiuFanKuiDan.ScratchSave.Save;
             wx = oo.SaveOrUpdateEntity(wx) as WeiXiuFanKuiDan;
-           
 
-            if(this.commonDataGridView1.Rows.Count>0)
+
+            if (this.commonDataGridView1.Rows.Count > 0)
             {
                 int count = this.commonDataGridView1.Rows.Count;
-                for (int i = 0; i < count;i++)
+                for (int i = 0; i < count; i++)
                 {
-                  Object[] obj =   (this.commonDataGridView1.Rows[i].Tag as Object[]);
-                 
+                    Object[] obj = (this.commonDataGridView1.Rows[i].Tag as Object[]);
+
                     sergoo.WeiXiuFanKuiDanId = wx;
-                    GoodsBaseInfo gg = new GoodsBaseInfo ();
+                    GoodsBaseInfo gg = new GoodsBaseInfo();
                     gg.Id = Convert.ToInt64(obj[7]);
                     sergoo.GoodsBaseInfoId = gg;
-                    sergoo.Number =  Convert.ToInt32 (obj[9]);
+                    sergoo.Number = Convert.ToInt32(obj[9]);
                     oo.SaveOrUpdateEntity(sergoo);
-                  
-                }
-            } 
 
-          
+                }
+            }
+
+
             if (MessageBox.Show("是否确认？", "确认", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-               
-                
                 this.DialogResult = DialogResult.OK;
-
             }
         }
 

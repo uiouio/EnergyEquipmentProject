@@ -269,29 +269,47 @@ namespace JianJian
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            this.button1.Cursor = Cursors.WaitCursor;
             this.JianJian1DataGridView1.Rows.Clear();
             string number = this.textBox4.Text;
             Currentss = OP_JianJian.QueryJianJian(number);
             ShowGridViewJianJian1();
+            this.button1.Cursor = Cursors.Hand;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.button4.Cursor = Cursors.WaitCursor;
             this.JianJian2DataGridView1.Rows.Clear();
             string name = this.textBox1.Text;
             string number = this.textBox2.Text;
             Currentss = OP_JianJian.QueryJianJianCheLiang(name, number,gridview2BatchId);
             ShowGridViewJianJianCheLiang();
+            this.button4.Cursor = Cursors.Hand;
         }
 
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
-            DoExport.DoTheExport(this.JianJian1DataGridView1);
+
+            this.commonPictureButton2.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(JianJian1DataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+            DoExport.DoTheExport(d1);
+            this.commonPictureButton2.Cursor = Cursors.Hand;
+       
         }
 
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
-            PrintDataGridView.PrintTheDataGridView(this.JianJian1DataGridView1);
+            this.commonPictureButton3.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(JianJian1DataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+            PrintDataGridView.PrintTheDataGridView(d1);
+            this.commonPictureButton3.Cursor = Cursors.Hand;
         }
     }
 }

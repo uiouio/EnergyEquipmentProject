@@ -45,21 +45,24 @@ namespace WeiXiu
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.button4.Cursor = Cursors.WaitCursor;
             this.commonDataGridView1.Rows.Clear();
             string code = textBox1.Text;
             string number = textBox2.Text;
             long time1 = dateTimePicker1.Value.Date.Ticks;
             long time2 = dateTimePicker2.Value.Date.AddDays(+1).Ticks;
             Currentss = OP_WX.QueryWeiXiuJiLu(code, number, time1, time2);
-             int i = 1;
-             if (Currentss != null) {
-                 foreach (EntityClassLibrary.TiaoShiWeiXiuJiLu s in Currentss) {
-                     this.commonDataGridView1.Rows.Add(0, i.ToString(),s.ModificationNumber,s.License,s.GasType,s.Condition,new DateTime(s.DebugTime).ToString("yyyy-MM-dd HH:mm"),"查看");
-                     this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = s;
-                     i++;
-                 }
-             }
-
+            int i = 1;
+            if (Currentss != null)
+            {
+                foreach (EntityClassLibrary.TiaoShiWeiXiuJiLu s in Currentss)
+                {
+                    this.commonDataGridView1.Rows.Add(0, i.ToString(), s.ModificationNumber, s.License, s.GasType, s.Condition, new DateTime(s.DebugTime).ToString("yyyy-MM-dd HH:mm"), "查看");
+                    this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = s;
+                    i++;
+                }
+            }
+            this.button4.Cursor = Cursors.Hand;
         }
 
         public void showTable() {
@@ -96,12 +99,27 @@ namespace WeiXiu
 
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
-            PrintDataGridView.PrintTheDataGridView(this.commonDataGridView1);
+            this.commonPictureButton3.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(commonDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+
+            PrintDataGridView.PrintTheDataGridView(d1);
+            this.commonPictureButton3.Cursor = Cursors.Hand;
+
         }
 
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
-            DoExport.DoTheExport(this.commonDataGridView1);
+            this.commonPictureButton2.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(commonDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+            DoExport.DoTheExport(d1);
+            this.commonPictureButton2.Cursor = Cursors.Hand;
+       
         }
     }
 }

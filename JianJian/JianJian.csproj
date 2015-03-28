@@ -76,11 +76,11 @@
     <Compile Include="JianJian_JieGuocs.Designer.cs">
       <DependentUpon>JianJian_JieGuocs.cs</DependentUpon>
     </Compile>
-    <Compile Include="JianJian_QiMiBaoGao.cs">
+    <Compile Include="UNDOJianJian_QiMiBaoGao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JianJian_QiMiBaoGao.Designer.cs">
-      <DependentUpon>JianJian_QiMiBaoGao.cs</DependentUpon>
+    <Compile Include="UNDOJianJian_QiMiBaoGao.Designer.cs">
+      <DependentUpon>UNDOJianJian_QiMiBaoGao.cs</DependentUpon>
     </Compile>
     <Compile Include="JianJian_TongZhiDan.cs">
       <SubType>Form</SubType>
@@ -107,11 +107,11 @@
     <Compile Include="ZiLiao_ChaiYouLNG.Designer.cs">
       <DependentUpon>ZiLiao_ChaiYouLNG.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZiLiao_ChuZuChe.cs">
+    <Compile Include="UNDOZiLiao_ChuZuChe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZiLiao_ChuZuChe.Designer.cs">
-      <DependentUpon>ZiLiao_ChuZuChe.cs</DependentUpon>
+    <Compile Include="UNDOZiLiao_ChuZuChe.Designer.cs">
+      <DependentUpon>UNDOZiLiao_ChuZuChe.cs</DependentUpon>
     </Compile>
     <Compile Include="ZiLiao_XiaoJiaoChe.cs">
       <SubType>Form</SubType>
@@ -136,8 +136,8 @@
     <EmbeddedResource Include="JianJian_JieGuocs.resx">
       <DependentUpon>JianJian_JieGuocs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JianJian_QiMiBaoGao.resx">
-      <DependentUpon>JianJian_QiMiBaoGao.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOJianJian_QiMiBaoGao.resx">
+      <DependentUpon>UNDOJianJian_QiMiBaoGao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JianJian_TongZhiDan.resx">
       <DependentUpon>JianJian_TongZhiDan.cs</DependentUpon>
@@ -152,8 +152,8 @@
     <EmbeddedResource Include="ZiLiao_ChaiYouLNG.resx">
       <DependentUpon>ZiLiao_ChaiYouLNG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZiLiao_ChuZuChe.resx">
-      <DependentUpon>ZiLiao_ChuZuChe.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOZiLiao_ChuZuChe.resx">
+      <DependentUpon>UNDOZiLiao_ChuZuChe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ZiLiao_XiaoJiaoChe.resx">
       <DependentUpon>ZiLiao_XiaoJiaoChe.cs</DependentUpon>

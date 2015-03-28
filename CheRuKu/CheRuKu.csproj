@@ -58,13 +58,12 @@
     <Compile Include="CheRuKuDan.Designer.cs">
       <DependentUpon>CheRuKuDan.cs</DependentUpon>
     </Compile>
-    <Compile Include="CheRuKuDan_ChaKan.cs">
+    <Compile Include="UNDOCheRuKuDan_ChaKan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CheRuKuDan_ChaKan.Designer.cs">
-      <DependentUpon>CheRuKuDan_ChaKan.cs</DependentUpon>
+    <Compile Include="UNDOCheRuKuDan_ChaKan.Designer.cs">
+      <DependentUpon>UNDOCheRuKuDan_ChaKan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -98,8 +97,8 @@
     <EmbeddedResource Include="CheRuKuDan.resx">
       <DependentUpon>CheRuKuDan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CheRuKuDan_ChaKan.resx">
-      <DependentUpon>CheRuKuDan_ChaKan.cs</DependentUpon>
+    <EmbeddedResource Include="UNDOCheRuKuDan_ChaKan.resx">
+      <DependentUpon>UNDOCheRuKuDan_ChaKan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

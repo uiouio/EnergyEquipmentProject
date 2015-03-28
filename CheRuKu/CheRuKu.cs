@@ -100,6 +100,7 @@ namespace CheRuKu
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.button4.Cursor = Cursors.WaitCursor;
             CheRuKuDataGridView1.Rows.Clear();
             string number = this.textBox1.Text;
             string order = this.textBox2.Text;
@@ -130,16 +131,32 @@ namespace CheRuKu
                     i++;
                 }
             }
+            this.button4.Cursor = Cursors.Hand;
         }
 
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
-            DoExport.DoTheExport(this.CheRuKuDataGridView1);
+            this.commonPictureButton2.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(CheRuKuDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+            DoExport.DoTheExport(d1);
+            this.commonPictureButton2.Cursor = Cursors.Hand;
+       
         }
 
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
-            PrintDataGridView.PrintTheDataGridView(this.CheRuKuDataGridView1);
+            this.commonPictureButton3.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(CheRuKuDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+            PrintDataGridView.PrintTheDataGridView(d1);
+            this.commonPictureButton3.Cursor = Cursors.Hand;
+       
+
         }
     }
 }

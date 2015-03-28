@@ -101,12 +101,26 @@ namespace TiaoShi
 
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
-            DoExport.DoTheExport(this.TiaoShiDataGridView1);
+            this.commonPictureButton2.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(TiaoShiDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+
+            DoExport.DoTheExport(d1);
+
+            this.commonPictureButton2.Cursor = Cursors.Hand;
+
         }
 
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
-            PrintDataGridView.PrintTheDataGridView(this.TiaoShiDataGridView1);
+            this.commonPictureButton3.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(TiaoShiDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+
+            PrintDataGridView.PrintTheDataGridView(d1);
+            this.commonPictureButton3.Cursor = Cursors.Hand;
         }
 
        

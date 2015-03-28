@@ -114,7 +114,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(148, 20);
             this.comboBox2.TabIndex = 10;
-            this.comboBox2.DropDown += new System.EventHandler(this.comboBox2_DropDown);
             // 
             // label2
             // 

@@ -32,7 +32,7 @@ namespace WorkProcedure
         private void Dispatch1_ChaKan_Load(object sender, EventArgs e)
         {
             //commonDataGridView1.Rows.Add(0, "1", "000001", "LNG+柴油(机械泵)", "冀B27173", "小轿车", "2014.7.14", "未派工", "第一组");
-
+            LoadCombobox2();
             reFreshAllControl();
             group = OP_LZB.GetAllGroups();
 
@@ -79,6 +79,7 @@ namespace WorkProcedure
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.button4.Cursor = Cursors.WaitCursor;
             commonDataGridView1.Rows.Clear();
             string number = this.textBox1.Text;
             int dispatch = this.comboBox1.SelectedIndex;
@@ -120,6 +121,7 @@ namespace WorkProcedure
                    
                 }
             }
+            this.button4.Cursor = Cursors.Hand;
 
         }
 
@@ -187,7 +189,7 @@ namespace WorkProcedure
             
         }
 
-        private void comboBox2_DropDown(object sender, EventArgs e)
+        private void LoadCombobox2()
         {
             if (this.comboBox2.Items.Count == 0)
             {
@@ -198,6 +200,7 @@ namespace WorkProcedure
                     //this.comboBox2.ValueMember = "Itself";
                 }
             }
+        
         }
 
 

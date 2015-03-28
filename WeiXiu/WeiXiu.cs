@@ -28,19 +28,14 @@ namespace WeiXiu
         {
             WeiXiuDataGridView1.Rows.Clear();
             ShowGridView();
-            
+
         }
         private void WeiXiu_Load(object sender, EventArgs e)
         {
-            //WeiXiuDataGridView1.Rows.Add(0, "1", "张伟", "小轿车", "冀A8383",  "13681512354", "正在维修", "2014.6.22",  "查看");
-            //WeiXiuDataGridView1.Rows.Add(0, "2", "王凯", "小轿车", "冀A8223",  "15632489553", "维修完成", "2014.6.22",  "查看");
-            //WeiXiuDataGridView1.Rows.Add(0, "3", "李毅", "重卡", "冀A8213",  "13652148555", "正在维修", "2014.6.22",  "查看");
-            //WeiXiuDataGridView1.Rows.Add(0, "4", "刘珊珊", "小轿车", "冀A0223",  "15246324967", "正在维修", "2014.6.22", "查看");
-
             reFreshAllControl();
         }
 
-  
+
 
         private void commonPictureButton1_Click(object sender, EventArgs e)
         {
@@ -52,19 +47,21 @@ namespace WeiXiu
 
         private void WeiXiuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 9) {
+            if (e.ColumnIndex == 9)
+            {
                 WeiXiu_FanKuiDan tt = new WeiXiu_FanKuiDan();
                 tt.Wx = (WeiXiuFanKuiDan)this.WeiXiuDataGridView1.CurrentRow.Tag;
                 tt.ShowDialog();
                 if (tt.DialogResult == DialogResult.OK)
                 {
                     this.WeiXiuDataGridView1.CurrentRow.Tag = tt.Wx;
-                    if (tt.Wx.ServiceState == (int)WeiXiuFanKuiDan.ScratchSave.Save) {
-                        this.WeiXiuDataGridView1.Rows[e.RowIndex].Cells[9].Value ="查看";
+                    if (tt.Wx.ServiceState == (int)WeiXiuFanKuiDan.ScratchSave.Save)
+                    {
+                        this.WeiXiuDataGridView1.Rows[e.RowIndex].Cells[9].Value = "查看";
                     }
                 }
             }
-           
+
         }
 
         public void ShowGridView()
@@ -75,7 +72,7 @@ namespace WeiXiu
             {
                 foreach (WeiXiuFanKuiDan s in Currentss)
                 {
-                    this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber,s.ServicePerson,s.QualityProblems, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"),  s.ServiceState ==(int)WeiXiuFanKuiDan.ScratchSave.Save? "查看" : "编辑");
+                    this.WeiXiuDataGridView1.Rows.Add(0, i.ToString(), s.Name, s.Models, s.LicensePlateNumber, s.TelephoneNumber, s.ServicePerson, s.QualityProblems, new DateTime(s.FeedbackTime).ToString("yyyy-MM-dd HH:mm"), s.ServiceState == (int)WeiXiuFanKuiDan.ScratchSave.Save ? "查看" : "编辑");
                     this.WeiXiuDataGridView1.Rows[this.WeiXiuDataGridView1.Rows.Count - 1].Tag = s;
                     i++;
                 }
@@ -84,6 +81,7 @@ namespace WeiXiu
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.button4.Cursor = Cursors.WaitCursor;
             this.WeiXiuDataGridView1.Rows.Clear();
             string name = textBox1.Text;
             string number = textBox2.Text;
@@ -100,21 +98,40 @@ namespace WeiXiu
                     i++;
                 }
             }
-            
+            this.button4.Cursor = Cursors.Hand;
+
         }
 
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
+
+            this.commonPictureButton2.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(WeiXiuDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+
             DoExport.DoTheExport(this.WeiXiuDataGridView1);
+            this.commonPictureButton2.Cursor = Cursors.Hand;
+
         }
 
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
-            PrintDataGridView.PrintTheDataGridView(this.WeiXiuDataGridView1);
+
+            this.commonPictureButton3.Cursor = Cursors.WaitCursor;
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(WeiXiuDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+
+            PrintDataGridView.PrintTheDataGridView(d1);
+            this.commonPictureButton3.Cursor = Cursors.Hand;
+
         }
 
-
-        }
 
     }
+
+}
 
