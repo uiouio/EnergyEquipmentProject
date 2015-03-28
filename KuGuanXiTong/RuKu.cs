@@ -48,18 +48,19 @@ namespace KuGuanXiTong
      
         private void comboBox1_DropDown(object sender, EventArgs e)
         {
+         
+        }
+        private void Loadcombox1()
+        {
             if (this.comboBox1.Items.Count == 0)
             {
-
                 IList suppliers = this.opsuplier.GetAllSupplier();
-                
-
                 this.comboBox1.DataSource = suppliers;
                 this.comboBox1.DisplayMember = "SupplierName";
                 this.comboBox1.ValueMember = "Itself";
-
             }
         }
+
 
         public override void reFreshAllControl()
         {
@@ -70,6 +71,7 @@ namespace KuGuanXiTong
 
         private void RuKu_Load(object sender, EventArgs e)
         {
+            Loadcombox1();
             reFreshAllControl();
         }
 
@@ -96,6 +98,7 @@ namespace KuGuanXiTong
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.button1.Cursor = Cursors.WaitCursor;
             this.commonDataGridView1.Rows.Clear();
             string num = this.textBox1.Text;
             SupplierInfo spp = this.comboBox1.SelectedValue as SupplierInfo;
@@ -114,9 +117,14 @@ namespace KuGuanXiTong
                     this.dateTimePicker1.Value.Date.Ticks, 
                     this.dateTimePicker2.Value.Date.AddDays(1).Ticks);
             }
+            if (i.Count > 0)
+                RefreshGrid(i);
+            else
+                MessageBox.Show("没有查到数据……");
 
-            RefreshGrid(i);
             this.comboBox1.SelectedIndex = -1;
+            this.button1.Cursor = Cursors.Hand;
+
         }
 
         //public void ShowSelectGrid()
@@ -138,10 +146,7 @@ namespace KuGuanXiTong
         //    }
         //}
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         /// <summary>
         /// 导出Excel
@@ -150,20 +155,24 @@ namespace KuGuanXiTong
         /// <param name="e"></param>
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
+            this.commonPictureButton2.Cursor = Cursors.WaitCursor;
             DataGridView d1 = new DataGridView();
             d1 = CommonMethod.OperateDateGridView.CloneDataGridView(commonDataGridView1);
             d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
 
             DoExport.DoTheExport(d1);
+            this.commonPictureButton2.Cursor = Cursors.Hand;
         }
 
         private void commonPictureButton5_Click(object sender, EventArgs e)
         {
+            this.commonPictureButton5.Cursor = Cursors.WaitCursor;
             DataGridView d1 = new DataGridView();
             d1 = CommonMethod.OperateDateGridView.CloneDataGridView(commonDataGridView1);
             d1.Columns.Remove(d1.Columns[d1.Columns.Count -1]);
 
             PrintDataGridView.PrintTheDataGridView(d1);
+            this.commonPictureButton5.Cursor = Cursors.Hand;
         }
 
     }
