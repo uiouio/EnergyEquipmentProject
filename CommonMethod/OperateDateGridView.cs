@@ -12,6 +12,7 @@ namespace CommonMethod
             try
             {
                 DataGridView ResultDGV = new DataGridView();
+                ResultDGV.AllowUserToAddRows = false;
                 ResultDGV.ColumnHeadersDefaultCellStyle = dgv.ColumnHeadersDefaultCellStyle.Clone();
                 DataGridViewCellStyle dtgvdcs = dgv.RowsDefaultCellStyle.Clone();
                 dtgvdcs.BackColor = dgv.DefaultCellStyle.BackColor;
@@ -33,8 +34,9 @@ namespace CommonMethod
                         ResultDGV.Columns.Add(DTGVC);
                     }
                 }
-                foreach (DataGridViewRow var in dgv.Rows)
+                for (int ii = 0; ii < dgv.Rows.Count; ii++)
                 {
+                    DataGridViewRow var = dgv.Rows[ii];
                     DataGridViewRow Dtgvr = var.Clone() as DataGridViewRow;
                     Dtgvr.DefaultCellStyle = var.DefaultCellStyle.Clone();
                     for (int i = 0; i < var.Cells.Count; i++)
@@ -44,7 +46,10 @@ namespace CommonMethod
                     if (var.Index % 2 == 0)
                         Dtgvr.DefaultCellStyle.BackColor = ResultDGV.RowsDefaultCellStyle.BackColor;
                     ResultDGV.Rows.Add(Dtgvr);
+                
                 }
+                    
+               
                 return ResultDGV;
             }
             catch (Exception ex)
