@@ -18,7 +18,7 @@ namespace CustomManageWindow
     {
         IList currentrecords,currentrecords1;
         CustomerRecordService ss = new CustomerRecordService();
-        CustomService cs = new CustomService();
+        
         public CustomServiceQuery()
         {
             InitializeComponent();
@@ -235,13 +235,26 @@ namespace CustomManageWindow
 
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
-
+            DataGridView div = new DataGridView();
+            div = CommonMethod.OperateDateGridView.CloneDataGridView(this.commonDataGridView2);
+            //div.Columns.Remove(div.Columns[13]);
+            //div.Columns.Remove(div.Columns[13]);
+            
+            foreach(DataGridViewRow dgr in div.Rows)
+            {
+                foreach (DataGridViewCell dgvc in dgr.Cells)
+                {
+                    if (dgvc.Value!=null && dgvc.Value.ToString().Length > 20)
+                        dgvc.Value = dgvc.Value.ToString().Substring(0,20)+"...";
+                }
+            }
+            PrintDataGridView.PrintTheDataGridView(div);
         }
 
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
             DataGridView div = new DataGridView();
-            div = cs.CloneDataGridView(this.commonDataGridView2);
+            div = CommonMethod.OperateDateGridView.CloneDataGridView(this.commonDataGridView2);
             //div.Columns.Remove(div.Columns[13]);
             //div.Columns.Remove(div.Columns[13]);
             DoExport.DoTheExport(div);
