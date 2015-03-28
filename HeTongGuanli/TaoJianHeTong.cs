@@ -218,5 +218,19 @@ namespace HeTongGuanLi
             }
         }
 
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void button1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==13)
+            {
+                button1_Click(sender, e);
+            }
+        }
+    
+
     }
 }

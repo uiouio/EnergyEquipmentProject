@@ -137,5 +137,13 @@ namespace CustomManageWindow
     
         }
 
+        private void PersonalCustomInfoManage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==13)
+            {
+                button1_Click(sender,e);
+            }
+        }
+
     }
 }

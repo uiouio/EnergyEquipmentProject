@@ -5,16 +5,19 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using HeTongGuanLi.Service;
 using System.Collections;
 using EntityClassLibrary;
 using CommonControl;
+using CustomManageWindow.Service;
+using HeTongGuanLi.Service;
+using CommonMethod;
 namespace HeTongGuanLi
 {
     public partial class HeTongShenPi : CommonControl.CommonTabPage
     {
         IList currenthetongs;
         ContractService hs = new ContractService();
+        CustomService cs = new CustomService();
         private ModificationContract modificationContract;
 
         public ModificationContract ModificationContract
@@ -405,6 +408,24 @@ namespace HeTongGuanLi
 
             this.commonDataGridView1.Rows.Clear();
             reFreshAllControl();
+        }
+
+        private void commonPictureButton5_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = cs.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[8]);
+            div.Columns.Remove(div.Columns[8]);
+            PrintDataGridView.PrintTheDataGridView(div);
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = cs.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[8]);
+            div.Columns.Remove(div.Columns[8]);
+            DoExport.DoTheExport(div);
         }
     }
 }

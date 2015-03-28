@@ -43,7 +43,7 @@ namespace GongYiGuanLi
                     i++;
                     ModificationContract mc  = (ModificationContract)o[0];
                     CarBaseInfo ci = (CarBaseInfo)o[1];
-                    commonDataGridView.Rows.Add(i, mc.ContractNo, CarBaseInfo.ModifyType[ci.ModidiedType], mc.PaymentMethod, ModificationContract.PaymentStateArray[mc.PaymentState], "查看", "派料");
+                    commonDataGridView.Rows.Add(i,mc.ContractNo, CarBaseInfo.ModifyType[ci.ModidiedType], mc.PaymentMethod, ModificationContract.PaymentStateArray[mc.PaymentState], "查看", "派料");
                     commonDataGridView.Rows[commonDataGridView.Rows.Count - 1].Tag = o;
                 }
             }

@@ -311,6 +311,10 @@
       <Project>{668BF412-E4C3-4F29-9FBE-F69332C290B2}</Project>
       <Name>CommonControl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CommonMethod\CommonMethod.csproj">
+      <Project>{7dfa3086-1243-4993-b8ad-80d98a2dee23}</Project>
+      <Name>CommonMethod</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CommonWindow\CommonWindow.csproj">
       <Project>{B5A3A9CE-CAA4-42B9-9C4C-D08FA4635283}</Project>
       <Name>CommonWindow</Name>
