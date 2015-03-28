@@ -56,11 +56,13 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.label14);
@@ -206,6 +208,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(96, 223);
+            this.textBox5.MaxLength = 50;
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(574, 70);
@@ -349,6 +352,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "车  牌  号：";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(23, 252);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(65, 12);
+            this.label15.TabIndex = 48;
+            this.label15.Text = "(最多50字)";
+            // 
             // CarManage_add_Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -393,5 +405,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label15;
     }
 }

@@ -10,6 +10,7 @@ using System.Collections;
 using CustomManageWindow.Service;
 using EntityClassLibrary;
 using CommonControl;
+using CommonMethod;
 namespace CustomManageWindow
 {
     public partial class JingXiaoShangGuanLi : CommonControl.CommonTabPage
@@ -108,6 +109,23 @@ namespace CustomManageWindow
             currentagents = ss.SelectAgents(name,cname);
 
             ShowSelectAgentGrid();
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[div.ColumnCount - 1]);
+            DoExport.DoTheExport(div);
+
+        }
+
+        private void commonPictureButton5_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[div.ColumnCount-1]);
+            PrintDataGridView.PrintTheDataGridView(div);
         }
     }
 }
