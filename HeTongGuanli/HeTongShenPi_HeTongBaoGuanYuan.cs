@@ -9,7 +9,7 @@ using HeTongGuanLi.Service;
 using System.Collections;
 using EntityClassLibrary;
 using CommonControl;
-
+using CommonMethod;
 namespace HeTongGuanLi
 {
     public partial class HeTongShenPi_HeTongBaoGuanYuan : CommonControl.CommonTabPage
@@ -139,6 +139,20 @@ namespace HeTongGuanLi
         {
             this.commonDataGridView1.Rows.Clear();
             reFreshAllControl();
+        }
+
+        private void commonPictureButton5_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView1);
+            PrintDataGridView.PrintTheDataGridView(div);
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView1);
+            DoExport.DoTheExport(div);
         }
     }
 }

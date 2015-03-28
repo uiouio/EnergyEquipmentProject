@@ -9,7 +9,7 @@ using CommonControl;
 using System.Collections;
 using HeTongGuanLi.Service;
 using EntityClassLibrary;
-
+using CommonMethod;
 namespace HeTongGuanLi
 {
     public partial class PaymentManagement : CommonControl.CommonTabPage
@@ -123,6 +123,22 @@ namespace HeTongGuanLi
                 IList currentpayments = hs.SelectPassedSuitContract(name, cname, time1, time2);
                 Show_TaoJian_PaymentGrid(currentpayments);
             }
+        }
+
+        private void commonPictureButton1_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[div.ColumnCount-1]);
+            PrintDataGridView.PrintTheDataGridView(div);
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[div.ColumnCount - 1]);
+            DoExport.DoTheExport(div);
         }
     }
 }

@@ -46,6 +46,9 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -63,9 +66,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +93,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.textBox3);
@@ -126,6 +128,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(99, 101);
+            this.textBox5.MaxLength = 50;
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(676, 45);
@@ -260,6 +263,32 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息(*为必填项)";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(636, 58);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(119, 21);
+            this.textBox2.TabIndex = 43;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(553, 62);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(89, 12);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "每月最低销量：";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(276, 26);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(11, 12);
+            this.label18.TabIndex = 41;
+            this.label18.Text = "*";
             // 
             // textBox9
             // 
@@ -441,31 +470,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "加盟商名称：";
             // 
-            // label18
+            // label19
             // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(276, 26);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(11, 12);
-            this.label18.TabIndex = 41;
-            this.label18.Text = "*";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(553, 62);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(89, 12);
-            this.label17.TabIndex = 42;
-            this.label17.Text = "每月最低销量：";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(636, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(119, 21);
-            this.textBox2.TabIndex = 43;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(28, 125);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(65, 12);
+            this.label19.TabIndex = 28;
+            this.label19.Text = "(最多50字)";
             // 
             // JingXiaoShangGuanLi_Add_dialog
             // 
@@ -527,5 +539,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label19;
     }
 }

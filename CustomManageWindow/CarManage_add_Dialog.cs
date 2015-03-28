@@ -81,7 +81,7 @@ namespace CustomManageWindow
                 this.textBox8.Enabled = false;
                 this.textBox8.Text = CarBaseInfo.KerbMass.ToString();
                 this.textBox10.Enabled = false;
-                this.textBox10.Text = CarBaseInfo.KerbMass.ToString();
+                this.textBox10.Text = CarBaseInfo.Mileage.ToString();
                 this.textBox5.Enabled = false;
                 this.textBox5.Text = CarBaseInfo.Remarks;
 

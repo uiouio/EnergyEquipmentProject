@@ -35,8 +35,8 @@
             this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
             this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.start_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.end_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,9 +44,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.commonDataGridView1 = new CommonControl.CommonDataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.commonDataGridView1 = new CommonControl.CommonDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,6 +89,7 @@
             this.commonPictureButton1.TabIndex = 0;
             this.commonPictureButton1.TabStop = false;
             this.commonPictureButton1.ToolTipString = null;
+            this.commonPictureButton1.Click += new System.EventHandler(this.commonPictureButton1_Click);
             // 
             // commonPictureButton2
             // 
@@ -103,6 +104,7 @@
             this.commonPictureButton2.TabIndex = 1;
             this.commonPictureButton2.TabStop = false;
             this.commonPictureButton2.ToolTipString = null;
+            this.commonPictureButton2.Click += new System.EventHandler(this.commonPictureButton2_Click);
             // 
             // groupBox1
             // 
@@ -124,6 +126,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "付款信息查询";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "改装合同",
+            "套件合同"});
+            this.comboBox1.Location = new System.Drawing.Point(70, 28);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(93, 20);
+            this.comboBox1.TabIndex = 35;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(861, 26);
@@ -133,15 +147,6 @@
             this.button1.Text = "查询";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(522, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "签订时间：";
             // 
             // start_dateTimePicker
             // 
@@ -198,6 +203,24 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "合同编号：";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 12);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "合同类型：";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(522, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "签订时间：";
+            // 
             // commonDataGridView1
             // 
             this.commonDataGridView1.AllowUserToAddRows = false;
@@ -228,27 +251,6 @@
             this.commonDataGridView1.Size = new System.Drawing.Size(1053, 462);
             this.commonDataGridView1.TabIndex = 2;
             this.commonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "改装合同",
-            "套件合同"});
-            this.comboBox1.Location = new System.Drawing.Point(70, 28);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(93, 20);
-            this.comboBox1.TabIndex = 35;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 12);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "合同类型：";
             // 
             // Column1
             // 

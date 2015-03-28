@@ -121,7 +121,7 @@ namespace CustomManageWindow
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
             DataGridView div = new DataGridView();
-            div = ss.CloneDataGridView(this.commonDataGridView1);
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView1); 
             div.Columns.Remove(div.Columns[8]);
             PrintDataGridView.PrintTheDataGridView(div);
            
@@ -131,7 +131,7 @@ namespace CustomManageWindow
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
             DataGridView div = new DataGridView();
-            div = ss.CloneDataGridView(this.commonDataGridView1);
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView1); 
             div.Columns.Remove(div.Columns[8]);
             DoExport.DoTheExport(div);
     

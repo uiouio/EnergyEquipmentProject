@@ -96,7 +96,7 @@ namespace CustomManageWindow
             {
                 foreach (CarBaseInfo s in currentcustoms)
                 {
-                    this.commonDataGridView2.Rows.Add(0,i.ToString(), s.Cbi == null ? "" : s.Cbi.Name, s.Cbi == null ? "" : s.Cbi.IdentifyCardNo, s.Cbi == null ? "" : s.Cbi.Phone, s.PlateNumber, s.VehicleType, s.Mileage, s.FuelConsumption, s.VIN, s.CylinderNo, s.CylinderVolume, "编辑", "查看", "删除");
+                    this.commonDataGridView2.Rows.Add(0,i.ToString(), s.Cbi == null ? "" : s.Cbi.Name, s.Cbi == null ? "" : s.Cbi.IdentifyCardNo, s.Cbi == null ? "" : s.Cbi.Phone, s.PlateNumber, s.VehicleType, s.Mileage, s.FuelConsumption, s.VIN, s.CylinderType, s.CylinderVolume, "编辑", "查看", "删除");
                     i++;
                 }
             }
@@ -110,7 +110,7 @@ namespace CustomManageWindow
             {
                 foreach (CarBaseInfo s in currentcustoms)
                 {
-                    this.commonDataGridView2.Rows.Add(0,i.ToString(), s.Cbi == null ? "" : s.Cbi.Name, s.Cbi == null ? "" : s.Cbi.IdentifyCardNo, s.Cbi == null ? "" : s.Cbi.Phone, s.PlateNumber, s.VehicleType, s.Mileage, s.FuelConsumption, s.VIN, s.CylinderNo, s.CylinderVolume, "编辑", "查看", "删除");
+                    this.commonDataGridView2.Rows.Add(0,i.ToString(), s.Cbi == null ? "" : s.Cbi.Name, s.Cbi == null ? "" : s.Cbi.IdentifyCardNo, s.Cbi == null ? "" : s.Cbi.Phone, s.PlateNumber, s.VehicleType, s.Mileage, s.FuelConsumption, s.VIN, s.CylinderType, s.CylinderVolume, "编辑", "查看", "删除");
                     i++;
                 }
             }
@@ -134,7 +134,7 @@ namespace CustomManageWindow
         private void commonPictureButton5_Click(object sender, EventArgs e)
         {
             DataGridView div = new DataGridView();
-            div = ss.CloneDataGridView(this.commonDataGridView2);
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView2); 
             div.Columns.Remove(div.Columns[13]);
             div.Columns.Remove(div.Columns[13]);
             PrintDataGridView.PrintTheDataGridView(div);
@@ -142,7 +142,7 @@ namespace CustomManageWindow
         private void commonPictureButton6_Click(object sender, EventArgs e)
         {
             DataGridView div = new DataGridView();
-            div = ss.CloneDataGridView(this.commonDataGridView2);
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView2); 
             div.Columns.Remove(div.Columns[13]);
             div.Columns.Remove(div.Columns[13]);
             DoExport.DoTheExport(div);

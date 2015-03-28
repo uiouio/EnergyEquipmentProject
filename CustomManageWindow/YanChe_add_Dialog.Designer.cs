@@ -723,6 +723,7 @@
             // textBox17
             // 
             this.textBox17.Location = new System.Drawing.Point(40, 50);
+            this.textBox17.MaxLength = 50;
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(372, 39);
