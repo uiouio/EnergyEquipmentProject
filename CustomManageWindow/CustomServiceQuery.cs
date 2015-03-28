@@ -255,6 +255,7 @@ namespace CustomManageWindow
         {
             DataGridView div = new DataGridView();
             div = CommonMethod.OperateDateGridView.CloneDataGridView(this.commonDataGridView2);
+            div.Columns.Remove(div.Columns[div.Columns.Count-1]);
             //div.Columns.Remove(div.Columns[13]);
             //div.Columns.Remove(div.Columns[13]);
             DoExport.DoTheExport(div);
