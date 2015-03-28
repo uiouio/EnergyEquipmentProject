@@ -38,10 +38,10 @@ namespace WorkProcedure
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (e.ColumnIndex==8)
+            if (e.ColumnIndex == 8)
             {
-                LiuZhuanBiaoView_Detail tt=new LiuZhuanBiaoView_Detail();
-                tt.ReceiveLiuZhuanDate = (LiuZhuanBiao)this.LiuZhuanBiaoDataGridView1.CurrentRow.Tag;              
+                LiuZhuanBiaoView_Detail tt = new LiuZhuanBiaoView_Detail();
+                tt.ReceiveLiuZhuanDate = (LiuZhuanBiao)this.LiuZhuanBiaoDataGridView1.CurrentRow.Tag;
                 tt.ShowDialog();
                 if (tt.DialogResult == DialogResult.OK)
                 {
@@ -52,24 +52,9 @@ namespace WorkProcedure
                         this.LiuZhuanBiaoDataGridView1.Rows[e.RowIndex].Cells[8].Value = "查看";
                         this.LiuZhuanBiaoDataGridView1.Rows[e.RowIndex].Cells[7].Value = DateTime.Now.ToString("yyyy-MM-dd");
                     }
-                
-                }
-                //if (tt.IsLiuZhuanBiao == 1)
-                //{
-                //    this.LiuZhuanBiaoDataGridView1.Rows[e.RowIndex].Cells[7].Value = "查看";
-                //    tt.LiuZhuanBiaoView_Detail1 =(LiuZhuanBiaoView_Detail)LiuZhuanBiaoDataGridView1.CurrentRow.Tag;
-                //    LiuZhuanBiaoView_Detail ss = new LiuZhuanBiaoView_Detail();
-                //    ss.ShowDialog();
-                //}
-            }
 
-           
-           /* if (LiuZhuanBiaoDataGridView1.CurrentCell.Value.ToString() == "编辑")
-            {
-                LiuZhuanBiaoEdit_Edit tt = new LiuZhuanBiaoEdit_Edit();
-                tt.chePaiHao = LiuZhuanBiaoDataGridView1[2, LiuZhuanBiaoDataGridView1.CurrentRow.Index].Value.ToString();
-                tt.ShowDialog();
-            }*/
+                }
+            }
         }
 
 
@@ -117,18 +102,20 @@ namespace WorkProcedure
 
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
-            DoExport.DoTheExport(this.LiuZhuanBiaoDataGridView1);
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(LiuZhuanBiaoDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+            DoExport.DoTheExport(d1);
         }
 
         private void commonPictureButton1_Click(object sender, EventArgs e)
         {
-            this.LiuZhuanBiaoDataGridView1.Columns.Remove(Column10);
-            this.LiuZhuanBiaoDataGridView1.Columns.Remove(Column11);
-            PrintDataGridView.PrintTheDataGridView(this.LiuZhuanBiaoDataGridView1);
-            this.LiuZhuanBiaoDataGridView1.Columns.Add(Column10);
-            this.LiuZhuanBiaoDataGridView1.Columns.Add(Column11);
-            reFreshAllControl();
-
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(LiuZhuanBiaoDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+            d1.Columns.Remove(d1.Columns[0]);
+            PrintDataGridView.PrintTheDataGridView(d1);
            
         }
 

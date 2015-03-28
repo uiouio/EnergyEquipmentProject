@@ -55,6 +55,7 @@
     <Compile Include="FileReadAndWrite.cs" />
     <Compile Include="FileUpDown.cs" />
     <Compile Include="HtmlUtility.cs" />
+    <Compile Include="OperateDateGridView.cs" />
     <Compile Include="PrintCode.cs" />
     <Compile Include="PrintDataGridView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

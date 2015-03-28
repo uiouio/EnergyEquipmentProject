@@ -122,9 +122,14 @@ namespace CommonWindow
         {
             try
             {
+
                 PictureBox pic = (PictureBox)sender;
+                pic.Cursor = Cursors.WaitCursor;
                 CommonTabControl commonTabControl1 = (CommonTabControl)pic.Parent.Parent.Parent.Parent.Parent;
                 commonTabControl1.AddTabPage((CommonTabPage)pic.Parent.Tag);
+                pic.Cursor = Cursors.Hand; 
+
+
             }
             catch (Exception exc)
             {

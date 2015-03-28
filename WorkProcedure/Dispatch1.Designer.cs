@@ -104,6 +104,7 @@
             this.commonPictureButton3.TabIndex = 2;
             this.commonPictureButton3.TabStop = false;
             this.commonPictureButton3.ToolTipString = "打印";
+            this.commonPictureButton3.Click += new System.EventHandler(this.commonPictureButton3_Click);
             // 
             // commonDataGridView1
             // 

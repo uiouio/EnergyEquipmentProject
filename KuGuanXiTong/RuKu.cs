@@ -150,13 +150,20 @@ namespace KuGuanXiTong
         /// <param name="e"></param>
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(commonDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
 
-            DoExport.DoTheExport(this.commonDataGridView1);
+            DoExport.DoTheExport(d1);
         }
 
         private void commonPictureButton5_Click(object sender, EventArgs e)
         {
-            PrintDataGridView.PrintTheDataGridView(this.commonDataGridView1);
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(commonDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count -1]);
+
+            PrintDataGridView.PrintTheDataGridView(d1);
         }
 
     }

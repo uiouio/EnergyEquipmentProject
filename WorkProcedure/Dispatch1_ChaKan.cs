@@ -10,6 +10,7 @@ using System.Collections;
 using WorkProcedure.SQL;
 using EntityClassLibrary;
 using GongYiGuanLi;
+using CommonMethod;
 
 namespace WorkProcedure
 {
@@ -17,7 +18,7 @@ namespace WorkProcedure
     {
         OP_LZB OP_LZB = new OP_LZB();
         IList Currentss;
-
+        IList group;
         public Dispatch1_ChaKan()
         {
             InitializeComponent();
@@ -33,6 +34,8 @@ namespace WorkProcedure
             //commonDataGridView1.Rows.Add(0, "1", "000001", "LNG+柴油(机械泵)", "冀B27173", "小轿车", "2014.7.14", "未派工", "第一组");
 
             reFreshAllControl();
+            group = OP_LZB.GetAllGroups();
+
         }
 
         public void ShowPaiGongDanChaKan()
@@ -188,7 +191,6 @@ namespace WorkProcedure
         {
             if (this.comboBox2.Items.Count == 0)
             {
-                IList group = OP_LZB.GetAllGroups();
                 if (group != null)
                 {
                     this.comboBox2.DataSource = group;
@@ -196,6 +198,26 @@ namespace WorkProcedure
                     //this.comboBox2.ValueMember = "Itself";
                 }
             }
+        }
+
+
+
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(commonDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+
+            PrintDataGridView.PrintTheDataGridView(d1);
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DataGridView d1 = new DataGridView();
+            d1 = CommonMethod.OperateDateGridView.CloneDataGridView(commonDataGridView1);
+            d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
+
+            DoExport.DoTheExport(d1);
         }
 
       /*  private void comboBox2_DropDown(object sender, EventArgs e)
