@@ -85,6 +85,7 @@
             this.commonPictureButton1.TabIndex = 0;
             this.commonPictureButton1.TabStop = false;
             this.commonPictureButton1.ToolTipString = null;
+            this.commonPictureButton1.Click += new System.EventHandler(this.commonPictureButton1_Click);
             // 
             // commonPictureButton2
             // 
@@ -99,6 +100,7 @@
             this.commonPictureButton2.TabIndex = 1;
             this.commonPictureButton2.TabStop = false;
             this.commonPictureButton2.ToolTipString = null;
+            this.commonPictureButton2.Click += new System.EventHandler(this.commonPictureButton2_Click);
             // 
             // commonDataGridView1
             // 

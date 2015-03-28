@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Collections;
 using EntityClassLibrary;
-
+using CommonMethod;
 namespace HeTongGuanLi
 {
     public partial class FaHuoGuanLi : CommonControl.CommonTabPage
@@ -127,6 +127,22 @@ namespace HeTongGuanLi
                 IList currentpayments = contractService.SelectPassedSuitContract(name, cname, time1, time2);
                 initToDoSuitContractGridView(currentpayments);
             }
+        }
+
+        private void commonPictureButton1_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[div.ColumnCount - 1]);
+            PrintDataGridView.PrintTheDataGridView(div);
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = OperateDateGridView.CloneDataGridView(this.commonDataGridView1);
+            div.Columns.Remove(div.Columns[div.ColumnCount - 1]);
+            DoExport.DoTheExport(div);
         }
     }
 }
