@@ -94,11 +94,6 @@
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Service References\WeatherService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Service\UserInfoService.cs" />
     <Compile Include="MainForm1.cs">
       <SubType>Form</SubType>
@@ -155,7 +150,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\WeatherService\WeatherWebService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonControl\CommonControl.csproj">
@@ -247,24 +241,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\WeatherService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\WeatherService\WeatherWebService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\WeatherService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\WeatherService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\WeatherService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\登 录.png" />

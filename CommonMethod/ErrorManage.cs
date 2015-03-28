@@ -19,13 +19,13 @@ namespace CommonMethod
         public static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
         {
             DealErrorByFile(e.Exception);
-            MessageBox.Show("发生致命错误，请及时联系作者！", "系统错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("操作有误，请检查后重新操作！", "系统错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             DealErrorByFile(e.ExceptionObject as Exception);
-            MessageBox.Show("发生致命错误，请停止当前操作并及时联系作者！", "系统错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("发生错误，您可以对错误进行记录，上报作者进行改进！", "系统错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static void DealErrorByFile(Exception e)

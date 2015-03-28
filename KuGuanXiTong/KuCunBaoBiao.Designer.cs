@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
             this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
+            this.commonPictureButton4 = new CommonControl.CommonPictureButton(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -51,13 +52,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.commonPictureButton4 = new CommonControl.CommonPictureButton(this.components);
             this.commonFlowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton4)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton4)).BeginInit();
             this.SuspendLayout();
             // 
             // commonFlowLayoutPanel1
@@ -86,6 +86,21 @@
             this.commonPictureButton1.TabStop = false;
             this.commonPictureButton1.ToolTipString = null;
             this.commonPictureButton1.Click += new System.EventHandler(this.commonPictureButton1_Click);
+            // 
+            // commonPictureButton4
+            // 
+            this.commonPictureButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonPictureButton4.BackgroundImage")));
+            this.commonPictureButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.commonPictureButton4.Location = new System.Drawing.Point(0, 67);
+            this.commonPictureButton4.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.commonPictureButton4.Name = "commonPictureButton4";
+            this.commonPictureButton4.NonSelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton4.NonSelectBackGroundImage")));
+            this.commonPictureButton4.SelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton4.SelectBackGroundImage")));
+            this.commonPictureButton4.Size = new System.Drawing.Size(66, 61);
+            this.commonPictureButton4.TabIndex = 10;
+            this.commonPictureButton4.TabStop = false;
+            this.commonPictureButton4.ToolTipString = null;
+            this.commonPictureButton4.Click += new System.EventHandler(this.commonPictureButton4_Click);
             // 
             // groupBox1
             // 
@@ -236,6 +251,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(615, 209);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(253, 23);
@@ -272,21 +288,6 @@
             this.linkLabel1.Text = "选择类别";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // commonPictureButton4
-            // 
-            this.commonPictureButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonPictureButton4.BackgroundImage")));
-            this.commonPictureButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton4.Location = new System.Drawing.Point(0, 67);
-            this.commonPictureButton4.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton4.Name = "commonPictureButton4";
-            this.commonPictureButton4.NonSelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton4.NonSelectBackGroundImage")));
-            this.commonPictureButton4.SelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton4.SelectBackGroundImage")));
-            this.commonPictureButton4.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton4.TabIndex = 10;
-            this.commonPictureButton4.TabStop = false;
-            this.commonPictureButton4.ToolTipString = null;
-            this.commonPictureButton4.Click += new System.EventHandler(this.commonPictureButton4_Click);
-            // 
             // KuCunBaoBiao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -303,12 +304,12 @@
             this.Load += new System.EventHandler(this.KuCunBaoBiao_Load);
             this.commonFlowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton4)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

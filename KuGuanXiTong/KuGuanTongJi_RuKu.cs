@@ -32,6 +32,7 @@ namespace KuGuanXiTong
 
         private void KuGuanTongJi_RuKu_Load(object sender, EventArgs e)
         {
+            LoadComboBox1();
             reFreshAllControl();
         }
 
@@ -91,11 +92,7 @@ namespace KuGuanXiTong
            
         }
 
-
-
-
-
-        private void comboBox1_DropDown(object sender, EventArgs e)
+        private void LoadComboBox1()
         {
             if (this.comboBox1.Items.Count == 0)
             {
@@ -104,9 +101,8 @@ namespace KuGuanXiTong
                 this.comboBox1.DisplayMember = "SupplierName";
                 this.comboBox1.ValueMember = "Itself";
             }
+        
         }
-
-
 
         /// <summary>
         /// 
@@ -115,7 +111,9 @@ namespace KuGuanXiTong
         /// <param name="e"></param>
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
+            this.commonPictureButton2.Cursor = Cursors.WaitCursor;
             DoExport.DoTheExport(this.commonDataGridView1);
+            this.commonPictureButton2.Cursor = Cursors.Hand;
         }
 
 
@@ -126,7 +124,9 @@ namespace KuGuanXiTong
         /// <param name="e"></param>
         private void commonPictureButton4_Click(object sender, EventArgs e)
         {
+            this.commonPictureButton4.Cursor = Cursors.WaitCursor;
             PrintDataGridView.PrintTheDataGridView(this.commonDataGridView1);
+            this.commonPictureButton4.Cursor = Cursors.Hand;
         }
     }
 }

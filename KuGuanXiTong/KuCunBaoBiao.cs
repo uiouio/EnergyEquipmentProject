@@ -86,6 +86,7 @@ namespace KuGuanXiTong
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            this.button1.Cursor = Cursors.WaitCursor;
 
             long t1;
 
@@ -172,6 +173,7 @@ namespace KuGuanXiTong
 
             this.commonDataGridView1.DataSource = CurrentTable;
 
+            this.button1.Cursor = Cursors.Hand;
 
         }
 

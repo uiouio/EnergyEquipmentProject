@@ -54,12 +54,15 @@ namespace KuGuanXiTong
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.button1.Cursor = Cursors.WaitCursor;
             currentStock = opstack.GetQuerryStock(this.textBox1.Text,this.textBox2.Text);
             ShowGridView();
+            this.button1.Cursor = Cursors.Hand;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.button2.Cursor = Cursors.WaitCursor;
             this.commonDataGridView2.Rows.Clear();
 
             string goodscode = this.textBox3.Text;
@@ -82,6 +85,7 @@ namespace KuGuanXiTong
               }
 
             }
+            this.button2.Cursor = Cursors.Hand;
            
         }
 
@@ -100,12 +104,16 @@ namespace KuGuanXiTong
         /// <param name="e"></param>
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
+            this.commonPictureButton2.Cursor = Cursors.WaitCursor;
             DoExport.DoTheExport(this.commonDataGridView1);
+            this.commonPictureButton2.Cursor = Cursors.Hand;
         }
 
         private void commonPictureButton4_Click(object sender, EventArgs e)
         {
+            this.commonPictureButton4.Cursor = Cursors.WaitCursor;
             PrintDataGridView.PrintTheDataGridView(this.commonDataGridView1);
+            this.commonPictureButton4.Cursor = Cursors.Hand;
         }
 
     }
