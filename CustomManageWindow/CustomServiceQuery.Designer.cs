@@ -111,6 +111,7 @@
             this.commonPictureButton2.TabIndex = 1;
             this.commonPictureButton2.TabStop = false;
             this.commonPictureButton2.ToolTipString = "打印";
+            this.commonPictureButton2.Click += new System.EventHandler(this.commonPictureButton2_Click);
             // 
             // commonPictureButton3
             // 
@@ -125,6 +126,7 @@
             this.commonPictureButton3.TabIndex = 2;
             this.commonPictureButton3.TabStop = false;
             this.commonPictureButton3.ToolTipString = "导出";
+            this.commonPictureButton3.Click += new System.EventHandler(this.commonPictureButton3_Click);
             // 
             // groupBox1
             // 
@@ -417,6 +419,8 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 21);
             this.textBox4.TabIndex = 19;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
             // 
             // label4
             // 

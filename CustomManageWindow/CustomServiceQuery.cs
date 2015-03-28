@@ -11,12 +11,14 @@ using CustomManageWindow.Service;
 using EntityClassLibrary;
 using CommonControl;
 using CommonMethod;
+using CommonControl;
 namespace CustomManageWindow
 {
     public partial class CustomServiceQuery : CommonControl.CommonTabPage
     {
         IList currentrecords,currentrecords1;
         CustomerRecordService ss = new CustomerRecordService();
+        CustomService cs = new CustomService();
         public CustomServiceQuery()
         {
             InitializeComponent();
@@ -100,7 +102,15 @@ namespace CustomManageWindow
             {
                 foreach (CarTheLibrary s in currentrecords)
                 {
-                    this.commonDataGridView1.Rows.Add(i.ToString(), s.RefitWork.CarInfo.PlateNumber, s.RefitWork.CarInfo.VehicleType, s.RefitWork.CarInfo.Cbi == null ? "" : s.RefitWork.CarInfo.Cbi.Name, s.RefitWork.CarInfo.Cbi == null ? "" : s.RefitWork.CarInfo.Cbi.Telephone,new DateTime( s.FinishTime).ToString(), "n", "查看", "新建回访记录");
+                    string counts= ss.SelectCustomServiceRecordByPlateNo(s.RefitWork.CarInfo.PlateNumber).Count.ToString();
+                    this.commonDataGridView1.Rows.Add(i.ToString(), 
+                        s.RefitWork.CarInfo.PlateNumber, 
+                        s.RefitWork.CarInfo.VehicleType, 
+                        s.RefitWork.CarInfo.Cbi == null ? "" : s.RefitWork.CarInfo.Cbi.Name, 
+                        s.RefitWork.CarInfo.Cbi == null ? "" : s.RefitWork.CarInfo.Cbi.Telephone,
+                        new DateTime( s.FinishTime).ToString(), 
+                        counts, 
+                        "查看", "新建回访记录");
                     i++;
                 }
             }
@@ -193,6 +203,7 @@ namespace CustomManageWindow
                 str = commonDataGridView1["车牌号", commonDataGridView1.CurrentCell.RowIndex].Value.ToString();
                 
                 CustomReport_Add_Dialog newGhs = new CustomReport_Add_Dialog();
+                newGhs.UserInfo = this.User;
                 newGhs.plateNo = str;//车牌号
                 newGhs.dialogFlag = 1;//新建
                 if (newGhs.ShowDialog() == DialogResult.OK)
@@ -207,6 +218,33 @@ namespace CustomManageWindow
         {
             currentrecords1 = ss.SelectCustomServiceRecordByPhoneWorker(textBox4.Text);
             ShowCustomServiceRecordGrid();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)
+            {
+                pictureBox2_Click(this, e);
+            }
+        }
+
+        private void commonPictureButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void commonPictureButton3_Click(object sender, EventArgs e)
+        {
+            DataGridView div = new DataGridView();
+            div = cs.CloneDataGridView(this.commonDataGridView2);
+            //div.Columns.Remove(div.Columns[13]);
+            //div.Columns.Remove(div.Columns[13]);
+            DoExport.DoTheExport(div);
         }
     }
 }
