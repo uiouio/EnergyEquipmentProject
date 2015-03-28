@@ -360,6 +360,7 @@
             this.ClientSize = new System.Drawing.Size(688, 309);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox2);
+            this.MaximizeBox = false;
             this.Name = "CompanyCustomInfo_add_Dialog1";
             this.Text = "企业信息客户录入";
             this.Load += new System.EventHandler(this.CompanyCustomInfo_add_Dialog1_Load);

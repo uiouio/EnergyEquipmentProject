@@ -415,6 +415,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
+            this.MaximizeBox = false;
             this.Name = "CompanyCarManage_add_Dialog";
             this.Text = "企业客户车辆信息";
             this.groupBox2.ResumeLayout(false);

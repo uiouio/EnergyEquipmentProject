@@ -358,9 +358,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 335);
+            this.ClientSize = new System.Drawing.Size(834, 335);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CompanyCustomInfo_add_Dialog2";
             this.Text = "企业客户信息";
             this.Load += new System.EventHandler(this.CompanyCustomInfo_add_Dialog2_Load_1);
