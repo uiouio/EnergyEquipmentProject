@@ -68,7 +68,7 @@ namespace HeTongGuanLi
                             }
                             #endregion
                             #region 总经理不通过
-                            else if (s.Process == (int)ModificationContract.guocheng.kjs && s.Pass == (int)ModificationContract.PassorNot.unpass)
+                            else if (s.Process == (int)ModificationContract.guocheng.zjl && s.Pass == (int)ModificationContract.PassorNot.unpass)
                             {
                                 this.commonDataGridView1.Rows.Add(0, i.ToString(), s.ContractNo, s.UserID.Name, s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, ModificationContract.ProcessArray[s.Process] + "不通过", "已审批", "查看");
                             }
