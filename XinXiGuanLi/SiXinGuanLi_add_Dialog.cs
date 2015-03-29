@@ -89,7 +89,7 @@ namespace XinXiGuanLi
 
         private void SiXinGuanLi_add_Dialog_Load(object sender, EventArgs e)
         {
-            this.Height = Screen.PrimaryScreen.WorkingArea.Height;
+            //this.Height = Screen.PrimaryScreen.WorkingArea.Height;
         }
     }
 }
