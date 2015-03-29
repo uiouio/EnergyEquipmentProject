@@ -100,6 +100,7 @@
             this.commonDataGridView1.MultiSelect = false;
             this.commonDataGridView1.Name = "commonDataGridView1";
             this.commonDataGridView1.RowHeadersVisible = false;
+            this.commonDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.commonDataGridView1.RowTemplate.Height = 23;
             this.commonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.commonDataGridView1.Size = new System.Drawing.Size(1076, 413);

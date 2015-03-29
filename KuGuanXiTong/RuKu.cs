@@ -37,7 +37,7 @@ namespace KuGuanXiTong
 
         private void commonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5&&this.commonDataGridView1.CurrentCell.Value.ToString() == "查看")
+            if (e.ColumnIndex == 5&&this.commonDataGridView1.Rows.Count>0)
             {
                 Ruku_ShowStockDetail opde = new Ruku_ShowStockDetail();
                 opde.SendStocktoshow = (StockOperation)this.commonDataGridView1.CurrentRow.Tag;
