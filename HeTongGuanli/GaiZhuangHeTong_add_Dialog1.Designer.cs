@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.commonDataGridView2 = new CommonControl.CommonDataGridView();
@@ -72,7 +73,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -121,6 +121,15 @@
             this.tabPage1.Text = "合同参数";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 526);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 12);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "(最多100字)";
+            // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
@@ -149,8 +158,8 @@
             this.commonDataGridView2.AllowUserToAddRows = false;
             this.commonDataGridView2.AllowUserToDeleteRows = false;
             this.commonDataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.commonDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commonDataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -520,27 +529,16 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 526);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 12);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "(最多100字)";
-            // 
             // GaiZhuangHeTong_add_Dialog1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(634, 741);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "GaiZhuangHeTong_add_Dialog1";
             this.Text = "新建改装类合同";
             this.Load += new System.EventHandler(this.GaiZhuangHeTong_add_Dialog1_Load);

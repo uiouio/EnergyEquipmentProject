@@ -37,7 +37,7 @@ namespace HeTongGuanLi
         private void GaiZhuangHeTong_add_Dialog1_Load(object sender, EventArgs e)
         {
             this.Height = Screen.PrimaryScreen.WorkingArea.Height;
-            this.FormBorderStyle = FormBorderStyle.Sizable;
+            //this.FormBorderStyle = FormBorderStyle.Sizable;
             this.textBox3.Enabled = false;
             this.textBox8.Enabled = false;
             DateTime now = DateTime.Now;
