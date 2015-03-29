@@ -34,6 +34,10 @@ namespace XinXiGuanLi
                 {
                     Letter letter = (Letter)newsList[i];
                     Regex r = new Regex("<[^<]*>");
+                    if(letter.LetterContent == null)
+                    {
+                        letter.LetterContent = " ";
+                    }
                     MatchCollection mc = r.Matches(letter.LetterContent.ToString());
                     String contentText = letter.LetterContent.ToString().Replace("&nbsp;", " ");
                     for (int j = 0; j < mc.Count; j++)

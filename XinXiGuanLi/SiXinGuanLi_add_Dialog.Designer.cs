@@ -44,7 +44,7 @@
             // 
             // button_save
             // 
-            this.button_save.Location = new System.Drawing.Point(668, 709);
+            this.button_save.Location = new System.Drawing.Point(684, 493);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(51, 23);
             this.button_save.TabIndex = 18;
@@ -54,7 +54,7 @@
             // 
             // button_upload
             // 
-            this.button_upload.Location = new System.Drawing.Point(668, 670);
+            this.button_upload.Location = new System.Drawing.Point(684, 454);
             this.button_upload.Name = "button_upload";
             this.button_upload.Size = new System.Drawing.Size(51, 23);
             this.button_upload.TabIndex = 17;
@@ -65,7 +65,7 @@
             // textBox_filepath
             // 
             this.textBox_filepath.Enabled = false;
-            this.textBox_filepath.Location = new System.Drawing.Point(60, 670);
+            this.textBox_filepath.Location = new System.Drawing.Point(76, 454);
             this.textBox_filepath.Name = "textBox_filepath";
             this.textBox_filepath.Size = new System.Drawing.Size(602, 21);
             this.textBox_filepath.TabIndex = 16;
@@ -73,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 673);
+            this.label4.Location = new System.Drawing.Point(29, 457);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 12);
             this.label4.TabIndex = 15;
@@ -125,13 +125,13 @@
             this.htmlEditor1.ShowStatusBar = false;
             this.htmlEditor1.ShowToolBar = false;
             this.htmlEditor1.ShowWb = true;
-            this.htmlEditor1.Size = new System.Drawing.Size(739, 598);
+            this.htmlEditor1.Size = new System.Drawing.Size(743, 373);
             this.htmlEditor1.TabIndex = 10;
             this.htmlEditor1.WebBrowserShortcutsEnabled = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(84, 704);
+            this.button1.Location = new System.Drawing.Point(100, 488);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 19;
@@ -142,7 +142,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 709);
+            this.label5.Location = new System.Drawing.Point(29, 493);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 12);
             this.label5.TabIndex = 20;
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(765, 762);
+            this.ClientSize = new System.Drawing.Size(778, 561);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button_save);
