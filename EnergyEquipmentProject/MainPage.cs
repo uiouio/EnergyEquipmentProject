@@ -158,36 +158,49 @@ namespace EnergyEquipmentProject
 
         public bool IsTheListAreSame(IList oldlist ,IList newlist)
         {
-
-            if (oldlist != null && newlist != null)
+            if (oldlist != null && newlist != null&& newlist.Count>0)
             {
-                for(int i = 0; i < newlist.Count; i++)
+                if (newlist[0].GetType() != typeof(Matter))
                 {
-                    if (!Contains(oldlist,newlist[i]))
+                    for (int i = 0; i < newlist.Count; i++)
                     {
-                        return false;
+                        if (!Contains(oldlist, newlist[i]))
+                        {
+                            return false;
+                        }
                     }
-                }
 
-                for (int i = 0 ; i<oldlist.Count;i++)
-                {
-                    if (!Contains(newlist, oldlist[i]))
+                    for (int i = 0; i < oldlist.Count; i++)
                     {
-                        return false;
+                        if (!Contains(newlist, oldlist[i]))
+                        {
+                            return false;
+                        }
                     }
+
+                    return true;
                 }
-                
-                return true;
+                else
+                {
+                    for (int i = 0; i < newlist.Count; i++)
+                    {
+                        if (!Contains(oldlist, newlist[i]))
+                        {
+                            return false;
+                        }
+                    }
+
+                    for (int i = 0; i < oldlist.Count; i++)
+                    {
+                        if (!Contains(newlist, oldlist[i]))
+                        {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
             }
-            else if (oldlist == null && newlist != null)
-            {
-                return false;
-            }
-            else if (oldlist != null && newlist == null)
-            {
-                return false;
-            }
-            else if (oldlist == null && newlist == null)
+            else if (newlist.Count == 0 && oldlist == null )
             {
                 return true;
             }
@@ -197,16 +210,34 @@ namespace EnergyEquipmentProject
 
         private bool Contains(IList i1, object obj)
         {
-            for (int i = 0; i < i1.Count;i++ )
+            if (obj.GetType() != typeof(Matter))
             {
-                BaseEntity b = i1[i] as BaseEntity;
-                BaseEntity b2 = obj as BaseEntity;
-                if (b.Id == b2.Id)
+                for (int i = 0; i < i1.Count; i++)
                 {
-                    return true;
+                    BaseEntity b = i1[i] as BaseEntity;
+                    BaseEntity b2 = obj as BaseEntity;
+                    if (b.Id == b2.Id)
+                    {
+                        return true;
+                    }
                 }
+                return false;
+
             }
-            return false;
+            else
+            {
+                for (int i = 0; i < i1.Count; i++)
+                {
+                    Matter b = i1[i] as Matter;
+                    Matter b2 = obj as Matter;
+                    if (b.Id == b2.Id && b.Number == b2.Number)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            
         }
        
         private void MainPage_Load(object sender, EventArgs e)
