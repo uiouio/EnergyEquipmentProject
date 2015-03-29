@@ -56,11 +56,11 @@ namespace HeTongGuanLi
                         }
                         #endregion
                         #region  总会计师待审批
-                        else if (s.Process == (int)ModificationContract.guocheng.kjs && s.Pass == (int)ModificationContract.PassorNot.pass)
-                        {
-                            this.commonDataGridView.Rows.Add(0, i.ToString(), s.ContractNo, cbi == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name,  s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : ModificationContract.ModifyType[cbi.ModidiedType], s.UserID.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, s.PaymentMethod, ModificationContract.ProcessArray[s.Process] + "待审批", "查看", "删除");
+                     //   else if (s.Process == (int)ModificationContract.guocheng.kjs && s.Pass == (int)ModificationContract.PassorNot.pass)
+                      //  {
+                          //  this.commonDataGridView.Rows.Add(0, i.ToString(), s.ContractNo, cbi == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name,  s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : ModificationContract.ModifyType[cbi.ModidiedType], s.UserID.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, s.PaymentMethod, ModificationContract.ProcessArray[s.Process] + "待审批", "查看", "删除");
 
-                        }
+                     //   }
                         #endregion
                         #region  总经理待审批
                         else if (s.Process == (int)ModificationContract.guocheng.zjl && s.Pass == (int)ModificationContract.PassorNot.pass)
@@ -76,10 +76,10 @@ namespace HeTongGuanLi
                         }
                         #endregion 
                         #region 总会计师不通过
-                        else if(s.Process==(int)ModificationContract.guocheng.kjs&&s.Pass==(int)ModificationContract.PassorNot.unpass)
-                        {
-                            this.commonDataGridView.Rows.Add(0, i.ToString(), s.ContractNo, cbi == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name,  s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : ModificationContract.ModifyType[cbi.ModidiedType], s.UserID.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, s.PaymentMethod, ModificationContract.ProcessArray[s.Process] + "不通过", "编辑", "删除");
-                        }
+                       // else if(s.Process==(int)ModificationContract.guocheng.kjs&&s.Pass==(int)ModificationContract.PassorNot.unpass)
+                       // {
+                       //     this.commonDataGridView.Rows.Add(0, i.ToString(), s.ContractNo, cbi == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name,  s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : ModificationContract.ModifyType[cbi.ModidiedType], s.UserID.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, s.PaymentMethod, ModificationContract.ProcessArray[s.Process] + "不通过", "编辑", "删除");
+                       // }
                         #endregion
                         #region 总经理不通过
                         else if(s.Process==(int)ModificationContract.guocheng.zjl&&s.Pass==(int)ModificationContract.PassorNot.unpass)
@@ -87,10 +87,10 @@ namespace HeTongGuanLi
                             this.commonDataGridView.Rows.Add(0, i.ToString(), s.ContractNo, cbi == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name,  s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : ModificationContract.ModifyType[cbi.ModidiedType], s.UserID.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, s.PaymentMethod, ModificationContract.ProcessArray[s.Process] + "不通过", "编辑", "删除");
                         }
                         #endregion
-                        #region 总经理通过
+                        #region 合同通过
                         else if (s.Process == (int)ModificationContract.guocheng.htbgy&&s.Pass==(int)ModificationContract.PassorNot.pass)
                         {
-                            this.commonDataGridView.Rows.Add(0, i.ToString(), s.ContractNo, cbi == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name,  s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : ModificationContract.ModifyType[cbi.ModidiedType], s.UserID.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, s.PaymentMethod, ModificationContract.ProcessArray[s.Process] + "已通过", "查看", "删除");
+                            this.commonDataGridView.Rows.Add(0, i.ToString(), s.ContractNo, cbi == null || s.CarBaseInfoID.Count == 0 ? "" : cbi.Cbi.Name, s.CarBaseInfoID == null || s.CarBaseInfoID.Count == 0 ? "" : ModificationContract.ModifyType[cbi.ModidiedType], s.UserID.Name, new DateTime(s.SignedDate).ToString(), s.ContractAmount, s.PaymentMethod, ModificationContract.ProcessArray[s.Process], "查看", "删除");
                         }
                         #endregion
                         i++;

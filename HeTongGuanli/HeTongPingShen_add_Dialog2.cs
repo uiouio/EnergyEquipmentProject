@@ -103,7 +103,7 @@ namespace HeTongGuanLi
             ModificationContract.GeneralManagerOpinion = this.textBox15.Text;
             ModificationContract.Pass = (int)ModificationContract.PassorNot.unpass;
             ModificationContract.ApprovalState = (int)ModificationContract.Approval.already;
-            ModificationContract.Process = (int)ModificationContract.guocheng.xsfzr;
+            //ModificationContract.Process = (int)ModificationContract.guocheng.xsfzr;
             ss.SaveOrUpdateEntity(ModificationContract);
             MessageBox.Show("合同评审完成 未通过");
             this.DialogResult = DialogResult.OK;
