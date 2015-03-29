@@ -32,7 +32,7 @@ namespace KuGuanXiTong
         private void commonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow r = commonDataGridView1.Rows[e.RowIndex];
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 7&&this.commonDataGridView1.Rows.Count>0)
             {
                 if (r.Cells[2].Value.ToString().Equals("改装派工单"))
                 {

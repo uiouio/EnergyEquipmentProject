@@ -204,14 +204,16 @@ namespace KuGuanXiTong
 
         private void commonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 6 && Convert.ToBoolean(commonDataGridView1.CurrentRow.Cells[6].EditedFormattedValue) == true)
+            if (e.ColumnIndex == 6 && this.commonDataGridView1.Rows.Count > 0)
             {
-                MessageBox.Show("选中之后会在库存中减去相应数量！");
+                if (Convert.ToBoolean(commonDataGridView1.CurrentRow.Cells[6].EditedFormattedValue) == true)
+                    MessageBox.Show("选中之后会在库存中减去相应数量！");
             }
 
-            if(e.ColumnIndex == 11&&this.commonDataGridView1.CurrentCell.Value.ToString() == "删除")
+            if (e.ColumnIndex == 11 && this.commonDataGridView1.Rows.Count > 0)
             {
-                this.commonDataGridView1.Rows.RemoveAt(e.RowIndex);
+                if (this.commonDataGridView1.CurrentCell.Value.ToString() == "删除")
+                    this.commonDataGridView1.Rows.RemoveAt(e.RowIndex);
             }
             
         }
