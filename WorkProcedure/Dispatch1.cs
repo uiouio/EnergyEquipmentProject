@@ -98,6 +98,7 @@ namespace WorkProcedure
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.button4.Cursor = Cursors.WaitCursor;
             this.commonDataGridView1.Rows.Clear();
             string number=textBox1.Text;
             int Screening=comboBox1.SelectedIndex;
@@ -129,6 +130,7 @@ namespace WorkProcedure
                     i++;
                 }
             }
+            this.button4.Cursor = Cursors.Hand;
         }
 
         private void commonPictureButton2_Click(object sender, EventArgs e)

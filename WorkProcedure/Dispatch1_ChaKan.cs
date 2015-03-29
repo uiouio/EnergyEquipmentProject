@@ -32,10 +32,9 @@ namespace WorkProcedure
         private void Dispatch1_ChaKan_Load(object sender, EventArgs e)
         {
             //commonDataGridView1.Rows.Add(0, "1", "000001", "LNG+柴油(机械泵)", "冀B27173", "小轿车", "2014.7.14", "未派工", "第一组");
-            LoadCombobox2();
             reFreshAllControl();
             group = OP_LZB.GetAllGroups();
-
+            LoadCombobox2();
         }
 
         public void ShowPaiGongDanChaKan()
