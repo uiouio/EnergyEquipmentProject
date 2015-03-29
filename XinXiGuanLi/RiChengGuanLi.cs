@@ -82,7 +82,15 @@ namespace XinXiGuanLi
                     MessageBox.Show("不可删除之前的日程！");
                     return;
                 }
-                scheduleService.deleteEntity(schedule);
+                else
+                {
+                    schedule.State = (int)BaseEntity.stateEnum.Deleted;
+                    scheduleService.SaveOrUpdateEntity(schedule);
+                    this.commonDataGridView1.Rows.RemoveAt(e.RowIndex);
+                    MessageBox.Show("删除成功！");
+                }
+                
+
             }
         }
     }

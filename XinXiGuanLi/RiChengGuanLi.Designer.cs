@@ -34,16 +34,16 @@
             this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
             this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.序号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.内容 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.查看 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.删除 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.commonFlowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
@@ -101,8 +101,47 @@
             this.commonDataGridView1.TabIndex = 1;
             this.commonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick);
             // 
+            // 序号
+            // 
+            this.序号.HeaderText = "序号";
+            this.序号.Name = "序号";
+            this.序号.Width = 60;
+            // 
+            // 内容
+            // 
+            this.内容.HeaderText = "内容";
+            this.内容.Name = "内容";
+            this.内容.ReadOnly = true;
+            this.内容.Width = 700;
+            // 
+            // 时间
+            // 
+            this.时间.HeaderText = "时间";
+            this.时间.Name = "时间";
+            this.时间.ReadOnly = true;
+            this.时间.Width = 180;
+            // 
+            // 查看
+            // 
+            this.查看.HeaderText = "查看";
+            this.查看.Name = "查看";
+            this.查看.ReadOnly = true;
+            this.查看.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.查看.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.查看.Width = 80;
+            // 
+            // 删除
+            // 
+            this.删除.HeaderText = "删除";
+            this.删除.Name = "删除";
+            this.删除.ReadOnly = true;
+            this.删除.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.删除.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.删除.Width = 80;
+            // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(816, 69);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -142,44 +181,6 @@
             this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 6;
             this.label2.Text = "日程日期：";
-            // 
-            // 序号
-            // 
-            this.序号.HeaderText = "序号";
-            this.序号.Name = "序号";
-            this.序号.Width = 60;
-            // 
-            // 内容
-            // 
-            this.内容.HeaderText = "内容";
-            this.内容.Name = "内容";
-            this.内容.ReadOnly = true;
-            this.内容.Width = 700;
-            // 
-            // 时间
-            // 
-            this.时间.HeaderText = "时间";
-            this.时间.Name = "时间";
-            this.时间.ReadOnly = true;
-            this.时间.Width = 180;
-            // 
-            // 查看
-            // 
-            this.查看.HeaderText = "查看";
-            this.查看.Name = "查看";
-            this.查看.ReadOnly = true;
-            this.查看.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.查看.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.查看.Width = 80;
-            // 
-            // 删除
-            // 
-            this.删除.HeaderText = "删除";
-            this.删除.Name = "删除";
-            this.删除.ReadOnly = true;
-            this.删除.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.删除.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.删除.Width = 80;
             // 
             // RiChengGuanLi
             // 
