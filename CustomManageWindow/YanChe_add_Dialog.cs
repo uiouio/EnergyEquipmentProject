@@ -77,6 +77,7 @@ namespace CustomManageWindow
 
             }
             this.textBox13.Text = CarBaseInfo.TotalMass.ToString();
+            this.comboBox1.Text = CarBaseInfo.CylinderType;
             //this.textBox3.Text = CarBaseInfo.CylinderType;
             if (CarBaseInfo.SupperTime==0)
             {
