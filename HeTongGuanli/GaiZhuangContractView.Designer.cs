@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -38,6 +38,11 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.commonDataGridView2 = new CommonControl.CommonDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -59,11 +64,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.htmlEditor1 = new WinHtmlEditor.HtmlEditor();
             this.button1 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).BeginInit();
@@ -78,7 +78,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(558, 711);
+            this.tabControl1.Size = new System.Drawing.Size(558, 686);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -107,7 +107,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(550, 685);
+            this.tabPage1.Size = new System.Drawing.Size(550, 660);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "合同参数";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -164,8 +164,8 @@
             this.commonDataGridView2.AllowUserToAddRows = false;
             this.commonDataGridView2.AllowUserToDeleteRows = false;
             this.commonDataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.commonDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commonDataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -184,6 +184,41 @@
             this.commonDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.commonDataGridView2.Size = new System.Drawing.Size(443, 120);
             this.commonDataGridView2.TabIndex = 40;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.HeaderText = " ";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 20;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.HeaderText = "序号";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 60;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column8.HeaderText = "车牌号";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 120;
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column11.HeaderText = "改装类型";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 120;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column10.HeaderText = "气瓶型号";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 120;
             // 
             // groupBox1
             // 
@@ -366,54 +401,19 @@
             this.htmlEditor1.ShowStatusBar = true;
             this.htmlEditor1.ShowToolBar = true;
             this.htmlEditor1.ShowWb = true;
-            this.htmlEditor1.Size = new System.Drawing.Size(558, 699);
+            this.htmlEditor1.Size = new System.Drawing.Size(558, 711);
             this.htmlEditor1.TabIndex = 0;
             this.htmlEditor1.WebBrowserShortcutsEnabled = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(472, 736);
+            this.button1.Location = new System.Drawing.Point(484, 702);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 23);
             this.button1.TabIndex = 16;
             this.button1.Text = "确定";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.HeaderText = " ";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 20;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.HeaderText = "序号";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 60;
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column8.HeaderText = "车牌号";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 120;
-            // 
-            // Column11
-            // 
-            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column11.HeaderText = "改装类型";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 120;
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column10.HeaderText = "气瓶型号";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 120;
             // 
             // GaiZhuangContractView
             // 

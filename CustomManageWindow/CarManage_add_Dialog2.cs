@@ -59,8 +59,7 @@ namespace CustomManageWindow
 
             this.textBox8.Text = Currentcar.VIN;
             this.comboBox1.Enabled = false;
-            this.comboBox1.Text =ModificationContract.ModifyType[Currentcar.ModidiedType];
-
+            this.comboBox1.Text=(ModificationContract.ModifyType[Currentcar.ModidiedType]).ToString();
             this.textBox10.Text = Currentcar.KerbMass.ToString();
             this.textBox5.Text = Currentcar.Remarks;
             
