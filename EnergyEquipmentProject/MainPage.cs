@@ -85,6 +85,11 @@ namespace EnergyEquipmentProject
                     }
                     else
                     {
+                        if (messagewindow.IsDisposed)
+                        {
+                            messagewindow = new MessageShow();
+                            messagewindow.Show();
+                        }
                         messagewindow.AddMessage("您有新的代办事项，请到首页查看。");
                         messagewindow.Focus();
                     }
@@ -106,6 +111,11 @@ namespace EnergyEquipmentProject
                     }
                     else
                     {
+                        if (messagewindow.IsDisposed)
+                        {
+                            messagewindow = new MessageShow();
+                            messagewindow.Show();
+                        }
                         messagewindow.AddMessage("有新的通知，请到首页查看。");
                         messagewindow.Focus();
                     }
@@ -127,6 +137,11 @@ namespace EnergyEquipmentProject
                     }
                     else
                     {
+                        if (messagewindow.IsDisposed)
+                        {
+                            messagewindow = new MessageShow();
+                            messagewindow.Show();
+                        }
                         messagewindow.AddMessage("您有新的日程，请到首页查看。");
                         messagewindow.Focus();
                     }
@@ -148,6 +163,11 @@ namespace EnergyEquipmentProject
                     }
                     else
                     {
+                        if (messagewindow.IsDisposed)
+                        {
+                            messagewindow = new MessageShow();
+                            messagewindow.Show();
+                        }
                         messagewindow.AddMessage("您有新的私信，请到首页查看。");
                         messagewindow.Focus();
                     }
