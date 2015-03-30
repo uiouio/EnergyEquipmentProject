@@ -212,23 +212,23 @@ namespace EntityClassLibrary
             set { afterGasConsumption = value; }
         }
         
-        private string cylinderType;
-        /// <summary>
-        /// 气瓶型号
-        /// </summary>
-        public virtual string CylinderType
+      private string cylinderType;
+        // <summary>
+       /// 气瓶型号
+        ///</summary>
+      public virtual string CylinderType
         {
-            get { return cylinderType; }
-            set { cylinderType = value; }
-        }
-        private int cylinderValue;
+           get { return cylinderType; }
+           set { cylinderType = value; }
+       }
+       private int cylinderValue;
         /// <summary>
         /// 气瓶价格
         /// </summary>
-        public virtual int CylinderValue
+       public virtual int CylinderValue
         {
             get { return cylinderValue; }
-            set { cylinderValue = value; }
+           set { cylinderValue = value; }
         }
         private int cylinderNumber;
         /// <summary>
@@ -238,7 +238,7 @@ namespace EntityClassLibrary
         {
             get { return cylinderNumber; }
             set { cylinderNumber = value; }
-        }
+       }
         private string cylinderNo;
         /// <summary>
         /// 气瓶编号
@@ -404,6 +404,13 @@ namespace EntityClassLibrary
         {
             get { return cbi; }
             set { cbi = value; }
+        }
+        private CylinderInfo cylinder;
+
+        public virtual CylinderInfo Cylinder
+        {
+            get { return cylinder; }
+            set { cylinder = value; }
         }
         private ModificationContract modificationID;
 

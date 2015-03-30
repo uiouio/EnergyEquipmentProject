@@ -49,6 +49,8 @@
     <property name="HistoryId" column="HistoryId" type="long" length="10" not-null="true"/>
     <many-to-one name="Cbi" column="CustomBaseID" lazy="false"
                  class="EntityClassLibrary.CustomBaseInfo, EntityClassLibrary" />
+    <many-to-one name="Cylinder" column="CylinderTypeID" lazy="false"
+                 class="EntityClassLibrary.CylinderInfo, EntityClassLibrary" />
     <many-to-one name="ModificationID" column="ModificationContractId" lazy="false"
                 class="EntityClassLibrary.ModificationContract, EntityClassLibrary" />
     <set name="CustomRecordInfo" inverse="false" lazy="false" where="State=0">

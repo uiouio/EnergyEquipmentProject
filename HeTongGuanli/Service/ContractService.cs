@@ -575,5 +575,17 @@ namespace HeTongGuanLi.Service
              i = this.loadEntityList(sql);
              return i;
          }
+         /// <summary>
+         /// 得到所有气瓶型号
+         /// </summary>
+         /// <returns></returns>
+         public IList GetAllCylinderType()
+         {
+             IList i = null;
+             string sql = "from CylinderInfo u where u.State = " + (int)BaseEntity.stateEnum.Normal;
+             i = this.loadEntityList(sql);
+             return i;
+         }
+         
     }
 }

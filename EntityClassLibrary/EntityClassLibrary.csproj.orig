@@ -55,7 +55,6 @@
     <Compile Include="CheRuKuInfo.cs" />
     <Compile Include="CustomBaseInfo.cs" />
     <Compile Include="CustomerServiceRecord.cs" />
-    <Compile Include="CylinderInfo.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="GoodsBaseInfo.cs" />
     <Compile Include="HuiYuanBaseInfo.cs" />
@@ -245,11 +244,13 @@
     <EmbeddedResource Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="CustomerServiceRecord.hbm.xml" />
+=======
     <EmbeddedResource Include="CustomerServiceRecord.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="CylinderInfo.hbm.xml" />
+>>>>>>> cf09d8d46f411279be8cb73f9a6f2495613922ab
     <Content Include="InstallRecord.hbm.xml">
       <SubType>Designer</SubType>
     </Content>

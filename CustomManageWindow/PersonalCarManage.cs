@@ -79,7 +79,7 @@ namespace CustomManageWindow
             {
                 foreach (CarBaseInfo s in currentcustoms)
                 {
-                    this.commonDataGridView1.Rows.Add(0, i.ToString(), s.PlateNumber, s.Cbi == null ? "" : s.Cbi.Name, s.VehicleType,s.VIN,  s.EngineIdentificationNumber,s.Mileage,s.FuelConsumption, new DateTime(s.Cbi.RegistrationTime).ToString(), s.CylinderNo, s.CylinderType, s.CylinderVolume, "编辑", "查看");
+                    this.commonDataGridView1.Rows.Add(0, i.ToString(), s.PlateNumber, s.Cbi == null ? "" : s.Cbi.Name, s.VehicleType, s.VIN, s.EngineIdentificationNumber, s.Mileage, s.FuelConsumption, new DateTime(s.Cbi.RegistrationTime).ToString(), s.CylinderNo, s.Cylinder==null ? "" : s.Cylinder.CylinderType, s.CylinderVolume, "编辑", "查看");
                     i++;
                 }
             }
