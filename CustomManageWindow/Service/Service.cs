@@ -103,7 +103,7 @@ namespace CustomManageWindow.Service
         public IList GetPersonalCar()
         {
             IList custom = null;
-            string sql = "select u from CarBaseInfo u left join u.Cbi c where c.Status=" + (int)CustomBaseInfo.PersonalOrCompany.Personal + " and  u.State=" + (int)BaseEntity.stateEnum.Normal + "order by c.RegistrationTime";
+            string sql = "select u from CarBaseInfo u left join u.Cbi c where c.Status=" + (int)CustomBaseInfo.PersonalOrCompany.Personal + " and  u.State=" + (int)BaseEntity.stateEnum.Normal + "order by c.RegistrationTime DESC";
             custom = this.loadEntityList(sql);
 
             if (custom.Count > 0 && custom != null)
