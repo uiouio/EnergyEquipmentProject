@@ -163,7 +163,9 @@
             this.textBox84 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -1269,10 +1271,21 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Location = new System.Drawing.Point(1, 9);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(736, 899);
             this.panel1.TabIndex = 306;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(7, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(110, 23);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "选择车辆";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // WeiXiuJiLu
             // 
@@ -1280,7 +1293,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(754, 742);
+            this.ClientSize = new System.Drawing.Size(764, 742);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -1416,6 +1429,7 @@
             this.Name = "WeiXiuJiLu";
             this.Load += new System.EventHandler(this.WeiXiuJiLu_Load);
             this.groupBox1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1558,5 +1572,6 @@
         private System.Windows.Forms.TextBox textBox84;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button4;
     }
 }

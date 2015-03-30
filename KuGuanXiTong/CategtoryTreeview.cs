@@ -152,7 +152,7 @@ namespace KuGuanXiTong
                 Gg = e.Node.Tag as GoodsBaseInfo;
                 this.textBox1.Text = Gg.GoodsClassCode + " " + Gg.GoodsName;
 
-                if (Gg.GoodsFlag == (int)GoodsBaseInfo.TheGoodsFlag.goods)
+                if (Gg.GoodsFlag != (int)GoodsBaseInfo.TheGoodsFlag.categtory)
                 {
                     this.button3.Visible = true;
                     currentGoods = Gg;
@@ -160,8 +160,8 @@ namespace KuGuanXiTong
                     this.textBox3.Text = currentGoods.Material;
                     this.textBox5.Text = currentGoods.Unit;
                     this.textBox4.Text = currentGoods.GoodsClassDescribe;
-                
                 }
+               
             }
         }
         private void button1_Click(object sender, EventArgs e)

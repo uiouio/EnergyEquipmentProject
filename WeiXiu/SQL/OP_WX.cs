@@ -94,5 +94,13 @@ namespace WeiXiu.SQL
             return i;
         }
 
+        public IList SelectCarBuyCarNum(string num)
+        {
+            IList i  = null ;
+            string sql = "select u ,c from ModificationContract u left join u.CarBaseInfoID c where c.PlateNumber like '%"+num+"%'";
+            i = loadEntityList(sql);
+            return i;
+        }
+
     }
 }
