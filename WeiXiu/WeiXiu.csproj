@@ -54,6 +54,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SelectCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCar.Designer.cs">
+      <DependentUpon>SelectCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQL\OP_WX.cs" />
     <Compile Include="TiaoShiWeiXiuJiLu.cs">
       <SubType>UserControl</SubType>
@@ -94,6 +100,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectCar.resx">
+      <DependentUpon>SelectCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TiaoShiWeiXiuJiLu.resx">
       <DependentUpon>TiaoShiWeiXiuJiLu.cs</DependentUpon>
