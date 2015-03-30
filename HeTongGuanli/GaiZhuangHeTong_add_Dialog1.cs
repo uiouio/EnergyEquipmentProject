@@ -140,7 +140,7 @@ namespace HeTongGuanLi
                     {
                         if (s.ModificationID == null)
                         {
-                            commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, ModificationContract.ModifyType[s.ModidiedType], s.CylinderType, "删除");
+                            commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, ModificationContract.ModifyType[s.ModidiedType], s.Cylinder == null ? "" : s.Cylinder.CylinderType, "删除");
                             commonDataGridView2.Rows[commonDataGridView2.Rows.Count - 1].Tag = s;
                             this.textBox5.Text = s.VIN;
                             i++;
@@ -210,7 +210,7 @@ namespace HeTongGuanLi
                     {
                         if (s.ModificationID == null)
                         {
-                            commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, ModificationContract.ModifyType[s.ModidiedType], s.CylinderType, "删除");
+                            commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, ModificationContract.ModifyType[s.ModidiedType], s.Cylinder == null ? "" : s.Cylinder.CylinderType, "删除");
                             commonDataGridView2.Rows[commonDataGridView2.Rows.Count - 1].Tag = s;
                             this.textBox5.Text = s.VIN;
                             i++;

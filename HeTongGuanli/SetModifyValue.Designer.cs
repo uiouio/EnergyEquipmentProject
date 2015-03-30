@@ -30,47 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetModifyValue));
-            this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
             this.commonPictureButton5 = new CommonControl.CommonPictureButton(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.commonFlowLayoutPanel1.SuspendLayout();
+            this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
+            this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
+            this.commonDataGridView2 = new CommonControl.CommonDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton5)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton1)).BeginInit();
+            this.commonFlowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // commonFlowLayoutPanel1
-            // 
-            this.commonFlowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonFlowLayoutPanel1.BackgroundImage")));
-            this.commonFlowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton2);
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton5);
-            this.commonFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.commonFlowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.commonFlowLayoutPanel1.Name = "commonFlowLayoutPanel1";
-            this.commonFlowLayoutPanel1.Size = new System.Drawing.Size(66, 427);
-            this.commonFlowLayoutPanel1.TabIndex = 1;
             // 
             // commonPictureButton2
             // 
             this.commonPictureButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonPictureButton2.BackgroundImage")));
             this.commonPictureButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton2.Location = new System.Drawing.Point(0, 3);
+            this.commonPictureButton2.Location = new System.Drawing.Point(0, 131);
             this.commonPictureButton2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.commonPictureButton2.Name = "commonPictureButton2";
             this.commonPictureButton2.NonSelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton2.NonSelectBackGroundImage")));
@@ -94,194 +78,144 @@
             this.commonPictureButton5.TabStop = false;
             this.commonPictureButton5.ToolTipString = null;
             // 
-            // groupBox1
+            // commonPictureButton1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(214, 15);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(287, 71);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "选择改装类型";
+            this.commonPictureButton1.BackgroundImage = global::HeTongGuanLi.Properties.Resources.新建;
+            this.commonPictureButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.commonPictureButton1.Location = new System.Drawing.Point(0, 3);
+            this.commonPictureButton1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.commonPictureButton1.Name = "commonPictureButton1";
+            this.commonPictureButton1.NonSelectBackGroundImage = global::HeTongGuanLi.Properties.Resources.新建;
+            this.commonPictureButton1.SelectBackGroundImage = global::HeTongGuanLi.Properties.Resources.新建select;
+            this.commonPictureButton1.Size = new System.Drawing.Size(66, 61);
+            this.commonPictureButton1.TabIndex = 17;
+            this.commonPictureButton1.TabStop = false;
+            this.commonPictureButton1.ToolTipString = null;
+            this.commonPictureButton1.Click += new System.EventHandler(this.commonPictureButton1_Click);
             // 
-            // radioButton2
+            // commonFlowLayoutPanel1
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(186, 32);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(41, 16);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "LNG";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.commonFlowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonFlowLayoutPanel1.BackgroundImage")));
+            this.commonFlowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton1);
+            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton5);
+            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton2);
+            this.commonFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.commonFlowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.commonFlowLayoutPanel1.Name = "commonFlowLayoutPanel1";
+            this.commonFlowLayoutPanel1.Size = new System.Drawing.Size(66, 483);
+            this.commonFlowLayoutPanel1.TabIndex = 1;
             // 
-            // radioButton1
+            // commonDataGridView2
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(44, 32);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(41, 16);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "CNG";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.commonDataGridView2.AllowUserToAddRows = false;
+            this.commonDataGridView2.AllowUserToDeleteRows = false;
+            this.commonDataGridView2.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.commonDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.commonDataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.commonDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.commonDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.commonDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column3,
+            this.Column8,
+            this.Column11,
+            this.Column10,
+            this.Column2,
+            this.Column4});
+            this.commonDataGridView2.Location = new System.Drawing.Point(190, 82);
+            this.commonDataGridView2.MultiSelect = false;
+            this.commonDataGridView2.Name = "commonDataGridView2";
+            this.commonDataGridView2.RowHeadersVisible = false;
+            this.commonDataGridView2.RowTemplate.Height = 23;
+            this.commonDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.commonDataGridView2.Size = new System.Drawing.Size(645, 251);
+            this.commonDataGridView2.TabIndex = 41;
+            this.commonDataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView2_CellContentClick);
             // 
-            // label1
+            // Column1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(569, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "车型：";
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.HeaderText = " ";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 20;
             // 
-            // groupBox2
+            // Column3
             // 
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(214, 102);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(540, 230);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "气瓶改装费用";
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.HeaderText = "序号";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 60;
             // 
-            // textBox3
+            // Column8
             // 
-            this.textBox3.Location = new System.Drawing.Point(421, 69);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 21);
-            this.textBox3.TabIndex = 11;
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column8.HeaderText = "气瓶型号";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 200;
             // 
-            // label6
+            // Column11
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(355, 74);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 12);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "价格：";
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column11.HeaderText = "气瓶数量";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 120;
             // 
-            // label4
+            // Column10
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 12);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "气瓶型号：";
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column10.HeaderText = "气瓶价格";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 120;
             // 
-            // comboBox3
+            // Column2
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.comboBox3.Location = new System.Drawing.Point(293, 71);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(45, 20);
-            this.comboBox3.TabIndex = 9;
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.HeaderText = "编辑";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 60;
             // 
-            // comboBox2
+            // Column4
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(113, 66);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(96, 20);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 12);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "数量：";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(571, 361);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "修改";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(635, 52);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(109, 20);
-            this.comboBox4.TabIndex = 7;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(678, 360);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "保存";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.HeaderText = "删除";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 60;
             // 
             // SetModifyValue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.commonDataGridView2);
             this.Controls.Add(this.commonFlowLayoutPanel1);
             this.Name = "SetModifyValue";
-            this.Size = new System.Drawing.Size(923, 427);
+            this.Size = new System.Drawing.Size(923, 483);
             this.Load += new System.EventHandler(this.SetModifyValue_Load);
-            this.commonFlowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton5)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton1)).EndInit();
+            this.commonFlowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private CommonControl.CommonFlowLayoutPanel commonFlowLayoutPanel1;
         private CommonControl.CommonPictureButton commonPictureButton2;
         private CommonControl.CommonPictureButton commonPictureButton5;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private CommonControl.CommonPictureButton commonPictureButton1;
+        private CommonControl.CommonFlowLayoutPanel commonFlowLayoutPanel1;
+        private CommonControl.CommonDataGridView commonDataGridView2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewLinkColumn Column2;
+        private System.Windows.Forms.DataGridViewLinkColumn Column4;
+
     }
 }

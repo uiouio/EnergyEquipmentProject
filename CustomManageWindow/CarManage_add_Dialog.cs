@@ -108,7 +108,7 @@ namespace CustomManageWindow
             }
             else
             {
-                cb.Mileage = float.Parse(textBox3.Text);
+                cb.Mileage = float.Parse(textBox10.Text);
             }
             if (textBox3.Text == "")
             {
@@ -137,13 +137,13 @@ namespace CustomManageWindow
             {
                 cb.ModidiedType=(int)ModificationContract.CNGGasCNGDieselLNGDiesel.LNGDiesel;
             }
-            if (textBox10.Text == "")
+            if (textBox8.Text == "")
             {
                 cb.KerbMass = 0;
             }
             else
             {
-                cb.KerbMass = float.Parse(textBox10.Text);
+                cb.KerbMass = float.Parse(textBox8.Text);
             }
            
 

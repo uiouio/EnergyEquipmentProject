@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CylinderAddDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CylinderAddDialog.Designer.cs">
+      <DependentUpon>CylinderAddDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="FaHuoGuanLi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -341,6 +347,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CylinderAddDialog.resx">
+      <DependentUpon>CylinderAddDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FaHuoGuanLi.resx">
       <DependentUpon>FaHuoGuanLi.cs</DependentUpon>
     </EmbeddedResource>

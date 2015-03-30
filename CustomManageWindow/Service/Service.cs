@@ -329,5 +329,30 @@ namespace CustomManageWindow.Service
             }
             return null;
         }
+        /// <summary>
+        /// 选择气瓶型号
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public IList SelectCylinderType(string name)
+        {
+            IList i = null;
+            string sql = "select distinct CylinderType from CylinderInfo where CylinderType like " + "'%" + name + "%' and State=" + (int)BaseEntity.stateEnum.Normal;
+            i = this.loadEntityList(sql);
+            return i;
+        }
+        /// <summary>
+        /// 得到气瓶ID
+        /// </summary>
+        /// <param name="s1"></param>
+        /// <param name="s2"></param>
+        /// <returns></returns>
+        public IList SelectCylinderID(string s1,int s2)
+        {
+            IList i = null;
+            string sql = "from CylinderInfo where CylinderType='" + s1 + "'and CylinderNumber='"+s2+"' and State=" + (int)BaseEntity.stateEnum.Normal;
+            i = this.loadEntityList(sql);
+            return i;
+        }
     }
 }

@@ -11,6 +11,7 @@ using CustomManageWindow.Service;
 using CommonControl;
 using CommonMethod;
 using System.IO;
+
 namespace CustomManageWindow
 {
     public partial class YanChe_add_Dialog : CommonControl.BaseForm
@@ -30,6 +31,8 @@ namespace CustomManageWindow
             get { return carBaseInfo; }
             set { carBaseInfo = value; }
         }
+        IList cylinder;
+        CustomService ss = new CustomService();
         public YanChe_add_Dialog()
         {
             InitializeComponent();
@@ -38,27 +41,12 @@ namespace CustomManageWindow
         {
             if(CarBaseInfo.ModidiedType==(int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGGas)
             {
-                this.comboBox1.Items.Add("φ325*50");
-                this.comboBox1.Items.Add("φ325*55");
-                this.comboBox1.Items.Add("φ325*60");
-                this.comboBox1.Items.Add("φ325*65");
-                this.comboBox1.Items.Add("φ356*65");
-                this.comboBox1.Items.Add("φ325*70");
-                this.comboBox1.Items.Add("φ356*70");
-                this.comboBox1.Items.Add("φ356*75");
-                this.comboBox1.Items.Add("φ325*80");
-                this.comboBox1.Items.Add("φ356*80");
-                this.comboBox1.Items.Add("φ406*87");
-                this.comboBox1.Items.Add("φ356*100");
-                this.comboBox1.Items.Add("φ406*100");
+                this.comboBox1.DataSource = ss.SelectCylinderType("CNG汽油");
                 this.comboBox2.Text = "1";
-
             }
             else if (CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGDiesel)
             {
-                this.comboBox1.Items.Add("140L-150L");
-                this.comboBox1.Items.Add("100L-120L");
-                this.comboBox1.Items.Add("100L以下");
+                this.comboBox1.DataSource = ss.SelectCylinderType("CNG柴油");
                 this.comboBox2.Items.Add("1");
                 this.comboBox2.Items.Add("2");
                 this.comboBox2.Items.Add("3");
@@ -67,18 +55,23 @@ namespace CustomManageWindow
             }
             else if (CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.LNGDiesel)
             {
-                this.comboBox1.Items.Add("200L");
-                this.comboBox1.Items.Add("275L");
-                this.comboBox1.Items.Add("375L");
-                this.comboBox1.Items.Add("450L");
-                this.comboBox1.Items.Add("500L");
+                this.comboBox1.DataSource = ss.SelectCylinderType("LNG柴油");
                 this.comboBox2.Items.Add("1");
                 this.comboBox2.Items.Add("2");
 
             }
+            
             this.textBox13.Text = CarBaseInfo.TotalMass.ToString();
-            this.comboBox1.Text = CarBaseInfo.CylinderType;
-            this.comboBox2.Text = CarBaseInfo.CylinderNumber.ToString();
+            if (CarBaseInfo.Cylinder != null)
+            {
+                this.comboBox1.Text = CarBaseInfo.Cylinder.CylinderType;
+                this.comboBox2.Text = CarBaseInfo.Cylinder.CylinderNumber.ToString();
+            }
+            else
+            {
+                this.comboBox1.Text = "";
+            }
+           
             //this.textBox3.Text = CarBaseInfo.CylinderType;
             if (CarBaseInfo.SupperTime==0)
             {
@@ -114,133 +107,133 @@ namespace CustomManageWindow
                 else
                 {
                     s = CarBaseInfo.GoodsValidation;
-                    char[] ss = s.ToCharArray();
+                    char[] s1 = s.ToCharArray();
                     #region
-                    if (ss[0] == '1')
+                    if (s1[0] == '1')
                     {
                         checkBox1.Checked = true;
                     }
-                    else if (ss[0] == '0')
+                    else if (s1[0] == '0')
                     {
                         checkBox1.Checked = false;
                     }
-                    if (ss[1] == '1')
+                    if (s1[1] == '1')
                     {
                         checkBox5.Checked = true;
                     }
-                    else if (ss[1] == '0')
+                    else if (s1[1] == '0')
                     {
                         checkBox5.Checked = false;
                     }
-                    if (ss[2] == '1')
+                    if (s1[2] == '1')
                     {
                         checkBox2.Checked = true;
                     }
-                    else if (ss[2] == '0')
+                    else if (s1[2] == '0')
                     {
                         checkBox2.Checked = false;
                     }
-                    if (ss[3] == '1')
+                    if (s1[3] == '1')
                     {
                         checkBox6.Checked = true;
                     }
-                    else if (ss[3] == '0')
+                    else if (s1[3] == '0')
                     {
                         checkBox6.Checked = false;
                     }
-                    if (ss[4] == '1')
+                    if (s1[4] == '1')
                     {
                         checkBox3.Checked = true;
                     }
-                    else if (ss[4] == '0')
+                    else if (s1[4] == '0')
                     {
                         checkBox3.Checked = false;
                     }
-                    if (ss[5] == '1')
+                    if (s1[5] == '1')
                     {
                         checkBox7.Checked = true;
                     }
-                    else if (ss[5] == '0')
+                    else if (s1[5] == '0')
                     {
                         checkBox7.Checked = false;
                     }
-                    if (ss[6] == '1')
+                    if (s1[6] == '1')
                     {
                         checkBox4.Checked = true;
                     }
-                    else if (ss[6] == '0')
+                    else if (s1[6] == '0')
                     {
                         checkBox4.Checked = false;
                     }
-                    if (ss[7] == '1')
+                    if (s1[7] == '1')
                     {
                         checkBox8.Checked = true;
                     }
-                    else if (ss[7] == '0')
+                    else if (s1[7] == '0')
                     {
                         checkBox8.Checked = false;
                     }
-                    if (ss[8] == '1')
+                    if (s1[8] == '1')
                     {
                         checkBox10.Checked = true;
                     }
-                    else if (ss[8] == '0')
+                    else if (s1[8] == '0')
                     {
                         checkBox10.Checked = false;
                     }
-                    if (ss[9] == '1')
+                    if (s1[9] == '1')
                     {
                         checkBox14.Checked = true;
                     }
-                    else if (ss[9] == '0')
+                    else if (s1[9] == '0')
                     {
                         checkBox14.Checked = false;
                     }
-                    if (ss[10] == '1')
+                    if (s1[10] == '1')
                     {
                         checkBox9.Checked = true;
                     }
-                    else if (ss[10] == '0')
+                    else if (s1[10] == '0')
                     {
                         checkBox9.Checked = false;
                     }
-                    if (ss[11] == '1')
+                    if (s1[11] == '1')
                     {
                         checkBox13.Checked = true;
                     }
-                    else if (ss[11] == '0')
+                    else if (s1[11] == '0')
                     {
                         checkBox13.Checked = false;
                     }
-                    if (ss[12] == '1')
+                    if (s1[12] == '1')
                     {
                         checkBox16.Checked = true;
                     }
-                    else if (ss[12] == '0')
+                    else if (s1[12] == '0')
                     {
                         checkBox16.Checked = false;
                     }
-                    if (ss[13] == '1')
+                    if (s1[13] == '1')
                     {
                         checkBox12.Checked = true;
                     }
-                    else if (ss[13] == '0')
+                    else if (s1[13] == '0')
                     {
                         checkBox12.Checked = false;
                     }
-                    if (ss[14] == '1')
+                    if (s1[14] == '1')
                     {
                         checkBox15.Checked = true;
                     }
-                    else if (ss[14] == '0')
+                    else if (s1[14] == '0')
                     {
                         checkBox15.Checked = false;
                     }
-                    if (ss[15] == '1')
+                    if (s1[15] == '1')
                     {
                         checkBox11.Checked = true;
                     }
-                    else if (ss[15] == '0')
+                    else if (s1[15] == '0')
                     {
                         checkBox11.Checked = false;
                     }
@@ -255,8 +248,6 @@ namespace CustomManageWindow
         private void button1_Click(object sender, EventArgs e)
         {
             
-            CustomService ss = new CustomService();
-
             CommonMethod.FileUpDown fileUpDown = new FileUpDown(Securit.DeDES(FileReadAndWrite.IniReadValue("file", "ip")), Securit.DeDES(FileReadAndWrite.IniReadValue("file", "id")), Securit.DeDES(FileReadAndWrite.IniReadValue("file", "pwd")));
             string filename = DateTime.Now.Ticks.ToString() + ".jpg";
             if (!File.Exists(CommonStaticParameter.TEMP + @"\carCheckTemp\"))
@@ -278,109 +269,7 @@ namespace CustomManageWindow
             }
             #endregion
             CarBaseInfo.SupperTime= dateTimePicker1.Value.Ticks;
-            CarBaseInfo.CylinderType = this.comboBox1.Text;
-            #region CNG汽油气瓶价格
-            if (CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGGas)
-            {
-                if (this.comboBox1.Text == "φ325*50")
-                {
-                    CarBaseInfo.CylinderValue = 3700;
-
-                }
-                else if (this.comboBox1.Text == "φ325*55")
-                {
-                    CarBaseInfo.CylinderValue = 3800;
-
-                }
-                else if (this.comboBox1.Text == "φ325*60")
-                {
-                    CarBaseInfo.CylinderValue = 3850;
-
-                }
-                else if (this.comboBox1.Text == "φ325*65")
-                {
-                    CarBaseInfo.CylinderValue = 3900;
-
-                }
-                else if (this.comboBox1.Text == "φ356*65")
-                {
-                    CarBaseInfo.CylinderValue = 3950;
-
-                }
-                else if (this.comboBox1.Text == "φ325*70")
-                {
-                    CarBaseInfo.CylinderValue = 4000;
-                    CarBaseInfo.CylinderNumber = 1;
-                }
-                else if (this.comboBox1.Text == "φ356*70")
-                {
-                    CarBaseInfo.CylinderNumber = 4050;
-                }
-
-                else if (this.comboBox1.Text == "φ356*75")
-                {
-                    CarBaseInfo.CylinderValue = 4100;
-
-                }
-                else if (this.comboBox1.Text == "φ325*80")
-                {
-                    CarBaseInfo.CylinderValue = 4100;
-
-                }
-                else if (this.comboBox1.Text == "φ356*80")
-                {
-                    CarBaseInfo.CylinderValue = 4150;
-
-                }
-                else if (this.comboBox1.Text == "φ406*87")
-                {
-                    CarBaseInfo.CylinderValue = 4300;
-
-                }
-                else if (this.comboBox1.Text == "φ356*100")
-                {
-                    CarBaseInfo.CylinderValue = 4350;
-
-                }
-                else if (this.comboBox1.Text == "φ406*100")
-                {
-                    CarBaseInfo.CylinderValue = 4400;
-
-                }
-            }
-            #endregion
-            #region CNG柴油气瓶价格
-            else if(CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGDiesel)
-            {
-                 if (this.comboBox1.Text == "140L-150L")
-                {
-                  CarBaseInfo.CylinderValue = 50000 - Convert.ToInt16(this.comboBox2.Text) * 2500;
-                 }
-                else if (this.comboBox1.Text == "100L-120L")
-                {
-                  CarBaseInfo.CylinderValue = 48000 - Convert.ToInt16(this.comboBox2.Text) * 2000;
-                }
-                else if (this.comboBox1.Text == "100L以下")
-                {
-                  CarBaseInfo.CylinderValue = 46000 - Convert.ToInt16(this.comboBox2.Text) * 1500;
-                }
-            }
-            #endregion
-            #region LNG气瓶价格
-            else if(CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.LNGDiesel)
-            {
-                if(this.comboBox2.Text=="1")
-                {
-                    CarBaseInfo.CylinderValue = 60000;
-                }
-                else if (this.comboBox2.Text == "2")
-                {
-                    CarBaseInfo.CylinderValue = 90000;
-                }
-            }
-            #endregion     
             CarBaseInfo.CylinderWeight =float.Parse(textBox9.Text);
-            CarBaseInfo.CylinderNumber=Convert.ToInt16(this.comboBox2.Text);
             CarBaseInfo.CylinderPressure = float.Parse(textBox15.Text);
         
             if (textBox14.Text == "")
@@ -550,6 +439,8 @@ namespace CustomManageWindow
             CarBaseInfo.GoodsValidation = s;
             CarBaseInfo.QJRemarks = textBox17.Text;
             carBaseInfo.BodyImage = file.Substring(file.LastIndexOf('/')+1);
+            cylinder= ss.SelectCylinderID(this.comboBox1.Text,Convert.ToInt16( this.comboBox2.Text));
+            CarBaseInfo.Cylinder=(CylinderInfo)cylinder[0];
             ss.Save(CarBaseInfo);
             MessageBox.Show("保存成功！");
             this.DialogResult = DialogResult.OK;

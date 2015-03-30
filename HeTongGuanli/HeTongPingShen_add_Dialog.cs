@@ -54,7 +54,7 @@ namespace HeTongGuanLi
                 this.textBox3.Text = cbi.Cbi.Phone;
                 this.textBox4.Text = cbi.CylinderNo;
                 this.textBox5.Text = ModificationContract.ContractNo;
-                this.textBox6.Text = cbi.CylinderType;
+                this.textBox6.Text = cbi.Cylinder == null ? "" : cbi.Cylinder.CylinderType;
                 this.textBox11.Text =ModificationContract.ContractAmount.ToString();
                 this.textBox7.Text =new DateTime(ModificationContract.SignedDate).ToLongDateString();
                 this.textBox10.Text = ModificationContract.PaymentMethod;
@@ -87,7 +87,7 @@ namespace HeTongGuanLi
                     cbi = c;
                     break;
                 }
-                if (ModificationContract.ContractAmount >= cbi.CylinderValue)
+                if (ModificationContract.ContractAmount >= cbi.Cylinder.CylinderValue)
                 {
                     ModificationContract.Process = (int)ModificationContract.guocheng.htbgy;
                     ModificationContract.ApprovalState = (int)ModificationContract.Approval.already;
