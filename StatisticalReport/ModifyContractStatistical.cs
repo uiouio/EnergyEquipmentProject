@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using SQLProvider.Service;
 using CommonMethod;
-
+using EntityClassLibrary;
 namespace StatisticalReport
 {
     public partial class ModifyContractStatistical : CommonControl.CommonTabPage
@@ -41,18 +41,42 @@ namespace StatisticalReport
                 t1 = new DateTime(this.dateTimePicker1.Value.Year, 1, 1).Ticks;
                 t2 = new DateTime(this.dateTimePicker2.Value.AddYears(1).Year, 1, 1).Ticks;
             }
-            DataSet dataSet = baseService.ExecuteSQLReturnDataSet("select m.ContractNo as 合同编号,u.Name as 销售人员,cbi.Name as 乙方,car.PlateNumber as 车牌号,m.ContractAmount as 合同金额,Convert(varchar(100),DATEADD(s, SignedDate/ 10000000 - 630822816000000000 / 10000000, '2000-1-1'),111) as 签订日期 from ModificationContract m,UserInfo u,CarBaseInfo car,CustomBaseInfo cbi where m.UserId=u.Id and m.Id=car.ModificationContractId and car.CustomBaseID=cbi.Id");
-            currentTable = dataSet.Tables[0];
-            DataTable ndt = new DataTable();
-            DataColumn dc = new DataColumn();
-            dc.ColumnName = "序号";
-            dc.AutoIncrement = true;
-            dc.AutoIncrementSeed = 1;
-            dc.AutoIncrementStep = 1;
-            ndt.Columns.Add(dc);
-            ndt.Merge(currentTable);
-            this.commonDataGridView1.DataSource = ndt;
-
+            if(this.comboBox1.Text=="改装合同")
+            {
+                string sql = "select m.ContractNo as 合同编号,u.Name as 销售人员,cbi.Name as 乙方,car.PlateNumber as 车牌号,m.ContractAmount as 合同金额,Convert(varchar(100),DATEADD(s, SignedDate/ 10000000 - 630822816000000000 / 10000000, '2000-1-1'),111) as 签订日期 from ModificationContract m,UserInfo u,CarBaseInfo car,CustomBaseInfo cbi where m.UserId=u.Id and m.Id=car.ModificationContractId and car.CustomBaseID=cbi.Id "//选择数据 
+              + " and u.Name like" + "'%" + this.textBox1.Text + "%'and m.SignedDate>=" + t1 + "and m.SignedDate<=" + t2 + "";
+                DataSet dataSet = baseService.ExecuteSQLReturnDataSet(sql);
+                currentTable = dataSet.Tables[0];
+                DataTable ndt = new DataTable();
+                DataColumn dc = new DataColumn();
+                dc.ColumnName = "序号";
+                dc.AutoIncrement = true;
+                dc.AutoIncrementSeed = 1;
+                dc.AutoIncrementStep = 1;
+                ndt.Columns.Add(dc);
+                ndt.Merge(currentTable);
+                this.commonDataGridView1.DataSource = ndt;
+            }
+            else if (this.comboBox1.Text == "套件合同")
+            {
+                string sql = "select m.ContractNo as 合同编号,u.Name as 销售人员,cbi.Name as 乙方,m.ContractAmount as 合同金额,m.PaymentMethod as 付款方式,Convert(varchar(100),DATEADD(s, SignedDate/ 10000000 - 630822816000000000 / 10000000, '2000-1-1'),111) as 签订日期 from SuiteContract m,UserInfo u,CustomBaseInfo cbi where m.UserId=u.Id  and m.CustomBaseID=cbi.ID "//选择数据 
+                 + " and u.Name like" + "'%" + this.textBox1.Text + "%'and m.SignedDate>=" + t1 + "and m.SignedDate<=" + t2 + "";
+                DataSet dataSet = baseService.ExecuteSQLReturnDataSet(sql);
+                currentTable = dataSet.Tables[0];
+                DataTable ndt = new DataTable();
+                DataColumn dc = new DataColumn();
+                dc.ColumnName = "序号";
+                dc.AutoIncrement = true;
+                dc.AutoIncrementSeed = 1;
+                dc.AutoIncrementStep = 1;
+                ndt.Columns.Add(dc);
+                ndt.Merge(currentTable);
+                this.commonDataGridView1.DataSource = ndt;
+            }
+            else
+            {
+                MessageBox.Show("请选择合同类型!");
+            }
 
         }
 
@@ -91,6 +115,11 @@ namespace StatisticalReport
                 this.dateTimePicker2.Format = DateTimePickerFormat.Custom;
                 this.dateTimePicker2.CustomFormat = "yyyy年";
             }
+        }
+
+        private void ModifyContractStatistical_Load(object sender, EventArgs e)
+        {
+
         }
 
     }

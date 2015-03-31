@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyContractStatistical));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
             this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -45,6 +45,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.commonFlowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -104,7 +106,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(988, 124);
+            this.button1.Location = new System.Drawing.Point(1048, 129);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
@@ -158,7 +160,7 @@
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Location = new System.Drawing.Point(352, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(340, 128);
+            this.groupBox1.Size = new System.Drawing.Size(324, 128);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "时间";
@@ -166,7 +168,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(757, 135);
+            this.label1.Location = new System.Drawing.Point(698, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 12);
             this.label1.TabIndex = 14;
@@ -174,7 +176,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(822, 129);
+            this.textBox1.Location = new System.Drawing.Point(763, 129);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 15;
@@ -184,12 +186,13 @@
             this.commonDataGridView1.AllowUserToAddRows = false;
             this.commonDataGridView1.AllowUserToDeleteRows = false;
             this.commonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.commonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commonDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.commonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.commonDataGridView1.Location = new System.Drawing.Point(352, 247);
+            this.commonDataGridView1.Location = new System.Drawing.Point(352, 261);
             this.commonDataGridView1.MultiSelect = false;
             this.commonDataGridView1.Name = "commonDataGridView1";
             this.commonDataGridView1.RowHeadersVisible = false;
@@ -198,9 +201,32 @@
             this.commonDataGridView1.Size = new System.Drawing.Size(711, 302);
             this.commonDataGridView1.TabIndex = 16;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(886, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 12);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "合同类型:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "改装合同",
+            "套件合同"});
+            this.comboBox1.Location = new System.Drawing.Point(951, 129);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(78, 20);
+            this.comboBox1.TabIndex = 18;
+            // 
             // ModifyContractStatistical
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.commonDataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -208,6 +234,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.commonFlowLayoutPanel1);
             this.Name = "ModifyContractStatistical";
+            this.Load += new System.EventHandler(this.ModifyContractStatistical_Load);
             this.commonFlowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -234,5 +261,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private CommonControl.CommonDataGridView commonDataGridView1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
