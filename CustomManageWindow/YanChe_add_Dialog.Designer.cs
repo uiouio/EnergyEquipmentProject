@@ -261,9 +261,9 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(452, 62);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(29, 12);
+            this.label18.Size = new System.Drawing.Size(35, 12);
             this.label18.TabIndex = 61;
-            this.label18.Text = "(Pa)";
+            this.label18.Text = "(MPa)";
             // 
             // label17
             // 
@@ -509,9 +509,9 @@
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(26, 29);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(53, 12);
+            this.label25.Size = new System.Drawing.Size(65, 12);
             this.label25.TabIndex = 13;
-            this.label25.Text = "总质量：";
+            this.label25.Text = "整备质量：";
             // 
             // label11
             // 

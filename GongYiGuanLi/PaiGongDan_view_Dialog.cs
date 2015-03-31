@@ -36,7 +36,14 @@ namespace GongYiGuanLi
             label32.Text = carInfo.SupplyMode;
             label33.Text = carInfo.KerbMass+"Kg";
             label41.Text = carInfo.TotalMass+"Kg";
-            label42.Text = carInfo.CylinderType;
+            if (carInfo.Cylinder == null)
+            {
+                label42.Text = "";
+            }
+            else
+            {
+                label42.Text = carInfo.Cylinder.CylinderType;
+            } 
             label43.Text = carInfo.CylinderVolume+"L";
             label51.Text = carInfo.CylinderWeight+"Kg";
             label52.Text = carInfo.CylinderPressure+"Pa";

@@ -86,7 +86,7 @@ namespace CustomManageWindow
             this.textBox9.Text = CarBaseInfo.CylinderWeight.ToString();
             this.textBox15.Text = (20).ToString();
             this.textBox14.Text = CarBaseInfo.CylinderVolume.ToString();
-           
+            this.textBox13.Text = CarBaseInfo.KerbMass.ToString();
             this.textBox4.Text = CarBaseInfo.Thinckness.ToString();
             this.textBox5.Text = CarBaseInfo.ChargeWeight.ToString();
             this.textBox2.Text = CarBaseInfo.CylinderNo;
@@ -258,14 +258,14 @@ namespace CustomManageWindow
             String file = fileUpDown.Upload(CommonStaticParameter.TEMP + @"\carCheckTemp\" + filename, CommonStaticParameter.CAR_RSOURCE);
             //File.Delete(CommonStaticParameter.TEMP + @"\" + filename);懒得弄了，资源占用删不了
             CarBaseInfo.BodyImage = file;
-            #region 判断总质量
+            #region 判断整备质量
             if (textBox13.Text == "")
             {
-                CarBaseInfo.TotalMass = 0;
+                CarBaseInfo.KerbMass = 0;
             }
             else
             {
-                CarBaseInfo.TotalMass = float.Parse(this.textBox13.Text);
+                CarBaseInfo.KerbMass= float.Parse(this.textBox13.Text);
             }
             #endregion
             CarBaseInfo.SupperTime= dateTimePicker1.Value.Ticks;
