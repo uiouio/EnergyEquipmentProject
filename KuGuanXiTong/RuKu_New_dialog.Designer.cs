@@ -37,6 +37,18 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -44,6 +56,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -70,21 +85,7 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -102,7 +103,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(624, 632);
+            this.button2.Location = new System.Drawing.Point(731, 632);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 66;
@@ -178,6 +179,76 @@
             this.commonDataGridView1.Size = new System.Drawing.Size(1070, 224);
             this.commonDataGridView1.TabIndex = 62;
             this.commonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column1.HeaderText = "物品编码";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "物品名称";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column12.HeaderText = "物品条码";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "规格型号";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "材质";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "单位";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "数量";
+            this.Column5.Name = "Column5";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "税前价";
+            this.Column7.Name = "Column7";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = " 税";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "库位号";
+            this.Column11.Name = "Column11";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "操作";
+            this.Column9.Name = "Column9";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "";
+            this.Column8.Name = "Column8";
             // 
             // textBox7
             // 
@@ -255,6 +326,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1030, 212);
             this.panel1.TabIndex = 70;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.Location = new System.Drawing.Point(410, 132);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(11, 12);
+            this.label17.TabIndex = 22;
+            this.label17.Text = "%";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(375, 128);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(31, 21);
+            this.textBox13.TabIndex = 21;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(353, 132);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(29, 12);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "税：";
             // 
             // label15
             // 
@@ -495,101 +592,15 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // label16
+            // checkBox1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(353, 132);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(29, 12);
-            this.label16.TabIndex = 20;
-            this.label16.Text = "税：";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(375, 128);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(31, 21);
-            this.textBox13.TabIndex = 21;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.Location = new System.Drawing.Point(410, 132);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(11, 12);
-            this.label17.TabIndex = 22;
-            this.label17.Text = "%";
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.HeaderText = "物品编码";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "物品名称";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column12.HeaderText = "物品条码";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "规格型号";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "材质";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "单位";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "数量";
-            this.Column5.Name = "Column5";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "税前价";
-            this.Column7.Name = "Column7";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = " 税";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "库位号";
-            this.Column11.Name = "Column11";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "操作";
-            this.Column9.Name = "Column9";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "";
-            this.Column8.Name = "Column8";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(535, 637);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(96, 16);
+            this.checkBox1.TabIndex = 72;
+            this.checkBox1.Text = "需要以后修改";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // RuKu_New_dialog
             // 
@@ -598,6 +609,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1187, 681);
             this.ControlBox = false;
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel1);
@@ -680,6 +692,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewLinkColumn Column9;
         private System.Windows.Forms.DataGridViewButtonColumn Column8;
+        private System.Windows.Forms.CheckBox checkBox1;
 
 
 

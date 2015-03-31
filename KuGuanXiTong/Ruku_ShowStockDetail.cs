@@ -19,6 +19,7 @@ namespace KuGuanXiTong
         List<StockOperationDetail> detaillist = new List<StockOperationDetail>();
         OpStock opp = new OpStock();
         StockOperation sendStocktoshow = new StockOperation();
+        List<StockOperationDetail> changeSpd = new List<StockOperationDetail>();
         /// <summary>
         /// 传入先择的Stock
         /// </summary>
@@ -43,14 +44,19 @@ namespace KuGuanXiTong
                 this.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width * 0.6);
             if (SendStocktoshow != null)
             {
+                if (SendStocktoshow.IsCanChange == 1)//可以修改
+                {
+                    this.button5.Visible = true;
+                    this.commonDataGridView1.ReadOnly = false;
+                }
                 IList details = opp.GetOpdetail(SendStocktoshow.Id);
 
                 int num = 1;
-                foreach(StockOperationDetail spd in details)
+                foreach (StockOperationDetail spd in details)
                 {
                     detaillist.Add(spd);
 
-                    this.commonDataGridView1.Rows.Add(num,spd.StockId.GoodsBaseInfoID.GoodsClassCode,
+                    this.commonDataGridView1.Rows.Add(num, spd.StockId.GoodsBaseInfoID.GoodsClassCode,
                         spd.StockId.GoodsBaseInfoID.GoodsName,
                         spd.GoodsCode,
                         spd.StockId.GoodsBaseInfoID.Specifications,
@@ -61,14 +67,14 @@ namespace KuGuanXiTong
                         spd.Tax,
                         spd.StockId.StorehouseplaceCode,
                         spd.StockId.Quantity);
+                    this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = spd;
+
                     num++;
-               
+
                 }
             }
         }
-
-
-
+        
        
         /// <summary>
         /// 打印按钮
@@ -109,6 +115,8 @@ namespace KuGuanXiTong
                     spd.Tax,
                     spd.StockId.StorehouseplaceCode,
                     spd.StockId.Quantity);
+                this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = spd;
+
                 num++;
             }
         }
@@ -135,7 +143,46 @@ namespace KuGuanXiTong
                     spd.Tax,
                     spd.StockId.StorehouseplaceCode,
                     spd.StockId.Quantity);
+                this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = spd;
                 num++;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (this.changeSpd.Count > 0)
+            {
+                if (MessageBox.Show("提交之后将不能修改，确定要提交吗？", "提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    for (int i = 0; i < changeSpd.Count;i++ )
+                    {
+                        opp.SaveOrUpdateEntity(changeSpd[i]);
+                    }
+                    sendStocktoshow.IsCanChange = 0;
+                    opp.SaveOrUpdateEntity(sendStocktoshow);
+                    this.commonDataGridView1.ReadOnly = true;
+                    this.button5.Visible = false;
+                }
+
+            }
+        }
+
+        private void commonDataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 8 || e.ColumnIndex == 9)
+            {
+                TestInput test = new TestInput ();
+                if (test.TestDecimal(this.commonDataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString()) && test.TestDecimal(this.commonDataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString()))
+                {
+                    StockOperationDetail cspd = this.commonDataGridView1.Rows[e.RowIndex].Tag as StockOperationDetail;
+                    cspd.TheMoney = float.Parse(this.commonDataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString());
+                    cspd.Tax = float.Parse(this.commonDataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString());
+                    changeSpd.Add(cspd);
+                }
+                else 
+                {
+                    MessageBox.Show("您输入的格式有误……");
+                }
             }
         }
     }

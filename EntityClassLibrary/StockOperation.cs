@@ -64,6 +64,15 @@ namespace EntityClassLibrary
             set { operationDetails = value; }
         }
 
+        private int isCanChange;
+        /// <summary>
+        /// 1=〉可以修改 0=〉不可以修改
+        /// </summary>
+        public virtual int IsCanChange
+        {
+            get { return isCanChange; }
+            set { isCanChange = value; }
+        }
 
         #region 枚举变量
         public enum InOrOutFlag

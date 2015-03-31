@@ -151,12 +151,10 @@ namespace KuGuanXiTong
         {
             if (this.commonDataGridView1.Rows.Count > 0) //货物单中必须有货物
             {
-
-
                 #region
                 if (MessageBox.Show("确定之后不能更改，确定这样做吗？", "提示", MessageBoxButtons.OKCancel) == DialogResult.OK) //友情提示框
                 {
-
+                    
                     this.textBox1.Text =
                         "CR" + 
                         DateTime.Now.Year.ToString() +
@@ -172,7 +170,11 @@ namespace KuGuanXiTong
                     stockop.OperationTime = this.dateTimePicker1.Value.Ticks;
                     stockop.RetrospectListNumber = this.textBox1.Text;
                     stockop.UserId = Userid;
-
+                    stockop.IsCanChange = 0; //不可以修改
+                    if (this.checkBox1.Checked == true)
+                    {
+                        stockop.IsCanChange = 1; //可以修改
+                    }
 
                     SupplierInfo spp = this.comboBox1.SelectedValue as SupplierInfo;
                     if (spp != null)
@@ -236,7 +238,7 @@ namespace KuGuanXiTong
                             sod.StockId = opstck.SaveOrUpdateEntity(ss) as Stock;
 
 
-                            
+
 
                             //填写Supplier_Goods表
                             if (this.comboBox1.SelectedValue != null)
