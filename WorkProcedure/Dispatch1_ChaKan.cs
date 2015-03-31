@@ -178,14 +178,18 @@ namespace WorkProcedure
 
         private void commonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            RefitWork s = (RefitWork)this.commonDataGridView1.Rows[e.RowIndex].Tag;
-            if (e.ColumnIndex == 10)
+            if (this.commonDataGridView1.Rows.Count > 0)
             {
-                CopyPaiGongDan_add_Dialog tt = new CopyPaiGongDan_add_Dialog();               
-                tt.RefitWork = s;
-                tt.ShowDialog();
+                RefitWork s = (RefitWork)this.commonDataGridView1.Rows[e.RowIndex].Tag;
+                if (e.ColumnIndex == 10)
+                {
+                    this.commonDataGridView1.Cursor = Cursors.WaitCursor;
+                    CopyPaiGongDan_add_Dialog tt = new CopyPaiGongDan_add_Dialog();
+                    tt.RefitWork = s;
+                    tt.ShowDialog();
+                    this.commonDataGridView1.Cursor = Cursors.Default;
+                }
             }
-            
         }
 
         private void LoadCombobox2()

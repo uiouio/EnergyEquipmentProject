@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -42,7 +42,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button6 = new System.Windows.Forms.Button();
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +67,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(330, 7);
+            this.textBox3.Location = new System.Drawing.Point(124, 12);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 21);
             this.textBox3.TabIndex = 35;
@@ -76,7 +75,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(267, 11);
+            this.label3.Location = new System.Drawing.Point(66, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 34;
@@ -84,7 +83,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(874, 6);
+            this.button3.Location = new System.Drawing.Point(612, 11);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 33;
@@ -94,7 +93,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(676, 7);
+            this.textBox2.Location = new System.Drawing.Point(449, 13);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 21);
@@ -102,7 +101,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(503, 7);
+            this.textBox1.Location = new System.Drawing.Point(285, 13);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 31;
@@ -110,7 +109,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(439, 11);
+            this.label1.Location = new System.Drawing.Point(226, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 29;
@@ -118,27 +117,27 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(679, 311);
+            this.button2.Location = new System.Drawing.Point(487, 239);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 39;
-            this.button2.Text = "←移除";
+            this.button2.Text = "↑移除";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(679, 243);
+            this.button1.Location = new System.Drawing.Point(262, 237);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 38;
-            this.button1.Text = "添加→";
+            this.button1.Text = "添加↓";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(609, 520);
+            this.button5.Location = new System.Drawing.Point(545, 599);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 22);
             this.button5.TabIndex = 42;
@@ -148,7 +147,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(528, 520);
+            this.button4.Location = new System.Drawing.Point(215, 602);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 22);
             this.button4.TabIndex = 41;
@@ -159,7 +158,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(611, 11);
+            this.label2.Location = new System.Drawing.Point(389, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 30;
@@ -168,7 +167,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(793, 11);
+            this.linkLabel1.Location = new System.Drawing.Point(555, 18);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(53, 12);
             this.linkLabel1.TabIndex = 43;
@@ -176,23 +175,13 @@
             this.linkLabel1.Text = "选择类别";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(966, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(113, 23);
-            this.button6.TabIndex = 44;
-            this.button6.Text = "查询全部货物";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // commonDataGridView1
             // 
             this.commonDataGridView1.AllowUserToAddRows = false;
             this.commonDataGridView1.AllowUserToDeleteRows = false;
             this.commonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.commonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commonDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -206,19 +195,22 @@
             this.Column5,
             this.Column4,
             this.Column6});
-            this.commonDataGridView1.Location = new System.Drawing.Point(31, 40);
+            this.commonDataGridView1.Location = new System.Drawing.Point(31, 42);
             this.commonDataGridView1.MultiSelect = false;
             this.commonDataGridView1.Name = "commonDataGridView1";
+            this.commonDataGridView1.ReadOnly = true;
             this.commonDataGridView1.RowHeadersVisible = false;
             this.commonDataGridView1.RowTemplate.Height = 23;
             this.commonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.commonDataGridView1.Size = new System.Drawing.Size(642, 474);
+            this.commonDataGridView1.Size = new System.Drawing.Size(690, 180);
             this.commonDataGridView1.TabIndex = 45;
+            this.commonDataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentDoubleClick);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "选择";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
@@ -242,6 +234,7 @@
             // 
             this.Column9.HeaderText = "材质";
             this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
             // Column5
             // 
@@ -266,8 +259,8 @@
             this.commonDataGridView2.AllowUserToAddRows = false;
             this.commonDataGridView2.AllowUserToDeleteRows = false;
             this.commonDataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.commonDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commonDataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -282,14 +275,15 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.Column8});
-            this.commonDataGridView2.Location = new System.Drawing.Point(766, 40);
+            this.commonDataGridView2.Location = new System.Drawing.Point(31, 270);
             this.commonDataGridView2.MultiSelect = false;
             this.commonDataGridView2.Name = "commonDataGridView2";
             this.commonDataGridView2.RowHeadersVisible = false;
             this.commonDataGridView2.RowTemplate.Height = 23;
             this.commonDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.commonDataGridView2.Size = new System.Drawing.Size(690, 474);
+            this.commonDataGridView2.Size = new System.Drawing.Size(690, 323);
             this.commonDataGridView2.TabIndex = 46;
+            this.commonDataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView2_CellDoubleClick);
             // 
             // dataGridViewCheckBoxColumn1
             // 
@@ -344,18 +338,18 @@
             // 
             // SelectGoods
             // 
+            this.AcceptButton = this.button3;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1370, 559);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(754, 629);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.commonDataGridView2);
             this.Controls.Add(this.commonDataGridView1);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox2);
@@ -386,7 +380,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button button6;
         private CommonControl.CommonDataGridView commonDataGridView1;
         private CommonControl.CommonDataGridView commonDataGridView2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;

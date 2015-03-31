@@ -60,13 +60,17 @@ namespace WeiXiu
 
         private void WeiXiuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (WeiXiuDataGridView1.CurrentCell.Value.ToString() == "查看")
+            if (this.WeiXiuDataGridView1.Rows.Count > 0)
             {
-               
-                WeiXiu_FanKuiDan tt = new WeiXiu_FanKuiDan();
-                tt.Wx = (WeiXiuFanKuiDan) this.WeiXiuDataGridView1.CurrentRow.Tag;
-                tt.SetAllTextEnableUnActive();
-                tt.ShowDialog();
+                if (WeiXiuDataGridView1.CurrentCell.Value.ToString() == "查看")
+                {
+                    this.WeiXiuDataGridView1.Cursor = Cursors.WaitCursor;
+                    WeiXiu_FanKuiDan tt = new WeiXiu_FanKuiDan();
+                    tt.Wx = (WeiXiuFanKuiDan)this.WeiXiuDataGridView1.CurrentRow.Tag;
+                    tt.SetAllTextEnableUnActive();
+                    tt.ShowDialog();
+                    this.WeiXiuDataGridView1.Cursor = Cursors.Default;
+                }
             }
         }
 

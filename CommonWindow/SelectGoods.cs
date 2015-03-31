@@ -69,7 +69,7 @@ namespace CommonWindow
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.button3.Enabled = false;
+            //this.button3.Enabled = false;
             IList showGoods;
             if(this.textBox2.Text != "")
             {
@@ -86,6 +86,7 @@ namespace CommonWindow
 
         public void ShowSelectInGrid1(IList showg)
         {
+            this.commonDataGridView1.Rows.Clear();
             IList showgrid1 = showg;
             if (showgrid1.Count > 0)
             {
@@ -140,19 +141,40 @@ namespace CommonWindow
                 string iftrue = this.commonDataGridView1.Rows[i].Cells[0].Value.ToString();
                 if ( iftrue ==  "True")
                 {
-                    DataGridViewRow selectrow = new DataGridViewRow();
-                    selectrow = this.commonDataGridView1.Rows[i];
-                    DataGridViewCell d = new DataGridViewTextBoxCell();
-                    //selectrow.Cells.Add(d);
-                    this.commonDataGridView1.Rows[i].Cells[0].Value = 0;
-                    this.commonDataGridView1.Rows.Remove(this.commonDataGridView1.Rows[i]);
-                    count = this.commonDataGridView1.Rows.Count;
-                    i--;
-                    this.commonDataGridView2.Rows.Add(selectrow);
+                    string a =(this.commonDataGridView1.Rows[i].Tag as object[])[7].ToString();
+                    if (!IsChoosed(a))
+                    {
+                        DataGridViewRow selectrow = new DataGridViewRow();
+                        selectrow = this.commonDataGridView1.Rows[i];
+                        DataGridViewCell d = new DataGridViewTextBoxCell();
+                        //selectrow.Cells.Add(d);
+                        this.commonDataGridView1.Rows[i].Cells[0].Value = 0;
+                        this.commonDataGridView1.Rows.Remove(this.commonDataGridView1.Rows[i]);
+                        count = this.commonDataGridView1.Rows.Count;
+                        i--;
+                        this.commonDataGridView2.Rows.Add(selectrow);
+                    }
                 }
             }
         }
 
+        /// <summary>
+        /// 判断是否已经选中
+        /// </summary>
+        /// <param name="id">货物的ID</param>
+        /// <returns>true代表已经选择了</returns>
+        private bool IsChoosed(string id)
+        {
+            for (int i = 0; i < this.commonDataGridView2.Rows.Count; i++)
+            {
+                string a = (this.commonDataGridView2.Rows[i].Tag as object[])[7].ToString();
+                if (a == id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         /// <summary>
         /// 移除
@@ -190,22 +212,27 @@ namespace CommonWindow
             this.textBox2.Text = SelectCate.GoodsName;
         }
 
+        /// <summary>
+        /// 查询选全部
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button6_Click(object sender, EventArgs e)
         {
-            this.textBox2.Text = "";
-            this.textBox1.Text = "";
-            this.textBox3.Text = "";
-            this.button3.Enabled = true;
-            this.commonDataGridView1.Rows.Clear();
+            //this.textBox2.Text = "";
+            //this.textBox1.Text = "";
+            //this.textBox3.Text = "";
+            //this.button3.Enabled = true;
+            //this.commonDataGridView1.Rows.Clear();
 
-            IList showGoods;
-            showGoods = opp.GetCategtoryBranching(1, this.textBox1.Text, this.textBox3.Text);
-            ShowSelectInGrid1(showGoods);
+            //IList showGoods;
+            //showGoods = opp.GetCategtoryBranching(1, this.textBox1.Text, this.textBox3.Text);
+            //ShowSelectInGrid1(showGoods);
         }
 
         private void SelectGoods_Load(object sender, EventArgs e)
         {
-            this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+            //this.Width = Screen.PrimaryScreen.WorkingArea.Width;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -263,6 +290,39 @@ namespace CommonWindow
                 i++;
             }
             return true;
+        }
+       
+       /// <summary>
+       /// 双击选中取消
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
+        private void commonDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string iftrue = this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            if (iftrue == "True")
+            {
+                this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value = false;
+                //this.commonDataGridView2.Rows.
+            }
+            else
+            {
+                this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value = true;
+            }
+        }
+
+        private void commonDataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string iftrue = this.commonDataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+            if (iftrue == "True")
+            {
+                this.commonDataGridView2.Rows[e.RowIndex].Cells[0].Value = false;
+                //this.commonDataGridView2.Rows.
+            }
+            else
+            {
+                this.commonDataGridView2.Rows[e.RowIndex].Cells[0].Value = true;
+            }
         }
     }
 }

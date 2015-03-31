@@ -47,11 +47,11 @@ namespace WorkProcedure
             set { isLiuZhuanBiao = value; }
         }
 
-        
+
         public LiuZhuanBiaoView_Detail()
         {
             InitializeComponent();
-      
+
         }
 
 
@@ -97,11 +97,11 @@ namespace WorkProcedure
                 this.textBox29.Text = receiveLiuZhuanDate.LNGConnectionHead;
                 this.textBox28.Text = receiveLiuZhuanDate.LNGConnectionHeadRemark;
                 this.textBox56.Text = receiveLiuZhuanDate.CNGConnectionInstaller;
-                this.textBox27.Text = receiveLiuZhuanDate.CNGConnectionHead;              
+                this.textBox27.Text = receiveLiuZhuanDate.CNGConnectionHead;
                 this.textBox55.Text = receiveLiuZhuanDate.MixerConnectionInstaller;
-                this.textBox25.Text = receiveLiuZhuanDate.MixerConnectionHead;               
+                this.textBox25.Text = receiveLiuZhuanDate.MixerConnectionHead;
                 this.textBox54.Text = receiveLiuZhuanDate.SpeedAcquisitionInstaller;
-                this.textBox23.Text = receiveLiuZhuanDate.SpeedAcquisitionHead;               
+                this.textBox23.Text = receiveLiuZhuanDate.SpeedAcquisitionHead;
                 this.textBox53.Text = receiveLiuZhuanDate.SpeedSignalInstaller;
                 this.textBox21.Text = receiveLiuZhuanDate.SpeedSignalHead;
                 this.textBox20.Text = receiveLiuZhuanDate.SpeedSignalRemark;
@@ -109,9 +109,9 @@ namespace WorkProcedure
                 this.textBox19.Text = receiveLiuZhuanDate.TemperatureSignalHead;
                 this.textBox18.Text = receiveLiuZhuanDate.TemperatureSignalRemark;
                 this.textBox51.Text = receiveLiuZhuanDate.FuelSignalInstaller;
-                this.textBox33.Text = receiveLiuZhuanDate.FuelSignalHead;               
+                this.textBox33.Text = receiveLiuZhuanDate.FuelSignalHead;
                 this.textBox50.Text = receiveLiuZhuanDate.SystemDebugInstaller; ;
-                this.textBox31.Text = receiveLiuZhuanDate.SystemDebugHead;               
+                this.textBox31.Text = receiveLiuZhuanDate.SystemDebugHead;
                 this.textBox34.Text = receiveLiuZhuanDate.TrainingLocation;
                 this.textBox35.Text = receiveLiuZhuanDate.Training;
                 this.textBox36.Text = receiveLiuZhuanDate.DriverGuideCollect;
@@ -128,30 +128,30 @@ namespace WorkProcedure
                 //}
                 //if (comboBox15.SelectedIndex != -1)
                 //{
-                    comboBox15.SelectedIndex = receiveLiuZhuanDate.AffectOriginalCar;
+                comboBox15.SelectedIndex = receiveLiuZhuanDate.AffectOriginalCar;
                 //}
 
                 //if (comboBox16.SelectedIndex != -1)
                 //{
-                    comboBox16.SelectedIndex = receiveLiuZhuanDate.AffectOriginalGasPedal;
+                comboBox16.SelectedIndex = receiveLiuZhuanDate.AffectOriginalGasPedal;
                 //}
 
                 //if (comboBox17.SelectedIndex != -1)
                 //{
-                    comboBox17.SelectedIndex = receiveLiuZhuanDate.AffectOriginalSpeed;
+                comboBox17.SelectedIndex = receiveLiuZhuanDate.AffectOriginalSpeed;
                 //}
 
                 //if (comboBox18.SelectedIndex != -1)
                 //{
-                    comboBox18.SelectedIndex = receiveLiuZhuanDate.AffectOriginalPower;
+                comboBox18.SelectedIndex = receiveLiuZhuanDate.AffectOriginalPower;
                 //}               
 
 
             }
-           
+
         }
 
-       
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -161,7 +161,7 @@ namespace WorkProcedure
         {
 
             OP_LZB oo = new OP_LZB();
-            receiveLiuZhuanDate.Factory=this.textBox43.Text;
+            receiveLiuZhuanDate.Factory = this.textBox43.Text;
             if (this.textBox42.Text == "")
             {
                 receiveLiuZhuanDate.EngingPower = 0;
@@ -212,7 +212,7 @@ namespace WorkProcedure
             receiveLiuZhuanDate.DriverGuideCollect = this.textBox36.Text;
             receiveLiuZhuanDate.TrainersSign = this.textBox37.Text;
             receiveLiuZhuanDate.TrainerDriverSign = this.textBox38.Text;
-            receiveLiuZhuanDate.TrainingDates = this.dateTimePicker1.Value.Ticks;          
+            receiveLiuZhuanDate.TrainingDates = this.dateTimePicker1.Value.Ticks;
             receiveLiuZhuanDate.AffectOriginalCar = comboBox15.SelectedIndex;
             receiveLiuZhuanDate.AffectOriginalGasPedal = comboBox16.SelectedIndex;
             receiveLiuZhuanDate.AffectOriginalSpeed = comboBox17.SelectedIndex;
@@ -227,7 +227,7 @@ namespace WorkProcedure
                 receiveLiuZhuanDate.EngingPower = float.Parse(this.textBox42.Text);
             }
 
-            receiveLiuZhuanDate.DieselOilFilterInstaller = this.textBox60.Text;       
+            receiveLiuZhuanDate.DieselOilFilterInstaller = this.textBox60.Text;
             receiveLiuZhuanDate.DieselOilFilterHead = textBox68.Text;
             receiveLiuZhuanDate.DieselOilFilterRemark = textBox67.Text;
             receiveLiuZhuanDate.PressurizerInstaller = textBox59.Text;
@@ -266,8 +266,8 @@ namespace WorkProcedure
             receiveLiuZhuanDate.WaterIsGoodPerson = textBox57.Text;
             receiveLiuZhuanDate.WaterIsGoodRemark = textBox29.Text;
             receiveLiuZhuanDate.WaterIsGoodSign = textBox28.Text;
-            
-           
+
+
             //if (comboBox16.Text == "是")
             //{
             //    receiveLiuZhuanDate.AffectOriginalGasPedal = (int)LiuZhuanBiao.YesNo.Yes;
@@ -292,11 +292,11 @@ namespace WorkProcedure
             //{
             //    receiveLiuZhuanDate.AffectOriginalPower = (int)LiuZhuanBiao.YesNo.No;
             //}
-           
-          
-                       
+
+
+
             oo.saveLiuZhuanBiao(receiveLiuZhuanDate);
-            MessageBox.Show("暂存成功");                  
+            MessageBox.Show("暂存成功");
             this.DialogResult = DialogResult.OK;
 
         }
@@ -326,11 +326,11 @@ namespace WorkProcedure
             receiveLiuZhuanDate.LNGConnectionHead = this.textBox29.Text;
             receiveLiuZhuanDate.LNGConnectionHeadRemark = this.textBox28.Text;
             receiveLiuZhuanDate.CNGConnectionInstaller = this.textBox56.Text;
-            receiveLiuZhuanDate.CNGConnectionHead = this.textBox27.Text;          
+            receiveLiuZhuanDate.CNGConnectionHead = this.textBox27.Text;
             receiveLiuZhuanDate.MixerConnectionInstaller = this.textBox55.Text;
-            receiveLiuZhuanDate.MixerConnectionHead = this.textBox25.Text;         
+            receiveLiuZhuanDate.MixerConnectionHead = this.textBox25.Text;
             receiveLiuZhuanDate.SpeedAcquisitionInstaller = this.textBox54.Text;
-            receiveLiuZhuanDate.SpeedAcquisitionHead = this.textBox23.Text;          
+            receiveLiuZhuanDate.SpeedAcquisitionHead = this.textBox23.Text;
             receiveLiuZhuanDate.SpeedSignalInstaller = this.textBox53.Text;
             receiveLiuZhuanDate.SpeedSignalHead = this.textBox21.Text;
             receiveLiuZhuanDate.SpeedSignalRemark = this.textBox20.Text;
@@ -338,9 +338,9 @@ namespace WorkProcedure
             receiveLiuZhuanDate.TemperatureSignalHead = this.textBox19.Text;
             receiveLiuZhuanDate.TemperatureSignalRemark = this.textBox18.Text;
             receiveLiuZhuanDate.FuelSignalInstaller = this.textBox51.Text;
-            receiveLiuZhuanDate.FuelSignalHead = this.textBox33.Text;         
+            receiveLiuZhuanDate.FuelSignalHead = this.textBox33.Text;
             receiveLiuZhuanDate.SystemDebugInstaller = this.textBox50.Text; ;
-            receiveLiuZhuanDate.SystemDebugHead = this.textBox31.Text;         
+            receiveLiuZhuanDate.SystemDebugHead = this.textBox31.Text;
             receiveLiuZhuanDate.TrainingLocation = this.textBox34.Text;
             receiveLiuZhuanDate.Training = this.textBox35.Text;
             receiveLiuZhuanDate.DriverGuideCollect = this.textBox36.Text;
@@ -430,20 +430,14 @@ namespace WorkProcedure
             this.button5.Enabled = false;
         }
 
+
         private void button4_Click(object sender, EventArgs e)
         {
             CommonMethod.DocumentPrint print = new CommonMethod.DocumentPrint();
             print.DocPrint(panel1);
         }
 
-            
-            
-            //if (MessageBox.Show(this, "您确定提交吗?", "提示信息", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
-            //    MessageBox.Show("恭喜您提交成功", "提示信息");
-            //}
-           
-        }
+    }
 
      
     }

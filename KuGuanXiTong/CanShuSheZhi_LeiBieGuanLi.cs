@@ -89,7 +89,8 @@ namespace KuGuanXiTong
                     if (r.GoodsClassLevel == 1)
                     {
                         TreeNode node = new TreeNode();
-                        node.Text = r.GoodsClassCode+" "+r.GoodsName;
+                        string Specifications = r.Specifications == null ? "" : r.Specifications;
+                        node.Text = r.GoodsClassCode + " " + r.GoodsName + Specifications;
                         node.Tag = r;
                         pNode.Nodes.Add(node);
                         treeNodes.Add(r.Id, node);
@@ -100,7 +101,8 @@ namespace KuGuanXiTong
                         if (fatherNode != null)
                         {
                             TreeNode node = new TreeNode();
-                            node.Text = r.GoodsClassCode + " " + r.GoodsName ;
+                            string Specifications = r.Specifications == null ? "" : r.Specifications;
+                            node.Text = r.GoodsClassCode + " " + r.GoodsName + Specifications;
                             node.Tag = r;
 
                             fatherNode.Nodes.Add(node);

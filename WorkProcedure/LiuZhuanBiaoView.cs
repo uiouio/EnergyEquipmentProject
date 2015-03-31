@@ -37,26 +37,27 @@ namespace WorkProcedure
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            if (e.ColumnIndex == 8)
+            if (this.LiuZhuanBiaoDataGridView1.Rows.Count > 0)
             {
-                LiuZhuanBiaoView_Detail tt = new LiuZhuanBiaoView_Detail();
-                tt.ReceiveLiuZhuanDate = (LiuZhuanBiao)this.LiuZhuanBiaoDataGridView1.CurrentRow.Tag;
-                tt.ShowDialog();
-                if (tt.DialogResult == DialogResult.OK)
+                if (e.ColumnIndex == 8)
                 {
-
-                    this.LiuZhuanBiaoDataGridView1.CurrentRow.Tag = tt.ReceiveLiuZhuanDate;
-                    if (tt.ReceiveLiuZhuanDate.ScratchSaveState == (int)LiuZhuanBiao.ScratchSave.Save)
+                    LiuZhuanBiaoView_Detail tt = new LiuZhuanBiaoView_Detail();
+                    tt.ReceiveLiuZhuanDate = (LiuZhuanBiao)this.LiuZhuanBiaoDataGridView1.CurrentRow.Tag;
+                    tt.ShowDialog();
+                    if (tt.DialogResult == DialogResult.OK)
                     {
-                        this.LiuZhuanBiaoDataGridView1.Rows[e.RowIndex].Cells[8].Value = "查看";
-                        this.LiuZhuanBiaoDataGridView1.Rows[e.RowIndex].Cells[7].Value = DateTime.Now.ToString("yyyy-MM-dd");
-                    }
 
+                        this.LiuZhuanBiaoDataGridView1.CurrentRow.Tag = tt.ReceiveLiuZhuanDate;
+                        if (tt.ReceiveLiuZhuanDate.ScratchSaveState == (int)LiuZhuanBiao.ScratchSave.Save)
+                        {
+                            this.LiuZhuanBiaoDataGridView1.Rows[e.RowIndex].Cells[8].Value = "查看";
+                            this.LiuZhuanBiaoDataGridView1.Rows[e.RowIndex].Cells[7].Value = DateTime.Now.ToString("yyyy-MM-dd");
+                        }
+
+                    }
                 }
             }
         }
-
 
         public void ShowGridView()
         {
