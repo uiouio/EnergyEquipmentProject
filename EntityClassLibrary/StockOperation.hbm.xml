@@ -21,7 +21,7 @@
       <one-to-many class="EntityClassLibrary.StockOperationDetail,EntityClassLibrary" />
     </bag>
 
-    
+    <property name="IsCanChange" column="IsCanChange" type="int" length="1" />
     
     <property name="HistoryId" column="HistoryId" type="long" length="10" />
     <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>

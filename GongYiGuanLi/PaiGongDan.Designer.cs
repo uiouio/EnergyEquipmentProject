@@ -441,11 +441,11 @@
             // 
             // Column2
             // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.FillWeight = 102.7411F;
             this.Column2.HeaderText = "合同号";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 236;
             // 
             // Column3
             // 
