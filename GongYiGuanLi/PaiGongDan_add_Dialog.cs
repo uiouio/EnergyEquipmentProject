@@ -106,7 +106,7 @@ namespace GongYiGuanLi
                         rwg.AddType = (int)RefitWorkGoods.IfAdd.Add;
                     }
                     rwg.ReceiveType = (int)RefitWorkGoods.ReceiveTypeEnum.NotReceive;
-                    rwg.Count = Convert.ToInt32(g[9]);
+                    rwg.Count = float.Parse(g[9].ToString());
                     GoodsBaseInfo gbi = new GoodsBaseInfo();
                     gbi.Id = Convert.ToInt64(g[7]);
                     rwg.GoodsBaseInfoId = gbi;

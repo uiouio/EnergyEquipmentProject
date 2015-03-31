@@ -264,7 +264,7 @@ namespace CaiGouXiTong
                         this.commonDataGridView1.Rows.Add(p[0].ToString(),
                             p[1].ToString(),
                             p[2].ToString(), p[3].ToString(),
-                            p[4].ToString(), Convert.ToInt64(p[9]),
+                            p[4].ToString(), Convert.ToDouble(p[9]),
                            (stocknum == -1 ? "库存无记录" : stocknum.ToString()),
                         Convert.ToInt64(p[9]), "删除");
                         this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = p;

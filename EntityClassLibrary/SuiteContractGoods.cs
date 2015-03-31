@@ -8,8 +8,8 @@ namespace EntityClassLibrary
     public class SuiteContractGoods : BaseEntity
     {
        
-        private int count;
-        public virtual int Count
+        private float count;
+        public virtual float Count
         {
             get { return count; }
             set { count = value; }

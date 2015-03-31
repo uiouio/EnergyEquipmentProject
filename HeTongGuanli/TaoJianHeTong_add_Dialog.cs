@@ -103,7 +103,7 @@ namespace HeTongGuanLi
                     foreach (Object[] g in goods)
                     {
                         SuiteContractGoods scg = new SuiteContractGoods();
-                        scg.Count = Convert.ToInt32(g[9]);
+                        scg.Count = float.Parse(g[9].ToString());
                         GoodsBaseInfo gbi = new GoodsBaseInfo();
                         gbi.Id = Convert.ToInt64(g[7]);
                         scg.GoodsBaseInfoId = gbi;

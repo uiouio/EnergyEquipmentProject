@@ -212,7 +212,7 @@ namespace WeiXiu
             {
                 foreach (object[] o in goodslist)
                 {
-                    this.commonDataGridView1.Rows.Add(o[2].ToString(), o[3].ToString(), o[4].ToString(), o[5].ToString(), Convert.ToInt32(o[9]));
+                    this.commonDataGridView1.Rows.Add(o[2].ToString(), o[3].ToString(), o[4].ToString(), o[5].ToString(), Convert.ToDouble(o[9]));
                     this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = o;
                 }
             }

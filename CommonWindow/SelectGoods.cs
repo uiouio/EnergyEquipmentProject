@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using EntityClassLibrary;
 using CommonWindow.Service;
 using System.Collections;
-
+using CommonMethod;
 namespace CommonWindow
 {
     public partial class SelectGoods : CommonControl.BaseForm
@@ -254,7 +254,6 @@ namespace CommonWindow
         {
             if (IsGoodsNoNum())
             {
-
                 ReturnIlist = new List<object[]>();
                 int count = this.commonDataGridView2.Rows.Count;
                 for (int i = 0; i < count; i++)
@@ -281,13 +280,18 @@ namespace CommonWindow
             //bool bol = true;
             int count = this.commonDataGridView2.Rows.Count;
 
-            for (int i = 0; i < count; i++ )
+            TestInput test = new TestInput ();
+            for (int i = 0; i < count; i++)
             {
-                if ( 
-                    !( 
-                    (this.commonDataGridView2.Rows[i].Cells[8].Value == null ? 0 : long.Parse(this.commonDataGridView2.Rows[i].Cells[8].Value.ToString()))>0))
+                if (this.commonDataGridView2.Rows[i].Cells[8].Value != null)
+                {
+                    if (!test.TestDecimal(this.commonDataGridView2.Rows[i].Cells[8].Value.ToString())||float.Parse(this.commonDataGridView2.Rows[i].Cells[8].Value.ToString())<=0)
+                    {
+                        return false;
+                    }
+                }
+                else
                     return false;
-                i++;
             }
             return true;
         }

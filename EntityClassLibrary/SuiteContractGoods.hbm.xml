@@ -8,7 +8,7 @@
     </id>
 
    
-    <property name="Count" column="Count" type="int" length="5" />
+    <property name="Count" column="Count" type="float" />
    
     <many-to-one name="GoodsBaseInfoId" column="GoodsBaseInfoId" lazy="false" not-null="true"
                 class="EntityClassLibrary.GoodsBaseInfo, EntityClassLibrary" />

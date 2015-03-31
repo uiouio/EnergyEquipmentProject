@@ -6,7 +6,7 @@
     <id name="Id" column="Id" type="long"  length="10" unsaved-value="0">
       <generator class="native" />
     </id>
-    <property name="Count" column="Count" type="int" length="5" />
+    <property name="Count" column="Count" type="float"  />
     <many-to-one name="GoodsBaseInfoId" column="GoodsBaseInfoId" lazy="false" not-null="true"
                 class="EntityClassLibrary.GoodsBaseInfo, EntityClassLibrary" />
     <many-to-one name="RefitWorkId" column="RefitWorkModelId" lazy="false" 

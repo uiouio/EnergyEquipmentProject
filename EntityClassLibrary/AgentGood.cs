@@ -6,9 +6,9 @@ namespace EntityClassLibrary
 {
    public  class AgentGood:BaseEntity
     {
-        private int count;
+        private float count;
 
-        public virtual int Count
+        public virtual float Count
         {
             get { return count; }
             set { count = value; }

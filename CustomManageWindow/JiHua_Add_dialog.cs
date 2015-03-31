@@ -106,7 +106,7 @@ namespace CustomManageWindow
                     i++;
                     commonDataGridView1.Rows.Add(0,i.ToString(),s[8],s[1],s[9],s[4],s[2],this.UserInfo.Name,DateTime.Now.ToLongDateString());
                     AgentGood ag = new AgentGood();
-                    ag.Count = Convert.ToInt32(s[9]);
+                    ag.Count = float.Parse(s[9].ToString());
                     GoodsBaseInfo gbi = new GoodsBaseInfo();
                     gbi.Id = Convert.ToInt64(s[7]);
                     ag.GoodsBaseInfoId = gbi;

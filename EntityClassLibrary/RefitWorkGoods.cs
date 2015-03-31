@@ -13,8 +13,8 @@ namespace EntityClassLibrary
             get { return receiveType; }
             set { receiveType = value; }
         }
-        private int count;
-        public virtual int Count
+        private float count;
+        public virtual float Count
         {
             get { return count; }
             set { count = value; }
