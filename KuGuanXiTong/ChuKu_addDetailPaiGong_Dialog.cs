@@ -20,8 +20,8 @@ namespace KuGuanXiTong
             get { return stockOp; }
             set { stockOp = value; }
         }
-        private int differenceCount;
-        public int DifferenceCount
+        private Double differenceCount;
+        public Double DifferenceCount
         {
             get { return differenceCount; }
             set { differenceCount = value; }
@@ -95,7 +95,7 @@ namespace KuGuanXiTong
         private void button1_Click(object sender, EventArgs e)
         {
             TestInput testInput = new TestInput();
-            if (textBox_Count.Text.Trim() == "" || !testInput.TestNum(textBox_Count.Text.Trim()))
+            if (textBox_Count.Text.Trim() == "" || !testInput.TestDecimal(textBox_Count.Text.Trim()))
             {
                 MessageBox.Show("输入数量格式不正确！");
                 textBox_Count.Text = "";
@@ -109,7 +109,7 @@ namespace KuGuanXiTong
                 textBox_goodsCode.Focus();
                 return;
             }
-            if ((differenceCount - Convert.ToInt32(textBox_Count.Text.Trim())) < 0)
+            if ((differenceCount - Convert.ToDouble(textBox_Count.Text.Trim())) < 0)
             {
                 MessageBox.Show("所出数量超出待出数量！");
                 textBox_Count.Text = "";
@@ -153,7 +153,7 @@ namespace KuGuanXiTong
                 chuKuService.SaveOrUpdateEntity(sod);
 
                 detailList.Add(sod);
-                differenceCount -= Convert.ToInt32(textBox_Count.Text.Trim());
+                differenceCount -= Convert.ToDouble(textBox_Count.Text.Trim());
 
                 IList<StockOperationDetail> sodList = new List<StockOperationDetail>();
                 sodList.Add(sod);

@@ -43,25 +43,33 @@ namespace WorkProcedure
 
         private void commonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            if (commonDataGridView1.CurrentCell.Value.ToString() == "派工")
+            if (this.commonDataGridView1.Rows.Count > 0)
             {
-                GongZuoZhuXuanZe gongZuoZhuXuanZe = new GongZuoZhuXuanZe();
-                gongZuoZhuXuanZe.RefitWork = (RefitWork)this.commonDataGridView1.Rows[e.RowIndex].Tag;
-                gongZuoZhuXuanZe.ShowDialog();
-
-                if (gongZuoZhuXuanZe.DialogResult == DialogResult.OK)
+                if (commonDataGridView1.CurrentCell.Value != null)
                 {
-                    this.commonDataGridView1.CurrentRow.Tag = gongZuoZhuXuanZe.RefitWork;
-                    if (gongZuoZhuXuanZe.RefitWork.DispatchState == (int)RefitWork.SaveDispatchingDispatchReceive.Dispacth)
+                    if (commonDataGridView1.CurrentCell.Value.ToString() == "派工")
                     {
-                        this.commonDataGridView1.Rows[e.RowIndex].Cells[9].Value = DateTime.Now.ToString("yyyy-MM-dd");
-                        this.commonDataGridView1.Rows[e.RowIndex].Cells[10].Value = "已派工";
-                        this.commonDataGridView1.Rows[e.RowIndex].Cells[11].Value = "";
+                        this.commonDataGridView1.Cursor = Cursors.WaitCursor;
+                        GongZuoZhuXuanZe gongZuoZhuXuanZe = new GongZuoZhuXuanZe();
+                        gongZuoZhuXuanZe.RefitWork = (RefitWork)this.commonDataGridView1.Rows[e.RowIndex].Tag;
+                        gongZuoZhuXuanZe.ShowDialog();
+                        
+
+                        if (gongZuoZhuXuanZe.DialogResult == DialogResult.OK)
+                        {
+                            this.commonDataGridView1.CurrentRow.Tag = gongZuoZhuXuanZe.RefitWork;
+                            if (gongZuoZhuXuanZe.RefitWork.DispatchState == (int)RefitWork.SaveDispatchingDispatchReceive.Dispacth)
+                            {
+                                this.commonDataGridView1.Rows[e.RowIndex].Cells[9].Value = DateTime.Now.ToString("yyyy-MM-dd");
+                                this.commonDataGridView1.Rows[e.RowIndex].Cells[10].Value = "已派工";
+                                this.commonDataGridView1.Rows[e.RowIndex].Cells[11].Value = "";
+                            }
+                        }
+                        this.commonDataGridView1.Cursor = Cursors.Default;
+
                     }
                 }
             }
-
         }
 
         public void ShowPaiGongDan()  //方法

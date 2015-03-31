@@ -47,8 +47,10 @@ namespace WeiXiu
 
         private void WeiXiuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 9)
+            if (e.ColumnIndex == 9&&this.WeiXiuDataGridView1.Rows.Count>0)
             {
+                this.WeiXiuDataGridView1.Cursor = Cursors.WaitCursor;
+
                 WeiXiu_FanKuiDan tt = new WeiXiu_FanKuiDan();
                 tt.Wx = (WeiXiuFanKuiDan)this.WeiXiuDataGridView1.CurrentRow.Tag;
                 tt.ShowDialog();
@@ -60,7 +62,9 @@ namespace WeiXiu
                         this.WeiXiuDataGridView1.Rows[e.RowIndex].Cells[9].Value = "查看";
                     }
                 }
+                this.WeiXiuDataGridView1.Cursor = Cursors.Default;
             }
+
 
         }
 

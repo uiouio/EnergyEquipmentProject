@@ -116,13 +116,19 @@ namespace JianJian
                         {
                             this.JianJian2DataGridView1.Rows.Add(0, i.ToString(), c.CarTheLibrary.RefitWork.CarInfo.Cbi.Name, "CNG柴油", c.CarTheLibrary.RefitWork.CarInfo.PlateNumber,
                                 c.CarTheLibrary.RefitWork.CarInfo.Cbi.Telephone, new DateTime(c.Batch.Date).ToString("yyyy-MM-dd"), c.Status == 0 ? "未监检" : "已经监检", "查看", car.Pass == 0 ? "填写" : "查看", "删除");
-                        }else if(c.CarTheLibrary.RefitWork.CarInfo.ModidiedType==2)
+                        }
+                        else if (c.CarTheLibrary.RefitWork.CarInfo.ModidiedType == 2)
                         {
                             this.JianJian2DataGridView1.Rows.Add(0, i.ToString(), c.CarTheLibrary.RefitWork.CarInfo.Cbi.Name, "LcjzrtNG柴油", c.CarTheLibrary.RefitWork.CarInfo.PlateNumber,
                                 c.CarTheLibrary.RefitWork.CarInfo.Cbi.Telephone, new DateTime(c.Batch.Date).ToString("yyyy-MM-dd"), c.Status == 0 ? "未监检" : "已经监检", "查看", car.Pass == 0 ? "填写" : "查看", "删除");
                         }
                     }
-                    
+
+                }
+                else
+                {
+                    MessageBox.Show("没有数据…");
+                
                 }
                 //Currentss = null;
             }

@@ -171,7 +171,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.shapeContainer1);
             this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(45, 12);
+            this.groupBox1.Location = new System.Drawing.Point(42, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(934, 681);
             this.groupBox1.TabIndex = 7;
@@ -719,18 +719,18 @@
             this.button1.Text = "确定";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // ZiLiaoShenCha_ChaiYouCNGChaKan
+            // UNDOZiLiaoShenCha_ChaiYouCNGChaKan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1019, 738);
+            this.ClientSize = new System.Drawing.Size(796, 573);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "ZiLiaoShenCha_ChaiYouCNGChaKan";
+            this.Name = "UNDOZiLiaoShenCha_ChaiYouCNGChaKan";
             this.Text = "资料审查柴油CNG_查看";
             this.Load += new System.EventHandler(this.ZiLiaoShenCha_ChaiYouCNGChaKan_Load);
             this.groupBox1.ResumeLayout(false);

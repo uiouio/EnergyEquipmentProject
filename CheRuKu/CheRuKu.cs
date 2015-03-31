@@ -39,30 +39,33 @@ namespace CheRuKu
             CheRuKuDataGridView1.Rows.Clear();
             ShowGridView();
         }
-       
+
         private void CheRuKuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex==8)
+            if (this.CheRuKuDataGridView1.Rows.Count > 0)
             {
-                CheRuKuDan tt = new CheRuKuDan();
-                //Object [] i= (Object []);
-                // (CheRuKuInfo)i[0];
-                //CheRuKuInfo cc = new CheRuKuInfo();
-                //cc = 
-                tt.CheRuKuInfo = (this.CheRuKuDataGridView1.Rows[e.RowIndex].Tag as Object[])[0] as CheRuKuInfo;
-                   
-                tt.ShowDialog();
-                if (tt.DialogResult == DialogResult.OK)
+                if (e.ColumnIndex == 8)
                 {
-                   
-                    this.CheRuKuDataGridView1.CurrentRow.Tag = tt.CheRuKuInfo;
-                    if (tt.CheRuKuInfo.Status == (int)EntityClassLibrary.CheRuKuInfo.savecheck.check)
+                    CheRuKuDan tt = new CheRuKuDan();
+                    //Object [] i= (Object []);
+                    // (CheRuKuInfo)i[0];
+                    //CheRuKuInfo cc = new CheRuKuInfo();
+                    //cc = 
+                    tt.CheRuKuInfo = (this.CheRuKuDataGridView1.Rows[e.RowIndex].Tag as Object[])[0] as CheRuKuInfo;
+
+                    tt.ShowDialog();
+                    if (tt.DialogResult == DialogResult.OK)
                     {
-                        this.CheRuKuDataGridView1.Rows[e.RowIndex].Cells[7].Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
-                        this.CheRuKuDataGridView1.Rows[e.RowIndex].Cells[8].Value = "查看";
+
+                        this.CheRuKuDataGridView1.CurrentRow.Tag = tt.CheRuKuInfo;
+                        if (tt.CheRuKuInfo.Status == (int)EntityClassLibrary.CheRuKuInfo.savecheck.check)
+                        {
+                            this.CheRuKuDataGridView1.Rows[e.RowIndex].Cells[7].Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+                            this.CheRuKuDataGridView1.Rows[e.RowIndex].Cells[8].Value = "查看";
+                        }
                     }
+
                 }
-               
             }
         }
 

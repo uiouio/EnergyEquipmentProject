@@ -52,7 +52,7 @@ namespace CommonWindow.Service
                         "(select m.GoodsClassCode as gcode,m.GoodsName as gname ,m.Specifications as gsp,m.Material as gma ,m.Unit " +
                         " as gunit,m.GoodsParentClassId as gpid,t.Quan as gquan ,m.Id as gid from (select cte.* from cte where cte.State = 0 and cte.GoodsFlag <>1) m left join " +
                         "(select GoodsBaseInfoID, SUM(Quantity) as Quan, sum([Money])/COUNT(*) as MM, sum(StorehouseplaceCode)/COUNT(*) as SS from Stock where State = 0 group by GoodsBaseInfoID) t on  t.GoodsBaseInfoID = m.Id ) g , " +
-                        " GoodsBaseInfo where g.gpid = GoodsBaseInfo.Id) gg where gg.gname like '%" + name + "%' and gg.gcode like '%" + code + "%'";
+                        " GoodsBaseInfo where g.gpid = GoodsBaseInfo.Id) gg where ( gg.gname like '%" + name + "%'  or gg.gsp like '%" + name + "%') and gg.gcode like '%" + code + "%'";
 
             i = this.ExecuteSQL(sql);
 

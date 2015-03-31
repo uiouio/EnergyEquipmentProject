@@ -107,7 +107,7 @@ namespace KuGuanXiTong
                                     Opstoc.OperationTpye = (long)StockOperation.OpTypeFlag.OutByBrokenParts;
                                     Opstoc.IOFlag = (long)StockOperation.InOrOutFlag.Out;
                                     Opstoc.OperationTime = DateTime.Now.Ticks;
-                                    Opstoc.Remark = this.commonDataGridView1.Rows[i].Cells[10].ToString();
+                                    Opstoc.Remark = this.commonDataGridView1.Rows[i].Cells[10].Value == null?"":this.commonDataGridView1.Rows[i].Cells[10].Value.ToString();
                                     Opstoc.UserId = User;
                                     Opstoc.RetrospectListNumber = newbroke.Id.ToString();
 
@@ -123,7 +123,7 @@ namespace KuGuanXiTong
                                     opdet.GoodsCode = this.commonDataGridView1.Rows[i].Cells[2].Value.ToString();
                                     opdet.Quantity = Convert.ToInt64(this.commonDataGridView1.Rows[i].Cells[7].Value);
 
-                                    ops.SaveOrUpdateEntity(stos);
+                                    ops.SaveOrUpdateEntity(opdet);
 
                                     this.commonDataGridView1.Rows.RemoveAt(i);
                                     i--;

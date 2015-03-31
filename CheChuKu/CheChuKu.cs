@@ -125,31 +125,31 @@ namespace CheChuKu
                     //i++;
                 //}
             }
-        
+
 
         private void commonDataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            //if(e.ColumnIndex==)
-
-            //出库操作
-            if (e.ColumnIndex==6)
+            if (this.commonDataGridView1.Rows.Count > 0)
             {
-                CheChuKuDan chk = new CheChuKuDan();
-                chk.RefitWork = this.commonDataGridView1.CurrentRow.Tag as RefitWork;
-                chk.ShowDialog();
-
-                if (chk.DialogResult == DialogResult.OK)
+                //出库操作
+                if (e.ColumnIndex == 6)
                 {
-                    this.commonDataGridView1.Rows.Remove(this.commonDataGridView1.CurrentRow);
-                    this.CheChuKuDataGridView1.Rows.Add(0, this.CheChuKuDataGridView1.Rows.Count + 1, chk.SendCarTheLibrary.RefitWork.ContractNo, chk.SendCarTheLibrary.RefitWork.DispatchOrder,
-                       chk.SendCarTheLibrary.RefitWork.CarInfo.PlateNumber, chk.SendCarTheLibrary.RefitWork.CarInfo.VehicleType,
-                         new DateTime(chk.SendCarTheLibrary.FinishTime).ToString("yyyy-MM-dd"));
-                
-                }
+                    CheChuKuDan chk = new CheChuKuDan();
+                    chk.RefitWork = this.commonDataGridView1.CurrentRow.Tag as RefitWork;
+                    chk.ShowDialog();
 
+                    if (chk.DialogResult == DialogResult.OK)
+                    {
+                        this.commonDataGridView1.Rows.Remove(this.commonDataGridView1.CurrentRow);
+                        this.CheChuKuDataGridView1.Rows.Add(0, this.CheChuKuDataGridView1.Rows.Count + 1, chk.SendCarTheLibrary.RefitWork.ContractNo, chk.SendCarTheLibrary.RefitWork.DispatchOrder,
+                           chk.SendCarTheLibrary.RefitWork.CarInfo.PlateNumber, chk.SendCarTheLibrary.RefitWork.CarInfo.VehicleType,
+                             new DateTime(chk.SendCarTheLibrary.FinishTime).ToString("yyyy-MM-dd"));
+
+                    }
+
+                }
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.button1.Cursor = Cursors.WaitCursor;
