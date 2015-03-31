@@ -81,7 +81,7 @@ namespace GongYiGuanLi
         {
             if (goodsList != null && goodsList.Count > 0)
             {
-                int i = 0;
+                int i = this.commonDataGridView.Rows.Count;
                 foreach (Object[] g in goodsList)
                 {
                     i++;
