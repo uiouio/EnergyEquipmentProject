@@ -117,7 +117,9 @@ namespace KuGuanXiTong
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            this.treeView1.Cursor = Cursors.WaitCursor;
             this.button3.Visible = false; //删除按钮
+            this.button2.Enabled = false;
             this.textBox9.Text = "";
             //打印条码
             this.button5.Enabled = false;
@@ -233,7 +235,7 @@ namespace KuGuanXiTong
                 }
 
             }
-
+            this.treeView1.Cursor = Cursors.Default;
         }
 
         public void ReadOnlyAllTextBox()
@@ -285,14 +287,14 @@ namespace KuGuanXiTong
         public void EnableButton()
         {
             this.button1.Enabled = true;
-            this.button3.Enabled = true;
+            //this.button3.Visible = true;
             this.button4.Enabled = true;
         }
 
         public void UnEnableButton()
         {
             this.button1.Enabled = false;
-            this.button3.Enabled = false;
+            //this.button3.Visible = false;
             this.button2.Enabled = false;
             this.button4.Enabled = false;
             this.button5.Enabled = false;
@@ -309,7 +311,7 @@ namespace KuGuanXiTong
             {
                 this.button2.Enabled = true;
                 this.button1.Enabled = false;
-                this.button3.Enabled = false;
+                this.button3.Visible = false;
             }
 
             UnReadOnlyAllTextBox();
@@ -396,7 +398,7 @@ namespace KuGuanXiTong
             ReadOnlyAllTextBox();
             this.button2.Enabled = false;
             this.button1.Enabled = true;
-            this.button3.Enabled = true;
+            //this.button3.Visible = true;
         }
 
         /// <summary>
@@ -510,10 +512,7 @@ namespace KuGuanXiTong
 
         }
 
-        private void linkLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         /// <summary>
         /// 删除按钮
@@ -534,6 +533,13 @@ namespace KuGuanXiTong
                 //RefreshTree(categtory.GetAllCategtory());
                 
                 MessageBox.Show("删除成功！");
+                this.button3.Visible = false;
+
+                this.button4.Enabled = false;
+                this.button5.Enabled = false;
+                this.button2.Enabled = false;
+                this.button1.Enabled = false;
+                
             }
 
         }
@@ -577,6 +583,11 @@ namespace KuGuanXiTong
             Ischanged = 1;
             
            
+        }
+
+        private void linkLabel1_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
