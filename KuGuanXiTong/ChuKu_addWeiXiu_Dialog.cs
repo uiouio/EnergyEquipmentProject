@@ -10,11 +10,13 @@ using EntityClassLibrary;
 using CommonWindow;
 using System.Collections;
 using CommonMethod;
+using KuGuanXiTong.Service;
 
 namespace KuGuanXiTong
 {
     public partial class ChuKu_addWeiXiu_Dialog : CommonControl.BaseForm
     {
+        OpStock opstock = new OpStock();
         Service.ChuKuService chuKuService = new Service.ChuKuService();
         private Object[] objectRefitWork;
         public Object[] ObjectRefitWork
@@ -36,6 +38,11 @@ namespace KuGuanXiTong
             addItemToDataGridViewEntity(refitWork.ServiceGoods);
             if (stockOperation != null)
             {
+                IList ilist = opstock.GetOpdetail(stockOperation.Id);
+                foreach (StockOperationDetail sp in ilist)
+                {
+                    stockOperation.OperationDetails.Add(sp);
+                }
                 initChuKuInfo(stockOperation.OperationDetails);
             }
         }

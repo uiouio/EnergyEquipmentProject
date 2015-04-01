@@ -10,11 +10,13 @@ using EntityClassLibrary;
 using CommonWindow;
 using System.Collections;
 using CommonMethod;
+using KuGuanXiTong.Service;
 
 namespace KuGuanXiTong
 {
     public partial class ChuKu_addTaoJian_Dialog : CommonControl.BaseForm
     {
+        OpStock opstock = new OpStock();
         Service.ChuKuService chuKuService = new Service.ChuKuService();
         private Object[] objectRefitWork;
         public Object[] ObjectRefitWork
@@ -39,6 +41,11 @@ namespace KuGuanXiTong
             
             if (stockOperation != null)
             {
+                IList ilist = opstock.GetOpdetail(stockOperation.Id);
+                foreach (StockOperationDetail sp in ilist)
+                {
+                    stockOperation.OperationDetails.Add(sp);
+                }
                 initChuKuInfo(stockOperation.OperationDetails);
             }
         }
@@ -59,8 +66,8 @@ namespace KuGuanXiTong
                             DeliverySuiteRecords rwg = (DeliverySuiteRecords)obj[0];
                             if (rwg.GoodsInfoId.Id==r.GoodsInfoId.Id)
                             {
-                                row.Cells[5].Value = rwg.Deliverycount + Convert.ToInt32(row.Cells[5].Value);
-                                row.Cells[6].Value = rwg.Deliverycount + Convert.ToInt32(row.Cells[6].Value);
+                                row.Cells[5].Value = rwg.Deliverycount + Convert.ToDouble(row.Cells[5].Value);
+                                row.Cells[6].Value = rwg.Deliverycount + Convert.ToDouble(row.Cells[6].Value);
                                 return;
                             }
                         }
@@ -118,7 +125,7 @@ namespace KuGuanXiTong
             if (e.ColumnIndex == 7)
             {
                 ChuKu_addDetailTaoJian_Dialog cadd = new ChuKu_addDetailTaoJian_Dialog();
-                cadd.DifferenceCount = Convert.ToInt32(r.Cells[6].Value);
+                cadd.DifferenceCount = Convert.ToDouble(r.Cells[6].Value);
                 cadd.ChuKuDetail = rwg;
                 cadd.StockOp = (StockOperation)objectRefitWork[1];
                 cadd.UserInfo = this.UserInfo;

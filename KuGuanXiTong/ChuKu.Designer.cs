@@ -197,6 +197,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(415, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(73, 23);

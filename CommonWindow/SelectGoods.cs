@@ -285,7 +285,7 @@ namespace CommonWindow
             {
                 if (this.commonDataGridView2.Rows[i].Cells[8].Value != null)
                 {
-                    if (!test.TestDecimal(this.commonDataGridView2.Rows[i].Cells[8].Value.ToString())||float.Parse(this.commonDataGridView2.Rows[i].Cells[8].Value.ToString())<=0)
+                    if (!test.TestDecimal(this.commonDataGridView2.Rows[i].Cells[8].Value.ToString()))
                     {
                         return false;
                     }

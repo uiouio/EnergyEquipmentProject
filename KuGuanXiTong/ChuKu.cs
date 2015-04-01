@@ -183,6 +183,7 @@ namespace KuGuanXiTong
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            this.button1.Cursor = Cursors.WaitCursor;
             if (comboBox_FormType.SelectedIndex == 0)
             {
                 Object[] formList = chuKuService.getRefitWorkByStateAndRefitNum(textBox1.Text.Trim());
@@ -198,6 +199,7 @@ namespace KuGuanXiTong
                 Object[] formList = chuKuService.getSuitByStateAndSuitNum(textBox1.Text.Trim());
                 initDataGridViewSuit(formList);
             }
+            this.button1.Cursor = Cursors.Hand;
         }
 
         /// <summary>

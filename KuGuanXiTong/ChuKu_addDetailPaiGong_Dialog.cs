@@ -150,9 +150,12 @@ namespace KuGuanXiTong
                 sod.StockOperationId = stockOp;
                 sod.StockId = stock;
                 sod.TheMoney = stock.GoodsBaseInfoID.SingleMoney;
-                chuKuService.SaveOrUpdateEntity(sod);
+                sod =  chuKuService.SaveOrUpdateEntity(sod) as StockOperationDetail;
 
                 detailList.Add(sod);
+                //stockOp.OperationDetails = detailList;
+                //chuKuService.SaveOrUpdateEntity(stockOp);
+                
                 differenceCount -= Convert.ToDouble(textBox_Count.Text.Trim());
 
                 IList<StockOperationDetail> sodList = new List<StockOperationDetail>();
