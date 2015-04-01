@@ -98,6 +98,7 @@ namespace HeTongGuanLi
             if(sg.ShowDialog()==DialogResult.OK)
             {
                 goods = sg.ReturnIlist;
+                int i = 1;
                 if (goods != null && goods.Count > 0)
                 {
                     foreach (Object[] g in goods)
@@ -108,7 +109,8 @@ namespace HeTongGuanLi
                         gbi.Id = Convert.ToInt64(g[7]);
                         scg.GoodsBaseInfoId = gbi;
                         currentGoods.Add(scg);
-                       
+                        commonDataGridView2.Rows.Add(i.ToString(),g[1],g[9],g[3],g[4]);
+                        i++;
                     }
                 }
              

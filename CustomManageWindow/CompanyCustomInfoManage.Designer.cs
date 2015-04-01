@@ -100,6 +100,7 @@
             this.commonDataGridView2.Size = new System.Drawing.Size(1001, 502);
             this.commonDataGridView2.TabIndex = 10;
             this.commonDataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView2_CellContentClick);
+            this.commonDataGridView2.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView2_CellContentDoubleClick);
             // 
             // Column5
             // 

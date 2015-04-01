@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -56,6 +57,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.htmlEditor1 = new WinHtmlEditor.HtmlEditor();
+            this.commonDataGridView2 = new CommonControl.CommonDataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -63,6 +71,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -71,7 +80,7 @@
             this.tabControl1.Location = new System.Drawing.Point(-9, -29);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(555, 589);
+            this.tabControl1.Size = new System.Drawing.Size(562, 589);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage2
@@ -80,7 +89,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(547, 563);
+            this.tabPage2.Size = new System.Drawing.Size(554, 563);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "合同正文";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -98,6 +107,8 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.commonDataGridView2);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -126,7 +137,7 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Location = new System.Drawing.Point(25, 160);
+            this.groupBox2.Location = new System.Drawing.Point(25, 136);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(506, 153);
             this.groupBox2.TabIndex = 51;
@@ -299,16 +310,16 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(100, 363);
+            this.textBox6.Location = new System.Drawing.Point(86, 418);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(429, 101);
+            this.textBox6.Size = new System.Drawing.Size(443, 46);
             this.textBox6.TabIndex = 28;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(31, 366);
+            this.label10.Location = new System.Drawing.Point(31, 421);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 12);
             this.label10.TabIndex = 27;
@@ -320,7 +331,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(533, 724);
+            this.tabPage3.Size = new System.Drawing.Size(533, 605);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "合同正文";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -341,12 +352,78 @@
             this.htmlEditor1.TabIndex = 0;
             this.htmlEditor1.WebBrowserShortcutsEnabled = true;
             // 
+            // commonDataGridView2
+            // 
+            this.commonDataGridView2.AllowUserToAddRows = false;
+            this.commonDataGridView2.AllowUserToDeleteRows = false;
+            this.commonDataGridView2.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.commonDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.commonDataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.commonDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.commonDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.commonDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column3,
+            this.Column8,
+            this.Column2,
+            this.Column11,
+            this.Column4});
+            this.commonDataGridView2.Location = new System.Drawing.Point(86, 295);
+            this.commonDataGridView2.MultiSelect = false;
+            this.commonDataGridView2.Name = "commonDataGridView2";
+            this.commonDataGridView2.RowHeadersVisible = false;
+            this.commonDataGridView2.RowTemplate.Height = 23;
+            this.commonDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.commonDataGridView2.Size = new System.Drawing.Size(443, 104);
+            this.commonDataGridView2.TabIndex = 75;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.HeaderText = "序号";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 40;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column8.HeaderText = "名称";
+            this.Column8.Name = "Column8";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.HeaderText = "数量";
+            this.Column2.Name = "Column2";
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column11.HeaderText = "材质";
+            this.Column11.Name = "Column11";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.HeaderText = "单位";
+            this.Column4.Name = "Column4";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 307);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "货物信息：";
+            // 
             // SuiteContractView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(550, 581);
+            this.ClientSize = new System.Drawing.Size(556, 581);
             this.Controls.Add(this.tabControl1);
             this.Name = "SuiteContractView";
             this.Text = "套件合同信息";
@@ -361,6 +438,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -395,5 +473,12 @@
         private WinHtmlEditor.HtmlEditor htmlEditor1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private CommonControl.CommonDataGridView commonDataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label2;
     }
 }

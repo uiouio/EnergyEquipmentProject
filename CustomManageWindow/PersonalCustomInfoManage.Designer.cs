@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonalCustomInfoManage));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,6 +42,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
+            this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
+            this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
+            this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
+            this.commonPictureButton3 = new CommonControl.CommonPictureButton(this.components);
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,10 +55,6 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
-            this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
-            this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
-            this.commonPictureButton3 = new CommonControl.CommonPictureButton(this.components);
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
@@ -129,7 +129,6 @@
             this.button11.Text = "查询";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
-
             // 
             // textBox2
             // 
@@ -168,8 +167,8 @@
             this.commonDataGridView1.AllowUserToAddRows = false;
             this.commonDataGridView1.AllowUserToDeleteRows = false;
             this.commonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.commonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commonDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -194,67 +193,7 @@
             this.commonDataGridView1.Size = new System.Drawing.Size(957, 503);
             this.commonDataGridView1.TabIndex = 4;
             this.commonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick);
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column7.HeaderText = "序号";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.FillWeight = 121.8274F;
-            this.Column1.HeaderText = "姓名";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.FillWeight = 44.06741F;
-            this.Column2.HeaderText = "性别";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 60;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.FillWeight = 187.5287F;
-            this.Column3.HeaderText = "身份证号";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.FillWeight = 68.24464F;
-            this.Column5.HeaderText = "手机号码";
-            this.Column5.Name = "Column5";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "家庭住址";
-            this.Column8.Name = "Column8";
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column10.HeaderText = "客户级别";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column11.HeaderText = "客户分类";
-            this.Column11.Name = "Column11";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.HeaderText = " ";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 50;
+            this.commonDataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentDoubleClick);
             // 
             // commonFlowLayoutPanel1
             // 
@@ -313,6 +252,75 @@
             this.commonPictureButton3.TabStop = false;
             this.commonPictureButton3.ToolTipString = "导出";
             this.commonPictureButton3.Click += new System.EventHandler(this.commonPictureButton3_Click);
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column7.HeaderText = "序号";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 60;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.FillWeight = 121.8274F;
+            this.Column1.HeaderText = "姓名";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 60;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.FillWeight = 44.06741F;
+            this.Column2.HeaderText = "性别";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 60;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.FillWeight = 187.5287F;
+            this.Column3.HeaderText = "身份证号";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 68.24464F;
+            this.Column5.HeaderText = "手机号码";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "家庭住址";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column10.HeaderText = "客户级别";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column11.HeaderText = "客户分类";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.HeaderText = " ";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 50;
             // 
             // PersonalCustomInfoManage
             // 

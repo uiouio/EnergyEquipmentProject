@@ -141,5 +141,23 @@ namespace GongYiGuanLi
                 }
             }
         }
+
+        private void commonDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Object[] o = (Object[])commonDataGridView.Rows[e.RowIndex].Tag;
+            ModificationContract mc = (ModificationContract)o[0];
+            CarBaseInfo ci = (CarBaseInfo)o[1];
+            PaiGongDan_select_Dialog pvd = new PaiGongDan_select_Dialog();
+            pvd.UserInfo = this.User;
+            RefitWork refitWork = new RefitWork();
+            refitWork.CarInfo = ci;
+            refitWork.ContractNo = mc.ContractNo;
+            pvd.RefiWork = refitWork;
+            if (pvd.ShowDialog() == DialogResult.OK)
+            {
+                refreshDidGiView();
+                refreshToDoGiView();
+            }
+        }
     }
 }

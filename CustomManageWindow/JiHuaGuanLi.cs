@@ -100,5 +100,13 @@ namespace CustomManageWindow
             div.Columns.Remove(div.Columns[7]);
             PrintDataGridView.PrintTheDataGridView(div);
         }
+
+        private void commonDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            JiHua_Add_dialog jj = new JiHua_Add_dialog("计划详细信息");
+            jj.Agent = (Agent)currentagents[this.commonDataGridView1.CurrentCell.RowIndex];
+            jj.IsShowOrInput = 0;
+            jj.ShowDialog();
+        }
     }
 }
