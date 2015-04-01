@@ -148,5 +148,24 @@ namespace HeTongGuanLi
 
 
         }
+
+        private void commonDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MuBanGuanLi_add_Dialog1 mb = new MuBanGuanLi_add_Dialog1();
+
+            mb.TemplateManager = (TemplateManager)currenthetongs[this.commonDataGridView.CurrentCell.RowIndex];
+
+            mb.IsShowOrInput = 0;
+            mb.UserInfo = this.User;
+
+            if (mb.ShowDialog() == DialogResult.OK)
+            {
+                this.commonDataGridView.Rows.Clear();
+
+                reFreshAllControl();
+
+
+            }
+        }
     }
 }

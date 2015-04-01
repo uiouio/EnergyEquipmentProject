@@ -73,6 +73,18 @@ namespace HeTongGuanLi
                 this.textBox8.Text = SuiteContract.UserID.Name;
                 this.textBox6.Text = SuiteContract.Remarks;
                 this.htmlEditor1.BodyInnerHTML = SuiteContract.ContractContents;
+                int i = 1;
+                if(SuiteContract.SuiteContractGoods!=null)
+                { 
+                    foreach(SuiteContractGoods  s in SuiteContract.SuiteContractGoods)
+                   {
+                      this.commonDataGridView2.Rows.Add(i.ToString(),s.GoodsBaseInfoId.GoodsName,s.Count,s.GoodsBaseInfoId.Material,s.GoodsBaseInfoId.Unit);
+                      i++;
+                   }
+                }
+               
+             
+                
             }
 
         private void button1_Click(object sender, EventArgs e)

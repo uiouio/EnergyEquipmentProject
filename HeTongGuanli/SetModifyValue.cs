@@ -85,5 +85,17 @@ namespace HeTongGuanLi
                 reFreshAllControl();
             }
         }
+
+        private void commonDataGridView2_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CylinderAddDialog newGhs = new CylinderAddDialog();
+            newGhs.IsShowOrInput = 0;
+            newGhs.CylinderInfo = (CylinderInfo)currentcylinder[this.commonDataGridView2.CurrentCell.RowIndex];
+            if (newGhs.ShowDialog() == DialogResult.OK)
+            {
+                this.commonDataGridView2.Rows.Clear();
+                reFreshAllControl();
+            }
+        }
     }
 }

@@ -127,5 +127,16 @@ namespace CustomManageWindow
             div.Columns.Remove(div.Columns[div.ColumnCount-1]);
             PrintDataGridView.PrintTheDataGridView(div);
         }
+
+        private void commonDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            JingXiaoShangGuanLi_View_dialog jw = new JingXiaoShangGuanLi_View_dialog();
+            jw.Agent = (Agent)currentagents[this.commonDataGridView1.CurrentCell.RowIndex];
+            if (jw.ShowDialog() == DialogResult.OK)
+            {
+                this.commonDataGridView1.Rows.Clear();
+                reFreshAllControl();
+            }
+        }
     }
 }

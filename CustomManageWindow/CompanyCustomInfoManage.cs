@@ -159,5 +159,19 @@ namespace CustomManageWindow
             div.Columns.Remove(div.Columns[9]);
             DoExport.DoTheExport(div);
         }
+
+        private void commonDataGridView2_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CompanyCustomInfo_add_Dialog2 newGhs = new CompanyCustomInfo_add_Dialog2();
+
+            newGhs.Currentcustom = (CustomBaseInfo)this.commonDataGridView2.Rows[this.commonDataGridView2.CurrentRow.Index].Tag;
+
+
+            if (newGhs.ShowDialog() == DialogResult.OK)
+            {
+                this.commonDataGridView2.Rows.Clear();
+                reFreshAllControl();
+            }
+        }
     }
 }

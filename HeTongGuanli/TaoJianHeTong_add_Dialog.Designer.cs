@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.htmlEditor1 = new WinHtmlEditor.HtmlEditor();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.commonDataGridView2 = new CommonControl.CommonDataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,8 +67,14 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -99,6 +108,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.commonDataGridView2);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label1);
@@ -127,6 +138,41 @@
             this.tabPage1.Text = "参数设置";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // commonDataGridView2
+            // 
+            this.commonDataGridView2.AllowUserToAddRows = false;
+            this.commonDataGridView2.AllowUserToDeleteRows = false;
+            this.commonDataGridView2.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.commonDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.commonDataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.commonDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.commonDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.commonDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column3,
+            this.Column8,
+            this.Column2,
+            this.Column11,
+            this.Column4});
+            this.commonDataGridView2.Location = new System.Drawing.Point(100, 423);
+            this.commonDataGridView2.MultiSelect = false;
+            this.commonDataGridView2.Name = "commonDataGridView2";
+            this.commonDataGridView2.RowHeadersVisible = false;
+            this.commonDataGridView2.RowTemplate.Height = 23;
+            this.commonDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.commonDataGridView2.Size = new System.Drawing.Size(447, 104);
+            this.commonDataGridView2.TabIndex = 73;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(35, 432);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.TabIndex = 72;
+            this.label2.Text = "货物信息：";
+            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(408, 256);
@@ -136,16 +182,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(95, 446);
+            this.textBox1.Location = new System.Drawing.Point(100, 555);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(429, 130);
+            this.textBox1.Size = new System.Drawing.Size(441, 64);
             this.textBox1.TabIndex = 70;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 446);
+            this.label1.Location = new System.Drawing.Point(35, 555);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 12);
             this.label1.TabIndex = 69;
@@ -411,7 +457,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(556, 701);
+            this.tabPage2.Size = new System.Drawing.Size(556, 648);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "合同正文";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -436,6 +482,37 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.HeaderText = "序号";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 40;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column8.HeaderText = "名称";
+            this.Column8.Name = "Column8";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.HeaderText = "数量";
+            this.Column2.Name = "Column2";
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column11.HeaderText = "材质";
+            this.Column11.Name = "Column11";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.HeaderText = "单位";
+            this.Column4.Name = "Column4";
+            // 
             // TaoJianHeTong_add_Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -451,6 +528,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -498,5 +576,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label2;
+        private CommonControl.CommonDataGridView commonDataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

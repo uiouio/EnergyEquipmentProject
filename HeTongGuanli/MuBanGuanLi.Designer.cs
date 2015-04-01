@@ -277,6 +277,7 @@
             this.commonDataGridView.Size = new System.Drawing.Size(706, 477);
             this.commonDataGridView.TabIndex = 3;
             this.commonDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView_CellContentClick);
+            this.commonDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView_CellContentDoubleClick);
             // 
             // Column12
             // 
@@ -352,7 +353,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.commonDataGridView);
             this.Name = "MuBanGuanLi";
-            this.Size = new System.Drawing.Size(1301, 680);
+            this.Size = new System.Drawing.Size(1284, 680);
             this.Load += new System.EventHandler(this.MuBanGuanLi_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton1)).EndInit();

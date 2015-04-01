@@ -145,5 +145,17 @@ namespace CustomManageWindow
             }
         }
 
+        private void commonDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PersonalCustomInfo_add_Dialog2 newGhs = new PersonalCustomInfo_add_Dialog2();
+            newGhs.Currentcustom = (CustomBaseInfo)currentcustoms[this.commonDataGridView1.CurrentCell.RowIndex];
+
+            if (newGhs.ShowDialog() == DialogResult.OK)
+            {
+                this.commonDataGridView1.Rows.Clear();
+                reFreshAllControl();
+            }
+        }
+
     }
 }
