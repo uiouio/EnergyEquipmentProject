@@ -18,11 +18,11 @@ namespace EntityClassLibrary
             get { return deliveryDate; }
             set { deliveryDate = value; }
         }
+        
+        private int deliverycount;
         /// <summary>
         /// 发货数量
         /// </summary>
-        private int deliverycount;
-
         public virtual int Deliverycount
         {
             get { return deliverycount; }

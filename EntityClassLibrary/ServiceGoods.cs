@@ -29,6 +29,9 @@ namespace EntityClassLibrary
         }
 
         private int number;
+        /// <summary>
+        /// 需要数量
+        /// </summary>
         public virtual int Number
         {
             get { return number; }

@@ -10,11 +10,13 @@ using EntityClassLibrary;
 using CommonWindow;
 using System.Collections;
 using CommonMethod;
+using KuGuanXiTong.Service;
 
 namespace KuGuanXiTong
 {
     public partial class ChuKu_addPaiGong_Dialog : CommonControl.BaseForm
     {
+        OpStock opstock = new OpStock();
         Service.ChuKuService chuKuService = new Service.ChuKuService();
         private Object[] objectRefitWork;
         public Object[] ObjectRefitWork
@@ -40,6 +42,12 @@ namespace KuGuanXiTong
             addItemToDataGridViewEntity(refitWork.RefitWorkGoodss);
             if (stockOperation != null)
             {
+                IList ilist = opstock.GetOpdetail(stockOperation.Id);
+                foreach (StockOperationDetail sp in ilist)
+                {
+                    stockOperation.OperationDetails.Add(sp);
+                }
+
                 initChuKuInfo(stockOperation.OperationDetails);
             }
         }
@@ -52,7 +60,18 @@ namespace KuGuanXiTong
                 foreach (RefitWorkGoods r in goodsList)
                 {
                     i++;
-                    commonDataGridView.Rows.Add(i.ToString(), r.GoodsBaseInfoId.GoodsName, r.GoodsBaseInfoId.Specifications, r.GoodsBaseInfoId.Unit, r.GoodsBaseInfoId.Material, r.Count, r.Count, r.Remark, RefitWorkGoods.ReceiveTypeArray[r.ReceiveType], BaseEntity.YesOrNoArray[r.AddType], "出库", r.GoodsBaseInfoId.SingleMoney);
+                    commonDataGridView.Rows.Add(i.ToString(), 
+                                                 r.GoodsBaseInfoId.GoodsName, 
+                                                 r.GoodsBaseInfoId.Specifications, 
+                                                 r.GoodsBaseInfoId.Unit, 
+                                                 r.GoodsBaseInfoId.Material, 
+                                                 r.Count, 
+                                                 r.Count, 
+                                                 r.Remark, 
+                                                 RefitWorkGoods.ReceiveTypeArray[r.ReceiveType], 
+                                                 BaseEntity.YesOrNoArray[r.AddType],
+                                                 "出库", 
+                                                 r.GoodsBaseInfoId.SingleMoney);
                     object[] o = { r, null };
                     commonDataGridView.Rows[commonDataGridView.Rows.Count - 1].Tag = o;
                 }
@@ -147,10 +166,11 @@ namespace KuGuanXiTong
                                 {
                                     stock.Quantity -= 1;
                                     chuKuService.SaveOrUpdateEntity(stock);
+                                    StockOperation so = objectRefitWork[1] as StockOperation;
                                     if (objectRefitWork[1] == null)
                                     {
                                         RefitWork refitWork = (RefitWork)objectRefitWork[0];
-                                        StockOperation so = new StockOperation();
+                                        so = new StockOperation();
                                         so.OperationTime = DateTime.Now.Ticks;
                                         so.OperationTpye = (int)StockOperation.OpTypeFlag.OutByRefitWork;
                                         so.RetrospectListNumber = refitWork.DispatchOrder;
@@ -167,9 +187,15 @@ namespace KuGuanXiTong
                                     sod.StockOperationId = (StockOperation)objectRefitWork[1];
                                     sod.StockId = stock;
                                     sod.TheMoney = stock.GoodsBaseInfoID.SingleMoney;
-                                    chuKuService.SaveOrUpdateEntity(sod);
+                                    
+                                    
+                                    sod =  chuKuService.SaveOrUpdateEntity(sod) as StockOperationDetail;
+                                    so.OperationDetails.Add(sod);
+                                    //chuKuService.SaveOrUpdateEntity(so);
+                                    objectRefitWork[1] = so;
 
                                     sodList.Add(sod);
+
 
                                     r.Cells[6].Value = Convert.ToInt32(r.Cells[6].Value) - 1;
                                     r.Cells[8].Value = RefitWorkGoods.ReceiveTypeArray[(int)RefitWorkGoods.ReceiveTypeEnum.Receive];
