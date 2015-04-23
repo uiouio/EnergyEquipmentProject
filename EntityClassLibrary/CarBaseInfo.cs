@@ -290,11 +290,11 @@ namespace EntityClassLibrary
             set { inFactoryTime = value; }
         }
         
-        private string outFactoryTime;
+        private long outFactoryTime;
         /// <summary>
         /// 【否决的】出厂时间
         /// </summary>
-        public virtual string OutFactoryTime
+        public virtual long OutFactoryTime
         {
             get { return outFactoryTime; }
             set { outFactoryTime = value; }
@@ -310,11 +310,11 @@ namespace EntityClassLibrary
             set { bottlingMan = value; }
         }
        
-        private long eCUOperator;
+        private string eCUOperator;
         /// <summary>
-        ///【否决的】 ECU安装人
+        ///进气方式
         /// </summary>
-        public virtual long ECUOperator
+        public virtual string ECUOperator
         {
             get { return eCUOperator; }
             set { eCUOperator = value; }

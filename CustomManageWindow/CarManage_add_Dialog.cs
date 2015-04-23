@@ -84,7 +84,10 @@ namespace CustomManageWindow
                 this.textBox10.Text = CarBaseInfo.Mileage.ToString();
                 this.textBox5.Enabled = false;
                 this.textBox5.Text = CarBaseInfo.Remarks;
-
+                this.comboBox4.Text = CarBaseInfo.ECUOperator;
+                this.dateTimePicker1.Text = new DateTime(CarBaseInfo.OutFactoryTime).ToString();
+                 
+                
 
             }
             if (IsShowOrInput == 1)
@@ -148,6 +151,8 @@ namespace CustomManageWindow
            
 
             cb.Remarks = textBox5.Text;
+            cb.OutFactoryTime = this.dateTimePicker1.Value.Date.Ticks;
+            cb.ECUOperator = this.comboBox4.Text;
             if (this.textBox1.Text == "")
             {
                 MessageBox.Show("请输入车牌号");
@@ -186,6 +191,11 @@ namespace CustomManageWindow
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

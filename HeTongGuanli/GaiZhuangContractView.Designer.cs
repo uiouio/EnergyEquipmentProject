@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -45,7 +45,6 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.htmlEditor1 = new WinHtmlEditor.HtmlEditor();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).BeginInit();
@@ -164,8 +164,8 @@
             this.commonDataGridView2.AllowUserToAddRows = false;
             this.commonDataGridView2.AllowUserToDeleteRows = false;
             this.commonDataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.commonDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commonDataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -222,8 +222,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Location = new System.Drawing.Point(25, 19);
@@ -241,13 +241,6 @@
             this.label13.Size = new System.Drawing.Size(65, 12);
             this.label13.TabIndex = 49;
             this.label13.Text = "身份证号：";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(385, 51);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(102, 21);
-            this.textBox5.TabIndex = 48;
             // 
             // textBox1
             // 
@@ -384,7 +377,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(550, 685);
+            this.tabPage2.Size = new System.Drawing.Size(550, 660);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "合同正文";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -414,6 +407,14 @@
             this.button1.Text = "确定";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(363, 48);
+            this.textBox4.MaxLength = 18;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(137, 21);
+            this.textBox4.TabIndex = 50;
             // 
             // GaiZhuangContractView
             // 
@@ -465,7 +466,6 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -474,5 +474,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

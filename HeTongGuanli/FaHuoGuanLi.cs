@@ -38,8 +38,11 @@ namespace HeTongGuanLi
                 foreach (ModificationContract m in contractList)
                 {
                     i++;
-                    commonDataGridView1.Rows.Add(0, i.ToString(), m.ContractNo, "改装合同", ModificationContract.PaymentStateArray[m.PaymentState], ModificationContract.DeliveryStatusArray[m.DeliveryStatus], "查看", "发货");
-                    commonDataGridView1.Rows[commonDataGridView1.Rows.Count - 1].Tag = m;
+                    foreach(CarBaseInfo s in m.CarBaseInfoID)
+                    {
+                       commonDataGridView1.Rows.Add(0, i.ToString(), m.ContractNo, s.PlateNumber,s.Cbi.Name,"改装合同", ModificationContract.PaymentStateArray[m.PaymentState], ModificationContract.DeliveryStatusArray[m.DeliveryStatus], "查看", "发货");
+                       commonDataGridView1.Rows[commonDataGridView1.Rows.Count - 1].Tag = m;
+                    }
                 }
             }
         }
@@ -52,16 +55,17 @@ namespace HeTongGuanLi
                 foreach (SuiteContract m in contractList)
                 {
                     i++;
-                    commonDataGridView1.Rows.Add(0, i.ToString(), m.ContractNo, "套件合同", SuiteContract.PaymentStateArray[m.PaymentState], SuiteContract.DeliveryStatusArray[m.DeliveryStatus], "查看", "发货");
+                    commonDataGridView1.Rows.Add(0, i.ToString(), m.ContractNo,"",m.CustomBaseID.Name, "套件合同", SuiteContract.PaymentStateArray[m.PaymentState], SuiteContract.DeliveryStatusArray[m.DeliveryStatus], "查看", "发货");
                     commonDataGridView1.Rows[commonDataGridView1.Rows.Count - 1].Tag = m;
+                   
                 }
             }
         }
         private void commonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 9)
             {
-                if (commonDataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Equals("改装合同"))
+                if (commonDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString().Equals("改装合同"))
                 {
                     ModificationContract m = (ModificationContract)commonDataGridView1.Rows[e.RowIndex].Tag;
                     IList deliveryList = deliveryService.GetDeliveryRecordByModuficationContractId(m.Id);
@@ -71,10 +75,10 @@ namespace HeTongGuanLi
                     if (fnd.ShowDialog() == DialogResult.OK)
                     {
                         contractService.SaveOrUpdateEntity(m);
-                        commonDataGridView1.Rows[e.RowIndex].Cells[5].Value = ModificationContract.DeliveryStatusArray[m.DeliveryStatus];
+                        commonDataGridView1.Rows[e.RowIndex].Cells[7].Value = ModificationContract.DeliveryStatusArray[m.DeliveryStatus];
                     }
                 }
-                else if (commonDataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Equals("套件合同"))
+                else if (commonDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString().Equals("套件合同"))
                 {
                     SuiteContract m = (SuiteContract)commonDataGridView1.Rows[e.RowIndex].Tag;
                     IList deliveryList = deliveryService.GetDeliveryRecordBySuitContractId(m.Id);
@@ -85,13 +89,13 @@ namespace HeTongGuanLi
                     if (fnd.ShowDialog() == DialogResult.OK)
                     {
                         contractService.SaveOrUpdateEntity(m);
-                        commonDataGridView1.Rows[e.RowIndex].Cells[5].Value = SuiteContract.DeliveryStatusArray[m.DeliveryStatus];
+                        commonDataGridView1.Rows[e.RowIndex].Cells[7].Value = SuiteContract.DeliveryStatusArray[m.DeliveryStatus];
                     }
                 }
             }
-            else if (e.ColumnIndex == 6)
+            else if (e.ColumnIndex == 8)
             {
-                if (commonDataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Equals("改装合同"))
+                if (commonDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString().Equals("改装合同"))
                 {
                     ModificationContract m = (ModificationContract)commonDataGridView1.Rows[e.RowIndex].Tag;
                     IList deliveryList = deliveryService.GetDeliveryRecordByModuficationContractId(m.Id);
@@ -100,7 +104,7 @@ namespace HeTongGuanLi
                     fvd.CarInfoList = m.CarBaseInfoID;
                     fvd.ShowDialog();
                 }
-                else if (commonDataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Equals("套件合同"))
+                else if (commonDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString().Equals("套件合同"))
                 {
                     SuiteContract m = (SuiteContract)commonDataGridView1.Rows[e.RowIndex].Tag;
                     IList deliveryList = deliveryService.GetDeliveryRecordBySuitContractId(m.Id);

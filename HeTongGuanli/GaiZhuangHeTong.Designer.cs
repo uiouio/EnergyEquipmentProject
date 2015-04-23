@@ -47,6 +47,10 @@
             this.Column9 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.end_dateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -102,8 +106,9 @@
             this.commonDataGridView.RowHeadersVisible = false;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.commonDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.commonDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.commonDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.commonDataGridView.Size = new System.Drawing.Size(1123, 502);
+            this.commonDataGridView.Size = new System.Drawing.Size(1121, 502);
             this.commonDataGridView.TabIndex = 0;
             this.commonDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView_CellContentClick);
             this.commonDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView_CellContentDoubleClick);
@@ -207,6 +212,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.end_dateTimePicker);
@@ -216,16 +225,48 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(210, 32);
+            this.groupBox1.Location = new System.Drawing.Point(119, 32);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1043, 84);
+            this.groupBox1.Size = new System.Drawing.Size(1207, 84);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "改装类合同查询";
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(611, 44);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(116, 21);
+            this.textBox4.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(563, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "经办人：";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(420, 44);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(116, 21);
+            this.textBox3.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(373, 47);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "车牌号：";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(936, 38);
+            this.button1.Location = new System.Drawing.Point(1103, 42);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 23);
             this.button1.TabIndex = 8;
@@ -236,7 +277,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(776, 44);
+            this.label4.Location = new System.Drawing.Point(948, 53);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(11, 12);
             this.label4.TabIndex = 7;
@@ -244,14 +285,14 @@
             // 
             // end_dateTimePicker
             // 
-            this.end_dateTimePicker.Location = new System.Drawing.Point(793, 38);
+            this.end_dateTimePicker.Location = new System.Drawing.Point(965, 44);
             this.end_dateTimePicker.Name = "end_dateTimePicker";
             this.end_dateTimePicker.Size = new System.Drawing.Size(122, 21);
             this.end_dateTimePicker.TabIndex = 6;
             // 
             // start_dateTimePicker
             // 
-            this.start_dateTimePicker.Location = new System.Drawing.Point(638, 38);
+            this.start_dateTimePicker.Location = new System.Drawing.Point(821, 44);
             this.start_dateTimePicker.Name = "start_dateTimePicker";
             this.start_dateTimePicker.Size = new System.Drawing.Size(121, 21);
             this.start_dateTimePicker.TabIndex = 5;
@@ -259,7 +300,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(567, 44);
+            this.label3.Location = new System.Drawing.Point(759, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 4;
@@ -267,7 +308,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(381, 38);
+            this.textBox2.Location = new System.Drawing.Point(240, 40);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(116, 21);
             this.textBox2.TabIndex = 3;
@@ -275,7 +316,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(302, 44);
+            this.label2.Location = new System.Drawing.Point(193, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 2;
@@ -283,7 +324,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(158, 41);
+            this.textBox1.Location = new System.Drawing.Point(75, 40);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 1;
@@ -291,7 +332,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 44);
+            this.label1.Location = new System.Drawing.Point(16, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 0;
@@ -369,5 +410,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewLinkColumn Column9;
         private System.Windows.Forms.DataGridViewLinkColumn Column10;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label5;
     }
 }

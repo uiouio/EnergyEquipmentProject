@@ -30,19 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FaHuoGuanLi));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
             this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
             this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,6 +46,16 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.commonFlowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).BeginInit();
@@ -107,8 +109,8 @@
             this.commonDataGridView1.AllowUserToAddRows = false;
             this.commonDataGridView1.AllowUserToDeleteRows = false;
             this.commonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.commonDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.commonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -116,73 +118,22 @@
             this.Column1,
             this.Column2,
             this.Column3,
+            this.Column9,
+            this.Column10,
             this.Column4,
             this.Column6,
             this.Column5,
             this.Column7,
             this.Column8});
-            this.commonDataGridView1.Location = new System.Drawing.Point(291, 124);
+            this.commonDataGridView1.Location = new System.Drawing.Point(228, 131);
             this.commonDataGridView1.MultiSelect = false;
             this.commonDataGridView1.Name = "commonDataGridView1";
             this.commonDataGridView1.RowHeadersVisible = false;
             this.commonDataGridView1.RowTemplate.Height = 23;
             this.commonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.commonDataGridView1.Size = new System.Drawing.Size(803, 472);
+            this.commonDataGridView1.Size = new System.Drawing.Size(1002, 472);
             this.commonDataGridView1.TabIndex = 1;
             this.commonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = " ";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 20;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "序号";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 60;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "合同号";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 180;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "合同类型";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 120;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "付款状态";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "发货状态";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "查看";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 60;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "发货";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 60;
             // 
             // button1
             // 
@@ -279,6 +230,69 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "签订时间：";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = " ";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 20;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "序号";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 60;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "合同号";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 180;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "车牌号";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "车主姓名";
+            this.Column10.Name = "Column10";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "合同类型";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 120;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "付款状态";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "发货状态";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "查看";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 60;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "发货";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 60;
+            // 
             // FaHuoGuanLi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -317,19 +331,21 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewLinkColumn Column7;
-        private System.Windows.Forms.DataGridViewLinkColumn Column8;
         private System.Windows.Forms.DateTimePicker start_dateTimePicker;
         private System.Windows.Forms.DateTimePicker end_dateTimePicker;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewLinkColumn Column7;
+        private System.Windows.Forms.DataGridViewLinkColumn Column8;
     }
 }

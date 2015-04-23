@@ -39,7 +39,7 @@ namespace HeTongGuanLi
         {
             this.Height = Screen.PrimaryScreen.WorkingArea.Height;
             this.textBox1.Enabled = false;
-            this.textBox5.Enabled = false;
+            this.textBox4.Enabled = false;
             this.commonDataGridView2.Enabled = false;
             this.textBox7.Enabled = false;
             this.textBox10.Enabled = false;
@@ -64,8 +64,8 @@ namespace HeTongGuanLi
                     this.label13.Text = "身份证号：";
                     this.textBox1.Enabled = false;
                     this.textBox1.Text = cbi.Cbi.Name;
-                    this.textBox5.Enabled = false;
-                    this.textBox5.Text = cbi.Cbi.IdentifyCardNo;
+                    this.textBox4.Enabled = false;
+                    this.textBox4.Text = cbi.Cbi.IdentifyCardNo;
                     
                     foreach(CarBaseInfo s in ModificationContract.CarBaseInfoID)
                     {
@@ -80,9 +80,9 @@ namespace HeTongGuanLi
                     this.label12.Text = "企业名称：";
                     this.label13.Text = "组织机构代码：";
                     this.textBox1.Enabled = false;
-                    this.textBox5.Enabled = false;
+                    this.textBox4.Enabled = false;
                     this.textBox1.Text = cbi.Cbi.Name;
-                    this.textBox5.Text = cbi.Cbi.IdentifyCardNo;
+                    this.textBox4.Text = cbi.Cbi.IdentifyCardNo;
                     foreach (CarBaseInfo s in ModificationContract.CarBaseInfoID)
                     {
                         this.commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, CarBaseInfo.ModifyType[s.ModidiedType], s.Cylinder == null ? "" : s.Cylinder.CylinderType);

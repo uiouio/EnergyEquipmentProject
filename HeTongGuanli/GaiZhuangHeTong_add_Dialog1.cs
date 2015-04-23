@@ -6,13 +6,17 @@ using CommonControl;
 using CommonWindow;
 using CustomManageWindow.Service;
 using Iesi.Collections.Generic;
-
+using CustomManageWindow;
 namespace HeTongGuanLi
 {
     public partial class GaiZhuangHeTong_add_Dialog1 : CommonControl.BaseForm
     {
 
         ISet<CarBaseInfo> carList = new HashedSet<CarBaseInfo>();
+        CustomService ss = new CustomService();
+        ModificationContract mc = new ModificationContract();
+        CarBaseInfo c = new CarBaseInfo();
+        ISet<CarBaseInfo> selectCarList = new HashedSet<CarBaseInfo>();
         private ModificationContract modificationContract;
 
         public ModificationContract ModificationContract
@@ -27,8 +31,6 @@ namespace HeTongGuanLi
             get { return templateManager; }
             set { templateManager = value; }
         }
-
-        CustomManageWindow.Service.CustomService ss = new CustomManageWindow.Service.CustomService();
         public GaiZhuangHeTong_add_Dialog1()
         {
             InitializeComponent();
@@ -54,80 +56,107 @@ namespace HeTongGuanLi
 
         private void button4_Click(object sender, EventArgs e)
         {
-            CustomService ss = new CustomService();
-            ModificationContract mc = new ModificationContract();
-
-            ISet<CarBaseInfo> selectCarList = new HashedSet<CarBaseInfo>();
-            if (commonDataGridView2.Rows != null)
+            foreach (DataGridViewRow r in commonDataGridView2.Rows)
             {
-                foreach (DataGridViewRow r in commonDataGridView2.Rows)
+                if (r.Cells[0].Value.ToString() == "0")
                 {
-                    if (r.Cells[0].Value.ToString() == "1")
+                    MessageBox.Show("请勾选车辆！");
+                }
+                else if (r.Cells[0].Value.ToString() == "1")
+                {
+                    c = (CarBaseInfo)r.Tag;
+                    #region 判断气瓶型号是否为空
+                    if (c.Cylinder == null)
+                    {
+                        DialogResult result = MessageBox.Show("请选择气瓶型号，数量", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (result == DialogResult.OK)
+                        {
+                            YanChe_add_Dialog ydd = new YanChe_add_Dialog();
+                            ydd.CarBaseInfo = c;
+                            ydd.IsShowOrInput = 1;
+                            if (ydd.ShowDialog() == DialogResult.OK)
+                            {
+                                r.Cells[this.commonDataGridView2.ColumnCount-2].Value=c.Cylinder.CylinderType;
+                                selectCarList.Add((CarBaseInfo)r.Tag);
+                                return;
+                            }
+                            else
+                            {
+                                return;
+                            }
+
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+                    #endregion
+                    else
                     {
                         selectCarList.Add((CarBaseInfo)r.Tag);
                     }
+                    mc.CarBaseInfoID = selectCarList;
+                    CarBaseInfo cbi = null;
+                    foreach (CarBaseInfo s in mc.CarBaseInfoID)
+                    {
+                        cbi = s;
+                        break;
+                    }
+                    this.textBox5.Text = cbi.VIN;
+                    cbi.Cbi.Category = (int)CustomBaseInfo.kehuleibie.zhenshikehu;
+                    ss.SaveOrUpdateEntity(cbi.Cbi);
+                    DateTime now = DateTime.Now;
+                    if (cbi.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGDiesel || cbi.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGGas)
+                    {
+
+                        textBox3.Text = "CAZHT" + now.Year + (now.Month.ToString().Length == 1 ? ("0" + now.Month) : now.Month.ToString()) + (now.Day.ToString().Length == 1 ? ("0" + now.Day) : now.Day.ToString()) + DateTime.Now.ToLongTimeString().Replace(":", "");
+                    }
+                    else if (cbi.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.LNGDiesel)
+                    {
+                        textBox3.Text = "LAZHT" + now.Year + (now.Month.ToString().Length == 1 ? ("0" + now.Month) : now.Month.ToString()) + (now.Day.ToString().Length == 1 ? ("0" + now.Day) : now.Day.ToString()) + DateTime.Now.ToLongTimeString().Replace(":", "");
+                    }
+                    mc.ContractNo = textBox3.Text;
+                    mc.SignedDate = dateTimePicker1.Value.Ticks;
+                    if (this.radioButton1.Checked)
+                    {
+                        mc.ContractMethod = (int)ModificationContract.Type.duinei;
+                    }
+                    else if (this.radioButton2.Checked)
+                    {
+                        mc.ContractMethod = (int)ModificationContract.Type.duiwai;
+                    }
+                    mc.PaymentMethod = this.comboBox3.Text;
+                    mc.Remarks = textBox6.Text;
+                    mc.UserID = this.UserInfo;
+                    mc.Process = (int)ModificationContract.guocheng.xsfzr;
+                    mc.ApprovalState = (int)ModificationContract.Approval.yet;
+                    mc.Pass = (int)ModificationContract.PassorNot.pass;
+                    mc.ApprovalTime = DateTime.Now.Ticks;
+                    mc.DeliveryStatus = (int)ModificationContract.DeliveryStatusEnum.None;
+                    mc.ContractContents = htmlEditor1.BodyInnerHTML;
+                    if (this.textBox2.Text == "")
+                    {
+                        MessageBox.Show("请输入合同金额");
+                    }
+                    else
+                    {
+                        mc.ContractAmount = float.Parse(textBox2.Text);
+                        ss.SaveOrUpdateEntity(mc);
+                        MessageBox.Show("提交给销售负责人审核");
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+
 
                 }
-            }
-            mc.CarBaseInfoID = selectCarList;
-            CarBaseInfo cbi = null;
-            foreach (CarBaseInfo s in mc.CarBaseInfoID)
-            {
-                cbi = s;
-                break;
-            }
-            this.textBox5.Text = cbi.VIN;
-            cbi.Cbi.Category = (int)CustomBaseInfo.kehuleibie.zhenshikehu;
-            ss.SaveOrUpdateEntity(cbi.Cbi);
-            DateTime now = DateTime.Now;
-            if (cbi.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGDiesel || cbi.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGGas)
-            {
 
-                textBox3.Text = "CAZHT" + now.Year + (now.Month.ToString().Length == 1 ? ("0" + now.Month) : now.Month.ToString()) + (now.Day.ToString().Length == 1 ? ("0" + now.Day) : now.Day.ToString()) + DateTime.Now.ToLongTimeString().Replace(":", "");
             }
-            else if (cbi.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.LNGDiesel)
-            {
-                textBox3.Text = "LAZHT" + now.Year + (now.Month.ToString().Length == 1 ? ("0" + now.Month) : now.Month.ToString()) + (now.Day.ToString().Length == 1 ? ("0" + now.Day) : now.Day.ToString()) + DateTime.Now.ToLongTimeString().Replace(":", "");
-            }
-            mc.ContractNo = textBox3.Text;
-            mc.SignedDate = dateTimePicker1.Value.Ticks;
-            if (this.radioButton1.Checked)
-            {
-                mc.ContractMethod = (int)ModificationContract.Type.duinei;
-            }
-            else if (this.radioButton2.Checked)
-            {
-                mc.ContractMethod = (int)ModificationContract.Type.duiwai;
-            }
-            mc.PaymentMethod = this.comboBox3.Text;
-            if (this.textBox2.Text == "")
-            {
-                MessageBox.Show("请输入合同金额");
-            }
-            else
-            {
-                mc.ContractAmount = float.Parse(textBox2.Text);
-            }
-            mc.Remarks = textBox6.Text;
-            mc.UserID = this.UserInfo;
-            mc.Process = (int)ModificationContract.guocheng.xsfzr;
-            mc.ApprovalState = (int)ModificationContract.Approval.yet;
-
-            mc.Pass = (int)ModificationContract.PassorNot.pass;
-            mc.ApprovalTime = DateTime.Now.Ticks;
-            mc.DeliveryStatus = (int)ModificationContract.DeliveryStatusEnum.None;
-            mc.ContractContents = htmlEditor1.BodyInnerHTML;
-
-            ss.SaveOrUpdateEntity(mc);
-            MessageBox.Show("提交给销售负责人审核");
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-
         }
         private void button6_Click(object sender, EventArgs e)
         {
+            this.commonDataGridView2.Rows.Clear();
             SelectPersonalCustomInfo xzgr = new SelectPersonalCustomInfo();
-
             if (xzgr.ShowDialog() == DialogResult.OK)
             {
 
@@ -138,7 +167,7 @@ namespace HeTongGuanLi
                 {
                     foreach (CarBaseInfo s in carList)
                     {
-                        if (s.ModificationID == null)
+                        if (s.ModificationID == null||(s.ModificationID!=null&&s.ModificationID.State==1))
                         {
                             commonDataGridView2.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, ModificationContract.ModifyType[s.ModidiedType], s.Cylinder == null ? "" : s.Cylinder.CylinderType, "删除");
                             commonDataGridView2.Rows[commonDataGridView2.Rows.Count - 1].Tag = s;
@@ -192,11 +221,13 @@ namespace HeTongGuanLi
                 }
 
             }
+
+        
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-
+            this.commonDataGridView2.Rows.Clear();
             SelectCompanyCustomInfo xzqy = new SelectCompanyCustomInfo();
 
             if (xzqy.ShowDialog() == DialogResult.OK)

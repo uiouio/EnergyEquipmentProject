@@ -263,12 +263,12 @@
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
             this.Column1.FillWeight = 121.8274F;
             this.Column1.HeaderText = "姓名";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 60;
+            this.Column1.Width = 5;
             // 
             // Column2
             // 
