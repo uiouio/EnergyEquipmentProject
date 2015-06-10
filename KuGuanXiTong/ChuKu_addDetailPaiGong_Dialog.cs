@@ -14,6 +14,14 @@ namespace KuGuanXiTong
     {
         Service.ChuKuService chuKuService = new Service.ChuKuService();
         private RefitWorkGoods refitGoods;
+        private int save;
+
+        public int Save
+        {
+            get { return save; }
+            set { save = value; }
+        }
+
         private StockOperation stockOp;
         public StockOperation StockOp
         {
@@ -82,7 +90,7 @@ namespace KuGuanXiTong
                     goodsName.Text = refitGoods.GoodsBaseInfoId.GoodsName;
                     count.Text = s.Quantity.ToString();
                     code.Text = s.GoodsCode;
-                    money.Text = s.TheMoney != null ? s.TheMoney.ToString() : "";
+                    money.Text = s.TheMoney != 0 ? s.TheMoney.ToString() : "";
                     item.SubItems.Add(goodsName);
                     item.SubItems.Add(count);
                     item.SubItems.Add(code);
@@ -150,17 +158,18 @@ namespace KuGuanXiTong
                 sod.StockOperationId = stockOp;
                 sod.StockId = stock;
                 sod.TheMoney = stock.GoodsBaseInfoID.SingleMoney;
-                sod =  chuKuService.SaveOrUpdateEntity(sod) as StockOperationDetail;
-
+                //sod =  chuKuService.SaveOrUpdateEntity(sod) as StockOperationDetail;
+                chuKuService.SaveOrUpdateEntity(sod);
                 detailList.Add(sod);
                 //stockOp.OperationDetails = detailList;
                 //chuKuService.SaveOrUpdateEntity(stockOp);
                 
                 differenceCount -= Convert.ToDouble(textBox_Count.Text.Trim());
-
                 IList<StockOperationDetail> sodList = new List<StockOperationDetail>();
                 sodList.Add(sod);
                 addItemToListView(sodList);
+                this.save = 1;
+                //this.DialogResult = DialogResult.OK;
             }
             else
             {

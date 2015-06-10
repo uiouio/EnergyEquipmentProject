@@ -48,7 +48,8 @@ namespace TiaoShi
             TiaoShiBaoGao.LiuZhuanBiao.PaiGongDan.CarInfo.VehicleType=this.textBox1.Text ;
             TiaoShiBaoGao.LiuZhuanBiao.PaiGongDan.CarInfo.PlateNumber=this.textBox6.Text;
             TiaoShiBaoGao.LiuZhuanBiao.PaiGongDan.CarInfo.Cbi.Unit=this.textBox4.Text ;
-             tiaoShiBaoGao.DebugPerson = this.textBox22.Text;
+            // tiaoShiBaoGao.DebugPerson = this.textBox22.Text;
+            TiaoShiBaoGao.DebugPerson = this.textBox22.Text;
             if (textBox12.Text == "")
             {
                 tiaoShiBaoGao.SingleFirewoodOilyFees = 0;
@@ -229,6 +230,7 @@ namespace TiaoShi
             textBox18.Text = tiaoShiBaoGao.OilAndGasSave.ToString();
             textBox10.Text = tiaoShiBaoGao.Dynamic;
             textBox11.Text = tiaoShiBaoGao.Issue;
+            this.textBox22.Text = tiaoShiBaoGao.DebugPerson;
             this.dateTimePicker1.Value = new DateTime(tiaoShiBaoGao.Time);
         }
 

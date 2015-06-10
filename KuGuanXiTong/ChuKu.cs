@@ -98,7 +98,7 @@ namespace KuGuanXiTong
                 {
                     i++;
                     commonDataGridView1.Rows.Add(false, i.ToString(), comboBox_FormType.Text, r.DispatchOrder, "", "", "未出库", "出库");
-                    object[] o = { r, null };
+                    object[] o = { r, null  };
                     commonDataGridView1.Rows[commonDataGridView1.Rows.Count - 1].Tag = o;
                 }
             }

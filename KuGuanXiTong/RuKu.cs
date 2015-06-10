@@ -41,6 +41,7 @@ namespace KuGuanXiTong
             {
                 Ruku_ShowStockDetail opde = new Ruku_ShowStockDetail();
                 opde.SendStocktoshow = (StockOperation)this.commonDataGridView1.CurrentRow.Tag;
+                opde.UserInfo = this.User;
                 opde.ShowDialog();
             }
         }

@@ -59,5 +59,6 @@ namespace KuGuanXiTong.Service
             string sql = " from DeliverySuiteRecords u where u.ContractId=" + contractId + " and u.State = " + (int)BaseEntity.stateEnum.Normal;
             return this.loadEntityList(sql);
         }
+        
     }
 }

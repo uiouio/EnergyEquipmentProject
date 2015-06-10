@@ -11,15 +11,17 @@ using System.Collections;
 using DLLFullPrint;
 using CommonMethod;
 using System.Linq;
-
+using KuGuanXiTong.Report;
+using SQLProvider.Service;
 namespace KuGuanXiTong
 {
-    public partial class Ruku_ShowStockDetail : Form
+    public partial class Ruku_ShowStockDetail : CommonControl.BaseForm
     {
         List<StockOperationDetail> detaillist = new List<StockOperationDetail>();
         OpStock opp = new OpStock();
         StockOperation sendStocktoshow = new StockOperation();
         List<StockOperationDetail> changeSpd = new List<StockOperationDetail>();
+        BaseService ss = new BaseService();
         /// <summary>
         /// 传入先择的Stock
         /// </summary>
@@ -83,7 +85,51 @@ namespace KuGuanXiTong
         /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-            PrintDataGridView.PrintTheDataGridView(commonDataGridView1);
+            //PrintDataGridView.PrintTheDataGridView(commonDataGridView1);
+            Form2 f2 = new Form2();
+            string s = "select g.GoodsClassCode,g.GoodsName from GoodsBaseInfo g  where g.GoodsParentClassId=1  order by g.GoodsClassCode";
+            IList goods = ss.ExecuteSQL(s);
+            List<string> lsName = new List<string>();
+            List<string> newlist = new List<string>();
+            List<string> goodcode = new List<string>();
+            List<string> goodname = new List<string>();
+            List<string> goodspecifition = new List<string>();
+            foreach (StockOperationDetail spd in detaillist)
+            {
+                foreach (Object[] g in goods)
+                {
+                    if (spd.StockId.GoodsBaseInfoID.GoodsClassCode.Substring(0, 2) == g[0].ToString())
+                    {
+                        lsName.Add(spd.StockId.GoodsBaseInfoID.GoodsClassCode.Substring(0, 2)+g[1]);
+                        foreach(String n in lsName)
+                        {
+                            if(!newlist.Contains(n))
+                            {
+                                newlist.Add(n);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            for (int i = 0; i < this.commonDataGridView1.Rows.Count; i++)
+            {
+                string gcode = this.commonDataGridView1.Rows[i].Cells[1].Value.ToString();
+                string gname = this.commonDataGridView1.Rows[i].Cells[2].Value.ToString();
+                string gspecifition = this.commonDataGridView1.Rows[i].Cells[4].Value.ToString();
+                goodcode.Add(gcode);
+                goodname.Add(gname);
+                goodspecifition.Add(gspecifition);
+                f2.Listcode = goodcode;
+                f2.Listname = goodname;
+                f2.Listspecifition = goodspecifition;
+            }
+            f2.List = newlist;
+            f2.SendStocktoshow = this.SendStocktoshow;
+            f2.UserInfo = this.UserInfo;
+            f2.ShowDialog();
+
         }
 
         /// <summary>

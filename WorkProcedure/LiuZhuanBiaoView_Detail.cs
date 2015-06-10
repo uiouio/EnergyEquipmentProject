@@ -64,14 +64,7 @@ namespace WorkProcedure
                     GetAllEnable();
                 }
                 this.textBox43.Text = receiveLiuZhuanDate.Factory;
-                if (this.textBox42.Text != "")
-                {
-                    this.textBox42.Text = receiveLiuZhuanDate.EngingPower.ToString();
-                }
-                //else
-                //{
-                //    receiveLiuZhuanDate.EngingPower = 0;
-                //}
+                this.textBox42.Text = receiveLiuZhuanDate.EngingPower.ToString();
                 this.textBox45.Text = ReceiveLiuZhuanDate.PaiGongDan.CarInfo.PlateNumber;
                 this.textBox44.Text = ReceiveLiuZhuanDate.PaiGongDan.CarInfo.EngineIdentificationNumber;
                 this.textBox46.Text = ReceiveLiuZhuanDate.PaiGongDan.CarInfo.FuelConsumption.ToString();
@@ -118,16 +111,43 @@ namespace WorkProcedure
                 this.textBox37.Text = receiveLiuZhuanDate.TrainersSign;
                 this.textBox38.Text = receiveLiuZhuanDate.TrainerDriverSign;
 
-                //if (this.dateTimePicker1.Value == 0)
-                //{
-                //    receiveLiuZhuanDate.TrainingDates = DateTime.Now;
-                //}
-                //else
-                //{
-                //    this.dateTimePicker1.Value = new DateTime(receiveLiuZhuanDate.TrainingDates);
-                //}
-                //if (comboBox15.SelectedIndex != -1)
-                //{
+                this.textBox60.Text = receiveLiuZhuanDate.DieselOilFilterInstaller;
+                textBox68.Text = receiveLiuZhuanDate.DieselOilFilterHead;
+                textBox67.Text = receiveLiuZhuanDate.DieselOilFilterRemark;
+                textBox59.Text= receiveLiuZhuanDate.PressurizerInstaller;
+                textBox66.Text = receiveLiuZhuanDate.PressurizerHead;
+                textBox65.Text=receiveLiuZhuanDate.PressurizerRemark;
+                textBox58.Text=receiveLiuZhuanDate.MixerInstaller;
+                textBox64.Text= receiveLiuZhuanDate.MixerHead;
+                textBox63.Text=receiveLiuZhuanDate.MixerRemark;
+                textBox2.Text= receiveLiuZhuanDate.WaterHeaterInstaller;
+                textBox62.Text= receiveLiuZhuanDate.WaterHeaterHead;
+                textBox61.Text= receiveLiuZhuanDate.WaterHeaterRemark;
+                textBox82.Text=receiveLiuZhuanDate.LiquidMonitorInstaller;
+                textBox86.Text=receiveLiuZhuanDate.LiquidMonitorHead;
+                textBox85.Text=receiveLiuZhuanDate.LiquidMonitorRemark;
+                textBox81.Text=receiveLiuZhuanDate.BracketInstallationInstaller;
+                textBox84.Text=receiveLiuZhuanDate.BracketInstallationHead;
+                textBox83.Text=receiveLiuZhuanDate.BoxInstallationRemark;
+                textBox72.Text=receiveLiuZhuanDate.GasInstallationInstaller;
+                textBox80.Text = receiveLiuZhuanDate.GasInstallationHead;
+                textBox79.Text=receiveLiuZhuanDate.GasInstallationRemark;
+                textBox71.Text= receiveLiuZhuanDate.BoxInstallationInstaller;
+                textBox78.Text=receiveLiuZhuanDate.BoxInstallationHead;
+                textBox77.Text=receiveLiuZhuanDate.BoxInstallationRemark;
+                textBox71.Text=receiveLiuZhuanDate.BufferInstallationInstaller;
+                textBox76.Text=receiveLiuZhuanDate.BufferInstallationHead;
+                textBox75.Text=receiveLiuZhuanDate.BufferInstallationRemark;
+                textBox69.Text=receiveLiuZhuanDate.SpeedInstallationInstaller;
+                textBox74.Text=receiveLiuZhuanDate.SpeedInstallationHead;
+                textBox73.Text=receiveLiuZhuanDate.SpeedInstallationRemark;
+                textBox88.Text=receiveLiuZhuanDate.TurbineInstallationInstaller;
+                textBox92.Text=receiveLiuZhuanDate.TurbineInstallationHead;
+                textBox91.Text=receiveLiuZhuanDate.TurbineInstallationRemark;
+                textBox87.Text=receiveLiuZhuanDate.BeautifulInstaller;
+                textBox90.Text=receiveLiuZhuanDate.BeautifuHead;
+                textBox89.Text=receiveLiuZhuanDate.BeautifuRemark;
+                
                 comboBox15.SelectedIndex = receiveLiuZhuanDate.AffectOriginalCar;
                 //}
 
@@ -322,6 +342,8 @@ namespace WorkProcedure
             receiveLiuZhuanDate.KeySwitchInstaller = this.textBox40.Text;
             receiveLiuZhuanDate.KeySwitchHead = this.textBox16.Text;
             receiveLiuZhuanDate.KeySwitchReamrk = this.textBox17.Text;
+           
+
             receiveLiuZhuanDate.LNGConnectionInstaller = this.textBox57.Text;
             receiveLiuZhuanDate.LNGConnectionHead = this.textBox29.Text;
             receiveLiuZhuanDate.LNGConnectionHeadRemark = this.textBox28.Text;
@@ -389,6 +411,7 @@ namespace WorkProcedure
             receiveLiuZhuanDate.BeautifulInstaller = textBox87.Text;
             receiveLiuZhuanDate.BeautifuHead = textBox90.Text;
             receiveLiuZhuanDate.BeautifuRemark = textBox89.Text;
+
             receiveLiuZhuanDate.WaterIsGoodPerson = textBox57.Text;
             receiveLiuZhuanDate.WaterIsGoodRemark = textBox29.Text;
             receiveLiuZhuanDate.WaterIsGoodSign = textBox28.Text;

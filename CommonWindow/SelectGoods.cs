@@ -303,16 +303,16 @@ namespace CommonWindow
        /// <param name="e"></param>
         private void commonDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string iftrue = this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            if (iftrue == "True")
-            {
-                this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value = false;
-                //this.commonDataGridView2.Rows.
-            }
-            else
-            {
-                this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value = true;
-            }
+            //string iftrue = this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            //if (iftrue == "True")
+            //{
+            //    this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value = false;
+            //    //this.commonDataGridView2.Rows.
+            //}
+            //else
+            //{
+            //    this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value = true;
+            //}
         }
 
         private void commonDataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -328,5 +328,21 @@ namespace CommonWindow
                 this.commonDataGridView2.Rows[e.RowIndex].Cells[0].Value = true;
             }
         }
+
+        private void commonDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string iftrue = this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            if (iftrue == "True")
+            {
+                this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value = false;
+                //this.commonDataGridView2.Rows.
+            }
+            else
+            {
+                this.commonDataGridView1.Rows[e.RowIndex].Cells[0].Value = true;
+            }
+        }
+
+    
     }
 }

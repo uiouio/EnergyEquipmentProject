@@ -25,6 +25,7 @@ namespace KuGuanXiTong
 
         public override void reFreshAllControl()
         {
+            this.comboBox2.SelectedIndex = 0;
             ShowInGrid(ops.GetChuKuDetailForTongJi());
             base.reFreshAllControl();
         }
@@ -113,12 +114,25 @@ namespace KuGuanXiTong
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            ShowInGrid(ops.SelectChukuDetailForTongJi(
-                this.dateTimePicker1.Value.Date.Ticks, 
-                this.dateTimePicker2.Value.Date.AddDays(1).Ticks, 
+            if (this.comboBox2.SelectedIndex == 0)
+            {
+                ShowInGrid(ops.SelectChukuDetailForTongJiBySpecifition(
+               this.dateTimePicker1.Value.Date.Ticks,
+               this.dateTimePicker2.Value.Date.AddDays(1).Ticks,
+               this.textBox2.Text,
+               this.textBox1.Text,
+               this.comboBox1.SelectedIndex));
+            }
+            else if(this.comboBox2.SelectedIndex==1)
+            {
+                ShowInGrid(ops.SelectChukuDetailForTongJi(
+                this.dateTimePicker1.Value.Date.Ticks,
+                this.dateTimePicker2.Value.Date.AddDays(1).Ticks,
                 this.textBox2.Text,
                 this.textBox1.Text,
                 this.comboBox1.SelectedIndex));
+            }
+            
         }
 
         /// <summary>

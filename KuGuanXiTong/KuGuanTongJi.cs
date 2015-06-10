@@ -55,7 +55,14 @@ namespace KuGuanXiTong
         private void button1_Click(object sender, EventArgs e)
         {
             this.button1.Cursor = Cursors.WaitCursor;
-            currentStock = opstack.GetQuerryStock(this.textBox1.Text,this.textBox2.Text);
+            if(this.comboBox1.SelectedIndex==1)
+            {
+                currentStock = opstack.GetQuerryStock(this.textBox1.Text, this.textBox2.Text);
+            }
+            else if(this.comboBox1.SelectedIndex==0)
+            {
+                currentStock = opstack.GetQuerryStockBySpecifications(this.textBox1.Text, this.textBox2.Text);
+            }
             ShowGridView();
             this.button1.Cursor = Cursors.Hand;
         }

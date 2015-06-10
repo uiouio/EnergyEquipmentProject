@@ -128,13 +128,13 @@ namespace KuGuanXiTong
         /// <param name="e"></param>
         private void commonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 9 && this.commonDataGridView1.Rows.Count > 0)
+            if (e.ColumnIndex == 10 && this.commonDataGridView1.Rows.Count > 0)
             {
                 if (this.commonDataGridView1.CurrentCell.Value.ToString() == "删除")
                     this.commonDataGridView1.Rows.Remove(this.commonDataGridView1.CurrentRow);
 
             }
-            if (e.ColumnIndex == 10 && this.commonDataGridView1.Rows.Count > 0)
+            if (e.ColumnIndex == 11 && this.commonDataGridView1.Rows.Count > 0)
             {
                 if (this.commonDataGridView1.CurrentCell.Value.ToString() == "打印条码")
                     CommonMethod.PrintCode.print(this.commonDataGridView1.CurrentRow.Cells[2].Value.ToString(), this.commonDataGridView1.CurrentRow.Cells[1].Value.ToString());

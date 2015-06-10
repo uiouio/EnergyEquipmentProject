@@ -39,6 +39,19 @@ namespace KuGuanXiTong.Service
             i = this.ExecuteSQL(sql);
             return i;
         }
+        public IList GetQuerryStockBySpecifications(string code, string name)
+        {
+            IList i = null;
+            string sql = "select * from (select GoodsBaseInfo.GoodsClassCode,GoodsBaseInfo.GoodsName," +
+                "GoodsBaseInfo.Specifications," +
+           " GoodsBaseInfo.Unit,GoodsBaseInfo.Material,t.* from (select GoodsBaseInfoID," +
+            " SUM(Quantity) as Quan, sum([Money])/COUNT(*) as MM, " +
+            "sum(StorehouseplaceCode)/COUNT(*) as SS from Stock where State = 0 " +
+            " group by GoodsBaseInfoID) t left join GoodsBaseInfo on t.GoodsBaseInfoID " +
+           " = GoodsBaseInfo.Id) a where Specifications like " + "'%" + name + "%'" + " and GoodsClassCode like " + "'%" + code + "%'";
+            i = this.ExecuteSQL(sql);
+            return i;
+        }
         public IList GetCategtoryBranching(long id, string name ,string code)
         {
             IList i = null;
@@ -165,7 +178,33 @@ namespace KuGuanXiTong.Service
             return i;
         }
 
+        public IList SelectChukuDetailForTongJiBySpecifition(long t1, long t2, string name, string code, long optype)
+        {
+            IList i = null;
+            string sql = "from StockOperationDetail u where u.State = "
+                + (int)BaseEntity.stateEnum.Normal +
+                " and u.StockOperationId.OperationTime>" + t1 +
+                " and u.StockOperationId.OperationTime<" + t2 +
+                " and u.StockId.GoodsBaseInfoID.GoodsClassCode like '%" + code + "%'" +
+                " and u.StockOperationId.OperationTpye = " + optype +
+                " and u.StockId.GoodsBaseInfoID.Specifications like '%" + name + "%'" +
+                " order by  u.StockOperationId.OperationTime DESC , u.StockOperationId.Id ASC ";
 
+            string sql2 = "from StockOperationDetail u where u.State = "
+                + (int)BaseEntity.stateEnum.Normal +
+                " and u.StockOperationId.OperationTime>" + t1 +
+                " and u.StockOperationId.OperationTime<" + t2 +
+                " and u.StockId.GoodsBaseInfoID.GoodsClassCode like '%" + code + "%'" +
+                " and u.StockOperationId.OperationTpye <> 0" +
+                " and u.StockId.GoodsBaseInfoID.Specifications like '%" + name + "%' " +
+                " order by u.StockOperationId.OperationTime DESC,u.StockOperationId.Id ASC";
+
+            if (optype > 0)
+                i = this.loadEntityList(sql);
+            else
+                i = this.loadEntityList(sql2);
+            return i;
+        }
 
 
         /// <summary>
