@@ -45,6 +45,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
             this.timerLoadMainPage = new System.Windows.Forms.Timer(this.components);
+            this.timerMemoryClear = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -219,6 +220,12 @@
             // 
             this.timerLoadMainPage.Tick += new System.EventHandler(this.timerLoadMainPage_Tick);
             // 
+            // timerMemoryClear
+            // 
+            this.timerMemoryClear.Enabled = true;
+            this.timerMemoryClear.Interval = 10000;
+            this.timerMemoryClear.Tick += new System.EventHandler(this.timerMemoryClear_Tick);
+            // 
             // MainForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -268,6 +275,7 @@
         private System.Windows.Forms.Label label4;
         private CommonControl.CommonPictureButton commonPictureButton1;
         private System.Windows.Forms.Timer timerLoadMainPage;
+        private System.Windows.Forms.Timer timerMemoryClear;
     }
 }
 
