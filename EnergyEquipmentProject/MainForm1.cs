@@ -15,12 +15,30 @@ using System.Collections;
 using System.IO;
 using System.Data.SqlClient;
 using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace EnergyEquipmentProject
 {
     public partial class MainForm1 : CommonControl.BaseForm
     {
-      
+
+        #region 内存回收
+        [DllImport("kernel32.dll", EntryPoint = "SetProcessWorkingSetSize")]
+        public static extern int SetProcessWorkingSetSize(IntPtr process, int minSize, int maxSize);
+        /// <summary>
+        /// 释放内存
+        /// </summary>
+        public static void ClearMemory()
+        {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+            {
+                SetProcessWorkingSetSize(System.Diagnostics.Process.GetCurrentProcess().Handle, -1, -1);
+            }
+        }
+        #endregion
+        
         public delegate void dataChangedHandler(object sender, SqlNotificationEventArgs e);
         Service.UserInfoService userInfoService = new Service.UserInfoService();
         public MainForm1()
@@ -242,6 +260,11 @@ namespace EnergyEquipmentProject
                 commonPictureButton1.NonSelectBackGroundImage = EnergyEquipmentProject.Properties.Resources.ToLeft1;
                 commonPictureButton1.SelectBackGroundImage = EnergyEquipmentProject.Properties.Resources.ToLeft1;
             }
+        }
+
+        private void timerMemoryClear_Tick(object sender, EventArgs e)
+        {
+            ClearMemory();
         }
 
       
