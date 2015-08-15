@@ -40,8 +40,9 @@ namespace HeTongGuanLi
             this.textBox9.Text = ModificationContract.PaymentMethod;
             this.textBox2.Text = ModificationContract.ContractAmount.ToString();
             this.textBox8.Text = ModificationContract.UserID.Name;
-            this.textBox6.Text = ModificationContract.Remarks;
-            this.htmlEditor1.BodyInnerText = ModificationContract.ContractContents;
+            this.textBox6.Text = ModificationContract.Remarks +Environment.NewLine+ "审批意见:" + ModificationContract.SalesResponsiblePersonOpinion;
+            //this.htmlEditor1.BodyInnerText = ModificationContract.ContractContents;
+            this.htmlEditor1.BodyInnerHTML = ModificationContract.ContractContents;
             if (ModificationContract.ContractMethod == (int)ModificationContract.Type.duinei)
             {
                 this.radioButton1.Checked = true;
@@ -102,7 +103,7 @@ namespace HeTongGuanLi
             CustomService ss = new CustomService();
             ModificationContract.ContractAmount =float.Parse( textBox2.Text);
             ModificationContract.Remarks = this.textBox6.Text;
-            ModificationContract.ContractContents = this.htmlEditor1.BodyInnerText;
+            ModificationContract.ContractContents = this.htmlEditor1.BodyInnerHTML;
             ModificationContract.Process = (int)ModificationContract.guocheng.xsfzr;
             ModificationContract.ApprovalState = (int)ModificationContract.Approval.yet;
 

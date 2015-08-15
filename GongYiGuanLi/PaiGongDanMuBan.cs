@@ -23,6 +23,10 @@ namespace GongYiGuanLi
             PaiGongDanMuBan_add_Dialog pad = new PaiGongDanMuBan_add_Dialog();
             pad.UserInfo = this.User;
             pad.ShowDialog();
+            if(pad.DialogResult==DialogResult.OK)
+            {
+                reFreshAllControl();
+            }
         }
 
         private void initDataGridView(IList modelList)

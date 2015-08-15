@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeTongShenPi));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
-            this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
-            this.commonPictureButton5 = new CommonControl.CommonPictureButton(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,9 +55,6 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.commonFlowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton5)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -68,41 +63,11 @@
             // 
             this.commonFlowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonFlowLayoutPanel1.BackgroundImage")));
             this.commonFlowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton2);
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton5);
             this.commonFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.commonFlowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.commonFlowLayoutPanel1.Name = "commonFlowLayoutPanel1";
             this.commonFlowLayoutPanel1.Size = new System.Drawing.Size(66, 680);
             this.commonFlowLayoutPanel1.TabIndex = 0;
-            // 
-            // commonPictureButton2
-            // 
-            this.commonPictureButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonPictureButton2.BackgroundImage")));
-            this.commonPictureButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton2.Location = new System.Drawing.Point(0, 3);
-            this.commonPictureButton2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton2.Name = "commonPictureButton2";
-            this.commonPictureButton2.NonSelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton2.NonSelectBackGroundImage")));
-            this.commonPictureButton2.SelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton2.SelectBackGroundImage")));
-            this.commonPictureButton2.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton2.TabIndex = 16;
-            this.commonPictureButton2.TabStop = false;
-            this.commonPictureButton2.ToolTipString = null;
-            // 
-            // commonPictureButton5
-            // 
-            this.commonPictureButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonPictureButton5.BackgroundImage")));
-            this.commonPictureButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton5.Location = new System.Drawing.Point(0, 67);
-            this.commonPictureButton5.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton5.Name = "commonPictureButton5";
-            this.commonPictureButton5.NonSelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton5.NonSelectBackGroundImage")));
-            this.commonPictureButton5.SelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton5.SelectBackGroundImage")));
-            this.commonPictureButton5.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton5.TabIndex = 15;
-            this.commonPictureButton5.TabStop = false;
-            this.commonPictureButton5.ToolTipString = null;
             // 
             // groupBox1
             // 
@@ -339,9 +304,6 @@
             this.Name = "HeTongShenPi";
             this.Size = new System.Drawing.Size(1369, 680);
             this.Load += new System.EventHandler(this.HeTongShenPi_Load);
-            this.commonFlowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton5)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).EndInit();
@@ -364,8 +326,6 @@
         private System.Windows.Forms.DateTimePicker start_dateTimePicker;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private CommonControl.CommonPictureButton commonPictureButton2;
-        private CommonControl.CommonPictureButton commonPictureButton5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

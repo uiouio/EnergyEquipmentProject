@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
@@ -56,15 +54,23 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.commonDataGridView1 = new CommonControl.CommonDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.textBox19);
             this.groupBox2.Controls.Add(this.label24);
@@ -84,40 +90,10 @@
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(811, 273);
+            this.groupBox2.Size = new System.Drawing.Size(788, 210);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "企业客户基本信息（*为必填项）";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(780, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(11, 12);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "*";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(518, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(11, 12);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "*";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(273, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(11, 12);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "*";
+            this.groupBox2.Text = "企业客户基本信息";
             // 
             // panel1
             // 
@@ -216,7 +192,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(35, 169);
+            this.label23.Location = new System.Drawing.Point(35, 144);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(65, 12);
             this.label23.TabIndex = 36;
@@ -224,10 +200,10 @@
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(101, 166);
+            this.textBox18.Location = new System.Drawing.Point(101, 141);
             this.textBox18.Multiline = true;
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(658, 82);
+            this.textBox18.Size = new System.Drawing.Size(673, 63);
             this.textBox18.TabIndex = 35;
             // 
             // comboBox5
@@ -346,7 +322,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(684, 291);
+            this.button1.Location = new System.Drawing.Point(713, 430);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 23);
             this.button1.TabIndex = 11;
@@ -354,15 +330,99 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.commonDataGridView1);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Location = new System.Drawing.Point(12, 228);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(788, 181);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "企业客户车辆信息";
+            // 
+            // commonDataGridView1
+            // 
+            this.commonDataGridView1.AllowUserToAddRows = false;
+            this.commonDataGridView1.AllowUserToDeleteRows = false;
+            this.commonDataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.commonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.commonDataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.commonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.commonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.commonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column3,
+            this.Column8,
+            this.Column10,
+            this.Column11,
+            this.Column2});
+            this.commonDataGridView1.Location = new System.Drawing.Point(28, 46);
+            this.commonDataGridView1.MultiSelect = false;
+            this.commonDataGridView1.Name = "commonDataGridView1";
+            this.commonDataGridView1.RowHeadersVisible = false;
+            this.commonDataGridView1.RowTemplate.Height = 23;
+            this.commonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.commonDataGridView1.Size = new System.Drawing.Size(746, 116);
+            this.commonDataGridView1.TabIndex = 40;
+            this.commonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.HeaderText = " ";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 20;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.HeaderText = "序号";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 60;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "车牌号";
+            this.Column8.Name = "Column8";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "车型";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "发动机号";
+            this.Column11.Name = "Column11";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.HeaderText = " ";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 50;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(683, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(91, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "添加车辆信息";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // CompanyCustomInfo_add_Dialog2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 335);
+            this.ClientSize = new System.Drawing.Size(834, 465);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "CompanyCustomInfo_add_Dialog2";
             this.Text = "企业客户信息";
             this.Load += new System.EventHandler(this.CompanyCustomInfo_add_Dialog2_Load_1);
@@ -370,6 +430,8 @@
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -377,9 +439,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton6;
@@ -404,5 +463,14 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private CommonControl.CommonDataGridView commonDataGridView1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewLinkColumn Column2;
+        private System.Windows.Forms.Button button3;
     }
 }

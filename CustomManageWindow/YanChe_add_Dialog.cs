@@ -42,6 +42,7 @@ namespace CustomManageWindow
             if(CarBaseInfo.ModidiedType==(int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGGas)
             {
                 this.comboBox1.DataSource = ss.SelectCylinderType("CNG汽油");
+                this.comboBox2.Enabled = false;
                 this.comboBox2.Text = "1";
             }
             else if (CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGDiesel)
@@ -56,16 +57,32 @@ namespace CustomManageWindow
             else if (CarBaseInfo.ModidiedType == (int)ModificationContract.CNGGasCNGDieselLNGDiesel.LNGDiesel)
             {
                 this.comboBox1.DataSource = ss.SelectCylinderType("LNG柴油");
-                this.comboBox2.Items.Add("1");
-                this.comboBox2.Items.Add("2");
-
-            }
-            
+                this.comboBox2.Enabled = false;
+                if(this.comboBox1.Text=="LNG柴油单支")
+                {
+                    this.comboBox2.Text = "1";
+                }
+                else if (this.comboBox1.Text== "LNG柴油双支")
+                {
+                    this.comboBox2.Text = "2";
+                }
+                
+            }      
             this.textBox13.Text = CarBaseInfo.TotalMass.ToString();
             if (CarBaseInfo.Cylinder != null)
             {
                 this.comboBox1.Text = CarBaseInfo.Cylinder.CylinderType;
                 this.comboBox2.Text = CarBaseInfo.Cylinder.CylinderNumber.ToString();
+                if (this.comboBox1.Text == "LNG柴油单支")
+                {
+                    this.comboBox1.Enabled = false;
+                    this.comboBox2.Text = "1";
+                }
+                else if (this.comboBox1.Text == "LNG柴油双支")
+                {
+                    this.comboBox1.Enabled = false;
+                    this.comboBox2.Text = "2";
+                }
             }
             else
             {

@@ -85,10 +85,17 @@ namespace CustomManageWindow
                 this.textBox5.Enabled = false;
                 this.textBox5.Text = CarBaseInfo.Remarks;
                 this.comboBox4.Text = CarBaseInfo.ECUOperator;
-                this.dateTimePicker1.Text = new DateTime(CarBaseInfo.OutFactoryTime).ToString();
-                 
-                
-
+                //this.dateTimePicker1.Text = new DateTime(CarBaseInfo.OutFactoryTime).ToString();
+                //this.dateTimePicker1.Value = new DateTime(CarBaseInfo.OutFactoryTime); 
+                if(CarBaseInfo.OutFactoryTime==0)
+                {
+                    this.dateTimePicker1.Format = DateTimePickerFormat.Custom;
+                    this.dateTimePicker1.CustomFormat = " ";
+                }
+                else
+                {
+                    this.dateTimePicker1.Value = new DateTime(CarBaseInfo.OutFactoryTime);
+                }
             }
             if (IsShowOrInput == 1)
             {

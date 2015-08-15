@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaiGongDanMuBan));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,10 +40,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.commonDataGridView = new CommonControl.CommonDataGridView();
-            this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
-            this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
-            this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
-            this.commonPictureButton3 = new CommonControl.CommonPictureButton(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,12 +47,12 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
+            this.commonPictureButton1 = new CommonControl.CommonPictureButton(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView)).BeginInit();
             this.commonFlowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -120,18 +116,18 @@
             this.commonDataGridView.AllowUserToAddRows = false;
             this.commonDataGridView.AllowUserToDeleteRows = false;
             this.commonDataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.commonDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.commonDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.commonDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.commonDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.commonDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -146,68 +142,12 @@
             this.commonDataGridView.Name = "commonDataGridView";
             this.commonDataGridView.ReadOnly = true;
             this.commonDataGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.commonDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.commonDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.commonDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.commonDataGridView.Size = new System.Drawing.Size(1133, 490);
             this.commonDataGridView.TabIndex = 6;
             this.commonDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView_CellContentClick);
-            // 
-            // commonFlowLayoutPanel1
-            // 
-            this.commonFlowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonFlowLayoutPanel1.BackgroundImage")));
-            this.commonFlowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton1);
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton2);
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton3);
-            this.commonFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.commonFlowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.commonFlowLayoutPanel1.Name = "commonFlowLayoutPanel1";
-            this.commonFlowLayoutPanel1.Size = new System.Drawing.Size(66, 680);
-            this.commonFlowLayoutPanel1.TabIndex = 9;
-            // 
-            // commonPictureButton1
-            // 
-            this.commonPictureButton1.BackgroundImage = global::GongYiGuanLi.Properties.Resources.新建;
-            this.commonPictureButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton1.Location = new System.Drawing.Point(0, 3);
-            this.commonPictureButton1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton1.Name = "commonPictureButton1";
-            this.commonPictureButton1.NonSelectBackGroundImage = global::GongYiGuanLi.Properties.Resources.新建;
-            this.commonPictureButton1.SelectBackGroundImage = global::GongYiGuanLi.Properties.Resources.新建select;
-            this.commonPictureButton1.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton1.TabIndex = 0;
-            this.commonPictureButton1.TabStop = false;
-            this.commonPictureButton1.ToolTipString = "新建";
-            this.commonPictureButton1.Click += new System.EventHandler(this.commonPictureButton1_Click);
-            // 
-            // commonPictureButton2
-            // 
-            this.commonPictureButton2.BackgroundImage = global::GongYiGuanLi.Properties.Resources.打印;
-            this.commonPictureButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton2.Location = new System.Drawing.Point(0, 67);
-            this.commonPictureButton2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton2.Name = "commonPictureButton2";
-            this.commonPictureButton2.NonSelectBackGroundImage = global::GongYiGuanLi.Properties.Resources.打印;
-            this.commonPictureButton2.SelectBackGroundImage = global::GongYiGuanLi.Properties.Resources.打印select;
-            this.commonPictureButton2.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton2.TabIndex = 1;
-            this.commonPictureButton2.TabStop = false;
-            this.commonPictureButton2.ToolTipString = "打印";
-            // 
-            // commonPictureButton3
-            // 
-            this.commonPictureButton3.BackgroundImage = global::GongYiGuanLi.Properties.Resources.导出;
-            this.commonPictureButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton3.Location = new System.Drawing.Point(0, 131);
-            this.commonPictureButton3.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton3.Name = "commonPictureButton3";
-            this.commonPictureButton3.NonSelectBackGroundImage = global::GongYiGuanLi.Properties.Resources.导出;
-            this.commonPictureButton3.SelectBackGroundImage = global::GongYiGuanLi.Properties.Resources.导出select;
-            this.commonPictureButton3.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton3.TabIndex = 2;
-            this.commonPictureButton3.TabStop = false;
-            this.commonPictureButton3.ToolTipString = "导出";
             // 
             // Column1
             // 
@@ -263,6 +203,32 @@
             this.Column10.ReadOnly = true;
             this.Column10.Width = 80;
             // 
+            // commonFlowLayoutPanel1
+            // 
+            this.commonFlowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonFlowLayoutPanel1.BackgroundImage")));
+            this.commonFlowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton1);
+            this.commonFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.commonFlowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.commonFlowLayoutPanel1.Name = "commonFlowLayoutPanel1";
+            this.commonFlowLayoutPanel1.Size = new System.Drawing.Size(66, 680);
+            this.commonFlowLayoutPanel1.TabIndex = 9;
+            // 
+            // commonPictureButton1
+            // 
+            this.commonPictureButton1.BackgroundImage = global::GongYiGuanLi.Properties.Resources.新建;
+            this.commonPictureButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.commonPictureButton1.Location = new System.Drawing.Point(0, 3);
+            this.commonPictureButton1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.commonPictureButton1.Name = "commonPictureButton1";
+            this.commonPictureButton1.NonSelectBackGroundImage = global::GongYiGuanLi.Properties.Resources.新建;
+            this.commonPictureButton1.SelectBackGroundImage = global::GongYiGuanLi.Properties.Resources.新建select;
+            this.commonPictureButton1.Size = new System.Drawing.Size(66, 61);
+            this.commonPictureButton1.TabIndex = 0;
+            this.commonPictureButton1.TabStop = false;
+            this.commonPictureButton1.ToolTipString = "新建";
+            this.commonPictureButton1.Click += new System.EventHandler(this.commonPictureButton1_Click);
+            // 
             // PaiGongDanMuBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -276,8 +242,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView)).EndInit();
             this.commonFlowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,8 +257,6 @@
         private CommonControl.CommonDataGridView commonDataGridView;
         private CommonControl.CommonFlowLayoutPanel commonFlowLayoutPanel1;
         private CommonControl.CommonPictureButton commonPictureButton1;
-        private CommonControl.CommonPictureButton commonPictureButton2;
-        private CommonControl.CommonPictureButton commonPictureButton3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;

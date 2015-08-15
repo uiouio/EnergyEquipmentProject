@@ -6,28 +6,28 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.52685in</Width>
+              <Width>0.42144in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.34029in</Width>
+              <Width>1.23488in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.40537in</Width>
+              <Width>1.29996in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.13152in</Width>
+              <Width>1.02611in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.67839in</Width>
+              <Width>0.57298in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.89459in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.89459in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.89459in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -44,7 +44,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>序号</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -74,7 +76,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>物品编号</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -104,7 +108,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>物品名称</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -134,7 +140,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>规格型号</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -164,7 +172,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>单位</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -194,7 +204,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>单价</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -224,7 +236,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>数量</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -254,7 +268,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>总价</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -289,10 +305,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=RowNumber("EnergyEquipmentProjectDataSet")</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -319,10 +339,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!GoodsClassCode.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>GoodsClassCode1</rd:DefaultName>
@@ -349,10 +373,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!GoodsName.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>GoodsName1</rd:DefaultName>
@@ -379,10 +407,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Specifications.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Specifications1</rd:DefaultName>
@@ -409,10 +441,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Unit.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Unit1</rd:DefaultName>
@@ -439,7 +475,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!SingleMoney.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -469,7 +507,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Quantity.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -499,7 +539,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Quantity.Value*Fields!SingleMoney.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -534,7 +576,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>合计</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -564,7 +608,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -594,7 +640,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -624,7 +672,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -654,7 +704,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -684,7 +736,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Sum(Fields!SingleMoney.Value)</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -714,7 +768,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Sum(Fields!Quantity.Value, "EnergyEquipmentProjectDataSet")</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -744,7 +800,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Sum(Fields!Quantity.Value*Fields!SingleMoney.Value)</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -797,7 +855,7 @@
         <Top>0.23834in</Top>
         <Left>0.25003in</Left>
         <Height>0.83333in</Height>
-        <Width>8.08242in</Width>
+        <Width>7.23914in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -805,10 +863,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.2227in</Height>
+    <Height>1.23312in</Height>
     <Style />
   </Body>
-  <Width>8.83209in</Width>
+  <Width>7.82203in</Width>
   <Page>
     <PageHeader>
       <Height>1.71875in</Height>
@@ -822,8 +880,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>新兴能源有限公司</Value>
-                  <Style />
+                  <Value>新兴际华新能源发展（邯郸）有限公司</Value>
+                  <Style>
+                    <FontSize>6pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -863,7 +923,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>0.30084in</Top>
-          <Left>3.39911in</Left>
+          <Left>3.19467in</Left>
           <Height>0.32292in</Height>
           <Width>1.55208in</Width>
           <ZIndex>1</ZIndex>
@@ -885,7 +945,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>单    据    号：</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -895,7 +957,7 @@
           <Top>0.80084in</Top>
           <Left>0.20268in</Left>
           <Height>0.20833in</Height>
-          <Width>0.87133in</Width>
+          <Width>1.02758in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -915,7 +977,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Parameters!p_DispatchOrder.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -923,9 +987,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
           <Top>0.80084in</Top>
-          <Left>1.07401in</Left>
+          <Left>1.23026in</Left>
           <Height>0.19792in</Height>
-          <Width>1.80208in</Width>
+          <Width>1.64583in</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -945,7 +1009,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>日        期：</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -975,7 +1041,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Parameters!p_Date.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1005,7 +1073,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>材 料 类 别 ：</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1015,7 +1085,7 @@
           <Top>1.14457in</Top>
           <Left>0.20268in</Left>
           <Height>0.20833in</Height>
-          <Width>0.87133in</Width>
+          <Width>1.02758in</Width>
           <ZIndex>6</ZIndex>
           <Style>
             <Border>
@@ -1035,7 +1105,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Parameters!p_ClassCode.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1043,9 +1115,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox21</rd:DefaultName>
           <Top>1.14457in</Top>
-          <Left>1.07401in</Left>
+          <Left>1.23026in</Left>
           <Height>0.20833in</Height>
-          <Width>1.80208in</Width>
+          <Width>1.64583in</Width>
           <ZIndex>7</ZIndex>
           <Style>
             <Border>
@@ -1065,7 +1137,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>仓　      库：</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1095,7 +1169,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>仓库</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1125,7 +1201,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>部          门：</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1155,7 +1233,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>职        员：</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1185,7 +1265,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>备            注：</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1195,7 +1277,7 @@
           <Top>1.40846in</Top>
           <Left>0.20268in</Left>
           <Height>0.20833in</Height>
-          <Width>0.87133in</Width>
+          <Width>1.02758in</Width>
           <ZIndex>12</ZIndex>
           <Style>
             <Border>
@@ -1215,7 +1297,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Parameters!p_CustomName.Value+" "+Parameters!p_PlateNumber.Value+" "+Parameters!p_ModifyType.Value+" "+Parameters!p_VehicleType.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1223,10 +1307,136 @@
           </Paragraphs>
           <rd:DefaultName>Textbox28</rd:DefaultName>
           <Top>1.42235in</Top>
-          <Left>1.07401in</Left>
+          <Left>1.23026in</Left>
           <Height>0.20833in</Height>
-          <Width>6.0612in</Width>
+          <Width>5.90495in</Width>
           <ZIndex>13</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox33">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!TotalPages</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>0.10292in</Top>
+          <Left>6.85972in</Left>
+          <Height>0.25in</Height>
+          <Width>0.16278in</Width>
+          <ZIndex>14</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox44">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>页码：</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox40</rd:DefaultName>
+          <Top>0.10292in</Top>
+          <Left>6.36023in</Left>
+          <Height>0.25in</Height>
+          <Width>0.45782in</Width>
+          <ZIndex>15</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox35">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>－</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox33</rd:DefaultName>
+          <Top>0.11488in</Top>
+          <Left>7.05027in</Left>
+          <Height>0.2093in</Height>
+          <Width>0.16817in</Width>
+          <ZIndex>16</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox37">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>0.10292in</Top>
+          <Left>7.2502in</Left>
+          <Height>0.25in</Height>
+          <Width>0.23897in</Width>
+          <ZIndex>17</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1245,7 +1455,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.67708in</Height>
+      <Height>0.71354in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1257,7 +1467,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>制   单   人：</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1286,7 +1498,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Parameters!p_Name.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1315,8 +1529,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>审   核  人：</Value>
-                  <Style />
+                  <Value>领   料  人：</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1326,7 +1542,7 @@
           <Top>0.23438in</Top>
           <Left>2.11717in</Left>
           <Height>0.20833in</Height>
-          <Width>0.78125in</Width>
+          <Width>1.00806in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -1345,7 +1561,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Parameters!p_Name.Value</Value>
+                  <Value />
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -1354,9 +1570,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox21</rd:DefaultName>
           <Top>0.22917in</Top>
-          <Left>2.91231in</Left>
+          <Left>3.19467in</Left>
           <Height>0.21354in</Height>
-          <Width>0.73958in</Width>
+          <Width>0.45722in</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -1375,8 +1591,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>记   账  人：</Value>
-                  <Style />
+                  <Value>保   管  人：</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1384,7 +1602,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>0.22917in</Top>
-          <Left>4.14911in</Left>
+          <Left>3.77411in</Left>
           <Height>0.20833in</Height>
           <Width>0.80208in</Width>
           <ZIndex>4</ZIndex>
@@ -1405,8 +1623,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Parameters!p_Name.Value</Value>
-                  <Style />
+                  <Value />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1414,7 +1634,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox21</rd:DefaultName>
           <Top>0.23438in</Top>
-          <Left>4.89711in</Left>
+          <Left>4.52211in</Left>
           <Height>0.20833in</Height>
           <Width>0.73958in</Width>
           <ZIndex>5</ZIndex>
@@ -1436,7 +1656,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>打 印 日 期：</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1444,7 +1666,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>0.22917in</Top>
-          <Left>6.09801in</Left>
+          <Left>5.5117in</Left>
           <Height>0.20833in</Height>
           <Width>0.96361in</Width>
           <ZIndex>6</ZIndex>
@@ -1466,7 +1688,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Parameters!p_Date.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1474,7 +1698,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox21</rd:DefaultName>
           <Top>0.22917in</Top>
-          <Left>7.07551in</Left>
+          <Left>6.4892in</Left>
           <Height>0.20833in</Height>
           <Width>1in</Width>
           <ZIndex>7</ZIndex>
@@ -1495,10 +1719,12 @@
         </Border>
       </Style>
     </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageHeight>5.51in</PageHeight>
+    <PageWidth>9.45in</PageWidth>
+    <LeftMargin>0.5in</LeftMargin>
+    <RightMargin>0.5in</RightMargin>
+    <TopMargin>0.4in</TopMargin>
+    <BottomMargin>0.8in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>

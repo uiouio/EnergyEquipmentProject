@@ -43,7 +43,11 @@ namespace KuGuanXiTong.Service
         public Stock getStockByGoodsCode(string goodsCode)
         {
             IList resultList = this.loadEntityList("from Stock where State=" + (int)BaseEntity.stateEnum.Normal + " and GoodsCode='" + goodsCode + "'");
-            if (resultList != null && resultList.Count == 1)
+            //if (resultList != null && resultList.Count == 1)
+            //{
+            //    return (Stock)resultList[0];
+            //}
+            if (resultList != null)
             {
                 return (Stock)resultList[0];
             }

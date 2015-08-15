@@ -55,6 +55,7 @@
             this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
             this.commonPictureButton4 = new CommonControl.CommonPictureButton(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -68,7 +69,6 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
             this.commonFlowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).BeginInit();
@@ -301,6 +301,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "货物出库信息";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "物品规格",
+            "物品名称"});
+            this.comboBox2.Location = new System.Drawing.Point(287, 51);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(93, 20);
+            this.comboBox2.TabIndex = 69;
+            this.comboBox2.Text = "物品规格：";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -434,18 +446,6 @@
             this.Column13.HeaderText = "改装单号";
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "物品规格",
-            "物品名称"});
-            this.comboBox2.Location = new System.Drawing.Point(287, 51);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(93, 20);
-            this.comboBox2.TabIndex = 69;
             // 
             // KuGuanTongJi_ChuKu
             // 

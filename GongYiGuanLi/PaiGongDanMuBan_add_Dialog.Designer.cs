@@ -36,8 +36,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.commonDataGridView = new CommonControl.CommonDataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,12 +44,14 @@
             this.付款类型 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(346, 730);
+            this.button3.Location = new System.Drawing.Point(347, 659);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 23);
             this.button3.TabIndex = 33;
@@ -120,27 +120,10 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.commonDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.commonDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.commonDataGridView.Size = new System.Drawing.Size(709, 537);
+            this.commonDataGridView.Size = new System.Drawing.Size(709, 455);
             this.commonDataGridView.TabIndex = 49;
             this.commonDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView_CellContentClick);
             this.commonDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView_CellValueChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(94, 654);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(650, 70);
-            this.textBox1.TabIndex = 52;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 657);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 12);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "备   注：";
             // 
             // Column1
             // 
@@ -193,11 +176,29 @@
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(94, 581);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(650, 52);
+            this.textBox1.TabIndex = 52;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 581);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 12);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "备   注：";
+            // 
             // PaiGongDanMuBan_add_Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 760);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(781, 706);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -205,6 +206,7 @@
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
+            this.MaximizeBox = true;
             this.Name = "PaiGongDanMuBan_add_Dialog";
             this.Text = "新建派工单模板";
             this.Load += new System.EventHandler(this.PaiGongDanMuBan_add_Dialog_Load);

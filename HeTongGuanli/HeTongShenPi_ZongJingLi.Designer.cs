@@ -32,9 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeTongShenPi_ZongJingLi));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
-            this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
-            this.commonPictureButton5 = new CommonControl.CommonPictureButton(this.components);
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,19 +55,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column8 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.commonFlowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -68,41 +63,11 @@
             // 
             this.commonFlowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonFlowLayoutPanel1.BackgroundImage")));
             this.commonFlowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton2);
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton5);
             this.commonFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.commonFlowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.commonFlowLayoutPanel1.Name = "commonFlowLayoutPanel1";
             this.commonFlowLayoutPanel1.Size = new System.Drawing.Size(66, 680);
             this.commonFlowLayoutPanel1.TabIndex = 2;
-            // 
-            // commonPictureButton2
-            // 
-            this.commonPictureButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonPictureButton2.BackgroundImage")));
-            this.commonPictureButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton2.Location = new System.Drawing.Point(0, 3);
-            this.commonPictureButton2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton2.Name = "commonPictureButton2";
-            this.commonPictureButton2.NonSelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton2.NonSelectBackGroundImage")));
-            this.commonPictureButton2.SelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton2.SelectBackGroundImage")));
-            this.commonPictureButton2.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton2.TabIndex = 16;
-            this.commonPictureButton2.TabStop = false;
-            this.commonPictureButton2.ToolTipString = null;
-            // 
-            // commonPictureButton5
-            // 
-            this.commonPictureButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonPictureButton5.BackgroundImage")));
-            this.commonPictureButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton5.Location = new System.Drawing.Point(0, 67);
-            this.commonPictureButton5.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton5.Name = "commonPictureButton5";
-            this.commonPictureButton5.NonSelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton5.NonSelectBackGroundImage")));
-            this.commonPictureButton5.SelectBackGroundImage = ((System.Drawing.Bitmap)(resources.GetObject("commonPictureButton5.SelectBackGroundImage")));
-            this.commonPictureButton5.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton5.TabIndex = 15;
-            this.commonPictureButton5.TabStop = false;
-            this.commonPictureButton5.ToolTipString = null;
             // 
             // commonDataGridView1
             // 
@@ -135,6 +100,83 @@
             this.commonDataGridView1.Size = new System.Drawing.Size(1004, 488);
             this.commonDataGridView1.TabIndex = 5;
             this.commonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick);
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column8.HeaderText = " ";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 20;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.HeaderText = "序号";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 60;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.HeaderText = "合同号";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 120;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.HeaderText = "经办人";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.HeaderText = "乙方";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column11.HeaderText = "签订日期";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column5.HeaderText = "合同金额(元)";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 120;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column10.HeaderText = "审核状态";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 180;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column9.HeaderText = " ";
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 50;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column6.HeaderText = " ";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 50;
             // 
             // groupBox1
             // 
@@ -252,83 +294,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "合同号：";
             // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column8.HeaderText = " ";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 20;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.HeaderText = "序号";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.HeaderText = "合同号";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 120;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.HeaderText = "经办人";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.HeaderText = "乙方";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
-            // 
-            // Column11
-            // 
-            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column11.HeaderText = "签订日期";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.HeaderText = "合同金额(元)";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 120;
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column10.HeaderText = "审核状态";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 180;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column9.HeaderText = " ";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 50;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column6.HeaderText = " ";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 50;
-            // 
             // HeTongShenPi_ZongJingLi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -338,9 +303,6 @@
             this.Controls.Add(this.commonFlowLayoutPanel1);
             this.Name = "HeTongShenPi_ZongJingLi";
             this.Load += new System.EventHandler(this.HeTongShenPi_ZongJingLi_Load);
-            this.commonFlowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -351,8 +313,6 @@
         #endregion
 
         private CommonControl.CommonFlowLayoutPanel commonFlowLayoutPanel1;
-        private CommonControl.CommonPictureButton commonPictureButton2;
-        private CommonControl.CommonPictureButton commonPictureButton5;
         private CommonControl.CommonDataGridView commonDataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;

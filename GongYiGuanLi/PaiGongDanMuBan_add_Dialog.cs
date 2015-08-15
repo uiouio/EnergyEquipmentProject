@@ -40,9 +40,9 @@ namespace GongYiGuanLi
                 refitModel = new RefitWorkModel();
                 refitModel.UserId = this.UserInfo;
             }
-            if (dispatchService.checkIfHave(textBox1.Text.Trim(), refitModel.Id))
+            if (dispatchService.checkIfHave(textBox7.Text.Trim(), refitModel.Id))
             {
-                MessageBox.Show("已有次名称模板，请重新命名！");
+                MessageBox.Show("已有此名称模板，请重新命名！");
                 textBox1.Text = "";
                 textBox1.Focus();
                 return;
@@ -59,8 +59,15 @@ namespace GongYiGuanLi
                     dispatchService.SaveOrUpdateEntity(r);
                 }
             }
-            dispatchService.SaveOrUpdateEntity(refitModel);
-            this.DialogResult = DialogResult.OK;
+            if(this.textBox7.Text=="")
+            {
+                MessageBox.Show("请输入模板名称：");
+            }
+            else
+            {
+                 dispatchService.SaveOrUpdateEntity(refitModel);
+                 this.DialogResult = DialogResult.OK;
+            }
         }
 
         private void addItemToDataGridViewEntity(ISet<RefitWorkModelGoods> goodsList)

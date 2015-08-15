@@ -343,6 +343,5 @@ namespace CommonWindow
             }
         }
 
-    
     }
 }

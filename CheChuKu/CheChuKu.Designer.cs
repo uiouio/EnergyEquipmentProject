@@ -57,8 +57,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.commonFlowLayoutPanel1 = new CommonControl.CommonFlowLayoutPanel(this.components);
-            this.commonPictureButton2 = new CommonControl.CommonPictureButton(this.components);
-            this.commonPictureButton3 = new CommonControl.CommonPictureButton(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
@@ -77,9 +75,6 @@
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CheChuKuDataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.commonFlowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton3)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
@@ -284,43 +279,11 @@
             // 
             this.commonFlowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("commonFlowLayoutPanel1.BackgroundImage")));
             this.commonFlowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton2);
-            this.commonFlowLayoutPanel1.Controls.Add(this.commonPictureButton3);
             this.commonFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.commonFlowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.commonFlowLayoutPanel1.Name = "commonFlowLayoutPanel1";
             this.commonFlowLayoutPanel1.Size = new System.Drawing.Size(66, 680);
             this.commonFlowLayoutPanel1.TabIndex = 8;
-            // 
-            // commonPictureButton2
-            // 
-            this.commonPictureButton2.BackgroundImage = global::CheChuKu.Properties.Resources.导出;
-            this.commonPictureButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton2.Location = new System.Drawing.Point(0, 3);
-            this.commonPictureButton2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton2.Name = "commonPictureButton2";
-            this.commonPictureButton2.NonSelectBackGroundImage = global::CheChuKu.Properties.Resources.导出;
-            this.commonPictureButton2.SelectBackGroundImage = global::CheChuKu.Properties.Resources.导出select;
-            this.commonPictureButton2.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton2.TabIndex = 1;
-            this.commonPictureButton2.TabStop = false;
-            this.commonPictureButton2.ToolTipString = "导出";
-            this.commonPictureButton2.Click += new System.EventHandler(this.commonPictureButton2_Click);
-            // 
-            // commonPictureButton3
-            // 
-            this.commonPictureButton3.BackgroundImage = global::CheChuKu.Properties.Resources.打印;
-            this.commonPictureButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.commonPictureButton3.Location = new System.Drawing.Point(0, 67);
-            this.commonPictureButton3.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.commonPictureButton3.Name = "commonPictureButton3";
-            this.commonPictureButton3.NonSelectBackGroundImage = global::CheChuKu.Properties.Resources.打印;
-            this.commonPictureButton3.SelectBackGroundImage = global::CheChuKu.Properties.Resources.打印select;
-            this.commonPictureButton3.Size = new System.Drawing.Size(66, 61);
-            this.commonPictureButton3.TabIndex = 2;
-            this.commonPictureButton3.TabStop = false;
-            this.commonPictureButton3.ToolTipString = "打印";
-            this.commonPictureButton3.Click += new System.EventHandler(this.commonPictureButton3_Click);
             // 
             // groupBox2
             // 
@@ -515,9 +478,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CheChuKuDataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.commonFlowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton3)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).EndInit();
@@ -533,8 +493,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button4;
         private CommonControl.CommonFlowLayoutPanel commonFlowLayoutPanel1;
-        private CommonControl.CommonPictureButton commonPictureButton2;
-        private CommonControl.CommonPictureButton commonPictureButton3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

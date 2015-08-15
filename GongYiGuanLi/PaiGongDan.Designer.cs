@@ -322,6 +322,7 @@
             this.commonDataGridView1.RowHeadersVisible = false;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.commonDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.commonDataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.commonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.commonDataGridView1.Size = new System.Drawing.Size(1094, 252);
             this.commonDataGridView1.TabIndex = 18;

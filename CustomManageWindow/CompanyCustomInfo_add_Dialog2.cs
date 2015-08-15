@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -9,14 +8,16 @@ using System.Windows.Forms;
 using EntityClassLibrary;
 using CustomManageWindow.Service;
 using System.Collections;
+using Iesi.Collections.Generic;
+using CommonControl;
 namespace CustomManageWindow
 {
     public partial class CompanyCustomInfo_add_Dialog2 : CommonControl.BaseForm
     {
         public int i = 0;
 
-        IList<CarBaseInfo> currentcars;
-
+        //IList<CarBaseInfo> currentcars;
+        ISet<CarBaseInfo> car = new HashedSet<CarBaseInfo>();
         public CustomBaseInfo currentcustom;
 
         public CustomBaseInfo Currentcustom
@@ -73,7 +74,7 @@ namespace CustomManageWindow
             #endregion
 
             Currentcustom.Remarks = this.textBox18.Text;
-
+            Currentcustom.CarInfo = car;
             ss.Save(Currentcustom);
             MessageBox.Show("保存成功");
             this.DialogResult = DialogResult.OK;
@@ -128,7 +129,45 @@ namespace CustomManageWindow
                 this.radioButton7.Checked = true;
             }
             #endregion
-            
+            car = Currentcustom.CarInfo;
+            ShowCompanyCarGrid();
+        }
+        public void ShowCompanyCarGrid()
+        {
+            int i = 1;
+            if (car != null)
+            {
+                foreach (CarBaseInfo s in car)
+                {
+                    this.commonDataGridView1.Rows.Add(0, i.ToString(), s.PlateNumber, s.VehicleType, s.EngineIdentificationNumber, "查看");
+                    commonDataGridView1.Rows[commonDataGridView1.Rows.Count - 1].Tag = s;
+                    i++;
+                }
+            }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CarManage_add_Dialog clxx = new CarManage_add_Dialog("车辆信息录入");
+            clxx.IsShowOrInput = 1;
+            if (clxx.ShowDialog() == DialogResult.OK)
+            {
+                commonDataGridView1.Rows.Add(0, 1, clxx.CarBaseInfo.PlateNumber, clxx.CarBaseInfo.VehicleType, clxx.CarBaseInfo.EngineIdentificationNumber, "查看");
+                commonDataGridView1.Rows[commonDataGridView1.Rows.Count - 1].Tag = clxx.CarBaseInfo;
+                car.Add(clxx.CarBaseInfo);
+
+            }
+        }
+
+        private void commonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CommonDataGridView grid = (CommonDataGridView)sender;
+            if (grid.CurrentCell.Value.ToString() == "查看")
+            {
+                CarManage_add_Dialog newGhs = new CarManage_add_Dialog("车辆详细信息");
+                newGhs.CarBaseInfo = (CarBaseInfo)this.commonDataGridView1.Rows[this.commonDataGridView1.CurrentRow.Index].Tag;
+                newGhs.IsShowOrInput = 0;
+                newGhs.ShowDialog();
+            }
         }
 
        

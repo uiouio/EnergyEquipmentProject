@@ -41,7 +41,7 @@ namespace HeTongGuanLi
             this.textBox1.Enabled = false;
             this.textBox4.Enabled = false;
             this.commonDataGridView2.Enabled = false;
-            this.textBox7.Enabled = false;
+            //this.textBox7.Enabled = false;
             this.textBox10.Enabled = false;
             this.textBox3.Enabled = false;
             this.textBox9.Enabled = false;
@@ -89,7 +89,7 @@ namespace HeTongGuanLi
                         i++;
                     }
                 }
-                this.textBox7.Text =CarBaseInfo.ModifyType[cbi.ModidiedType];
+                //this.textBox7.Text = ModificationContract.ContractNo;
                 this.textBox10.Text = new DateTime(ModificationContract.SignedDate).ToLongDateString();
                 this.textBox3.Text = ModificationContract.ContractNo;
                 this.textBox9.Text = ModificationContract.PaymentMethod;

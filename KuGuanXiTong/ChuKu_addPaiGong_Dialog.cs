@@ -313,6 +313,10 @@ namespace KuGuanXiTong
                     {
                         value[j] = r.Cells[j].Value;
                     }
+                    //dr.Columns[12].DefaultCellStyle.ForeColor = Color.Black;
+                    DataGridViewTextBoxCell dgvb = new DataGridViewTextBoxCell();
+                    r.Cells[12] = dgvb;
+                    value[12] = "已出库";
                     this.commonDataGridView.Rows.Add(value);
                     this.button2.Enabled = false;
                 }

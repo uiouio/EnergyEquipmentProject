@@ -104,7 +104,7 @@ namespace KuGuanXiTong.Report
             this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;//reportViewer1是你报表控件的name
             RefitWork refitWork = (RefitWork)objectRefitWork[0];
             this.reportViewer1.Reset();
-            this.reportViewer1.LocalReport.ReportPath = Application.StartupPath + @"\lib\Report\Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = Application.StartupPath + @"\TEMP\lib\Report\Report1.rdlc";
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Report1.rdlc";
             List<ReportParameter> pList = new List<ReportParameter>();
             pList.Add(new ReportParameter("p_DispatchOrder", refitWork.DispatchOrder));

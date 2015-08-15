@@ -176,7 +176,7 @@ namespace CheChuKu
 
         private void commonPictureButton3_Click(object sender, EventArgs e)
         {
-            this.commonPictureButton3.Cursor = Cursors.WaitCursor;
+            //this.commonPictureButton3.Cursor = Cursors.WaitCursor;
             DataGridView d1 = new DataGridView();
             d1 = CommonMethod.OperateDateGridView.CloneDataGridView(commonDataGridView1);
             d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
@@ -185,20 +185,20 @@ namespace CheChuKu
 
             DoExport.DoTheExport(d1);
 
-            this.commonPictureButton3.Cursor = Cursors.Hand;
+            //this.commonPictureButton3.Cursor = Cursors.Hand;
 
         }
 
         private void commonPictureButton2_Click(object sender, EventArgs e)
         {
-            this.commonPictureButton2.Cursor = Cursors.WaitCursor;
+            //this.commonPictureButton2.Cursor = Cursors.WaitCursor;
             DataGridView d1 = new DataGridView();
             d1 = CommonMethod.OperateDateGridView.CloneDataGridView(commonDataGridView1);
             d1.Columns.Remove(d1.Columns[d1.Columns.Count - 1]);
 
             DoExport.DoTheExport(d1);
 
-            this.commonPictureButton2.Cursor = Cursors.Hand;
+           // this.commonPictureButton2.Cursor = Cursors.Hand;
         }
 
     }

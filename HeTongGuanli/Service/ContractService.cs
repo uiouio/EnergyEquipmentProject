@@ -164,6 +164,7 @@ namespace HeTongGuanLi.Service
              IList i = null;
              //string sql = "select u from ModificationContract u  where u in(select c.ModificationID from CarBaseInfo c  where c.State=" + (int)BaseEntity.stateEnum.Normal + ") and   u.ContractNo like " + "'%" + name + "%' and  cbi.Name like " + "'%" + cname + "%' and u.SignedDate>=" + time1 + " and u.SignedDate<" + time2 + "  and u.State = " + (int)BaseEntity.stateEnum.Normal + " order by u.Process ASC,u.SignedDate Desc";
              string sql = " from ModificationContract u  where u.Id in(select u from ModificationContract u left join u.CarBaseInfoID c left join c.Cbi cbi left join cbi.UserID w  where  u.ContractNo like " + "'%" + name + "%' and  cbi.Name like " + "'%" + cname + "%' and c.PlateNumber like " + "'%" + dname + "%' and w.Name like " + "'%" + ename + "%' and u.SignedDate>=" + time1 + " and u.SignedDate<" + time2 + "  and u.State = " + (int)BaseEntity.stateEnum.Normal + ") order by u.Process ASC,u.SignedDate Desc";
+             //string sql1 = "select u from ModificationContract u  left join u.CarBaseInfoID c left join c.Cbi cbi left join cbi.UserID w  where   u.ContractNo like " + "'%" + name + "%' and  cbi.Name like " + "'%" + cname + "%' and c.PlateNumber like " + "'%" + dname + "%' and w.Name like " + "'%" + ename + "%' and u.SignedDate>=" + time1 + " and u.SignedDate<" + time2 + "  and u.State = " + (int)BaseEntity.stateEnum.Normal + " order by u.Process ASC,u.SignedDate Desc";
              i = this.loadEntityList(sql);
              return i;
          }

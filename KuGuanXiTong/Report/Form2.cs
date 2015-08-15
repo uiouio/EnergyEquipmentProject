@@ -68,12 +68,16 @@ namespace KuGuanXiTong.Report
         {
             this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
             this.reportViewer1.Reset();
-            this.reportViewer1.LocalReport.ReportPath = Application.StartupPath + @"\lib\Report\Report2.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = Application.StartupPath + @"\TEMP\lib\Report\Report2.rdlc";
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Report2.rdlc";
             List<ReportParameter> pList = new List<ReportParameter>();
             pList.Add(new ReportParameter("p_Code", sendStocktoshow.RetrospectListNumber));
+            pList.Add(new ReportParameter("p_SupplyName", sendStocktoshow.SupplierInfoId==null?"":sendStocktoshow.SupplierInfoId.SupplierName));
             pList.Add(new ReportParameter("p_Class", this.comboBox1.Text));
-            pList.Add(new ReportParameter("p_Date", DateTime.Now.ToLongDateString()));
+            pList.Add(new ReportParameter("p_Date", DateTime.Now.ToString("yyyy-MM-dd")));
+            DateTime dt = new DateTime(sendStocktoshow.OperationTime);
+            string str = dt.ToString("yyyy-MM-dd");
+            pList.Add(new ReportParameter("p_OperationDate", str));
             pList.Add(new ReportParameter("p_Name", this.UserInfo.Name));
             this.reportViewer1.LocalReport.SetParameters(pList);
             this.reportViewer1.LocalReport.DataSources.Clear();

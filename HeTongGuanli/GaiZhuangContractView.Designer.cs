@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.commonDataGridView2 = new CommonControl.CommonDataGridView();
@@ -44,6 +43,7 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -56,14 +56,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.htmlEditor1 = new WinHtmlEditor.HtmlEditor();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.htmlEditor1 = new WinHtmlEditor.HtmlEditor();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).BeginInit();
@@ -86,7 +84,6 @@
             this.tabPage1.Controls.Add(this.radioButton1);
             this.tabPage1.Controls.Add(this.textBox10);
             this.tabPage1.Controls.Add(this.textBox9);
-            this.tabPage1.Controls.Add(this.textBox7);
             this.tabPage1.Controls.Add(this.textBox8);
             this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.commonDataGridView2);
@@ -100,7 +97,6 @@
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
@@ -115,7 +111,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(91, 359);
+            this.radioButton1.Location = new System.Drawing.Point(94, 328);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(47, 16);
             this.radioButton1.TabIndex = 49;
@@ -136,16 +132,9 @@
             this.textBox9.Size = new System.Drawing.Size(112, 21);
             this.textBox9.TabIndex = 47;
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(88, 285);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(102, 21);
-            this.textBox7.TabIndex = 46;
-            // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(91, 394);
+            this.textBox8.Location = new System.Drawing.Point(91, 360);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 21);
             this.textBox8.TabIndex = 44;
@@ -153,7 +142,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(23, 399);
+            this.label17.Location = new System.Drawing.Point(23, 363);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 12);
             this.label17.TabIndex = 43;
@@ -164,8 +153,8 @@
             this.commonDataGridView2.AllowUserToAddRows = false;
             this.commonDataGridView2.AllowUserToDeleteRows = false;
             this.commonDataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.commonDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commonDataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -233,6 +222,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "乙  方：";
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(363, 48);
+            this.textBox4.MaxLength = 18;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(137, 21);
+            this.textBox4.TabIndex = 50;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -270,7 +267,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 361);
+            this.label6.Location = new System.Drawing.Point(23, 328);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 12);
             this.label6.TabIndex = 33;
@@ -279,7 +276,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(149, 359);
+            this.radioButton2.Location = new System.Drawing.Point(151, 328);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(47, 16);
             this.radioButton2.TabIndex = 32;
@@ -324,7 +321,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(513, 363);
+            this.label5.Location = new System.Drawing.Point(197, 410);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 12);
             this.label5.TabIndex = 10;
@@ -332,31 +329,22 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(89, 325);
+            this.textBox3.Location = new System.Drawing.Point(89, 285);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(102, 21);
             this.textBox3.TabIndex = 8;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 288);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 12);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "改装类型：";
-            // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(402, 360);
+            this.textBox2.Location = new System.Drawing.Point(89, 407);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(112, 21);
+            this.textBox2.Size = new System.Drawing.Size(102, 21);
             this.textBox2.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 328);
+            this.label4.Location = new System.Drawing.Point(25, 288);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 3;
@@ -365,7 +353,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(312, 363);
+            this.label3.Location = new System.Drawing.Point(25, 410);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 2;
@@ -382,22 +370,6 @@
             this.tabPage2.Text = "合同正文";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // htmlEditor1
-            // 
-            this.htmlEditor1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.htmlEditor1.BodyInnerHTML = null;
-            this.htmlEditor1.BodyInnerText = null;
-            this.htmlEditor1.EnterToBR = false;
-            this.htmlEditor1.FontSize = WinHtmlEditor.FontSize.Three;
-            this.htmlEditor1.Location = new System.Drawing.Point(-4, 0);
-            this.htmlEditor1.Name = "htmlEditor1";
-            this.htmlEditor1.ShowStatusBar = true;
-            this.htmlEditor1.ShowToolBar = true;
-            this.htmlEditor1.ShowWb = true;
-            this.htmlEditor1.Size = new System.Drawing.Size(558, 711);
-            this.htmlEditor1.TabIndex = 0;
-            this.htmlEditor1.WebBrowserShortcutsEnabled = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(484, 702);
@@ -408,20 +380,28 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox4
+            // htmlEditor1
             // 
-            this.textBox4.Location = new System.Drawing.Point(363, 48);
-            this.textBox4.MaxLength = 18;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(137, 21);
-            this.textBox4.TabIndex = 50;
+            this.htmlEditor1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.htmlEditor1.BodyInnerHTML = null;
+            this.htmlEditor1.BodyInnerText = null;
+            this.htmlEditor1.EnterToBR = false;
+            this.htmlEditor1.FontSize = WinHtmlEditor.FontSize.Three;
+            this.htmlEditor1.Location = new System.Drawing.Point(-4, 5);
+            this.htmlEditor1.Name = "htmlEditor1";
+            this.htmlEditor1.ShowStatusBar = false;
+            this.htmlEditor1.ShowToolBar = true;
+            this.htmlEditor1.ShowWb = true;
+            this.htmlEditor1.Size = new System.Drawing.Size(558, 650);
+            this.htmlEditor1.TabIndex = 1;
+            this.htmlEditor1.WebBrowserShortcutsEnabled = true;
             // 
             // GaiZhuangContractView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(578, 750);
+            this.ClientSize = new System.Drawing.Size(634, 741);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Name = "GaiZhuangContractView";
@@ -455,15 +435,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage2;
-        private WinHtmlEditor.HtmlEditor htmlEditor1;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox1;
@@ -475,5 +452,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.TextBox textBox4;
+        private WinHtmlEditor.HtmlEditor htmlEditor1;
     }
 }
