@@ -28,6 +28,8 @@ namespace KuGuanXiTong
             get { return objectRefitWork; }
             set { objectRefitWork = value; }
         }
+
+        public string ChukuNumString;
         public ChuKu_addPaiGong_Dialog()
         {
             InitializeComponent();
@@ -35,7 +37,12 @@ namespace KuGuanXiTong
 
         private void PaiGongDan_add_Dialog_Load(object sender, EventArgs e)
         {
-            
+
+            ChukuNumString = "CK" + DateTime.Now.Year + 
+                DateTime.Now.Month + DateTime.Now.Day + 
+                DateTime.Now.Hour + DateTime.Now.Minute + 
+                DateTime.Now.Second;
+
             this.Height = Screen.PrimaryScreen.WorkingArea.Height;
             if (Screen.PrimaryScreen.WorkingArea.Width < 800)
                 this.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width * 0.6); 
@@ -157,6 +164,7 @@ namespace KuGuanXiTong
                         cadd.ChuKuDetail = rwg;
                         cadd.StockOp = (StockOperation)objectRefitWork[1];
                         cadd.UserInfo = this.UserInfo;
+                        cadd.ChukuNumString = ChukuNumString;
                         cadd.ShowDialog();
                         if(cadd.Save==1)
                         {
@@ -305,10 +313,20 @@ namespace KuGuanXiTong
             dr = OperateDateGridView.CloneDataGridView(this.commonDataGridView);
             this.commonDataGridView.Rows.Clear();
             object[] value = new object[dr.Columns.Count];
+
+            
             foreach(DataGridViewRow r in dr.Rows)
             {
                  if (r.DefaultCellStyle.ForeColor == Color.Red)                
                 {
+
+                    //object[] objchuku = (object[])r.Tag;
+
+
+
+
+
+
                     for (int j = 0; j < dr.Columns.Count; j++)
                     {
                         value[j] = r.Cells[j].Value;
@@ -320,6 +338,8 @@ namespace KuGuanXiTong
                     this.commonDataGridView.Rows.Add(value);
                     this.button2.Enabled = false;
                 }
+
+
             }
          
            this.button1.Enabled = true;

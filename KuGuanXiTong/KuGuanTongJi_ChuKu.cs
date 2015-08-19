@@ -10,6 +10,7 @@ using System.Collections;
 using EntityClassLibrary;
 using KuGuanXiTong.Service;
 using CommonMethod;
+using SQLProvider.Service;
 
 namespace KuGuanXiTong
 {
@@ -177,6 +178,43 @@ namespace KuGuanXiTong
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //出库单号查询
+            string sql = "select StockOperationDetail.ChuKuNum from StockOperationDetail where StockOperationDetail.ChuKuNum is not null and  StockOperationDetail.TimeStamp>" + this.dateTimePicker1.Value.Ticks + " and StockOperationDetail.TimeStamp < "+this.dateTimePicker2.Value.Ticks+" group by StockOperationDetail.ChuKuNum ";
+
+            IList ChukuNums = 
+            ops.ExecuteSQL(sql);
+
+            if (ChukuNums != null && ChukuNums.Count > 0)
+            {
+                int i = 1;
+                foreach (object[] o in ChukuNums)
+                {
+                    this.commonDataGridView3.Rows.Add(i,o[0].ToString(),"查看");
+
+                    i++;
+                    this.commonDataGridView3.Rows[this.commonDataGridView3.Rows.Count - 1].Tag = o;
+                }
+            
+            }
+
+        
+        }
+
+        private void commonDataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2 && this.commonDataGridView3.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == "查看")
+            {
+                string sql = "select u from StockOperationDetail u where u.ChuKuNum like '%"+ this.commonDataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString()+"%'";
+                IList i =
+                ops.loadEntityList(sql);
+                ShowInGrid(i);
+            }
+        }
+
+
 
     }
 }

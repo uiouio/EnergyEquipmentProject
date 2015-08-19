@@ -45,6 +45,14 @@ namespace KuGuanXiTong
             InitializeComponent();
         }
 
+        private String chukuNumString;
+
+        public String ChukuNumString
+        {
+            get { return chukuNumString; }
+            set { chukuNumString = value; }
+        }
+
         private void ChuKu_addDetail_Dialog_Load(object sender, EventArgs e)
         {
             if (differenceCount <= 0)
@@ -158,6 +166,7 @@ namespace KuGuanXiTong
                 sod.StockOperationId = stockOp;
                 sod.StockId = stock;
                 sod.TheMoney = stock.GoodsBaseInfoID.SingleMoney;
+                sod.ChuKuNum = ChukuNumString;
                 //sod =  chuKuService.SaveOrUpdateEntity(sod) as StockOperationDetail;
                 chuKuService.SaveOrUpdateEntity(sod);
                 detailList.Add(sod);

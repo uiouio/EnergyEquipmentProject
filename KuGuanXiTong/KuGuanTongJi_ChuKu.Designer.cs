@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KuGuanTongJi_ChuKu));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +70,11 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commonDataGridView3 = new CommonControl.CommonDataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
             this.commonFlowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).BeginInit();
@@ -76,6 +82,7 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -127,14 +134,14 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.commonDataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.commonDataGridView1.Location = new System.Drawing.Point(156, 232);
+            this.commonDataGridView1.Location = new System.Drawing.Point(388, 232);
             this.commonDataGridView1.MultiSelect = false;
             this.commonDataGridView1.Name = "commonDataGridView1";
             this.commonDataGridView1.ReadOnly = true;
             this.commonDataGridView1.RowHeadersVisible = false;
             this.commonDataGridView1.RowTemplate.Height = 23;
             this.commonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.commonDataGridView1.Size = new System.Drawing.Size(1144, 194);
+            this.commonDataGridView1.Size = new System.Drawing.Size(912, 194);
             this.commonDataGridView1.TabIndex = 51;
             // 
             // Column10
@@ -208,11 +215,11 @@
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(386, 127);
+            this.button1.Location = new System.Drawing.Point(505, 127);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 60;
-            this.button1.Text = "查询";
+            this.button1.Text = "货物查询";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -283,6 +290,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -447,10 +455,66 @@
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
             // 
+            // commonDataGridView3
+            // 
+            this.commonDataGridView3.AllowUserToAddRows = false;
+            this.commonDataGridView3.AllowUserToDeleteRows = false;
+            this.commonDataGridView3.AllowUserToResizeRows = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.commonDataGridView3.BackgroundColor = System.Drawing.Color.White;
+            this.commonDataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.commonDataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.commonDataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn1,
+            this.Column14});
+            this.commonDataGridView3.Location = new System.Drawing.Point(156, 232);
+            this.commonDataGridView3.MultiSelect = false;
+            this.commonDataGridView3.Name = "commonDataGridView3";
+            this.commonDataGridView3.RowHeadersVisible = false;
+            this.commonDataGridView3.RowTemplate.Height = 23;
+            this.commonDataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.commonDataGridView3.Size = new System.Drawing.Size(213, 194);
+            this.commonDataGridView3.TabIndex = 56;
+            this.commonDataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView3_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "序号";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "出库单号";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "操作";
+            this.Column14.Name = "Column14";
+            this.Column14.Width = 50;
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Location = new System.Drawing.Point(190, 127);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 70;
+            this.button3.Text = "单号查询";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // KuGuanTongJi_ChuKu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.commonDataGridView3);
             this.Controls.Add(this.commonDataGridView2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.commonDataGridView1);
@@ -467,6 +531,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -507,5 +572,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button3;
+        private CommonControl.CommonDataGridView commonDataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewLinkColumn Column14;
     }
 }
