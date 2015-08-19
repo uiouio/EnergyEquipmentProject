@@ -16,6 +16,8 @@
     
     <property name="Tax" column="Tax" type="float"/>
 
+    <property name="ChuKuNum" column="ChuKuNum" type="string" />
+    
     <property name="TheMoney" column="TheMoney" type="float"/>
     <property name="HistoryId" column="HistoryId" type="long" length="10" />
     <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>

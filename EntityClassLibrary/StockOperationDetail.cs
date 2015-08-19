@@ -63,5 +63,14 @@ namespace EntityClassLibrary
             set { tax = value; }
         }
 
+        string chuKuNum;
+
+        public virtual string ChuKuNum
+        {
+            get { return chuKuNum; }
+            set { chuKuNum = value; }
+        }
+
+        
     }
 }
