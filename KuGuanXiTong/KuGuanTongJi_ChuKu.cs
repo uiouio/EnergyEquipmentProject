@@ -52,7 +52,7 @@ namespace KuGuanXiTong
                           o.StockId.GoodsBaseInfoID.Material,
                           o.StockId.GoodsBaseInfoID.Unit,
                           o.Quantity,
-                          new DateTime(o.StockOperationId.OperationTime).ToString("yyyy-MM-dd HH:mm:ss"),
+                          new DateTime(o.TimeStamp).ToString("yyyy-MM-dd HH:mm:ss"),
                           StockOperation.OpType[1]);
                         num++;
                     }
@@ -181,6 +181,7 @@ namespace KuGuanXiTong
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.commonDataGridView3.Rows.Clear();
             //出库单号查询
             string sql = "select StockOperationDetail.ChuKuNum from StockOperationDetail where StockOperationDetail.ChuKuNum is not null and  StockOperationDetail.TimeStamp>" + this.dateTimePicker1.Value.Ticks + " and StockOperationDetail.TimeStamp < "+this.dateTimePicker2.Value.Ticks+" group by StockOperationDetail.ChuKuNum ";
 
