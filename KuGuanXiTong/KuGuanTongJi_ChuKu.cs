@@ -16,6 +16,7 @@ namespace KuGuanXiTong
 {
     public partial class KuGuanTongJi_ChuKu : CommonControl.CommonTabPage
     {
+        List<StockOperationDetail> detaillist = new List<StockOperationDetail>();
 
         OpStock ops = new OpStock();
 
@@ -34,11 +35,26 @@ namespace KuGuanXiTong
         {
             reFreshAllControl();
         }
+
+        private void SetdetailList(IList i)
+        {
+            detaillist.Clear();
+            if (i != null)
+            {
+                foreach (StockOperationDetail o in i)
+                {
+                    detaillist.Add(o);
+                }
+            
+            }
+        
+        }
         public void ShowInGrid(IList i)
         {
             this.commonDataGridView1.Rows.Clear();
             if( i!= null)
             {
+                SetdetailList(i);
                 int num = 1;
                 foreach (StockOperationDetail o in i)
                 {
@@ -212,6 +228,66 @@ namespace KuGuanXiTong
                 IList i =
                 ops.loadEntityList(sql);
                 ShowInGrid(i);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.commonDataGridView1.Rows.Clear();
+
+            string likeed = this.textBox4.Text.Trim() + "%";
+            var resultList = from item in detaillist
+                             where item.StockId.GoodsBaseInfoID.GoodsClassCode.StartsWith(this.textBox4.Text.Trim())
+                             select item;
+
+            var escortList = resultList.ToList();
+
+            int num = 1;
+            foreach (StockOperationDetail o in escortList)
+            {
+
+
+                this.commonDataGridView1.Rows.Add(num,
+                           o.StockId.GoodsBaseInfoID.GoodsClassCode,
+                           o.StockId.GoodsBaseInfoID.GoodsName,
+                           o.StockId.GoodsBaseInfoID.Specifications,
+                           o.StockId.GoodsBaseInfoID.Material,
+                           o.StockId.GoodsBaseInfoID.Unit,
+                           o.Quantity,
+                           new DateTime(o.TimeStamp).ToString("yyyy-MM-dd HH:mm:ss"),
+                           StockOperation.OpType[4],
+                           o.StockOperationId.Remark
+                           );
+
+              
+                this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = o;
+
+                num++;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.commonDataGridView1.Rows.Clear();
+            int num = 1;
+            foreach (StockOperationDetail o in detaillist)
+            {
+
+
+                this.commonDataGridView1.Rows.Add(num,
+                         o.StockId.GoodsBaseInfoID.GoodsClassCode,
+                         o.StockId.GoodsBaseInfoID.GoodsName,
+                         o.StockId.GoodsBaseInfoID.Specifications,
+                         o.StockId.GoodsBaseInfoID.Material,
+                         o.StockId.GoodsBaseInfoID.Unit,
+                         o.Quantity,
+                         new DateTime(o.TimeStamp).ToString("yyyy-MM-dd HH:mm:ss"),
+                         StockOperation.OpType[4],
+                         o.StockOperationId.Remark
+                         );
+              
+                this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = o;
+                num++;
             }
         }
 

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KuGuanTongJi_ChuKu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.commonDataGridView1 = new CommonControl.CommonDataGridView();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +75,11 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView1)).BeginInit();
             this.commonFlowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commonPictureButton2)).BeginInit();
@@ -100,20 +105,20 @@
             this.commonDataGridView1.AllowUserToDeleteRows = false;
             this.commonDataGridView1.AllowUserToResizeColumns = false;
             this.commonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.commonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.commonDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.commonDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.commonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.commonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.commonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.commonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column10,
@@ -126,22 +131,22 @@
             this.Column1,
             this.Column7,
             this.Column9});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.commonDataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.commonDataGridView1.Location = new System.Drawing.Point(388, 232);
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.commonDataGridView1.DefaultCellStyle = dataGridViewCellStyle16;
+            this.commonDataGridView1.Location = new System.Drawing.Point(388, 256);
             this.commonDataGridView1.MultiSelect = false;
             this.commonDataGridView1.Name = "commonDataGridView1";
             this.commonDataGridView1.ReadOnly = true;
             this.commonDataGridView1.RowHeadersVisible = false;
             this.commonDataGridView1.RowTemplate.Height = 23;
             this.commonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.commonDataGridView1.Size = new System.Drawing.Size(912, 194);
+            this.commonDataGridView1.Size = new System.Drawing.Size(912, 170);
             this.commonDataGridView1.TabIndex = 51;
             // 
             // Column10
@@ -154,9 +159,9 @@
             // 
             // Column2
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column2.HeaderText = "物品编码";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -427,8 +432,8 @@
             this.commonDataGridView2.AllowUserToAddRows = false;
             this.commonDataGridView2.AllowUserToDeleteRows = false;
             this.commonDataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.commonDataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.commonDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -471,8 +476,8 @@
             this.commonDataGridView3.AllowUserToAddRows = false;
             this.commonDataGridView3.AllowUserToDeleteRows = false;
             this.commonDataGridView3.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Beige;
-            this.commonDataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Beige;
+            this.commonDataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
             this.commonDataGridView3.BackgroundColor = System.Drawing.Color.White;
             this.commonDataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.commonDataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -512,10 +517,60 @@
             this.Column14.Name = "Column14";
             this.Column14.Width = 50;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(728, 227);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(120, 23);
+            this.button4.TabIndex = 73;
+            this.button4.Text = "显示全部";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(597, 227);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(105, 23);
+            this.button5.TabIndex = 72;
+            this.button5.Text = "按编码筛选";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(452, 229);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(124, 21);
+            this.textBox4.TabIndex = 70;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(393, 232);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.TabIndex = 71;
+            this.label3.Text = "物品编码：";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(879, 227);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(120, 23);
+            this.button6.TabIndex = 74;
+            this.button6.Text = "打印结果";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // KuGuanTongJi_ChuKu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.commonDataGridView3);
             this.Controls.Add(this.commonDataGridView2);
             this.Controls.Add(this.groupBox2);
@@ -535,6 +590,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commonDataGridView3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -579,5 +635,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewLinkColumn Column14;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button6;
     }
 }
