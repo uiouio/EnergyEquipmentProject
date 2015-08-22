@@ -47,7 +47,7 @@ namespace KuGuanXiTong.Service
             //{
             //    return (Stock)resultList[0];
             //}
-            if (resultList != null)
+            if (resultList != null&&resultList.Count!=0)
             {
                 return (Stock)resultList[0];
             }
