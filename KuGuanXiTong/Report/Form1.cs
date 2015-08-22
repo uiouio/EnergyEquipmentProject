@@ -16,11 +16,31 @@ namespace KuGuanXiTong.Report
 {
     public partial class Form1 : CommonControl.BaseForm
     {
+        private int isNeworOld;
+        public int IsNeworOld
+        {
+            get { return isNeworOld; }
+            set { isNeworOld = value; }
+        }
         private Object[] objectRefitWork;
         public Object[] ObjectRefitWork
         {
             get { return objectRefitWork; }
             set { objectRefitWork = value; }
+        }
+        private string chukuNum;
+
+        public string ChukuNum
+        {
+            get { return chukuNum; }
+            set { chukuNum = value; }
+        }
+        private IList chukuList;
+
+        public IList ChukuList
+        {
+            get { return chukuList; }
+            set { chukuList = value; }
         }
         private List<string> list;
 
@@ -59,76 +79,80 @@ namespace KuGuanXiTong.Report
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: 这行代码将数据加载到表“EnergyEquipmentProjectDataSet.GoodsBaseInfo”中。您可以根据需要移动或删除它。
-            //this.GoodsBaseInfoTableAdapter.Fill(this.EnergyEquipmentProjectDataSet.GoodsBaseInfo);
-            // TODO: 这行代码将数据加载到表“EnergyEquipmentProjectDataSet.GoodsBaseInfo”中。您可以根据需要移动或删除它。
-            RefitWork refitWork = (RefitWork)objectRefitWork[0];
-            this.comboBox1.DataSource = list;
-            #region 不用的
-            // string s1 = "select g.GoodsClassCode,g.GoodsName from GoodsBaseInfo g  where g.GoodsParentClassId=1  order by g.GoodsClassCode";
-           // IList goodlist = bs.ExecuteSQL(s1);
-
-           // foreach (RefitWorkGoods r in refitWork.RefitWorkGoodss)
-           // {
-           //     foreach (Object[] g in goodlist)
-            //    {
-
-            //        if (r.GoodsBaseInfoId.GoodsClassCode.Substring(0, 2) == g[0].ToString())
-              //      {
-              //          this.comboBox1.Items.Add(r.GoodsBaseInfoId.GoodsClassCode.Substring(0, 2) + g[1]);
-                    //}
-              //  }
-
-         //   }
-           // int count = comboBox1.Items.Count;
-           // int i;
-        //    for (i = 0; i < count; i++)
-        //    {
-        //        string str = comboBox1.Items[i].ToString();
-        //        for (int j = i + 1; j < count; j++)
-        //        {
-        //            string str1 = comboBox1.Items[j].ToString();
-        //            if (str1 == str)
-        //            {
-        //                comboBox1.Items.RemoveAt(j);
-        //                count--;
-        //                j--;
-        //            }
-        //        }
-            //    }
-            #endregion
+            if(isNeworOld==0)
+            {
+                RefitWork refitWork = (RefitWork)objectRefitWork[0];
+                this.comboBox1.DataSource = list;
+            }
+            else
+            {
+                this.comboBox1.DataSource = list;
+            }
+           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;//reportViewer1是你报表控件的name
-            RefitWork refitWork = (RefitWork)objectRefitWork[0];
+            this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;//reportViewer1是你报表控件的name            
             this.reportViewer1.Reset();
             this.reportViewer1.LocalReport.ReportPath = Application.StartupPath + @"\TEMP\lib\Report\Report1.rdlc";
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Report1.rdlc";
-            List<ReportParameter> pList = new List<ReportParameter>();
-            pList.Add(new ReportParameter("p_DispatchOrder", refitWork.DispatchOrder));
-            pList.Add(new ReportParameter("p_PlateNumber", refitWork.CarInfo.PlateNumber));
-            pList.Add(new ReportParameter("p_ModifyType", CarBaseInfo.ModifyType[refitWork.CarInfo.ModidiedType]));
-            pList.Add(new ReportParameter("p_CustomName", refitWork.CarInfo.Cbi.Name));
-            pList.Add(new ReportParameter("p_VehicleType", refitWork.CarInfo.VehicleType));
-            pList.Add(new ReportParameter("p_ClassCode", this.comboBox1.Text));
-            //pList.Add(new ReportParameter("p_Remark", refitWork.CarInfo.Cbi.Name +""+ refitWork.CarInfo.PlateNumber + CarBaseInfo.ModifyType[refitWork.CarInfo.ModidiedType] + refitWork.CarInfo.VehicleType));
-            pList.Add(new ReportParameter("p_Name", this.UserInfo.Name));
-            pList.Add(new ReportParameter("p_Date", DateTime.Now.ToLongDateString()));
-            this.reportViewer1.LocalReport.SetParameters(pList);
-            this.reportViewer1.LocalReport.DataSources.Clear();
-            DataSet ds = new DataSet();
-            for (int i = 0; i < Listcode.Count; i++)
+            if(this.isNeworOld==0)
             {
-                string sql = "SELECT top 1 g.GoodsClassCode,g.GoodsName,g.Specifications,g.Unit,g.SingleMoney,sod.Quantity,(sod.Quantity*g.SingleMoney) AS 总价 FROM GoodsBaseInfo g,RefitWork r,RefitWorkGoods rg,Stock s,StockOperationDetail sod where r.DispatchOrder='" + refitWork.DispatchOrder + "' and rg.RefitWorkId=r.Id and rg.GoodsBaseInfoId=g.Id and sod.StockId=s.Id and s.GoodsBaseInfoID=g.Id and g.GoodsClassCode=" + Listcode[i] + " and g.GoodsClassCode  like '" + this.comboBox1.Text.Substring(0, 2) + "%'  and g.GoodsName='" + Listname[i] + "'and g.Specifications='" + Listspecifition[i] + "' order by sod.TimeStamp DESC";
-                DataSet dt = new DataSet();
-                dt = bs.ExecuteSQLReturnDataSet(sql);
-                ds.Merge(dt);
+                RefitWork refitWork = (RefitWork)objectRefitWork[0];
+                List<ReportParameter> pList = new List<ReportParameter>();
+                pList.Add(new ReportParameter("p_DispatchOrder", this.chukuNum));
+                pList.Add(new ReportParameter("p_PlateNumber", refitWork.CarInfo.PlateNumber));
+                pList.Add(new ReportParameter("p_ModifyType", CarBaseInfo.ModifyType[refitWork.CarInfo.ModidiedType]));
+                pList.Add(new ReportParameter("p_CustomName", refitWork.CarInfo.Cbi.Name));
+                pList.Add(new ReportParameter("p_VehicleType", refitWork.CarInfo.VehicleType));
+                pList.Add(new ReportParameter("p_ClassCode", this.comboBox1.Text));
+                //pList.Add(new ReportParameter("p_Remark", refitWork.CarInfo.Cbi.Name +""+ refitWork.CarInfo.PlateNumber + CarBaseInfo.ModifyType[refitWork.CarInfo.ModidiedType] + refitWork.CarInfo.VehicleType));
+                pList.Add(new ReportParameter("p_Name", this.UserInfo.Name));
+                pList.Add(new ReportParameter("p_Date", DateTime.Now.ToLongDateString()));
+                this.reportViewer1.LocalReport.SetParameters(pList);
+                this.reportViewer1.LocalReport.DataSources.Clear();
+                DataSet ds = new DataSet();
+                for (int i = 0; i < Listcode.Count; i++)
+                {
+                    string sql = "SELECT top 1 g.GoodsClassCode,g.GoodsName,g.Specifications,g.Unit,g.SingleMoney,sod.Quantity,(sod.Quantity*g.SingleMoney) AS 总价 FROM GoodsBaseInfo g,RefitWork r,RefitWorkGoods rg,Stock s,StockOperationDetail sod where r.DispatchOrder='" + refitWork.DispatchOrder + "' and rg.RefitWorkId=r.Id and rg.GoodsBaseInfoId=g.Id and sod.StockId=s.Id and s.GoodsBaseInfoID=g.Id and g.GoodsClassCode=" + Listcode[i] + " and g.GoodsClassCode  like '" + this.comboBox1.Text.Substring(0, 2) + "%'  and g.GoodsName='" + Listname[i] + "'and g.Specifications='" + Listspecifition[i] + "' order by sod.TimeStamp DESC";
+                    DataSet dt = new DataSet();
+                    dt = bs.ExecuteSQLReturnDataSet(sql);
+                    ds.Merge(dt);
+                }
+                reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("EnergyEquipmentProjectDataSet", ds.Tables[0]));
+                reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", ds.Tables[0]));
+                this.reportViewer1.RefreshReport();
             }
-            reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("EnergyEquipmentProjectDataSet",ds.Tables[0]));
-            reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", ds.Tables[0]));
-            this.reportViewer1.RefreshReport();
+            else
+            {
+                List<ReportParameter> pList = new List<ReportParameter>();
+                foreach(Object[] c in chukuList)
+                {
+                    pList.Add(new ReportParameter("p_PlateNumber", c[0].ToString()));
+                    int modifytype = Convert.ToInt16(c[1]);
+                    pList.Add(new ReportParameter("p_ModifyType", CarBaseInfo.ModifyType[modifytype]));
+                    pList.Add(new ReportParameter("p_CustomName", c[2].ToString()));
+                    pList.Add(new ReportParameter("p_VehicleType", c[3].ToString()));
+                }
+                pList.Add(new ReportParameter("p_DispatchOrder", this.chukuNum));
+                pList.Add(new ReportParameter("p_ClassCode", this.comboBox1.Text));
+                pList.Add(new ReportParameter("p_Name", this.UserInfo.Name));
+                pList.Add(new ReportParameter("p_Date", DateTime.Now.ToLongDateString()));
+                this.reportViewer1.LocalReport.SetParameters(pList);
+                this.reportViewer1.LocalReport.DataSources.Clear();
+                DataSet ds = new DataSet();
+                for (int i = 0; i < Listcode.Count; i++)
+                {
+                    string sql = "SELECT  g.GoodsClassCode,g.GoodsName,g.Specifications,g.Unit,g.SingleMoney,sod.Quantity,(sod.Quantity*g.SingleMoney) AS 总价 FROM GoodsBaseInfo g,Stock s, StockOperationDetail sod where  sod.ChuKuNum='" + this.chukuNum + "'and sod.StockId=s.Id and s.GoodsBaseInfoID=g.Id and g.GoodsClassCode='" + this.Listcode[i] + "'and g.GoodsName='" + Listname[i] + "'";
+                    DataSet dt = new DataSet();
+                    dt = bs.ExecuteSQLReturnDataSet(sql);
+                    ds.Merge(dt);
+                }
+                reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("EnergyEquipmentProjectDataSet", ds.Tables[0]));
+                reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", ds.Tables[0]));
+                this.reportViewer1.RefreshReport();
+            }
            
             
         }

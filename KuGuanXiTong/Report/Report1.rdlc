@@ -1895,6 +1895,7 @@
     <ReportParameter Name="p_DispatchOrder">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="p_Name">

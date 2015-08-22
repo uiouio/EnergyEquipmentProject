@@ -29,7 +29,12 @@ namespace KuGuanXiTong
             set { objectRefitWork = value; }
         }
 
-        public string ChukuNumString;
+        private string ChukuNumString;
+        public string ChukuNumString1
+        {
+            get { return ChukuNumString; }
+            set { ChukuNumString = value; }
+        }
         public ChuKu_addPaiGong_Dialog()
         {
             InitializeComponent();
@@ -174,6 +179,7 @@ namespace KuGuanXiTong
                             objectRefitWork[1] = cadd.StockOp;
                             r.Cells[10].Value = RefitWorkGoods.ReceiveTypeArray[(int)RefitWorkGoods.ReceiveTypeEnum.Receive];
                             r.DefaultCellStyle.ForeColor = Color.Red;
+                            this.ChukuNumString1 = cadd.ChukuNumString;
                         }
                       
                     }
@@ -279,7 +285,7 @@ namespace KuGuanXiTong
             List<string> lsName=new List<string>();
             List<string> goodcode = new List<string>();
             List<string> goodname = new List<string>();
-            List<string> goodspecifition = new List<string>();
+            List<string> goodspecifition = new List<string>();           
             for(int i=0;i<this.commonDataGridView.Rows.Count;i++)
            {
               string name=this.commonDataGridView.Rows[i].Cells[1].Value.ToString();
@@ -304,6 +310,8 @@ namespace KuGuanXiTong
             }
             f1.ObjectRefitWork = this.ObjectRefitWork;
             f1.UserInfo = this.UserInfo;
+            f1.IsNeworOld = 0;
+            f1.ChukuNum = this.ChukuNumString1;
             f1.ShowDialog();
         }
 
@@ -321,11 +329,6 @@ namespace KuGuanXiTong
                 {
 
                     //object[] objchuku = (object[])r.Tag;
-
-
-
-
-
 
                     for (int j = 0; j < dr.Columns.Count; j++)
                     {
