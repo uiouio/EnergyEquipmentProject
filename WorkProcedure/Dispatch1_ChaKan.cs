@@ -226,23 +226,15 @@ namespace WorkProcedure
             DoExport.DoTheExport(d1);
         }
 
-      /*  private void comboBox2_DropDown(object sender, EventArgs e)
+        private void commonDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (this.comboBox2.Items.Count == 0)
-            {
-                IList group = OP_LZB.GetAllGroups();
-                if (group != null)
-                {
-                    this.comboBox2.DataSource = group;
-                    this.comboBox2.DisplayMember = "WorkingGroupName";
-                    //this.comboBox2.ValueMember = "Itself";
-                }
-            }
-        }*/
-
-
-      
-
+            RefitWork s = (RefitWork)this.commonDataGridView1.Rows[e.RowIndex].Tag;
+            this.commonDataGridView1.Cursor = Cursors.WaitCursor;
+            CopyPaiGongDan_add_Dialog tt = new CopyPaiGongDan_add_Dialog();
+            tt.RefitWork = s;
+            tt.ShowDialog();
+            this.commonDataGridView1.Cursor = Cursors.Default;
         }
+      }
     }
 

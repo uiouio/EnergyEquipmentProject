@@ -201,6 +201,22 @@ namespace CheChuKu
            // this.commonPictureButton2.Cursor = Cursors.Hand;
         }
 
+        private void commonDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CheChuKuDan chk = new CheChuKuDan();
+            chk.RefitWork = this.commonDataGridView1.CurrentRow.Tag as RefitWork;
+            chk.ShowDialog();
+
+            if (chk.DialogResult == DialogResult.OK)
+            {
+                this.commonDataGridView1.Rows.Remove(this.commonDataGridView1.CurrentRow);
+                this.CheChuKuDataGridView1.Rows.Add(0, this.CheChuKuDataGridView1.Rows.Count + 1, chk.SendCarTheLibrary.RefitWork.ContractNo, chk.SendCarTheLibrary.RefitWork.DispatchOrder,
+                   chk.SendCarTheLibrary.RefitWork.CarInfo.PlateNumber, chk.SendCarTheLibrary.RefitWork.CarInfo.VehicleType,
+                     new DateTime(chk.SendCarTheLibrary.FinishTime).ToString("yyyy-MM-dd"));
+
+            }
+        }
+
     }
 }
 

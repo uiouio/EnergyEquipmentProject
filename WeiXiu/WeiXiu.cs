@@ -134,6 +134,23 @@ namespace WeiXiu
 
         }
 
+        private void WeiXiuDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.WeiXiuDataGridView1.Cursor = Cursors.WaitCursor;
+            WeiXiu_FanKuiDan tt = new WeiXiu_FanKuiDan();
+            tt.Wx = (WeiXiuFanKuiDan)this.WeiXiuDataGridView1.CurrentRow.Tag;
+            tt.ShowDialog();
+            if (tt.DialogResult == DialogResult.OK)
+            {
+                this.WeiXiuDataGridView1.CurrentRow.Tag = tt.Wx;
+                if (tt.Wx.ServiceState == (int)WeiXiuFanKuiDan.ScratchSave.Save)
+                {
+                    this.WeiXiuDataGridView1.Rows[e.RowIndex].Cells[9].Value = "查看";
+                }
+            }
+            this.WeiXiuDataGridView1.Cursor = Cursors.Default;
+        }
+
 
     }
 

@@ -120,5 +120,15 @@ namespace WeiXiu
             this.commonPictureButton3.Cursor = Cursors.Hand;
         
         }
+
+        private void WeiXiuDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.WeiXiuDataGridView1.Cursor = Cursors.WaitCursor;
+            WeiXiu_FanKuiDan tt = new WeiXiu_FanKuiDan();
+            tt.Wx = (WeiXiuFanKuiDan)this.WeiXiuDataGridView1.CurrentRow.Tag;
+            tt.SetAllTextEnableUnActive();
+            tt.ShowDialog();
+            this.WeiXiuDataGridView1.Cursor = Cursors.Default;
+        }
     }
 }

@@ -121,5 +121,13 @@ namespace WeiXiu
             this.commonPictureButton2.Cursor = Cursors.Hand;
        
         }
+
+        private void commonDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            WeiXiuJiLu tt = new WeiXiuJiLu();
+            tt.Tw = (EntityClassLibrary.TiaoShiWeiXiuJiLu)this.commonDataGridView1.CurrentRow.Tag;
+            tt.unEnableShow();
+            tt.ShowDialog();
+        }
     }
 }

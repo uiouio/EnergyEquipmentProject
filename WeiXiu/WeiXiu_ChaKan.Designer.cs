@@ -254,6 +254,7 @@
             this.WeiXiuDataGridView1.Size = new System.Drawing.Size(1100, 450);
             this.WeiXiuDataGridView1.TabIndex = 14;
             this.WeiXiuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.WeiXiuDataGridView1_CellContentClick);
+            this.WeiXiuDataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.WeiXiuDataGridView1_CellContentDoubleClick);
             // 
             // Column3
             // 
