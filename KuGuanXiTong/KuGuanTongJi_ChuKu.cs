@@ -17,14 +17,27 @@ namespace KuGuanXiTong
     public partial class KuGuanTongJi_ChuKu : CommonControl.CommonTabPage
     {
         List<StockOperationDetail> detaillist = new List<StockOperationDetail>();
-
+        BaseService ss = new BaseService();
         OpStock ops = new OpStock();
+        private IList chukuList;
 
+        public IList ChukuList
+        {
+            get { return chukuList; }
+            set { chukuList = value; }
+        }
+
+        private string chukuNum;
+
+        public string ChukuNum
+        {
+            get { return chukuNum; }
+            set { chukuNum = value; }
+        }
         public KuGuanTongJi_ChuKu()
         {
             InitializeComponent();
         }
-
         public override void reFreshAllControl()
         {
             this.comboBox2.SelectedIndex = 0;
@@ -227,6 +240,7 @@ namespace KuGuanXiTong
                 string sql = "select u from StockOperationDetail u where u.ChuKuNum like '%"+ this.commonDataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString()+"%'";
                 IList i =
                 ops.loadEntityList(sql);
+                this.chukuNum = this.commonDataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
                 ShowInGrid(i);
             }
         }
@@ -289,6 +303,51 @@ namespace KuGuanXiTong
                 this.commonDataGridView1.Rows[this.commonDataGridView1.Rows.Count - 1].Tag = o;
                 num++;
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            KuGuanXiTong.Report.Form1 f1 = new KuGuanXiTong.Report.Form1();
+            List<string> lsName = new List<string>();
+            List<string> goodcode = new List<string>();
+            List<string> goodname = new List<string>();
+            List<string> goodspecifition = new List<string>();
+            string sql = "select distinct c.PlateNumber,c.ModidiedType,c.VehicleType,cb.Name,sod.ChuKuNum from CarBaseInfo c,CustomBaseInfo cb,  RefitWork r,StockOperation s,StockOperationDetail sod where r.DispatchOrder=s.RetrospectListNumber and sod.StockOperationId=s.Id and sod.ChuKuNum='"+this.chukuNum+"' and r.CarBaseInfoId=c.Id and c.CustomBaseID=cb.ID";            
+            IList list = ss.ExecuteSQL(sql);
+            this.chukuList = list;
+            for (int i = 0; i < this.commonDataGridView1.Rows.Count; i++)
+            {
+                string name = this.commonDataGridView1.Rows[i].Cells[1].Value.ToString().Substring(0,2);
+                string gcode = this.commonDataGridView1.Rows[i].Cells[1].Value.ToString();
+                string gname = this.commonDataGridView1.Rows[i].Cells[2].Value.ToString();
+                string gspecifition = this.commonDataGridView1.Rows[i].Cells[3].Value.ToString();
+                goodcode.Add(gcode);
+                goodname.Add(gname);
+                goodspecifition.Add(gspecifition);
+                if (lsName.Contains(name))
+                {
+                    continue;
+                }
+                else
+                {
+                    lsName.Add(name);
+                }
+                f1.List = lsName;
+                f1.Listcode = goodcode;
+                f1.Listname = goodname;
+                f1.Listspecifition = goodspecifition;
+            }
+            //f1.ObjectRefitWork = this.ObjectRefitWork;
+            f1.UserInfo = this.User;
+            f1.IsNeworOld = 1;
+            f1.ChukuList = this.chukuList;
+            f1.ChukuNum = this.chukuNum;
+            f1.ShowDialog();
+        }
+
+        private void commonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
 

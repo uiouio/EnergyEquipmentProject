@@ -213,7 +213,7 @@ namespace GongYiGuanLi
                     r.Cells[5].Value = rwg.Count;
                     return;
                 }
-                if (refitWork.DispatchState != (int)EntityClassLibrary.RefitWork.SaveDispatchingDispatchReceive.Save)
+                if (refitWork.DispatchState != (int)EntityClassLibrary.RefitWork.SaveDispatchingDispatchReceive.Receive)
                 {
                     r.Cells[8].Value = "是";
                     rwg.AddType = (int)RefitWorkGoods.IfAdd.Add;
