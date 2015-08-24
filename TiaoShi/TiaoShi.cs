@@ -123,6 +123,30 @@ namespace TiaoShi
             this.commonPictureButton3.Cursor = Cursors.Hand;
         }
 
+        private void TiaoShiDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.TiaoShiDataGridView1.Cursor = Cursors.WaitCursor;
+            if (e.RowIndex > 0)
+            {
+                TiaoShi_BaoGao tt = new TiaoShi_BaoGao();
+                tt.TiaoShiBaoGao = (TiaoShiBaoGao)this.TiaoShiDataGridView1.CurrentRow.Tag;
+                tt.ShowDialog();
+                if (tt.DialogResult == DialogResult.OK)
+                {
+                    //ShowTiaoShiBaoGao();
+                    this.TiaoShiDataGridView1.CurrentCell.Tag = tt.TiaoShiBaoGao;
+                    if (tt.TiaoShiBaoGao.Status == (int)TiaoShiBaoGao.savecheck.check)
+                    {
+                        this.TiaoShiDataGridView1.Rows[e.RowIndex].Cells[7].Value = DateTime.Now.ToString("yyyy-MM-dd");
+                        this.TiaoShiDataGridView1.Rows[e.RowIndex].Cells[8].Value = "已调试";
+                        this.TiaoShiDataGridView1.Rows[e.RowIndex].Cells[9].Value = "查看";
+                    }
+                }
+            }
+            this.TiaoShiDataGridView1.Cursor = Cursors.Default;
+            
+        }
+
        
     }
 }
