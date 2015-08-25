@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.Office.Interop.Excel;
+
 using System.Reflection;
 using System.Data;
 using System.Windows.Forms;
+using NPOI;
+using NPOI.HPSF;
+using NPOI.HSSF;
+using NPOI.HSSF.UserModel;
+using System.IO;
 namespace CommonMethod
 {
     public  class DoExport
@@ -34,47 +39,8 @@ namespace CommonMethod
                     dt.Rows.Add(drr);
                 }
 
-
-                Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.ApplicationClass();
-                if (app == null)
-                {
-                    throw new Exception(" Excel无法启动 ");
-                }
-                app.Visible = true;
-                Workbooks wbs = app.Workbooks;
-                Workbook wb = wbs.Add(Missing.Value);
-                Worksheet ws = (Worksheet)wb.Worksheets[1];
-
-                int cnt = dt.Rows.Count;
-                int columncnt = dt.Columns.Count;
-
-                //  *****************获取数据******************** 
-                object[,] objData = new Object[cnt + 1, columncnt];   //  创建缓存数据
-                //  获取列标题 
-                for (int i = 0; i < columncnt; i++)
-                {
-                    objData[0, i] = dt.Columns[i].ColumnName;
-                }
-                //  获取具体数据 
-                for (int i = 0; i < cnt; i++)
-                {
-                    System.Data.DataRow dr = dt.Rows[i];
-                    for (int j = 0; j < columncnt; j++)
-                    {
-                        objData[i + 1, j] = dr[j];
-                    }
-                }
-
-                // ********************* 写入Excel****************** 
-                Range r = ws.get_Range(app.Cells[1, 1], app.Cells[cnt + 1, columncnt]);
-                r.NumberFormat = " @ ";
-                // r = r.get_Resize(cnt+1, columncnt); 
-                r.Value2 = objData;
-                r.EntireColumn.AutoFit();
-
-                app = null;
+                ExportExcel(dt);
                 return true;
-
             }
             else
             {
@@ -85,6 +51,55 @@ namespace CommonMethod
 
 
            
+        }
+
+        private static void ExportExcel(DataTable Dt)
+        {
+            HSSFWorkbook hssfworkbook2 = new HSSFWorkbook();
+            HSSFSheet sheet = (HSSFSheet)hssfworkbook2.CreateSheet("Sheet1");
+
+            HSSFRow row1 = (HSSFRow)sheet.CreateRow(0);
+
+
+            for (int j1 = 0; j1 <= Dt.Columns.Count - 1; j1++)
+            {
+                row1.CreateCell(j1).SetCellValue(Dt.Columns[j1].ColumnName);
+                sheet.SetColumnWidth(j1, 20 * 256);
+            }
+
+            for (int I = 0; I <= Dt.Rows.Count - 1; I++)
+            {
+                HSSFRow row2 = (HSSFRow)sheet.CreateRow(I + 1);
+
+                for (int j = 0; j <= Dt.Columns.Count - 1; j++)
+                {
+                    string DgvValue = Dt.Rows[I][j].ToString();
+                    row2.CreateCell(j).SetCellValue(DgvValue);
+                    sheet.SetColumnWidth(j, 20 * 256);
+                }
+            }
+
+
+            try
+            {
+
+                SaveFileDialog Sfd = new SaveFileDialog();
+                Sfd.Filter = "Excel文件(*.xls)|*.xls";
+                if (Sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    FileStream file3 = new FileStream(Sfd.FileName, FileMode.Create);
+                    hssfworkbook2.Write(file3);
+                    file3.Close();
+                    MessageBox.Show("成功导出为Excel！");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
         }
 
 
