@@ -121,7 +121,7 @@
             this.TiaoShiDataGridView1.Size = new System.Drawing.Size(1100, 450);
             this.TiaoShiDataGridView1.TabIndex = 1;
             this.TiaoShiDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick);
-            this.TiaoShiDataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TiaoShiDataGridView1_CellContentDoubleClick);
+            this.TiaoShiDataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TiaoShiDataGridView1_CellDoubleClick);
             // 
             // Column9
             // 
