@@ -36,8 +36,8 @@ namespace KuGuanXiTong
             if (this.commonDataGridView1.Rows.Count > 0)
             {
 
-                folderBrowserDialog1.ShowDialog();
-                ExportAndImport.ExportExcel(folderBrowserDialog1.SelectedPath, "库存统计", CurrentTable);
+                //folderBrowserDialog1.ShowDialog();
+                DoExport.DoTheExport(this.commonDataGridView1);
 
             }
         }
