@@ -359,6 +359,7 @@
             this.commonDataGridView1.Size = new System.Drawing.Size(1100, 190);
             this.commonDataGridView1.TabIndex = 9;
             this.commonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick_1);
+            this.commonDataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentDoubleClick);
             // 
             // dataGridViewCheckBoxColumn1
             // 

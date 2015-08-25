@@ -11,7 +11,7 @@ using CheRuKu.SQL;
 using SQLProvider.Service;
 using EntityClassLibrary;
 using CommonMethod;
-
+using CommonControl;
 namespace CheRuKu
 {
     public partial class CheRuKu : CommonControl.CommonTabPage
@@ -42,9 +42,10 @@ namespace CheRuKu
 
         private void CheRuKuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            CommonDataGridView grid = (CommonDataGridView)sender;
             if (this.CheRuKuDataGridView1.Rows.Count > 0)
             {
-                if (e.ColumnIndex == 8)
+                if (grid.CurrentCell.Value.ToString() == "编辑")
                 {
                     CheRuKuDan tt = new CheRuKuDan();
                     //Object [] i= (Object []);
@@ -58,6 +59,7 @@ namespace CheRuKu
                     {
 
                         this.CheRuKuDataGridView1.CurrentRow.Tag = tt.CheRuKuInfo;
+                        
                         if (tt.CheRuKuInfo.Status == (int)EntityClassLibrary.CheRuKuInfo.savecheck.check)
                         {
                             this.CheRuKuDataGridView1.Rows[e.RowIndex].Cells[7].Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
@@ -65,6 +67,17 @@ namespace CheRuKu
                         }
                     }
 
+                }
+                else if (grid.CurrentCell.Value.ToString() == "查看")
+                {
+                    CheRuKuDan tt = new CheRuKuDan();
+                    tt.CheRuKuInfo = (this.CheRuKuDataGridView1.Rows[e.RowIndex].Tag as Object[])[0] as CheRuKuInfo;
+                    tt.ShowDialog();
+                    if (tt.DialogResult == DialogResult.OK)
+                    {
+                        this.CheRuKuDataGridView1.Rows.Clear();
+                        reFreshAllControl();
+                    }
                 }
             }
         }
@@ -160,6 +173,43 @@ namespace CheRuKu
             this.commonPictureButton3.Cursor = Cursors.Hand;
        
 
+        }
+
+        private void CheRuKuDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CommonDataGridView grid = (CommonDataGridView)sender;
+            if (this.CheRuKuDataGridView1.Rows.Count > 0)
+            {
+                if (grid.CurrentRow.Cells[8].Value.ToString() == "编辑")
+                {
+                    CheRuKuDan tt = new CheRuKuDan();
+                    tt.CheRuKuInfo = (this.CheRuKuDataGridView1.Rows[e.RowIndex].Tag as Object[])[0] as CheRuKuInfo;
+                    tt.ShowDialog();
+                    if (tt.DialogResult == DialogResult.OK)
+                    {
+
+                        this.CheRuKuDataGridView1.CurrentRow.Tag = tt.CheRuKuInfo;
+
+                        if (tt.CheRuKuInfo.Status == (int)EntityClassLibrary.CheRuKuInfo.savecheck.check)
+                        {
+                            this.CheRuKuDataGridView1.Rows[e.RowIndex].Cells[7].Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+                            this.CheRuKuDataGridView1.Rows[e.RowIndex].Cells[8].Value = "查看";
+                        }
+                    }
+
+                }
+                else if (grid.CurrentRow.Cells[8].Value.ToString() == "查看")
+                {
+                    CheRuKuDan tt = new CheRuKuDan();
+                    tt.CheRuKuInfo = (this.CheRuKuDataGridView1.Rows[e.RowIndex].Tag as Object[])[0] as CheRuKuInfo;
+                    tt.ShowDialog();
+                    if (tt.DialogResult == DialogResult.OK)
+                    {
+                        this.CheRuKuDataGridView1.Rows.Clear();
+                        reFreshAllControl();
+                    }
+                }
+            }
         }
     }
 }

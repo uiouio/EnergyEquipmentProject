@@ -92,6 +92,7 @@
             this.CheRuKuDataGridView1.Size = new System.Drawing.Size(1100, 450);
             this.CheRuKuDataGridView1.TabIndex = 1;
             this.CheRuKuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CheRuKuDataGridView1_CellContentClick);
+            this.CheRuKuDataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CheRuKuDataGridView1_CellContentDoubleClick);
             // 
             // Column9
             // 

@@ -222,5 +222,58 @@ namespace KuGuanXiTong
             PrintDataGridView.PrintTheDataGridView(this.commonDataGridView1);
         }
 
+        private void commonDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow r = commonDataGridView1.Rows[e.RowIndex];
+            if (this.commonDataGridView1.Rows.Count > 0)
+            {
+                if (r.Cells[2].Value.ToString().Equals("改装派工单"))
+                {
+                    ChuKu_addPaiGong_Dialog cad = new ChuKu_addPaiGong_Dialog();
+                    cad.ObjectRefitWork = (object[])r.Tag;
+                    cad.UserInfo = this.User;
+                    cad.ShowDialog();
+                    r.Tag = cad.ObjectRefitWork;
+                    StockOperation s = (StockOperation)cad.ObjectRefitWork[1];
+                    if (s != null)
+                    {
+                        r.Cells[4].Value = s.UserId.Name;
+                        r.Cells[5].Value = new DateTime(s.OperationTime).ToShortDateString();
+                        r.Cells[6].Value = "已出库";
+                    }
+                }
+                else if (r.Cells[2].Value.ToString().Equals("维修派工单"))
+                {
+                    ChuKu_addWeiXiu_Dialog cad = new ChuKu_addWeiXiu_Dialog();
+                    cad.ObjectRefitWork = (object[])r.Tag;
+                    cad.UserInfo = this.User;
+                    cad.ShowDialog();
+                    r.Tag = cad.ObjectRefitWork;
+                    StockOperation s = (StockOperation)cad.ObjectRefitWork[1];
+                    if (s != null)
+                    {
+                        r.Cells[4].Value = s.UserId.Name;
+                        r.Cells[5].Value = new DateTime(s.OperationTime).ToShortDateString();
+                        r.Cells[6].Value = "已出库";
+                    }
+                }
+                else if (r.Cells[2].Value.ToString().Equals("套件发货单"))/////////////////////////////////////////////////////////////////////
+                {
+                    ChuKu_addTaoJian_Dialog cad = new ChuKu_addTaoJian_Dialog();
+                    cad.ObjectRefitWork = (object[])r.Tag;
+                    cad.UserInfo = this.User;
+                    cad.ShowDialog();
+                    r.Tag = cad.ObjectRefitWork;
+                    StockOperation s = (StockOperation)cad.ObjectRefitWork[1];
+                    if (s != null)
+                    {
+                        r.Cells[4].Value = s.UserId.Name;
+                        r.Cells[5].Value = new DateTime(s.OperationTime).ToShortDateString();
+                        r.Cells[6].Value = "已出库";
+                    }
+                }
+            }
+        }
+
     }
 }

@@ -17,6 +17,7 @@ namespace HeTongGuanLi
         ModificationContract mc = new ModificationContract();
         CarBaseInfo c = new CarBaseInfo();
         ISet<CarBaseInfo> selectCarList = new HashedSet<CarBaseInfo>();
+        bool ifcheck = false;
         private ModificationContract modificationContract;
 
         public ModificationContract ModificationContract
@@ -56,13 +57,18 @@ namespace HeTongGuanLi
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (this.textBox2.Text == "")
+            {
+                MessageBox.Show("请输入合同金额");
+                return;
+            }
             foreach (DataGridViewRow r in commonDataGridView2.Rows)
             {
-                if (r.Cells[0].Value.ToString() == "0")
-                {
-                    MessageBox.Show("请勾选车辆！");
-                }
-                else if (r.Cells[0].Value.ToString() == "1")
+                //if (r.Cells[0].Value.ToString() == "0")
+                //{
+                //    MessageBox.Show("请勾选车辆！");
+                //}
+                if (r.Cells[0].Value.ToString() == "1")
                 {
                     c = (CarBaseInfo)r.Tag;
                     #region 判断气瓶型号是否为空
@@ -135,23 +141,17 @@ namespace HeTongGuanLi
                     mc.ApprovalTime = DateTime.Now.Ticks;
                     mc.DeliveryStatus = (int)ModificationContract.DeliveryStatusEnum.None;
                     mc.ContractContents = htmlEditor1.BodyInnerHTML;
-                    if (this.textBox2.Text == "")
-                    {
-                        MessageBox.Show("请输入合同金额");
-                    }
-                    else
-                    {
-                        mc.ContractAmount = float.Parse(textBox2.Text);
-                        ss.SaveOrUpdateEntity(mc);
-                        MessageBox.Show("提交给销售负责人审核");
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
-                    }
-
-
+                    mc.ContractAmount = float.Parse(textBox2.Text);
+                    ss.SaveOrUpdateEntity(mc);
+                    MessageBox.Show("提交给销售负责人审核");
+                    this.DialogResult = DialogResult.OK;
+                    ifcheck = true;
+                    
                 }
 
             }
+            if (!ifcheck)
+            MessageBox.Show("请选择车辆");
         }
         private void button6_Click(object sender, EventArgs e)
         {

@@ -230,6 +230,18 @@ namespace HeTongGuanLi
                 button1_Click(sender, e);
             }
         }
+
+        private void commonDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SuiteContractView gz = new SuiteContractView();
+            gz.SuiteContract = (SuiteContract)currenthetongs[this.commonDataGridView.CurrentCell.RowIndex];
+            if (gz.ShowDialog() == DialogResult.OK)
+            {
+                this.commonDataGridView.Rows.Clear();
+                reFreshAllControl();
+
+            }  
+        }
     
 
     }

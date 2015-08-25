@@ -89,6 +89,7 @@
             this.commonDataGridView1.Size = new System.Drawing.Size(1100, 450);
             this.commonDataGridView1.TabIndex = 0;
             this.commonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentClick);
+            this.commonDataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.commonDataGridView1_CellContentDoubleClick);
             // 
             // Column1
             // 

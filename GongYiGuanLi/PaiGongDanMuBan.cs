@@ -94,5 +94,21 @@ namespace GongYiGuanLi
                 reFreshAllControl();
             }
         }
+
+        private void commonDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow r = commonDataGridView.Rows[e.RowIndex];
+            RefitWorkModel rwm = (RefitWorkModel)r.Tag;
+            PaiGongDanMuBan_add_Dialog pad = new PaiGongDanMuBan_add_Dialog();
+            pad.RefitModel = rwm;
+            pad.UserInfo = this.User;
+            if (pad.ShowDialog() == DialogResult.OK)
+            {
+                r.Cells[1].Value = pad.RefitModel.Name;
+                r.Cells[3].Value = pad.RefitModel.FinalUserId.Name;
+                r.Cells[4].Value = pad.RefitModel.Remarks;
+            }
+
+        }
     }
 }

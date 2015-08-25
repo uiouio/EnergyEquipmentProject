@@ -46,7 +46,7 @@ namespace CommonMethod
             xlApp.Visible = true;
 
             workbook.Saved = true;
-            workbook.SaveAs(excelFilePath+@"\"+DateTime.Now.Ticks+".xlsx");
+            workbook.SaveAs(excelFilePath+@"\"+DateTime.Now.Ticks+".xls");
             workbook.Close(true, Type.Missing, Type.Missing);
             workbook = null;
             xlApp.Quit();

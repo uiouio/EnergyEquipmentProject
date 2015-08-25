@@ -163,6 +163,25 @@ namespace WorkProcedure
             this.commonPictureButton3.Cursor = Cursors.Hand;
         }
 
+        private void commonDataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.commonDataGridView1.Cursor = Cursors.WaitCursor;
+            GongZuoZhuXuanZe gongZuoZhuXuanZe = new GongZuoZhuXuanZe();
+            gongZuoZhuXuanZe.RefitWork = (RefitWork)this.commonDataGridView1.Rows[e.RowIndex].Tag;
+            gongZuoZhuXuanZe.ShowDialog();
+            if (gongZuoZhuXuanZe.DialogResult == DialogResult.OK)
+            {
+                this.commonDataGridView1.CurrentRow.Tag = gongZuoZhuXuanZe.RefitWork;
+                if (gongZuoZhuXuanZe.RefitWork.DispatchState == (int)RefitWork.SaveDispatchingDispatchReceive.Dispacth)
+                {
+                    this.commonDataGridView1.Rows[e.RowIndex].Cells[9].Value = DateTime.Now.ToString("yyyy-MM-dd");
+                    this.commonDataGridView1.Rows[e.RowIndex].Cells[10].Value = "已派工";
+                    this.commonDataGridView1.Rows[e.RowIndex].Cells[11].Value = "";
+                }
+            }
+            this.commonDataGridView1.Cursor = Cursors.Default;
+        }
+
        
     }
 }

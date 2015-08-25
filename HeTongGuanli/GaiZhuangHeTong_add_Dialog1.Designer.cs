@@ -151,7 +151,7 @@
             this.groupBox2.Size = new System.Drawing.Size(535, 140);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "选择车辆(勾选车辆)";
+            this.groupBox2.Text = "选择车辆(只勾选一辆车)";
             // 
             // commonDataGridView2
             // 
