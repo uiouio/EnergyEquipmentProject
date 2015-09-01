@@ -123,7 +123,7 @@ namespace WorkProcedure.SQL
             string sql;
             if (dispatch != -1)
             {
-                sql = "from RefitWork u where u.DispatchOrder like" + "'%" + number + "%' and u.CarInfo.ModidiedType =" + dispatch + " and u.WorkingGroupId.WorkingGroupName='" + workgroup + "' and u.CarInfo.PlateNumber like" + "'%" + platenumber + " %'and u.State = " + (int)BaseEntity.stateEnum.Normal + "order by u.DispatchState Asc, u.DispatchTime Desc";
+                sql = "from RefitWork u where u.DispatchOrder like" + "'%" + number + "%' and u.CarInfo.ModidiedType =" + dispatch + " and u.WorkingGroupId.WorkingGroupName='" + workgroup + "' and u.CarInfo.PlateNumber like" + "'%" + platenumber + "%' and u.State = " + (int)BaseEntity.stateEnum.Normal + "order by u.DispatchState Asc, u.DispatchTime Desc";
             }
             else
             {
