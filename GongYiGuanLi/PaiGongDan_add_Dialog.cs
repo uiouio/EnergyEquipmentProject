@@ -95,7 +95,8 @@ namespace GongYiGuanLi
                     #endregion
 
                     i++;
-                    commonDataGridView.Rows.Add(i.ToString(), g[1], g[2], g[3], g[4], g[9], "","未领料","否", "删除");
+                    //wp修改
+                    commonDataGridView.Rows.Add(i.ToString(), g[1], g[2], g[4], g[3], g[9], "","未领料","否", "删除");
                     RefitWorkGoods rwg = new RefitWorkGoods();
                     if (refitWork.DispatchState == (int)EntityClassLibrary.RefitWork.SaveDispatchingDispatchReceive.Save)
                     {

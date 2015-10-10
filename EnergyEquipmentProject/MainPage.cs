@@ -456,12 +456,12 @@ namespace EnergyEquipmentProject
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.xxsrl.com/");
+            System.Diagnostics.Process.Start("http://222.222.253.79:8088/");
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.xxhi.net/");
+            System.Diagnostics.Process.Start("http://www.xxcig.com/");
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
