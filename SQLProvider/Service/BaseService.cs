@@ -312,10 +312,10 @@ namespace SQLProvider.Service
         }
         public IList loadEntityList(string sql)
         {
+            ISessionFactory factory = Connection.Connection.getConfiguration().BuildSessionFactory();
+            ISession session = factory.OpenSession();
             try
             {
-                ISessionFactory factory = Connection.Connection.getConfiguration().BuildSessionFactory();
-                ISession session = factory.OpenSession();
                 ITransaction trans = session.BeginTransaction();
                 IQuery query = session.CreateQuery(sql);
                 IList result = query != null ? query.List() : null;
@@ -326,7 +326,18 @@ namespace SQLProvider.Service
             {
                 throw e;
             }
-            
+            finally
+            {
+                if (session != null && session.IsOpen)
+                {
+                    session.Clear();
+                    session.Close();
+                    factory.Close();
+                    factory.Dispose();
+                    session.Dispose();
+                }
+            }
+
         }
         /// <summary>
         /// 执行sql语句，不是hql
