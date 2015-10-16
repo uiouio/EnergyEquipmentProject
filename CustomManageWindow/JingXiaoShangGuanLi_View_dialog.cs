@@ -32,6 +32,10 @@ namespace CustomManageWindow
             this.textBox4.Text = Agent.ContactName;
             this.textBox5.Text = Agent.ContactPhone;
             this.textBox6.Text = Agent.ContactAddress;
+            this.textBox7.Text = Agent.AgentMoney;
+            this.textBox1.Text = Agent.MinimumSale.ToString();
+            this.textBox8.Text = Agent.DeliveryAddress;
+            this.textBox9.Text = Agent.AgentLevel;
             ShowGoodsGrid(Agent.AgentGoodBaseInfo);
             this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2 - this.Width / 2, Screen.PrimaryScreen.WorkingArea.Height / 2 - this.Height / 2);
 

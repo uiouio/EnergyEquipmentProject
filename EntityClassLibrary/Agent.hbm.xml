@@ -30,6 +30,8 @@
     <property name="State" column="State" type="int" length="1"/>
     <property name="TimeStamp" column="TimeStamp" type="long" length="18"/>
     <property name="HistoryId" column="HistoryId" type="long" length="10" not-null="true"/>
+    <property name="AgentLevel" column="AgentLevel" type="string" length="10" />
+
     <set name="AgentGoodBaseInfo" inverse="false" lazy="false" where="State=0">
       <key column="AgentId"/>
       <one-to-many class="EntityClassLibrary.AgentGood,EntityClassLibrary" />

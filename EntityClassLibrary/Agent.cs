@@ -179,6 +179,17 @@ namespace EntityClassLibrary
             set { deliveryTime = value; }
         }
         /// <summary>
+        /// 加盟商等级
+        /// </summary>
+        private string agentLevel;
+
+        public virtual string AgentLevel
+        {
+            get { return agentLevel; }
+            set { agentLevel = value; }
+        }
+
+        /// <summary>
         /// 发货形式
         /// </summary>
         private string deliveryForm;

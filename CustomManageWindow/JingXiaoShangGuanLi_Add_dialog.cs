@@ -37,6 +37,8 @@ namespace CustomManageWindow
         {
             Agent aa = new Agent();
             CustomService ss = new CustomService();
+            if (textBox2.Text == "")
+                textBox2.Text = "0";
             aa.AgentName = textBox1.Text;
             aa.Category = comboBox1.Text;
             aa.AcceptTime =dateTimePicker1.Value.Ticks;
@@ -52,6 +54,31 @@ namespace CustomManageWindow
             aa.ContactAddress = textBox4.Text;
             aa.DeliveryAddress = textBox5.Text;
             aa.MinimumSale =int.Parse(textBox2.Text);
+
+            #region 判断客户级别
+            if (radioButton1.Checked)
+            {
+                aa.AgentLevel = radioButton1.Text;
+
+            }
+            else if (radioButton2.Checked)
+            {
+                aa.AgentLevel = radioButton2.Text;
+            }
+            else if (radioButton5.Checked)
+            {
+                aa.AgentLevel = radioButton5.Text;
+            }
+            else if (radioButton6.Checked)
+            {
+                aa.AgentLevel = radioButton6.Text;
+            }
+            else if (radioButton7.Checked)
+            {
+                aa.AgentLevel = radioButton7.Text;
+            }
+            #endregion
+
             if(this.textBox1.Text=="")
             {
                 MessageBox.Show("请输入必填信息");
