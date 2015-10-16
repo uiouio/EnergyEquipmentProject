@@ -16,6 +16,15 @@ namespace SQLProvider.Service
 {
     public class BaseService
     {
+
+        ISessionFactory factory ;//= Connection.Connection.getConfiguration().BuildSessionFactory();
+
+        public BaseService()
+        {
+
+            factory = Connection.Connection.getConfiguration().BuildSessionFactory();
+        
+        }
         /// <summary>
         /// 不用了
         /// </summary>
@@ -310,9 +319,10 @@ namespace SQLProvider.Service
                 throw e;
             }
         }
+        
         public IList loadEntityList(string sql)
         {
-            ISessionFactory factory = Connection.Connection.getConfiguration().BuildSessionFactory();
+            
             ISession session = factory.OpenSession();
             try
             {
@@ -330,10 +340,12 @@ namespace SQLProvider.Service
             {
                 if (session != null && session.IsOpen)
                 {
+                    session.Flush();
                     session.Clear();
                     session.Close();
-                    factory.Close();
-                    factory.Dispose();
+                    //factory.
+                    //factory.Close();
+                    //factory.Dispose();
                     session.Dispose();
                 }
             }
