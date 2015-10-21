@@ -159,7 +159,8 @@ namespace StatisticalReport
         private void commonPictureButton1_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
-            ExportAndImport.ExportExcel(folderBrowserDialog1.SelectedPath, "客户统计", currentTable);
+            DoExport.ExportExcel(currentTable);
+            //ExportAndImport.ExportExcel(folderBrowserDialog1.SelectedPath, "客户统计", currentTable);
         }
     }
 }

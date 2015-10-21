@@ -53,7 +53,7 @@ namespace CommonMethod
            
         }
 
-        private static void ExportExcel(DataTable Dt)
+        public static void ExportExcel(DataTable Dt)
         {
             HSSFWorkbook hssfworkbook2 = new HSSFWorkbook();
             HSSFSheet sheet = (HSSFSheet)hssfworkbook2.CreateSheet("Sheet1");
