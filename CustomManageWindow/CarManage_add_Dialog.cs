@@ -84,7 +84,7 @@ namespace CustomManageWindow
                 this.textBox10.Text = CarBaseInfo.Mileage.ToString();
                 this.textBox5.Enabled = false;
                 this.textBox5.Text = CarBaseInfo.Remarks;
-                this.comboBox4.Text = CarBaseInfo.ECUOperator;
+                this.comboBox4.Text = CarBaseInfo.ECUOperator.ToString();
                 //this.dateTimePicker1.Text = new DateTime(CarBaseInfo.OutFactoryTime).ToString();
                 //this.dateTimePicker1.Value = new DateTime(CarBaseInfo.OutFactoryTime); 
                 if(CarBaseInfo.OutFactoryTime==0)
@@ -107,11 +107,11 @@ namespace CustomManageWindow
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
 
+            
             cb.PlateNumber = textBox1.Text;
 
-            cb.EngineIdentificationNumber =  textBox4.Text;
+            cb.EngineIdentificationNumber = textBox4.Text;
             if (textBox10.Text == "")
             {
                 cb.Mileage = 0;
@@ -128,24 +128,26 @@ namespace CustomManageWindow
             {
                 cb.FuelConsumption = float.Parse(textBox3.Text);
             }
+
+
             cb.VehicleBrand = this.textBox6.Text;
-            
+
             cb.VehicleType = this.comboBox3.Text;
-           
+
             cb.SupplyMode = comboBox2.Text;
 
             cb.VIN = textBox9.Text;
             if (this.comboBox1.Text == "CNG汽油")
             {
-                cb.ModidiedType=(int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGGas;
+                cb.ModidiedType = (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGGas;
             }
             else if (this.comboBox1.Text == "CNG柴油")
-            { 
-                cb.ModidiedType=(int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGDiesel;
+            {
+                cb.ModidiedType = (int)ModificationContract.CNGGasCNGDieselLNGDiesel.CNGDiesel;
             }
             else if (this.comboBox1.Text == "LNG柴油")
             {
-                cb.ModidiedType=(int)ModificationContract.CNGGasCNGDieselLNGDiesel.LNGDiesel;
+                cb.ModidiedType = (int)ModificationContract.CNGGasCNGDieselLNGDiesel.LNGDiesel;
             }
             if (textBox8.Text == "")
             {
@@ -155,11 +157,24 @@ namespace CustomManageWindow
             {
                 cb.KerbMass = float.Parse(textBox8.Text);
             }
-           
+
 
             cb.Remarks = textBox5.Text;
             cb.OutFactoryTime = this.dateTimePicker1.Value.Date.Ticks;
-            cb.ECUOperator = this.comboBox4.Text;
+            //cb.ECUOperator = this.comboBox4.Text;
+            
+            if(this.comboBox4.Text=="自然吸气式")
+            {
+                cb.ECUOperator =0;
+            }
+            else if(this.comboBox4.Text=="涡轮增压式")
+            {
+                cb.ECUOperator =1;
+            }
+            else if(this.comboBox4.Text=="缸内直喷")
+                {
+                cb.ECUOperator =2;
+            }
             if (this.textBox1.Text == "")
             {
                 MessageBox.Show("请输入车牌号");

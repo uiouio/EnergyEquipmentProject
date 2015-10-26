@@ -35,7 +35,7 @@
     <property name="InFactoryTime" column="InFactoryTime" type="string" length="18" />
     <property name="OutFactoryTime" column="OutFactoryTime" type="long" length="18" />
     <property name="BottlingMan" column="BottlingMan" type="long" length="10" />
-    <property name="ECUOperator" column="ECUOperator" type="string" length="10" />
+    <property name="ECUOperator" column="ECUOperator" type="long" length="10" />
     <property name="CylinderPressure" column="CylinderPressure" type="float"  />
     <property name="CylinderVolume" column="CylinderVolume" type="float" />
     <property name="ChargeWeight" column="ChargeWeight" type="float"  />

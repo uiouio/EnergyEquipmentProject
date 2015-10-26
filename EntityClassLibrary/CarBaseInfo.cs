@@ -310,11 +310,11 @@ namespace EntityClassLibrary
             set { bottlingMan = value; }
         }
        
-        private string eCUOperator;
+        private long eCUOperator;
         /// <summary>
         ///进气方式
         /// </summary>
-        public virtual string ECUOperator
+        public virtual long ECUOperator
         {
             get { return eCUOperator; }
             set { eCUOperator = value; }
